@@ -1,0 +1,56 @@
+﻿<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../css/login.css" />
+    <script type="text/javascript" src="../3rd/jquery-3.3.1/jquery-3.3.1.min.js"></script>
+</head>
+<!-- 界面主体 -->
+<div class="main">
+    <div class="logincontainer">
+        <p class="sdktitle">CIM JavaScript SDK 演示Demo</p>
+        <div class="loginwidget">
+            <div class="userRoom">
+                <input type="text" placeholder="用户名" name="username" id="idUid" />
+                <img src="../res/user.png" class=" iconPic" />
+            </div>
+            <div class=" passwordRoom">
+                <input type="password" placeholder="密　码" name="password" id="idPwd" />
+                <img src="../res/key.png" class=" iconPic" />
+            </div>
+            <div class="urlRoom">
+                <input type="url" placeholder="地 址" name="cimUrl" id="idUrl" value="http://cim.citylinker.com:9010/cityeye" readonly="readonly" style="background-color:gray;"/>
+                <img src="../res/web.png" class=" iconPic" />
+            </div>
+            <button onclick="onLogin()">登录</button>
+        </div>
+    </div>
+</div>
+
+<!-- 脚本 -->
+<script language="javascript">
+    function onLogin() {
+        var webUrl = $("#idUrl").val();
+        var uid = $("#idUid").val();
+        var pwd = $("#idPwd").val();
+        if (uid === undefined || uid === null || uid === ""
+            || pwd === undefined || pwd === null || pwd === "") {
+            alert("用户名或密码为空！");
+            return;
+        }
+        $.ajax({
+            url: webUrl + "/v1.0/service/uc/auth/login?username=" + uid + "&password=" + pwd ,
+            dataType: "json",
+            contentType: "application/json",
+            type : "post",
+            success: function (result) {
+                if (result["status"] === 1) {
+                    parent.setToken(webUrl, result["data"]["access_token"]);
+                    window.location.href = "SelectScene.html";
+                }
+                else {
+                    alert(result["message"]);
+                }
+            }
+        });
+    }
+</script>

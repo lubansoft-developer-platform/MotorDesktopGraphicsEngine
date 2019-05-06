@@ -1,0 +1,9211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Module: ComponentApi | CIM Client SDK for JAVAScript</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-jsdoc.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/tui-doc.css">
+
+    
+</head>
+<body>
+<nav class="lnb" id="lnb">
+    <div class="logo" style="">
+        
+            <img src="img/toast-ui.png" width="100%" height="100%">
+        
+    </div>
+    <div class="title">
+        <h1><a href="index.html" class="link">CIM Client SDK for JAVAScript</a></h1>
+        
+            <span class="version">v1.0 beta 公测版</span>
+        
+    </div>
+    <div class="search-container" id="search-container">
+        <input type="text" placeholder="Search">
+        <ul></ul>
+    </div>
+    
+        <ol class="lnb-tab">
+            <li id="api-tab">
+                <a href="#"><h4>API</h4></a>
+            </li>
+            <li id="examples-tab">
+                <a href="#"><h4>Help</h4></a>
+            </li>
+        </ol>
+    
+    <div class="lnb-examples hidden"><h3>Help</h3><ul><li><a href="tutorial-1_build.html">环境搭建</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="1_build_sub"></div></li><li><a href="tutorial-2_guide.html">操作指南</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="2_guide_sub"></div></li><li><a href="tutorial-3_debug.html">调试</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="3_debug_sub"></div></li></ul></div><div class="lnb-api hidden"><h3>Modules</h3><ul><li><a href="module-CallBack.html">CallBack</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="module:CallBack_sub"><div class="member-type">Methods</div><ul class="inner"><li><a href="module-CallBack.html#.removeCreateComponentCompleteCallBack">removeCreateComponentCompleteCallBack</a></li><li><a href="module-CallBack.html#.removeSelectBillBoardCallBack">removeSelectBillBoardCallBack</a></li><li><a href="module-CallBack.html#.removeSelectComponentCallBack">removeSelectComponentCallBack</a></li><li><a href="module-CallBack.html#.setCreateComponentCompleteCallBack">setCreateComponentCompleteCallBack</a></li><li><a href="module-CallBack.html#.setSelectBillBoardCallBack">setSelectBillBoardCallBack</a></li><li><a href="module-CallBack.html#.setSelectComponentCallBack">setSelectComponentCallBack</a></li></ul><div class="member-type">Typedef</div><ul class="inner"><li><a href="module-CallBack.html#~onCreateComponentCompleteCallBack">onCreateComponentCompleteCallBack</a></li><li><a href="module-CallBack.html#~onSelectBillBoardCallBack">onSelectBillBoardCallBack</a></li><li><a href="module-CallBack.html#~onSelectComponentCallBack">onSelectComponentCallBack</a></li></ul></div></li><li><a href="module-ComponentApi.html">ComponentApi</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="module:ComponentApi_sub"><div class="member-type">Members</div><ul class="inner"><li><a href="module-ComponentApi.html#.ECompAttrKey">ECompAttrKey</a></li><li><a href="module-ComponentApi.html#.ECompType">ECompType</a></li></ul><div class="member-type">Methods</div><ul class="inner"><li><a href="module-ComponentApi.html#.cancelHighlightComp">cancelHighlightComp</a></li><li><a href="module-ComponentApi.html#.clearComponentForceColor">clearComponentForceColor</a></li><li><a href="module-ComponentApi.html#.createBillboard">createBillboard</a></li><li><a href="module-ComponentApi.html#.deleteComp">deleteComp</a></li><li><a href="module-ComponentApi.html#.enablePointCheckMode">enablePointCheckMode</a></li><li><a href="module-ComponentApi.html#.getBillboardByCompId">getBillboardByCompId</a></li><li><a href="module-ComponentApi.html#.getBillboardByType">getBillboardByType</a></li><li><a href="module-ComponentApi.html#.getCompBimInfo">getCompBimInfo</a></li><li><a href="module-ComponentApi.html#.getCompBimInfoBatch">getCompBimInfoBatch</a></li><li><a href="module-ComponentApi.html#.getComponentAttr">getComponentAttr</a></li><li><a href="module-ComponentApi.html#.getComponentBoundingBox">getComponentBoundingBox</a></li><li><a href="module-ComponentApi.html#.getComponentInfo">getComponentInfo</a></li><li><a href="module-ComponentApi.html#.getComponentInfosByProjId">getComponentInfosByProjId</a></li><li><a href="module-ComponentApi.html#.getComponentPosition">getComponentPosition</a></li><li><a href="module-ComponentApi.html#.getCompTempDesInfo">getCompTempDesInfo</a></li><li><a href="module-ComponentApi.html#.getCompTransf">getCompTransf</a></li><li><a href="module-ComponentApi.html#.getProjComponentInfosByType">getProjComponentInfosByType</a></li><li><a href="module-ComponentApi.html#.getRelComponentInBillboard">getRelComponentInBillboard</a></li><li><a href="module-ComponentApi.html#.getSortedProjComponentInfosByType">getSortedProjComponentInfosByType</a></li><li><a href="module-ComponentApi.html#.highlightComp">highlightComp</a></li><li><a href="module-ComponentApi.html#.removeBillboard">removeBillboard</a></li><li><a href="module-ComponentApi.html#.removeBillboardByType">removeBillboardByType</a></li><li><a href="module-ComponentApi.html#.removeComponent">removeComponent</a></li><li><a href="module-ComponentApi.html#.researchComp">researchComp</a></li><li><a href="module-ComponentApi.html#.setBillboardImgByLocal">setBillboardImgByLocal</a></li><li><a href="module-ComponentApi.html#.setBillboardImgByUrl">setBillboardImgByUrl</a></li><li><a href="module-ComponentApi.html#.setBillboardVisible">setBillboardVisible</a></li><li><a href="module-ComponentApi.html#.setBillboardVisibleByType">setBillboardVisibleByType</a></li><li><a href="module-ComponentApi.html#.setComponentAttr">setComponentAttr</a></li><li><a href="module-ComponentApi.html#.setComponentColor">setComponentColor</a></li><li><a href="module-ComponentApi.html#.setComponentVisible">setComponentVisible</a></li><li><a href="module-ComponentApi.html#.setCompTransf">setCompTransf</a></li></ul><div class="member-type">Typedef</div><ul class="inner"><li><a href="module-ComponentApi.html#~clearComponentForceColorCallback">clearComponentForceColorCallback</a></li><li><a href="module-ComponentApi.html#~createBillboardCallback">createBillboardCallback</a></li><li><a href="module-ComponentApi.html#~getBillboardByCompIdCallback">getBillboardByCompIdCallback</a></li><li><a href="module-ComponentApi.html#~getBillboardByTypeCallback">getBillboardByTypeCallback</a></li><li><a href="module-ComponentApi.html#~getCompBimInfoBatchCallback">getCompBimInfoBatchCallback</a></li><li><a href="module-ComponentApi.html#~getCompBimInfoCallback">getCompBimInfoCallback</a></li><li><a href="module-ComponentApi.html#~getComponentAttrCallback">getComponentAttrCallback</a></li><li><a href="module-ComponentApi.html#~getComponentBoundingBoxCallback">getComponentBoundingBoxCallback</a></li><li><a href="module-ComponentApi.html#~getComponentInfoCallback">getComponentInfoCallback</a></li><li><a href="module-ComponentApi.html#~getComponentInfosByProjIdCallback">getComponentInfosByProjIdCallback</a></li><li><a href="module-ComponentApi.html#~getComponentInfosByProjIdCallback">getComponentInfosByProjIdCallback</a></li><li><a href="module-ComponentApi.html#~getComponentPositionCallback">getComponentPositionCallback</a></li><li><a href="module-ComponentApi.html#~getCompTempDesInfoCallback">getCompTempDesInfoCallback</a></li><li><a href="module-ComponentApi.html#~getCompTransfCallback">getCompTransfCallback</a></li><li><a href="module-ComponentApi.html#~getRelComponentInBillboardCallback">getRelComponentInBillboardCallback</a></li><li><a href="module-ComponentApi.html#~removeComponentCallback">removeComponentCallback</a></li><li><a href="module-ComponentApi.html#~setComponentColorCallback">setComponentColorCallback</a></li><li><a href="module-ComponentApi.html#~setComponentVisibleCallback">setComponentVisibleCallback</a></li></ul></div></li><li><a href="module-ProjectApi.html">ProjectApi</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="module:ProjectApi_sub"><div class="member-type">Members</div><ul class="inner"><li><a href="module-ProjectApi.html#.EManipulatorType">EManipulatorType</a></li><li><a href="module-ProjectApi.html#.EProjKey">EProjKey</a></li><li><a href="module-ProjectApi.html#.EProjType">EProjType</a></li><li><a href="module-ProjectApi.html#.ESelectType">ESelectType</a></li></ul><div class="member-type">Methods</div><ul class="inner"><li><a href="module-ProjectApi.html#.closeProject">closeProject</a></li><li><a href="module-ProjectApi.html#.createFBXComponent">createFBXComponent</a></li><li><a href="module-ProjectApi.html#.deplayFBX">deplayFBX</a></li><li><a href="module-ProjectApi.html#.getAllBimCompInfoByProject">getAllBimCompInfoByProject</a></li><li><a href="module-ProjectApi.html#.getAllFBXTml">getAllFBXTml</a></li><li><a href="module-ProjectApi.html#.getAllProjInfoList">getAllProjInfoList</a></li><li><a href="module-ProjectApi.html#.getBimCompInfoByProjectCimFloor">getBimCompInfoByProjectCimFloor</a></li><li><a href="module-ProjectApi.html#.getBimProjectInfo">getBimProjectInfo</a></li><li><a href="module-ProjectApi.html#.getBimProjectPPIDs">getBimProjectPPIDs</a></li><li><a href="module-ProjectApi.html#.getCurProjectInfo">getCurProjectInfo</a></li><li><a href="module-ProjectApi.html#.getProjectAttr">getProjectAttr</a></li><li><a href="module-ProjectApi.html#.getProjectCimFloors">getProjectCimFloors</a></li><li><a href="module-ProjectApi.html#.getProjectPropTempDes">getProjectPropTempDes</a></li><li><a href="module-ProjectApi.html#.getSelType">getSelType</a></li><li><a href="module-ProjectApi.html#.hasBimProject">hasBimProject</a></li><li><a href="module-ProjectApi.html#.importFBXTml">importFBXTml</a></li><li><a href="module-ProjectApi.html#.isChildProject">isChildProject</a></li><li><a href="module-ProjectApi.html#.openProject">openProject</a></li><li><a href="module-ProjectApi.html#.resetProjStatus">resetProjStatus</a></li><li><a href="module-ProjectApi.html#.saveProject">saveProject</a></li><li><a href="module-ProjectApi.html#.setProjectAttr">setProjectAttr</a></li><li><a href="module-ProjectApi.html#.setSelType">setSelType</a></li><li><a href="module-ProjectApi.html#.setValidManipulatorType">setValidManipulatorType</a></li></ul><div class="member-type">Typedef</div><ul class="inner"><li><a href="module-ProjectApi.html#~closeProjectCallback">closeProjectCallback</a></li><li><a href="module-ProjectApi.html#~createFBXComponentCallback">createFBXComponentCallback</a></li><li><a href="module-ProjectApi.html#~getAllBimCompInfoByProjectCallback">getAllBimCompInfoByProjectCallback</a></li><li><a href="module-ProjectApi.html#~getAllFBXTmlCallback">getAllFBXTmlCallback</a></li><li><a href="module-ProjectApi.html#~getAllProjInfoListCallback">getAllProjInfoListCallback</a></li><li><a href="module-ProjectApi.html#~getBimCompInfoByProjectCimFloorCallback">getBimCompInfoByProjectCimFloorCallback</a></li><li><a href="module-ProjectApi.html#~getBimProjectInfoCallback">getBimProjectInfoCallback</a></li><li><a href="module-ProjectApi.html#~getBimProjectPPIDsCallback">getBimProjectPPIDsCallback</a></li><li><a href="module-ProjectApi.html#~getProjectAttrCallback">getProjectAttrCallback</a></li><li><a href="module-ProjectApi.html#~getProjectCimFloorsCallback">getProjectCimFloorsCallback</a></li><li><a href="module-ProjectApi.html#~getProjectInfoCallback">getProjectInfoCallback</a></li><li><a href="module-ProjectApi.html#~getProjectPropTempDesCallBack">getProjectPropTempDesCallBack</a></li><li><a href="module-ProjectApi.html#~getSelTypeCallBack">getSelTypeCallBack</a></li><li><a href="module-ProjectApi.html#~importFBXTmlCallback">importFBXTmlCallback</a></li><li><a href="module-ProjectApi.html#~isBimProjectCallback">isBimProjectCallback</a></li><li><a href="module-ProjectApi.html#~isChildProjectCallback">isChildProjectCallback</a></li><li><a href="module-ProjectApi.html#~openProjectCallback">openProjectCallback</a></li><li><a href="module-ProjectApi.html#~resetProjStatusCallBack">resetProjStatusCallBack</a></li><li><a href="module-ProjectApi.html#~saveProjectCallback">saveProjectCallback</a></li></ul></div></li><li><a href="module-SceneApi.html">SceneApi</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="module:SceneApi_sub"><div class="member-type">Members</div><ul class="inner"><li><a href="module-SceneApi.html#.ERoamMode">ERoamMode</a></li><li><a href="module-SceneApi.html#.ESceneType">ESceneType</a></li></ul><div class="member-type">Methods</div><ul class="inner"><li><a href="module-SceneApi.html#.getSceneArg">getSceneArg</a></li><li><a href="module-SceneApi.html#.initSceneProjData">initSceneProjData</a></li><li><a href="module-SceneApi.html#.loadSceneProjData">loadSceneProjData</a></li><li><a href="module-SceneApi.html#.positionTo">positionTo</a></li><li><a href="module-SceneApi.html#.positionToComponent">positionToComponent</a></li><li><a href="module-SceneApi.html#.positionToProject">positionToProject</a></li><li><a href="module-SceneApi.html#.setPlayerMode">setPlayerMode</a></li><li><a href="module-SceneApi.html#.setSceneArg">setSceneArg</a></li><li><a href="module-SceneApi.html#.unLoadSceneProjData">unLoadSceneProjData</a></li></ul><div class="member-type">Typedef</div><ul class="inner"><li><a href="module-SceneApi.html#~getSceneArgCallback">getSceneArgCallback</a></li><li><a href="module-SceneApi.html#~initSceneProjDataCallback">initSceneProjDataCallback</a></li><li><a href="module-SceneApi.html#~loadSceneProjDataCallback">loadSceneProjDataCallback</a></li></ul></div></li><li><a href="module-SystemApi.html">SystemApi</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="module:SystemApi_sub"><div class="member-type">Members</div><ul class="inner"><li><a href="module-SystemApi.html#.ESystemMode">ESystemMode</a></li></ul><div class="member-type">Methods</div><ul class="inner"><li><a href="module-SystemApi.html#.closeMainWindow">closeMainWindow</a></li><li><a href="module-SystemApi.html#.closeProcessBar">closeProcessBar</a></li><li><a href="module-SystemApi.html#.convertScreenPttoWorldCoord">convertScreenPttoWorldCoord</a></li><li><a href="module-SystemApi.html#.convertWGS84toWorldCoord">convertWGS84toWorldCoord</a></li><li><a href="module-SystemApi.html#.dragMainWindow">dragMainWindow</a></li><li><a href="module-SystemApi.html#.geometry">geometry</a></li><li><a href="module-SystemApi.html#.getFolderPath">getFolderPath</a></li><li><a href="module-SystemApi.html#.getLocalRootPath">getLocalRootPath</a></li><li><a href="module-SystemApi.html#.getOpenFilePath">getOpenFilePath</a></li><li><a href="module-SystemApi.html#.getSaveFilePath">getSaveFilePath</a></li><li><a href="module-SystemApi.html#.getScreenInfos">getScreenInfos</a></li><li><a href="module-SystemApi.html#.isMaxSized">isMaxSized</a></li><li><a href="module-SystemApi.html#.moveMainWindow">moveMainWindow</a></li><li><a href="module-SystemApi.html#.normalGeometry">normalGeometry</a></li><li><a href="module-SystemApi.html#.resizeMainWindow">resizeMainWindow</a></li><li><a href="module-SystemApi.html#.setGeometry">setGeometry</a></li><li><a href="module-SystemApi.html#.setSystemMode">setSystemMode</a></li><li><a href="module-SystemApi.html#.setToken">setToken</a></li><li><a href="module-SystemApi.html#.showMaxSize">showMaxSize</a></li><li><a href="module-SystemApi.html#.showMiniSize">showMiniSize</a></li><li><a href="module-SystemApi.html#.showNomalSize">showNomalSize</a></li><li><a href="module-SystemApi.html#.showProcessBar">showProcessBar</a></li></ul><div class="member-type">Typedef</div><ul class="inner"><li><a href="module-SystemApi.html#~convertScreenPttoWorldCoordCallBack">convertScreenPttoWorldCoordCallBack</a></li><li><a href="module-SystemApi.html#~convertWGS84toWorldCoordCallBack">convertWGS84toWorldCoordCallBack</a></li><li><a href="module-SystemApi.html#~dragMainWindowCallback">dragMainWindowCallback</a></li><li><a href="module-SystemApi.html#~geometryCallback">geometryCallback</a></li><li><a href="module-SystemApi.html#~getFolderPathCallback">getFolderPathCallback</a></li><li><a href="module-SystemApi.html#~getLocalRootPathCallback">getLocalRootPathCallback</a></li><li><a href="module-SystemApi.html#~getOpenFilePathCallback">getOpenFilePathCallback</a></li><li><a href="module-SystemApi.html#~getSaveFilePathCallback">getSaveFilePathCallback</a></li><li><a href="module-SystemApi.html#~getScreenInfosCallBack">getScreenInfosCallBack</a></li><li><a href="module-SystemApi.html#~isMaxSizedCallback">isMaxSizedCallback</a></li></ul></div></li><li><a href="module-ThreeViewApi.html">ThreeViewApi</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="module:ThreeViewApi_sub"><div class="member-type">Methods</div><ul class="inner"><li><a href="module-ThreeViewApi.html#.bind3DView">bind3DView</a></li><li><a href="module-ThreeViewApi.html#.BL3D_focusInEvent">BL3D_focusInEvent</a></li><li><a href="module-ThreeViewApi.html#.BL3D_focusOutEvent">BL3D_focusOutEvent</a></li><li><a href="module-ThreeViewApi.html#.BL3D_keyPressEvent">BL3D_keyPressEvent</a></li><li><a href="module-ThreeViewApi.html#.BL3D_keyReleaseEvent">BL3D_keyReleaseEvent</a></li><li><a href="module-ThreeViewApi.html#.BL3D_mouseDoubleClickEvent">BL3D_mouseDoubleClickEvent</a></li><li><a href="module-ThreeViewApi.html#.BL3D_mouseMoveEvent">BL3D_mouseMoveEvent</a></li><li><a href="module-ThreeViewApi.html#.BL3D_mousePressEvent">BL3D_mousePressEvent</a></li><li><a href="module-ThreeViewApi.html#.BL3D_mouseReleaseEvent">BL3D_mouseReleaseEvent</a></li><li><a href="module-ThreeViewApi.html#.BL3D_resizeEvent">BL3D_resizeEvent</a></li><li><a href="module-ThreeViewApi.html#.BL3D_wheelEvent">BL3D_wheelEvent</a></li><li><a href="module-ThreeViewApi.html#.getCameraDir">getCameraDir</a></li><li><a href="module-ThreeViewApi.html#.getCameraPos">getCameraPos</a></li><li><a href="module-ThreeViewApi.html#.getCameraPro">getCameraPro</a></li><li><a href="module-ThreeViewApi.html#.rotateCameraAboutCurCenterPt">rotateCameraAboutCurCenterPt</a></li><li><a href="module-ThreeViewApi.html#.rotateCameraAboutCurCenterPtEx">rotateCameraAboutCurCenterPtEx</a></li><li><a href="module-ThreeViewApi.html#.rotateEarth">rotateEarth</a></li><li><a href="module-ThreeViewApi.html#.setCameraDir">setCameraDir</a></li><li><a href="module-ThreeViewApi.html#.setCameraPos">setCameraPos</a></li><li><a href="module-ThreeViewApi.html#.setCameraPro">setCameraPro</a></li><li><a href="module-ThreeViewApi.html#.setLightFollowCamera">setLightFollowCamera</a></li></ul><div class="member-type">Typedef</div><ul class="inner"><li><a href="module-ThreeViewApi.html#~getCameraDirCallBack">getCameraDirCallBack</a></li><li><a href="module-ThreeViewApi.html#~getCameraPosCallBack">getCameraPosCallBack</a></li><li><a href="module-ThreeViewApi.html#~getCameraProCallBack">getCameraProCallBack</a></li></ul></div></li></ul></div>
+</nav>
+<div id="resizer"></div>
+
+<div class="main" id="main">
+    
+
+
+
+
+<section>
+
+<header>
+    
+        <h2>ComponentApi</h2>
+        
+            
+        
+    
+</header>
+
+<article>
+    
+        <div class="container-overview">
+        
+            
+                <div class="description"><p>构件相关API</p></div>
+            
+
+            
+                
+
+<dt>
+    
+</dt>
+<dd>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+        
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Members</h3>
+
+        <dl>
+            
+
+<dt>
+<h4 class="name" id=".ECompAttrKey">
+    <span class="type-signature"><span class="icon green">static</span> </span>ECompAttrKey<span class="type-signature"> :string</span>
+    
+    <div class="container-source members">
+        <code><a href="blcomponentApi.js.html">blcomponentApi.js</a></code>,
+        <code><a href="blcomponentApi.js.html#line35">line 35</a></code>
+    </div>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>构件属性key</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">string</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>pa_attrGuid</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>bim构件属性guid</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>pa_compDomain</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>bim构件专业</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>pa_dalei</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>bim构件大类</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>pa_xiaolei</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>bim构件小类</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>pa_floorName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>bim构件楼层名</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>pa_sysName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>bim构件系统名</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>pa_compProjID</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>构件对应的工程id</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
+            
+
+<dt>
+<h4 class="name" id=".ECompType">
+    <span class="type-signature"><span class="icon green">static</span> </span>ECompType<span class="type-signature"> :string</span>
+    
+    <div class="container-source members">
+        <code><a href="blcomponentApi.js.html">blcomponentApi.js</a></code>,
+        <code><a href="blcomponentApi.js.html#line11">line 11</a></code>
+    </div>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>构件类型</p>
+    </div>
+    
+
+    <!--
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">string</span>
+
+
+            </li>
+        </ul>
+    
+    -->
+
+    
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>type_cluster</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>CLUSTER Mod类型</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>type_terrain</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>地形</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>type_qxsy</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>倾斜摄影</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>type_fbx</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>FBX模板类型</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        </dl>
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        <dl>
+                
+
+<dt>
+    
+        <h4 class="name" id=".cancelHighlightComp">
+            
+                <span class="type-signature"><span class="icon green">static</span> </span>cancelHighlightComp<span class="signature">(compIds)</span><span class="type-signature"> &rarr; {void}</span>
+                
+            
+            <div class="container-source members">
+                <code><a href="blcomponentApi.js.html">blcomponentApi.js</a></code>,
+                <code><a href="blcomponentApi.js.html#line530">line 530</a></code>
+            </div>
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>取消构件高亮</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>compIds</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;string></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>构件ID</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">void</span>
+
+
+
+
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id=".clearComponentForceColor">
+            
+                <span class="type-signature"><span class="icon green">static</span> </span>clearComponentForceColor<span class="signature">(componentIds, funcRet)</span><span class="type-signature"> &rarr; {void}</span>
+                
+            
+            <div class="container-source members">
+                <code><a href="blcomponentApi.js.html">blcomponentApi.js</a></code>,
+                <code><a href="blcomponentApi.js.html#line197">line 197</a></code>
+            </div>
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>批量清除构件颜色</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>componentIds</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;string></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>构件Id列表</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>funcRet</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">clearComponentForceColorCallback</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">void</span>
+
+
+
+
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id=".createBillboard">
+            
+                <span class="type-signature"><span class="icon green">static</span> </span>createBillboard<span class="signature">(relComponentId, sType, funcRet)</span><span class="type-signature"> &rarr; {void}</span>
+                
+            
+            <div class="container-source members">
+                <code><a href="blcomponentApi.js.html">blcomponentApi.js</a></code>,
+                <code><a href="blcomponentApi.js.html#line268">line 268</a></code>
+            </div>
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>创建billboard</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>relComponentId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>需要关联的构件Id</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>sType</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>billboard类型</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>funcRet</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">createBillboardCallback</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">void</span>
+
+
+
+
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id=".deleteComp">
+            
+                <span class="type-signature"><span class="icon green">static</span> </span>deleteComp<span class="signature">(compId, bTempComp)</span><span class="type-signature"> &rarr; {void}</span>
+                
+            
+            <div class="container-source members">
+                <code><a href="blcomponentApi.js.html">blcomponentApi.js</a></code>,
+                <code><a href="blcomponentApi.js.html#line670">line 670</a></code>
+            </div>
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>删除构件</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>compId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>构件id</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>bTempComp</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>是否是临时构件</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">void</span>
+
+
+
+
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id=".enablePointCheckMode">
+            
+                <span class="type-signature"><span class="icon green">static</span> </span>enablePointCheckMode<span class="signature">(bEnable)</span><span class="type-signature"> &rarr; {void}</span>
+                
+            
+            <div class="container-source members">
+                <code><a href="blcomponentApi.js.html">blcomponentApi.js</a></code>,
+                <code><a href="blcomponentApi.js.html#line256">line 256</a></code>
+            </div>
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>开启点选模式</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>bEnable</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">void</span>
+
+
+
+
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id=".getBillboardByCompId">
+            
+                <span class="type-signature"><span class="icon green">static</span> </span>getBillboardByCompId<span class="signature">(compId, funcRet)</span><span class="type-signature"> &rarr; {void}</span>
+                
+            
+            <div class="container-source members">
+                <code><a href="blcomponentApi.js.html">blcomponentApi.js</a></code>,
+                <code><a href="blcomponentApi.js.html#line651">line 651</a></code>
+            </div>
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>根据关联构件获取billboard列表</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>compId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>关联了billboard的构件id</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>funcRet</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">getBillBoardByCompIdCallback</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">void</span>
+
+
+
+
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id=".getBillboardByType">
+            
+                <span class="type-signature"><span class="icon green">static</span> </span>getBillboardByType<span class="signature">(sType, funcRet)</span><span class="type-signature"> &rarr; {void}</span>
+                
+            
+            <div class="container-source members">
+                <code><a href="blcomponentApi.js.html">blcomponentApi.js</a></code>,
+                <code><a href="blcomponentApi.js.html#line376">line 376</a></code>
+            </div>
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>根据类型获取billboard列表</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>sType</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>billboard类型</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>funcRet</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">getBillboardByTypeCallback</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">void</span>
+
+
+
+
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id=".getCompBimInfo">
+            
+                <span class="type-signature"><span class="icon green">static</span> </span>getCompBimInfo<span class="signature">(compId, funcRet)</span><span class="type-signature"> &rarr; {void}</span>
+                
+            
+            <div class="container-source members">
+                <code><a href="blcomponentApi.js.html">blcomponentApi.js</a></code>,
+                <code><a href="blcomponentApi.js.html#line426">line 426</a></code>
+            </div>
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>获取构件bim信息</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>compId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>构件ID</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>funcRet</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">getCompBimInfoCallback</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">void</span>
+
+
+
+
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id=".getCompBimInfoBatch">
+            
+                <span class="type-signature"><span class="icon green">static</span> </span>getCompBimInfoBatch<span class="signature">(compIds, funcRet)</span><span class="type-signature"> &rarr; {void}</span>
+                
+            
+            <div class="container-source members">
+                <code><a href="blcomponentApi.js.html">blcomponentApi.js</a></code>,
+                <code><a href="blcomponentApi.js.html#line468">line 468</a></code>
+            </div>
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>批量获取构件bim信息</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>compIds</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;string></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>构件ID</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>funcRet</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">getCompBimInfoBatchCallback</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">void</span>
+
+
+
+
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id=".getComponentAttr">
+            
+                <span class="type-signature"><span class="icon green">static</span> </span>getComponentAttr<span class="signature">(componentId, attrKey, funcRet)</span><span class="type-signature"> &rarr; {void}</span>
+                
+            
+            <div class="container-source members">
+                <code><a href="blcomponentApi.js.html">blcomponentApi.js</a></code>,
+                <code><a href="blcomponentApi.js.html#line138">line 138</a></code>
+            </div>
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>获取构件属性</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>componentId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>构件ID</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>attrKey</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>属性键</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>funcRet</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">getComponentAttrCallback</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">void</span>
+
+
+
+
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id=".getComponentBoundingBox">
+            
+                <span class="type-signature"><span class="icon green">static</span> </span>getComponentBoundingBox<span class="signature">(compId, funcRet)</span><span class="type-signature"> &rarr; {void}</span>
+                
+            
+            <div class="container-source members">
+                <code><a href="blcomponentApi.js.html">blcomponentApi.js</a></code>,
+                <code><a href="blcomponentApi.js.html#line584">line 584</a></code>
+            </div>
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>获取构件包围盒(AABB)</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>compId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>构件ID</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>funcRet</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">getComponentBoundingBoxCallback</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">void</span>
+
+
+
+
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id=".getComponentInfo">
+            
+                <span class="type-signature"><span class="icon green">static</span> </span>getComponentInfo<span class="signature">(componentId, funcRet)</span><span class="type-signature"> &rarr; {void}</span>
+                
+            
+            <div class="container-source members">
+                <code><a href="blcomponentApi.js.html">blcomponentApi.js</a></code>,
+                <code><a href="blcomponentApi.js.html#line73">line 73</a></code>
+            </div>
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>获取构件信息</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>componentId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>构件Id</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>funcRet</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">getComponentInfoCallback</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">void</span>
+
+
+
+
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id=".getComponentInfosByProjId">
+            
+                <span class="type-signature"><span class="icon green">static</span> </span>getComponentInfosByProjId<span class="signature">(projId, funcRet)</span><span class="type-signature"> &rarr; {void}</span>
+                
+            
+            <div class="container-source members">
+                <code><a href="blcomponentApi.js.html">blcomponentApi.js</a></code>,
+                <code><a href="blcomponentApi.js.html#line99">line 99</a></code>
+            </div>
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>根据工程Id获取构件信息</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>projId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>工程Id</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>funcRet</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">getComponentInfosByProjIdCallback</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">void</span>
+
+
+
+
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id=".getComponentPosition">
+            
+                <span class="type-signature"><span class="icon green">static</span> </span>getComponentPosition<span class="signature">(componentId, funcRet)</span><span class="type-signature"> &rarr; {void}</span>
+                
+            
+            <div class="container-source members">
+                <code><a href="blcomponentApi.js.html">blcomponentApi.js</a></code>,
+                <code><a href="blcomponentApi.js.html#line236">line 236</a></code>
+            </div>
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>获取构件坐标</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>componentId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>构件Id</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>funcRet</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">getComponentPositionCallback</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">void</span>
+
+
+
+
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id=".getCompTempDesInfo">
+            
+                <span class="type-signature"><span class="icon green">static</span> </span>getCompTempDesInfo<span class="signature">(compId, funcRet)</span><span class="type-signature"> &rarr; {void}</span>
+                
+            
+            <div class="container-source members">
+                <code><a href="blcomponentApi.js.html">blcomponentApi.js</a></code>,
+                <code><a href="blcomponentApi.js.html#line395">line 395</a></code>
+            </div>
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>获取构件描述</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>compId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>构件ID</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>funcRet</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">getCompTempDesInfoCallback</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">void</span>
+
+
+
+
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id=".getCompTransf">
+            
+                <span class="type-signature"><span class="icon green">static</span> </span>getCompTransf<span class="signature">(compId, funcRet)</span><span class="type-signature"> &rarr; {void}</span>
+                
+            
+            <div class="container-source members">
+                <code><a href="blcomponentApi.js.html">blcomponentApi.js</a></code>,
+                <code><a href="blcomponentApi.js.html#line541">line 541</a></code>
+            </div>
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>获取构件的变换矩阵</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>compId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>构件ID</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>funcRet</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">getCompTransfCallback</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">void</span>
+
+
+
+
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id=".getProjComponentInfosByType">
+            
+                <span class="type-signature"><span class="icon green">static</span> </span>getProjComponentInfosByType<span class="signature">(projId, type, funcRet)</span><span class="type-signature"> &rarr; {void}</span>
+                
+            
+            <div class="container-source members">
+                <code><a href="blcomponentApi.js.html">blcomponentApi.js</a></code>,
+                <code><a href="blcomponentApi.js.html#line610">line 610</a></code>
+            </div>
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>根据类型获取构件</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>projId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>工程id</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>type</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>构件类型</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>funcRet</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">getProjComponentInfosByTypeCallback</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">void</span>
+
+
+
+
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id=".getRelComponentInBillboard">
+            
+                <span class="type-signature"><span class="icon green">static</span> </span>getRelComponentInBillboard<span class="signature">(billboardId, funcRet)</span><span class="type-signature"> &rarr; {void}</span>
+                
+            
+            <div class="container-source members">
+                <code><a href="blcomponentApi.js.html">blcomponentApi.js</a></code>,
+                <code><a href="blcomponentApi.js.html#line287">line 287</a></code>
+            </div>
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>获取关联的构件</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>billboardId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>billboardId</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>funcRet</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">getRelComponentInBillboardCallback</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">void</span>
+
+
+
+
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id=".getSortedProjComponentInfosByType">
+            
+                <span class="type-signature"><span class="icon green">static</span> </span>getSortedProjComponentInfosByType<span class="signature">(projId, type, bAsc, funcRet)</span><span class="type-signature"> &rarr; {void}</span>
+                
+            
+            <div class="container-source members">
+                <code><a href="blcomponentApi.js.html">blcomponentApi.js</a></code>,
+                <code><a href="blcomponentApi.js.html#line625">line 625</a></code>
+            </div>
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>根据排序后的类型获取构件</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>projId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>工程id</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>type</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>构件类型</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>bAsc</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>= 是否升序排列</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>funcRet</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">getProjComponentInfosByTypeCallback</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">void</span>
+
+
+
+
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id=".highlightComp">
+            
+                <span class="type-signature"><span class="icon green">static</span> </span>highlightComp<span class="signature">(compIds)</span><span class="type-signature"> &rarr; {void}</span>
+                
+            
+            <div class="container-source members">
+                <code><a href="blcomponentApi.js.html">blcomponentApi.js</a></code>,
+                <code><a href="blcomponentApi.js.html#line520">line 520</a></code>
+            </div>
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>构件高亮</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>compIds</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;string></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>构件ID</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">void</span>
+
+
+
+
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id=".removeBillboard">
+            
+                <span class="type-signature"><span class="icon green">static</span> </span>removeBillboard<span class="signature">(billboardIds)</span><span class="type-signature"> &rarr; {void}</span>
+                
+            
+            <div class="container-source members">
+                <code><a href="blcomponentApi.js.html">blcomponentApi.js</a></code>,
+                <code><a href="blcomponentApi.js.html#line305">line 305</a></code>
+            </div>
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>移除billboard</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>billboardIds</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;string></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>billboardId列表</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">void</span>
+
+
+
+
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id=".removeBillboardByType">
+            
+                <span class="type-signature"><span class="icon green">static</span> </span>removeBillboardByType<span class="signature">(sType)</span><span class="type-signature"> &rarr; {void}</span>
+                
+            
+            <div class="container-source members">
+                <code><a href="blcomponentApi.js.html">blcomponentApi.js</a></code>,
+                <code><a href="blcomponentApi.js.html#line315">line 315</a></code>
+            </div>
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>根据类型移除billboard</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>sType</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>billboard类型</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">void</span>
+
+
+
+
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id=".removeComponent">
+            
+                <span class="type-signature"><span class="icon green">static</span> </span>removeComponent<span class="signature">(projId, componentId, funcRet)</span><span class="type-signature"> &rarr; {void}</span>
+                
+            
+            <div class="container-source members">
+                <code><a href="blcomponentApi.js.html">blcomponentApi.js</a></code>,
+                <code><a href="blcomponentApi.js.html#line158">line 158</a></code>
+            </div>
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>删除构件</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>projId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>工程Id</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>componentId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>构件Id</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>funcRet</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">removeComponentCallback</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">void</span>
+
+
+
+
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id=".researchComp">
+            
+                <span class="type-signature"><span class="icon green">static</span> </span>researchComp<span class="signature">(compIds, dbScale)</span><span class="type-signature"> &rarr; {void}</span>
+                
+            
+            <div class="container-source members">
+                <code><a href="blcomponentApi.js.html">blcomponentApi.js</a></code>,
+                <code><a href="blcomponentApi.js.html#line510">line 510</a></code>
+            </div>
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>反查构件</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>compIds</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;string></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>构件ID</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>dbScale</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>镜头缩放系数, 默认取值2.0</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">void</span>
+
+
+
+
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id=".setBillboardImgByLocal">
+            
+                <span class="type-signature"><span class="icon green">static</span> </span>setBillboardImgByLocal<span class="signature">(billboardId, sPath, scalingPicTimes, scalingPoint, scalingLine)</span><span class="type-signature"> &rarr; {void}</span>
+                
+            
+            <div class="container-source members">
+                <code><a href="blcomponentApi.js.html">blcomponentApi.js</a></code>,
+                <code><a href="blcomponentApi.js.html#line365">line 365</a></code>
+            </div>
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>根据路径设置billboard展示内容</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>billboardId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>billboardId</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>sPath</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>图片路径(应用程序根目录的相对路径)</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>scalingPicTimes</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>图片缩放比例</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>scalingPoint</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">double</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>标注点缩放比例</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>scalingLine</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">double</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>连线缩放比例</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">void</span>
+
+
+
+
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id=".setBillboardImgByUrl">
+            
+                <span class="type-signature"><span class="icon green">static</span> </span>setBillboardImgByUrl<span class="signature">(billboardId-, sUrl, scalingPicTimes, scalingPoint, scalingLine)</span><span class="type-signature"> &rarr; {void}</span>
+                
+            
+            <div class="container-source members">
+                <code><a href="blcomponentApi.js.html">blcomponentApi.js</a></code>,
+                <code><a href="blcomponentApi.js.html#line351">line 351</a></code>
+            </div>
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>根据url设置billboard展示内容</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>billboardId-</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>billboardId</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>sUrl</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>图片路径(网络url)</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>scalingPicTimes</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>图片缩放比例</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>scalingPoint</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">double</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>标注点缩放比例</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>scalingLine</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">double</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>连线缩放比例</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">void</span>
+
+
+
+
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id=".setBillboardVisible">
+            
+                <span class="type-signature"><span class="icon green">static</span> </span>setBillboardVisible<span class="signature">(billboardIds, bShow)</span><span class="type-signature"> &rarr; {void}</span>
+                
+            
+            <div class="container-source members">
+                <code><a href="blcomponentApi.js.html">blcomponentApi.js</a></code>,
+                <code><a href="blcomponentApi.js.html#line326">line 326</a></code>
+            </div>
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>显示/隐藏billboard</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>billboardIds</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;string></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>billboardId列表</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>bShow</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>是否显示</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">void</span>
+
+
+
+
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id=".setBillboardVisibleByType">
+            
+                <span class="type-signature"><span class="icon green">static</span> </span>setBillboardVisibleByType<span class="signature">(sType, bShow)</span><span class="type-signature"> &rarr; {void}</span>
+                
+            
+            <div class="container-source members">
+                <code><a href="blcomponentApi.js.html">blcomponentApi.js</a></code>,
+                <code><a href="blcomponentApi.js.html#line337">line 337</a></code>
+            </div>
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>根据类型显示/隐藏billboard</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>sType</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>billboard类型</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>bShow</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>是否显示</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">void</span>
+
+
+
+
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id=".setComponentAttr">
+            
+                <span class="type-signature"><span class="icon green">static</span> </span>setComponentAttr<span class="signature">(componentId, attrKey, attrVal)</span><span class="type-signature"> &rarr; {void}</span>
+                
+            
+            <div class="container-source members">
+                <code><a href="blcomponentApi.js.html">blcomponentApi.js</a></code>,
+                <code><a href="blcomponentApi.js.html#line126">line 126</a></code>
+            </div>
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>设置构件属性</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>componentId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>构件ID</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>attrKey</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>属性键</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>attrVal</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>属性值</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">void</span>
+
+
+
+
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id=".setComponentColor">
+            
+                <span class="type-signature"><span class="icon green">static</span> </span>setComponentColor<span class="signature">(componentIds, color, funcRet)</span><span class="type-signature"> &rarr; {void}</span>
+                
+            
+            <div class="container-source members">
+                <code><a href="blcomponentApi.js.html">blcomponentApi.js</a></code>,
+                <code><a href="blcomponentApi.js.html#line178">line 178</a></code>
+            </div>
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>批量设置构件颜色</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>componentIds</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;string></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>构件Id列表</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>color</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>颜色十六进制字符串，如&quot;#ff0000&quot;</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>funcRet</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">setComponentColorCallback</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">void</span>
+
+
+
+
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id=".setComponentVisible">
+            
+                <span class="type-signature"><span class="icon green">static</span> </span>setComponentVisible<span class="signature">(componentIds, bShow, funcRet)</span><span class="type-signature"> &rarr; {void}</span>
+                
+            
+            <div class="container-source members">
+                <code><a href="blcomponentApi.js.html">blcomponentApi.js</a></code>,
+                <code><a href="blcomponentApi.js.html#line217">line 217</a></code>
+            </div>
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>批量设置构件是否可见</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>componentIds</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;string></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>构件Id列表</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>bShow</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>是否显示</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>funcRet</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">setComponentVisibleCallback</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">void</span>
+
+
+
+
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id=".setCompTransf">
+            
+                <span class="type-signature"><span class="icon green">static</span> </span>setCompTransf<span class="signature">(compId, transf)</span><span class="type-signature"> &rarr; {void}</span>
+                
+            
+            <div class="container-source members">
+                <code><a href="blcomponentApi.js.html">blcomponentApi.js</a></code>,
+                <code><a href="blcomponentApi.js.html#line573">line 573</a></code>
+            </div>
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>设置构件的变换矩阵</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>compId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>构件ID</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>transf</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">JSON</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>变换矩阵<br>转换CAD矩阵 4*4，含平移，旋转，镜像，缩放<br>x1    x2    x3    t1<br>y1    y2    y3    t2<br>z1    z2    z3    t3<br>0    0    0    1<br>格式如下：<br>{<br> line1:{col1:double, col2:double, col3:double, col4:double},<br> line2:{col1:double, col2:double, col3:double, col4:double},<br> line3:{col1:double, col2:double, col3:double, col4:double},<br> line4:{col1:double, col2:double, col3:double, col4:double},<br>}</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">void</span>
+
+
+
+
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            </dl>
+    
+
+    
+        <h3 class="subsection-title">Type Definitions</h3>
+
+        <dl>
+                
+
+<dt>
+    
+        <h4 class="name" id="~clearComponentForceColorCallback">
+            
+                <span class="type-signature"></span>clearComponentForceColorCallback<span class="signature">(returnValue)</span><span class="type-signature"></span>
+                
+            
+            <div class="container-source members">
+                <code><a href="blcomponentApi.js.html">blcomponentApi.js</a></code>,
+                <code><a href="blcomponentApi.js.html#line202">line 202</a></code>
+            </div>
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>clearComponentForceColor</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>returnValue</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>操作结果</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id="~createBillboardCallback">
+            
+                <span class="type-signature"></span>createBillboardCallback<span class="signature">(returnValue)</span><span class="type-signature"></span>
+                
+            
+            <div class="container-source members">
+                <code><a href="blcomponentApi.js.html">blcomponentApi.js</a></code>,
+                <code><a href="blcomponentApi.js.html#line273">line 273</a></code>
+            </div>
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>createBillboard回调函数</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>returnValue</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>billboardId</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id="~getBillboardByCompIdCallback">
+            
+                <span class="type-signature"></span>getBillboardByCompIdCallback<span class="signature">(returnValue)</span><span class="type-signature"></span>
+                
+            
+            <div class="container-source members">
+                <code><a href="blcomponentApi.js.html">blcomponentApi.js</a></code>,
+                <code><a href="blcomponentApi.js.html#line656">line 656</a></code>
+            </div>
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>getBillboardByCompId回调函数</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>returnValue</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;string></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>billboardId列表</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id="~getBillboardByTypeCallback">
+            
+                <span class="type-signature"></span>getBillboardByTypeCallback<span class="signature">(returnValue)</span><span class="type-signature"></span>
+                
+            
+            <div class="container-source members">
+                <code><a href="blcomponentApi.js.html">blcomponentApi.js</a></code>,
+                <code><a href="blcomponentApi.js.html#line381">line 381</a></code>
+            </div>
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>getBillboardByType回调函数</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>returnValue</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;string></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>billboardId列表</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id="~getCompBimInfoBatchCallback">
+            
+                <span class="type-signature"></span>getCompBimInfoBatchCallback<span class="signature">(returnValue)</span><span class="type-signature"></span>
+                
+            
+            <div class="container-source members">
+                <code><a href="blcomponentApi.js.html">blcomponentApi.js</a></code>,
+                <code><a href="blcomponentApi.js.html#line473">line 473</a></code>
+            </div>
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>getCompBimInfoBatch回调函数</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>returnValue</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">JSON</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>构件的bim信息<br>格式如下:<br>[{<br>     guid:string, //构件Guid<br>     cimProjGuid:string//cim工程id<br>     bimGuid:string, //构件的bim句柄<br>     mainCompGuid:string, //主构件bim句柄<br>     projGuid: string, //构件所属工程Guid<br>     bimPPid:string, //构件所属工程的bim工程代理id<br>     zhuanye:string, //构件专业<br>     floor:string, //构件所在的bim楼层<br>     cimFloor:string, //cim对应楼层<br>     dalei:string, //构件大类<br>     xiaolei:string, //构件小类<br>     name:string //构件名称<br>     props:[<br>         {<br>             name:string, //属性名称<br>             value:string, //属性值<br>             unit:string, //属性单位<br>             group:string, //属性分组<br>         }<br>     ]<br> }]</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id="~getCompBimInfoCallback">
+            
+                <span class="type-signature"></span>getCompBimInfoCallback<span class="signature">(returnValue)</span><span class="type-signature"></span>
+                
+            
+            <div class="container-source members">
+                <code><a href="blcomponentApi.js.html">blcomponentApi.js</a></code>,
+                <code><a href="blcomponentApi.js.html#line431">line 431</a></code>
+            </div>
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>getCompBimInfo回调函数</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>returnValue</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">JSON</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>构件的bim信息<br>格式如下:<br>{<br>     guid:string, //构件Guid<br>     cimProjGuid:string//cim工程id<br>     bimGuid:string, //构件的bim句柄<br>     mainCompGuid:string, //主构件bim句柄<br>     projGuid: string, //构件所属工程Guid<br>     bimPPid:string, //构件所属工程的bim工程代理id<br>     zhuanye:string, //构件专业<br>     floor:string, //构件所在的bim楼层<br>     cimFloor:string, //cim对应楼层<br>     dalei:string, //构件大类<br>     xiaolei:string, //构件小类<br>     name:string //构件名称<br>     props:[<br>         {<br>             name:string, //属性名称<br>             value:string, //属性值<br>             unit:string, //属性单位<br>             group:string, //属性分组<br>         }<br>     ]<br> }</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id="~getComponentAttrCallback">
+            
+                <span class="type-signature"></span>getComponentAttrCallback<span class="signature">(returnValue)</span><span class="type-signature"></span>
+                
+            
+            <div class="container-source members">
+                <code><a href="blcomponentApi.js.html">blcomponentApi.js</a></code>,
+                <code><a href="blcomponentApi.js.html#line143">line 143</a></code>
+            </div>
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>getComponentAttr回调函数</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>returnValue</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>构件属性</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id="~getComponentBoundingBoxCallback">
+            
+                <span class="type-signature"></span>getComponentBoundingBoxCallback<span class="signature">(returnValue)</span><span class="type-signature"></span>
+                
+            
+            <div class="container-source members">
+                <code><a href="blcomponentApi.js.html">blcomponentApi.js</a></code>,
+                <code><a href="blcomponentApi.js.html#line589">line 589</a></code>
+            </div>
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>getComponentBoundingBox回调函数</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>returnValue</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">JSON</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>包围盒的点描述<br>格式如下:<br>{<br> lowPt:{x:double, y:double, z:double} //左下角<br> highPt:{x:double, y:double, z:double} //右上角<br> midPt:{x:double, y:double, z:double} //中心点<br>}</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id="~getComponentInfoCallback">
+            
+                <span class="type-signature"></span>getComponentInfoCallback<span class="signature">(returnValue)</span><span class="type-signature"></span>
+                
+            
+            <div class="container-source members">
+                <code><a href="blcomponentApi.js.html">blcomponentApi.js</a></code>,
+                <code><a href="blcomponentApi.js.html#line78">line 78</a></code>
+            </div>
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>getComponentInfo回调函数</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>returnValue</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">JSON</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>构件信息的json对象<br>格式如下:<br>{<br>   componentId:string,<br>   componentType:string,<br>   componentName:string,<br>   pos:{x:double, y: double, z:double}<br> }</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id="~getComponentInfosByProjIdCallback">
+            
+                <span class="type-signature"></span>getComponentInfosByProjIdCallback<span class="signature">(returnValue)</span><span class="type-signature"></span>
+                
+            
+            <div class="container-source members">
+                <code><a href="blcomponentApi.js.html">blcomponentApi.js</a></code>,
+                <code><a href="blcomponentApi.js.html#line630">line 630</a></code>
+            </div>
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>getProjComponentInfosByType回调函数</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>returnValue</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">JSON</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>构件信息的json数组<br>格式如下:<br>[{<br>   componentId:string,<br>   componentType:string,<br>   componentName:string,<br>   pos:{x:double, y: double, z:double}<br> }]</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id="~getComponentInfosByProjIdCallback">
+            
+                <span class="type-signature"></span>getComponentInfosByProjIdCallback<span class="signature">(returnValue)</span><span class="type-signature"></span>
+                
+            
+            <div class="container-source members">
+                <code><a href="blcomponentApi.js.html">blcomponentApi.js</a></code>,
+                <code><a href="blcomponentApi.js.html#line104">line 104</a></code>
+            </div>
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>getComponentInfosByProjId回调函数</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>returnValue</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">JSON</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>构件信息的json数组<br>格式如下:<br>[{<br>   componentId:string,<br>   componentType:string,<br>   componentName:string,<br>   pos:{x:double, y: double, z:double}<br> }]</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id="~getComponentPositionCallback">
+            
+                <span class="type-signature"></span>getComponentPositionCallback<span class="signature">(returnValue)</span><span class="type-signature"></span>
+                
+            
+            <div class="container-source members">
+                <code><a href="blcomponentApi.js.html">blcomponentApi.js</a></code>,
+                <code><a href="blcomponentApi.js.html#line241">line 241</a></code>
+            </div>
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>getComponentPosition回调函数</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>returnValue</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">JSON</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>构件坐标的json对象<br>格式如下:<br>{x:double, y: double, z:double}</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id="~getCompTempDesInfoCallback">
+            
+                <span class="type-signature"></span>getCompTempDesInfoCallback<span class="signature">(returnValue)</span><span class="type-signature"></span>
+                
+            
+            <div class="container-source members">
+                <code><a href="blcomponentApi.js.html">blcomponentApi.js</a></code>,
+                <code><a href="blcomponentApi.js.html#line400">line 400</a></code>
+            </div>
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>getCompTempDesInfo回调函数</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>returnValue</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">JSON</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>构件的bim信息<br>格式如下:<br>{<br> CTVisible:Boolean, //属性面板是否可见<br> CardVisible:Boolean, //卡片面板是否可见<br> props:[<br>     {<br>         CTVisible:Boolean, //属性面板是否可见<br>         CardVisible:Boolean, //卡片面板是否可见<br>         prop:{key:string, value:string} //属性键值对<br>     }<br> ]<br>}</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id="~getCompTransfCallback">
+            
+                <span class="type-signature"></span>getCompTransfCallback<span class="signature">(returnValue)</span><span class="type-signature"></span>
+                
+            
+            <div class="container-source members">
+                <code><a href="blcomponentApi.js.html">blcomponentApi.js</a></code>,
+                <code><a href="blcomponentApi.js.html#line546">line 546</a></code>
+            </div>
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>getCompTransf回调函数</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>returnValue</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">JSON</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>构件的变换矩阵</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li>setCompTransf</li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id="~getRelComponentInBillboardCallback">
+            
+                <span class="type-signature"></span>getRelComponentInBillboardCallback<span class="signature">(returnValue)</span><span class="type-signature"></span>
+                
+            
+            <div class="container-source members">
+                <code><a href="blcomponentApi.js.html">blcomponentApi.js</a></code>,
+                <code><a href="blcomponentApi.js.html#line292">line 292</a></code>
+            </div>
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>getRelComponentInBillboard回调函数</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>returnValue</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>构件Id</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id="~removeComponentCallback">
+            
+                <span class="type-signature"></span>removeComponentCallback<span class="signature">(returnValue)</span><span class="type-signature"></span>
+                
+            
+            <div class="container-source members">
+                <code><a href="blcomponentApi.js.html">blcomponentApi.js</a></code>,
+                <code><a href="blcomponentApi.js.html#line163">line 163</a></code>
+            </div>
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>removeComponent回调函数</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>returnValue</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>操作结果</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id="~setComponentColorCallback">
+            
+                <span class="type-signature"></span>setComponentColorCallback<span class="signature">(returnValue)</span><span class="type-signature"></span>
+                
+            
+            <div class="container-source members">
+                <code><a href="blcomponentApi.js.html">blcomponentApi.js</a></code>,
+                <code><a href="blcomponentApi.js.html#line183">line 183</a></code>
+            </div>
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>setComponentColor回调函数</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>returnValue</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>操作结果</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id="~setComponentVisibleCallback">
+            
+                <span class="type-signature"></span>setComponentVisibleCallback<span class="signature">(returnValue)</span><span class="type-signature"></span>
+                
+            
+            <div class="container-source members">
+                <code><a href="blcomponentApi.js.html">blcomponentApi.js</a></code>,
+                <code><a href="blcomponentApi.js.html#line222">line 222</a></code>
+            </div>
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>setComponentVisible回调函数</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>returnValue</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>操作结果</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            </dl>
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<footer>
+    <img class="logo" src="img/toast-ui.png" style="">
+    <div class="footer-text">班联数城 cim sdk for javascript</div>
+</footer>
+<script>prettyPrint();</script>
+<script src="scripts/jquery.min.js"></script>
+<script src="scripts/tui-doc.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+    <script>
+        var id = 'module:ComponentApi_sub'.replace(/"/g, '_');
+        var selectedApi = document.getElementById(id); // do not use jquery selector
+        var $selectedApi = $(selectedApi);
+
+        $selectedApi.removeClass('hidden');
+        $selectedApi.parent().find('.glyphicon').removeClass('glyphicon-plus').addClass('glyphicon-minus');
+        showLnbApi();
+    </script>
+
+</body>
+</html>

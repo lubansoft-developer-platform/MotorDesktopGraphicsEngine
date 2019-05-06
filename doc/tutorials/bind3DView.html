@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>bind3DView</title>
+    <script src="./jquery.js"></script>
+    <script type='text/javascript' src='blsdk.js'></script>
+</head>
+<body>
+    <p><code>bind3DView</code>作为三维视图绑定接口，需在所有三维操作前调用，以确保后续与三维模型的交互操作<p>
+    <div class="code-html">
+        <div id="leftDiv" class="li1"></div>
+        <label class="lab1" id='lab1'></label>
+        <div id="centerDiv" class="li2"></div>
+        <label class="lab2"></label>
+        <div id="rightDiv" class="li3"></div>
+    </div>
+    <script class="code-js">
+        window.onload = function(){   
+            // 绑定3D视图，允许界面操作三维模型
+            // 主界面加载阶段执行
+            bind3DView(document.getElementById('centerDiv'));
+        }
+    </script>
+</body>
+</html>

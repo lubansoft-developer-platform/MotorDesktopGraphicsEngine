@@ -1,0 +1,516 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Source: qwebchannel.js | CIM Client SDK for JAVAScript</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-jsdoc.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/tui-doc.css">
+
+    
+</head>
+<body>
+<nav class="lnb" id="lnb">
+    <div class="logo" style="">
+        
+            <img src="img/toast-ui.png" width="100%" height="100%">
+        
+    </div>
+    <div class="title">
+        <h1><a href="index.html" class="link">CIM Client SDK for JAVAScript</a></h1>
+        
+            <span class="version">v1.0 beta 公测版</span>
+        
+    </div>
+    <div class="search-container" id="search-container">
+        <input type="text" placeholder="Search">
+        <ul></ul>
+    </div>
+    
+        <ol class="lnb-tab">
+            <li id="api-tab">
+                <a href="#"><h4>API</h4></a>
+            </li>
+            <li id="examples-tab">
+                <a href="#"><h4>Help</h4></a>
+            </li>
+        </ol>
+    
+    <div class="lnb-examples hidden"><h3>Help</h3><ul><li><a href="tutorial-1_build.html">环境搭建</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="1_build_sub"></div></li><li><a href="tutorial-2_guide.html">操作指南</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="2_guide_sub"></div></li><li><a href="tutorial-3_debug.html">调试</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="3_debug_sub"></div></li></ul></div><div class="lnb-api hidden"><h3>Modules</h3><ul><li><a href="module-CallBack.html">CallBack</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="module:CallBack_sub"><div class="member-type">Methods</div><ul class="inner"><li><a href="module-CallBack.html#.removeCreateComponentCompleteCallBack">removeCreateComponentCompleteCallBack</a></li><li><a href="module-CallBack.html#.removeSelectBillBoardCallBack">removeSelectBillBoardCallBack</a></li><li><a href="module-CallBack.html#.removeSelectComponentCallBack">removeSelectComponentCallBack</a></li><li><a href="module-CallBack.html#.setCreateComponentCompleteCallBack">setCreateComponentCompleteCallBack</a></li><li><a href="module-CallBack.html#.setSelectBillBoardCallBack">setSelectBillBoardCallBack</a></li><li><a href="module-CallBack.html#.setSelectComponentCallBack">setSelectComponentCallBack</a></li></ul><div class="member-type">Typedef</div><ul class="inner"><li><a href="module-CallBack.html#~onCreateComponentCompleteCallBack">onCreateComponentCompleteCallBack</a></li><li><a href="module-CallBack.html#~onSelectBillBoardCallBack">onSelectBillBoardCallBack</a></li><li><a href="module-CallBack.html#~onSelectComponentCallBack">onSelectComponentCallBack</a></li></ul></div></li><li><a href="module-ComponentApi.html">ComponentApi</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="module:ComponentApi_sub"><div class="member-type">Members</div><ul class="inner"><li><a href="module-ComponentApi.html#.ECompAttrKey">ECompAttrKey</a></li><li><a href="module-ComponentApi.html#.ECompType">ECompType</a></li></ul><div class="member-type">Methods</div><ul class="inner"><li><a href="module-ComponentApi.html#.cancelHighlightComp">cancelHighlightComp</a></li><li><a href="module-ComponentApi.html#.clearComponentForceColor">clearComponentForceColor</a></li><li><a href="module-ComponentApi.html#.createBillboard">createBillboard</a></li><li><a href="module-ComponentApi.html#.deleteComp">deleteComp</a></li><li><a href="module-ComponentApi.html#.enablePointCheckMode">enablePointCheckMode</a></li><li><a href="module-ComponentApi.html#.getBillboardByCompId">getBillboardByCompId</a></li><li><a href="module-ComponentApi.html#.getBillboardByType">getBillboardByType</a></li><li><a href="module-ComponentApi.html#.getCompBimInfo">getCompBimInfo</a></li><li><a href="module-ComponentApi.html#.getCompBimInfoBatch">getCompBimInfoBatch</a></li><li><a href="module-ComponentApi.html#.getComponentAttr">getComponentAttr</a></li><li><a href="module-ComponentApi.html#.getComponentBoundingBox">getComponentBoundingBox</a></li><li><a href="module-ComponentApi.html#.getComponentInfo">getComponentInfo</a></li><li><a href="module-ComponentApi.html#.getComponentInfosByProjId">getComponentInfosByProjId</a></li><li><a href="module-ComponentApi.html#.getComponentPosition">getComponentPosition</a></li><li><a href="module-ComponentApi.html#.getCompTempDesInfo">getCompTempDesInfo</a></li><li><a href="module-ComponentApi.html#.getCompTransf">getCompTransf</a></li><li><a href="module-ComponentApi.html#.getProjComponentInfosByType">getProjComponentInfosByType</a></li><li><a href="module-ComponentApi.html#.getRelComponentInBillboard">getRelComponentInBillboard</a></li><li><a href="module-ComponentApi.html#.getSortedProjComponentInfosByType">getSortedProjComponentInfosByType</a></li><li><a href="module-ComponentApi.html#.highlightComp">highlightComp</a></li><li><a href="module-ComponentApi.html#.removeBillboard">removeBillboard</a></li><li><a href="module-ComponentApi.html#.removeBillboardByType">removeBillboardByType</a></li><li><a href="module-ComponentApi.html#.removeComponent">removeComponent</a></li><li><a href="module-ComponentApi.html#.researchComp">researchComp</a></li><li><a href="module-ComponentApi.html#.setBillboardImgByLocal">setBillboardImgByLocal</a></li><li><a href="module-ComponentApi.html#.setBillboardImgByUrl">setBillboardImgByUrl</a></li><li><a href="module-ComponentApi.html#.setBillboardVisible">setBillboardVisible</a></li><li><a href="module-ComponentApi.html#.setBillboardVisibleByType">setBillboardVisibleByType</a></li><li><a href="module-ComponentApi.html#.setComponentAttr">setComponentAttr</a></li><li><a href="module-ComponentApi.html#.setComponentColor">setComponentColor</a></li><li><a href="module-ComponentApi.html#.setComponentVisible">setComponentVisible</a></li><li><a href="module-ComponentApi.html#.setCompTransf">setCompTransf</a></li></ul><div class="member-type">Typedef</div><ul class="inner"><li><a href="module-ComponentApi.html#~clearComponentForceColorCallback">clearComponentForceColorCallback</a></li><li><a href="module-ComponentApi.html#~createBillboardCallback">createBillboardCallback</a></li><li><a href="module-ComponentApi.html#~getBillboardByCompIdCallback">getBillboardByCompIdCallback</a></li><li><a href="module-ComponentApi.html#~getBillboardByTypeCallback">getBillboardByTypeCallback</a></li><li><a href="module-ComponentApi.html#~getCompBimInfoBatchCallback">getCompBimInfoBatchCallback</a></li><li><a href="module-ComponentApi.html#~getCompBimInfoCallback">getCompBimInfoCallback</a></li><li><a href="module-ComponentApi.html#~getComponentAttrCallback">getComponentAttrCallback</a></li><li><a href="module-ComponentApi.html#~getComponentBoundingBoxCallback">getComponentBoundingBoxCallback</a></li><li><a href="module-ComponentApi.html#~getComponentInfoCallback">getComponentInfoCallback</a></li><li><a href="module-ComponentApi.html#~getComponentInfosByProjIdCallback">getComponentInfosByProjIdCallback</a></li><li><a href="module-ComponentApi.html#~getComponentInfosByProjIdCallback">getComponentInfosByProjIdCallback</a></li><li><a href="module-ComponentApi.html#~getComponentPositionCallback">getComponentPositionCallback</a></li><li><a href="module-ComponentApi.html#~getCompTempDesInfoCallback">getCompTempDesInfoCallback</a></li><li><a href="module-ComponentApi.html#~getCompTransfCallback">getCompTransfCallback</a></li><li><a href="module-ComponentApi.html#~getRelComponentInBillboardCallback">getRelComponentInBillboardCallback</a></li><li><a href="module-ComponentApi.html#~removeComponentCallback">removeComponentCallback</a></li><li><a href="module-ComponentApi.html#~setComponentColorCallback">setComponentColorCallback</a></li><li><a href="module-ComponentApi.html#~setComponentVisibleCallback">setComponentVisibleCallback</a></li></ul></div></li><li><a href="module-ProjectApi.html">ProjectApi</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="module:ProjectApi_sub"><div class="member-type">Members</div><ul class="inner"><li><a href="module-ProjectApi.html#.EManipulatorType">EManipulatorType</a></li><li><a href="module-ProjectApi.html#.EProjKey">EProjKey</a></li><li><a href="module-ProjectApi.html#.EProjType">EProjType</a></li><li><a href="module-ProjectApi.html#.ESelectType">ESelectType</a></li></ul><div class="member-type">Methods</div><ul class="inner"><li><a href="module-ProjectApi.html#.closeProject">closeProject</a></li><li><a href="module-ProjectApi.html#.createFBXComponent">createFBXComponent</a></li><li><a href="module-ProjectApi.html#.deplayFBX">deplayFBX</a></li><li><a href="module-ProjectApi.html#.getAllBimCompInfoByProject">getAllBimCompInfoByProject</a></li><li><a href="module-ProjectApi.html#.getAllFBXTml">getAllFBXTml</a></li><li><a href="module-ProjectApi.html#.getAllProjInfoList">getAllProjInfoList</a></li><li><a href="module-ProjectApi.html#.getBimCompInfoByProjectCimFloor">getBimCompInfoByProjectCimFloor</a></li><li><a href="module-ProjectApi.html#.getBimProjectInfo">getBimProjectInfo</a></li><li><a href="module-ProjectApi.html#.getBimProjectPPIDs">getBimProjectPPIDs</a></li><li><a href="module-ProjectApi.html#.getCurProjectInfo">getCurProjectInfo</a></li><li><a href="module-ProjectApi.html#.getProjectAttr">getProjectAttr</a></li><li><a href="module-ProjectApi.html#.getProjectCimFloors">getProjectCimFloors</a></li><li><a href="module-ProjectApi.html#.getProjectPropTempDes">getProjectPropTempDes</a></li><li><a href="module-ProjectApi.html#.getSelType">getSelType</a></li><li><a href="module-ProjectApi.html#.hasBimProject">hasBimProject</a></li><li><a href="module-ProjectApi.html#.importFBXTml">importFBXTml</a></li><li><a href="module-ProjectApi.html#.isChildProject">isChildProject</a></li><li><a href="module-ProjectApi.html#.openProject">openProject</a></li><li><a href="module-ProjectApi.html#.resetProjStatus">resetProjStatus</a></li><li><a href="module-ProjectApi.html#.saveProject">saveProject</a></li><li><a href="module-ProjectApi.html#.setProjectAttr">setProjectAttr</a></li><li><a href="module-ProjectApi.html#.setSelType">setSelType</a></li><li><a href="module-ProjectApi.html#.setValidManipulatorType">setValidManipulatorType</a></li></ul><div class="member-type">Typedef</div><ul class="inner"><li><a href="module-ProjectApi.html#~closeProjectCallback">closeProjectCallback</a></li><li><a href="module-ProjectApi.html#~createFBXComponentCallback">createFBXComponentCallback</a></li><li><a href="module-ProjectApi.html#~getAllBimCompInfoByProjectCallback">getAllBimCompInfoByProjectCallback</a></li><li><a href="module-ProjectApi.html#~getAllFBXTmlCallback">getAllFBXTmlCallback</a></li><li><a href="module-ProjectApi.html#~getAllProjInfoListCallback">getAllProjInfoListCallback</a></li><li><a href="module-ProjectApi.html#~getBimCompInfoByProjectCimFloorCallback">getBimCompInfoByProjectCimFloorCallback</a></li><li><a href="module-ProjectApi.html#~getBimProjectInfoCallback">getBimProjectInfoCallback</a></li><li><a href="module-ProjectApi.html#~getBimProjectPPIDsCallback">getBimProjectPPIDsCallback</a></li><li><a href="module-ProjectApi.html#~getProjectAttrCallback">getProjectAttrCallback</a></li><li><a href="module-ProjectApi.html#~getProjectCimFloorsCallback">getProjectCimFloorsCallback</a></li><li><a href="module-ProjectApi.html#~getProjectInfoCallback">getProjectInfoCallback</a></li><li><a href="module-ProjectApi.html#~getProjectPropTempDesCallBack">getProjectPropTempDesCallBack</a></li><li><a href="module-ProjectApi.html#~getSelTypeCallBack">getSelTypeCallBack</a></li><li><a href="module-ProjectApi.html#~importFBXTmlCallback">importFBXTmlCallback</a></li><li><a href="module-ProjectApi.html#~isBimProjectCallback">isBimProjectCallback</a></li><li><a href="module-ProjectApi.html#~isChildProjectCallback">isChildProjectCallback</a></li><li><a href="module-ProjectApi.html#~openProjectCallback">openProjectCallback</a></li><li><a href="module-ProjectApi.html#~resetProjStatusCallBack">resetProjStatusCallBack</a></li><li><a href="module-ProjectApi.html#~saveProjectCallback">saveProjectCallback</a></li></ul></div></li><li><a href="module-SceneApi.html">SceneApi</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="module:SceneApi_sub"><div class="member-type">Members</div><ul class="inner"><li><a href="module-SceneApi.html#.ERoamMode">ERoamMode</a></li><li><a href="module-SceneApi.html#.ESceneType">ESceneType</a></li></ul><div class="member-type">Methods</div><ul class="inner"><li><a href="module-SceneApi.html#.getSceneArg">getSceneArg</a></li><li><a href="module-SceneApi.html#.initSceneProjData">initSceneProjData</a></li><li><a href="module-SceneApi.html#.loadSceneProjData">loadSceneProjData</a></li><li><a href="module-SceneApi.html#.positionTo">positionTo</a></li><li><a href="module-SceneApi.html#.positionToComponent">positionToComponent</a></li><li><a href="module-SceneApi.html#.positionToProject">positionToProject</a></li><li><a href="module-SceneApi.html#.setPlayerMode">setPlayerMode</a></li><li><a href="module-SceneApi.html#.setSceneArg">setSceneArg</a></li><li><a href="module-SceneApi.html#.unLoadSceneProjData">unLoadSceneProjData</a></li></ul><div class="member-type">Typedef</div><ul class="inner"><li><a href="module-SceneApi.html#~getSceneArgCallback">getSceneArgCallback</a></li><li><a href="module-SceneApi.html#~initSceneProjDataCallback">initSceneProjDataCallback</a></li><li><a href="module-SceneApi.html#~loadSceneProjDataCallback">loadSceneProjDataCallback</a></li></ul></div></li><li><a href="module-SystemApi.html">SystemApi</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="module:SystemApi_sub"><div class="member-type">Members</div><ul class="inner"><li><a href="module-SystemApi.html#.ESystemMode">ESystemMode</a></li></ul><div class="member-type">Methods</div><ul class="inner"><li><a href="module-SystemApi.html#.closeMainWindow">closeMainWindow</a></li><li><a href="module-SystemApi.html#.closeProcessBar">closeProcessBar</a></li><li><a href="module-SystemApi.html#.convertScreenPttoWorldCoord">convertScreenPttoWorldCoord</a></li><li><a href="module-SystemApi.html#.convertWGS84toWorldCoord">convertWGS84toWorldCoord</a></li><li><a href="module-SystemApi.html#.dragMainWindow">dragMainWindow</a></li><li><a href="module-SystemApi.html#.geometry">geometry</a></li><li><a href="module-SystemApi.html#.getFolderPath">getFolderPath</a></li><li><a href="module-SystemApi.html#.getLocalRootPath">getLocalRootPath</a></li><li><a href="module-SystemApi.html#.getOpenFilePath">getOpenFilePath</a></li><li><a href="module-SystemApi.html#.getSaveFilePath">getSaveFilePath</a></li><li><a href="module-SystemApi.html#.getScreenInfos">getScreenInfos</a></li><li><a href="module-SystemApi.html#.isMaxSized">isMaxSized</a></li><li><a href="module-SystemApi.html#.moveMainWindow">moveMainWindow</a></li><li><a href="module-SystemApi.html#.normalGeometry">normalGeometry</a></li><li><a href="module-SystemApi.html#.resizeMainWindow">resizeMainWindow</a></li><li><a href="module-SystemApi.html#.setGeometry">setGeometry</a></li><li><a href="module-SystemApi.html#.setSystemMode">setSystemMode</a></li><li><a href="module-SystemApi.html#.setToken">setToken</a></li><li><a href="module-SystemApi.html#.showMaxSize">showMaxSize</a></li><li><a href="module-SystemApi.html#.showMiniSize">showMiniSize</a></li><li><a href="module-SystemApi.html#.showNomalSize">showNomalSize</a></li><li><a href="module-SystemApi.html#.showProcessBar">showProcessBar</a></li></ul><div class="member-type">Typedef</div><ul class="inner"><li><a href="module-SystemApi.html#~convertScreenPttoWorldCoordCallBack">convertScreenPttoWorldCoordCallBack</a></li><li><a href="module-SystemApi.html#~convertWGS84toWorldCoordCallBack">convertWGS84toWorldCoordCallBack</a></li><li><a href="module-SystemApi.html#~dragMainWindowCallback">dragMainWindowCallback</a></li><li><a href="module-SystemApi.html#~geometryCallback">geometryCallback</a></li><li><a href="module-SystemApi.html#~getFolderPathCallback">getFolderPathCallback</a></li><li><a href="module-SystemApi.html#~getLocalRootPathCallback">getLocalRootPathCallback</a></li><li><a href="module-SystemApi.html#~getOpenFilePathCallback">getOpenFilePathCallback</a></li><li><a href="module-SystemApi.html#~getSaveFilePathCallback">getSaveFilePathCallback</a></li><li><a href="module-SystemApi.html#~getScreenInfosCallBack">getScreenInfosCallBack</a></li><li><a href="module-SystemApi.html#~isMaxSizedCallback">isMaxSizedCallback</a></li></ul></div></li><li><a href="module-ThreeViewApi.html">ThreeViewApi</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="module:ThreeViewApi_sub"><div class="member-type">Methods</div><ul class="inner"><li><a href="module-ThreeViewApi.html#.bind3DView">bind3DView</a></li><li><a href="module-ThreeViewApi.html#.BL3D_focusInEvent">BL3D_focusInEvent</a></li><li><a href="module-ThreeViewApi.html#.BL3D_focusOutEvent">BL3D_focusOutEvent</a></li><li><a href="module-ThreeViewApi.html#.BL3D_keyPressEvent">BL3D_keyPressEvent</a></li><li><a href="module-ThreeViewApi.html#.BL3D_keyReleaseEvent">BL3D_keyReleaseEvent</a></li><li><a href="module-ThreeViewApi.html#.BL3D_mouseDoubleClickEvent">BL3D_mouseDoubleClickEvent</a></li><li><a href="module-ThreeViewApi.html#.BL3D_mouseMoveEvent">BL3D_mouseMoveEvent</a></li><li><a href="module-ThreeViewApi.html#.BL3D_mousePressEvent">BL3D_mousePressEvent</a></li><li><a href="module-ThreeViewApi.html#.BL3D_mouseReleaseEvent">BL3D_mouseReleaseEvent</a></li><li><a href="module-ThreeViewApi.html#.BL3D_resizeEvent">BL3D_resizeEvent</a></li><li><a href="module-ThreeViewApi.html#.BL3D_wheelEvent">BL3D_wheelEvent</a></li><li><a href="module-ThreeViewApi.html#.getCameraDir">getCameraDir</a></li><li><a href="module-ThreeViewApi.html#.getCameraPos">getCameraPos</a></li><li><a href="module-ThreeViewApi.html#.getCameraPro">getCameraPro</a></li><li><a href="module-ThreeViewApi.html#.rotateCameraAboutCurCenterPt">rotateCameraAboutCurCenterPt</a></li><li><a href="module-ThreeViewApi.html#.rotateCameraAboutCurCenterPtEx">rotateCameraAboutCurCenterPtEx</a></li><li><a href="module-ThreeViewApi.html#.rotateEarth">rotateEarth</a></li><li><a href="module-ThreeViewApi.html#.setCameraDir">setCameraDir</a></li><li><a href="module-ThreeViewApi.html#.setCameraPos">setCameraPos</a></li><li><a href="module-ThreeViewApi.html#.setCameraPro">setCameraPro</a></li><li><a href="module-ThreeViewApi.html#.setLightFollowCamera">setLightFollowCamera</a></li></ul><div class="member-type">Typedef</div><ul class="inner"><li><a href="module-ThreeViewApi.html#~getCameraDirCallBack">getCameraDirCallBack</a></li><li><a href="module-ThreeViewApi.html#~getCameraPosCallBack">getCameraPosCallBack</a></li><li><a href="module-ThreeViewApi.html#~getCameraProCallBack">getCameraProCallBack</a></li></ul></div></li></ul></div>
+</nav>
+<div id="resizer"></div>
+
+<div class="main" id="main">
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/****************************************************************************
+**
+** Copyright (C) 2016 The Qt Company Ltd.
+** Copyright (C) 2016 Klarälvdalens Datakonsult AB, a KDAB Group company, info@kdab.com, author Milian Wolff &lt;milian.wolff@kdab.com>
+** Contact: https://www.qt.io/licensing/
+**
+** This file is part of the QtWebChannel module of the Qt Toolkit.
+**
+** $QT_BEGIN_LICENSE:LGPL$
+** Commercial License Usage
+** Licensees holding valid commercial Qt licenses may use this file in
+** accordance with the commercial license agreement provided with the
+** Software or, alternatively, in accordance with the terms contained in
+** a written agreement between you and The Qt Company. For licensing terms
+** and conditions see https://www.qt.io/terms-conditions. For further
+** information use the contact form at https://www.qt.io/contact-us.
+**
+** GNU Lesser General Public License Usage
+** Alternatively, this file may be used under the terms of the GNU Lesser
+** General Public License version 3 as published by the Free Software
+** Foundation and appearing in the file LICENSE.LGPL3 included in the
+** packaging of this file. Please review the following information to
+** ensure the GNU Lesser General Public License version 3 requirements
+** will be met: https://www.gnu.org/licenses/lgpl-3.0.html.
+**
+** GNU General Public License Usage
+** Alternatively, this file may be used under the terms of the GNU
+** General Public License version 2.0 or (at your option) the GNU General
+** Public license version 3 or any later version approved by the KDE Free
+** Qt Foundation. The licenses are as published by the Free Software
+** Foundation and appearing in the file LICENSE.GPL2 and LICENSE.GPL3
+** included in the packaging of this file. Please review the following
+** information to ensure the GNU General Public License requirements will
+** be met: https://www.gnu.org/licenses/gpl-2.0.html and
+** https://www.gnu.org/licenses/gpl-3.0.html.
+**
+** $QT_END_LICENSE$
+**
+****************************************************************************/
+
+"use strict";
+
+var QWebChannelMessageTypes = {
+    signal: 1,
+    propertyUpdate: 2,
+    init: 3,
+    idle: 4,
+    debug: 5,
+    invokeMethod: 6,
+    connectToSignal: 7,
+    disconnectFromSignal: 8,
+    setProperty: 9,
+    response: 10,
+};
+
+var QWebChannel = function(transport, initCallback)
+{
+    if (typeof transport !== "object" || typeof transport.send !== "function") {
+        console.error("The QWebChannel expects a transport object with a send function and onmessage callback property." +
+                      " Given is: transport: " + typeof(transport) + ", transport.send: " + typeof(transport.send));
+        return;
+    }
+
+    var channel = this;
+    this.transport = transport;
+
+    this.send = function(data)
+    {
+        if (typeof(data) !== "string") {
+            data = JSON.stringify(data);
+        }
+        channel.transport.send(data);
+    }
+
+    this.transport.onmessage = function(message)
+    {
+        var data = message.data;
+        if (typeof data === "string") {
+            data = JSON.parse(data);
+        }
+        switch (data.type) {
+            case QWebChannelMessageTypes.signal:
+                channel.handleSignal(data);
+                break;
+            case QWebChannelMessageTypes.response:
+                channel.handleResponse(data);
+                break;
+            case QWebChannelMessageTypes.propertyUpdate:
+                channel.handlePropertyUpdate(data);
+                break;
+            default:
+                console.error("invalid message received:", message.data);
+                break;
+        }
+    }
+
+    this.execCallbacks = {};
+    this.execId = 0;
+    this.exec = function(data, callback)
+    {
+        if (!callback) {
+            // if no callback is given, send directly
+            channel.send(data);
+            return;
+        }
+        if (channel.execId === Number.MAX_VALUE) {
+            // wrap
+            channel.execId = Number.MIN_VALUE;
+        }
+        if (data.hasOwnProperty("id")) {
+            console.error("Cannot exec message with property id: " + JSON.stringify(data));
+            return;
+        }
+        data.id = channel.execId++;
+        channel.execCallbacks[data.id] = callback;
+        channel.send(data);
+    };
+
+    this.objects = {};
+
+    this.handleSignal = function(message)
+    {
+        var object = channel.objects[message.object];
+        if (object) {
+            object.signalEmitted(message.signal, message.args);
+        } else {
+            console.warn("Unhandled signal: " + message.object + "::" + message.signal);
+        }
+    }
+
+    this.handleResponse = function(message)
+    {
+        if (!message.hasOwnProperty("id")) {
+            console.error("Invalid response message received: ", JSON.stringify(message));
+            return;
+        }
+        channel.execCallbacks[message.id](message.data);
+        delete channel.execCallbacks[message.id];
+    }
+
+    this.handlePropertyUpdate = function(message)
+    {
+        for (var i in message.data) {
+            var data = message.data[i];
+            var object = channel.objects[data.object];
+            if (object) {
+                object.propertyUpdate(data.signals, data.properties);
+            } else {
+                console.warn("Unhandled property update: " + data.object + "::" + data.signal);
+            }
+        }
+        channel.exec({type: QWebChannelMessageTypes.idle});
+    }
+
+    this.debug = function(message)
+    {
+        channel.send({type: QWebChannelMessageTypes.debug, data: message});
+    };
+
+    channel.exec({type: QWebChannelMessageTypes.init}, function(data) {
+        for (var objectName in data) {
+            var object = new QObject(objectName, data[objectName], channel);
+        }
+        // now unwrap properties, which might reference other registered objects
+        for (var objectName in channel.objects) {
+            channel.objects[objectName].unwrapProperties();
+        }
+        if (initCallback) {
+            initCallback(channel);
+        }
+        channel.exec({type: QWebChannelMessageTypes.idle});
+    });
+};
+
+function QObject(name, data, webChannel)
+{
+    this.__id__ = name;
+    webChannel.objects[name] = this;
+
+    // List of callbacks that get invoked upon signal emission
+    this.__objectSignals__ = {};
+
+    // Cache of all properties, updated when a notify signal is emitted
+    this.__propertyCache__ = {};
+
+    var object = this;
+
+    // ----------------------------------------------------------------------
+
+    this.unwrapQObject = function(response)
+    {
+        if (response instanceof Array) {
+            // support list of objects
+            var ret = new Array(response.length);
+            for (var i = 0; i &lt; response.length; ++i) {
+                ret[i] = object.unwrapQObject(response[i]);
+            }
+            return ret;
+        }
+        if (!response
+            || !response["__QObject*__"]
+            || response.id === undefined) {
+            return response;
+        }
+
+        var objectId = response.id;
+        if (webChannel.objects[objectId])
+            return webChannel.objects[objectId];
+
+        if (!response.data) {
+            console.error("Cannot unwrap unknown QObject " + objectId + " without data.");
+            return;
+        }
+
+        var qObject = new QObject( objectId, response.data, webChannel );
+        qObject.destroyed.connect(function() {
+            if (webChannel.objects[objectId] === qObject) {
+                delete webChannel.objects[objectId];
+                // reset the now deleted QObject to an empty {} object
+                // just assigning {} though would not have the desired effect, but the
+                // below also ensures all external references will see the empty map
+                // NOTE: this detour is necessary to workaround QTBUG-40021
+                var propertyNames = [];
+                for (var propertyName in qObject) {
+                    propertyNames.push(propertyName);
+                }
+                for (var idx in propertyNames) {
+                    delete qObject[propertyNames[idx]];
+                }
+            }
+        });
+        // here we are already initialized, and thus must directly unwrap the properties
+        qObject.unwrapProperties();
+        return qObject;
+    }
+
+    this.unwrapProperties = function()
+    {
+        for (var propertyIdx in object.__propertyCache__) {
+            object.__propertyCache__[propertyIdx] = object.unwrapQObject(object.__propertyCache__[propertyIdx]);
+        }
+    }
+
+    function addSignal(signalData, isPropertyNotifySignal)
+    {
+        var signalName = signalData[0];
+        var signalIndex = signalData[1];
+        object[signalName] = {
+            connect: function(callback) {
+                if (typeof(callback) !== "function") {
+                    console.error("Bad callback given to connect to signal " + signalName);
+                    return;
+                }
+
+                object.__objectSignals__[signalIndex] = object.__objectSignals__[signalIndex] || [];
+                object.__objectSignals__[signalIndex].push(callback);
+
+                if (!isPropertyNotifySignal &amp;&amp; signalName !== "destroyed") {
+                    // only required for "pure" signals, handled separately for properties in propertyUpdate
+                    // also note that we always get notified about the destroyed signal
+                    webChannel.exec({
+                        type: QWebChannelMessageTypes.connectToSignal,
+                        object: object.__id__,
+                        signal: signalIndex
+                    });
+                }
+            },
+            disconnect: function(callback) {
+                if (typeof(callback) !== "function") {
+                    console.error("Bad callback given to disconnect from signal " + signalName);
+                    return;
+                }
+                object.__objectSignals__[signalIndex] = object.__objectSignals__[signalIndex] || [];
+                var idx = object.__objectSignals__[signalIndex].indexOf(callback);
+                if (idx === -1) {
+                    console.error("Cannot find connection of signal " + signalName + " to " + callback.name);
+                    return;
+                }
+                object.__objectSignals__[signalIndex].splice(idx, 1);
+                if (!isPropertyNotifySignal &amp;&amp; object.__objectSignals__[signalIndex].length === 0) {
+                    // only required for "pure" signals, handled separately for properties in propertyUpdate
+                    webChannel.exec({
+                        type: QWebChannelMessageTypes.disconnectFromSignal,
+                        object: object.__id__,
+                        signal: signalIndex
+                    });
+                }
+            }
+        };
+    }
+
+    /**
+     * Invokes all callbacks for the given signalname. Also works for property notify callbacks.
+     */
+    function invokeSignalCallbacks(signalName, signalArgs)
+    {
+        var connections = object.__objectSignals__[signalName];
+        if (connections) {
+            connections.forEach(function(callback) {
+                callback.apply(callback, signalArgs);
+            });
+        }
+    }
+
+    this.propertyUpdate = function(signals, propertyMap)
+    {
+        // update property cache
+        for (var propertyIndex in propertyMap) {
+            var propertyValue = propertyMap[propertyIndex];
+            object.__propertyCache__[propertyIndex] = propertyValue;
+        }
+
+        for (var signalName in signals) {
+            // Invoke all callbacks, as signalEmitted() does not. This ensures the
+            // property cache is updated before the callbacks are invoked.
+            invokeSignalCallbacks(signalName, signals[signalName]);
+        }
+    }
+
+    this.signalEmitted = function(signalName, signalArgs)
+    {
+        invokeSignalCallbacks(signalName, this.unwrapQObject(signalArgs));
+    }
+
+    function addMethod(methodData)
+    {
+        var methodName = methodData[0];
+        var methodIdx = methodData[1];
+        object[methodName] = function() {
+            var args = [];
+            var callback;
+            for (var i = 0; i &lt; arguments.length; ++i) {
+                var argument = arguments[i];
+                if (typeof argument === "function")
+                    callback = argument;
+                else if (argument instanceof QObject &amp;&amp; webChannel.objects[argument.__id__] !== undefined)
+                    args.push({
+                        "id": argument.__id__
+                    });
+                else
+                    args.push(argument);
+            }
+
+            webChannel.exec({
+                "type": QWebChannelMessageTypes.invokeMethod,
+                "object": object.__id__,
+                "method": methodIdx,
+                "args": args
+            }, function(response) {
+                if (response !== undefined) {
+                    var result = object.unwrapQObject(response);
+                    if (callback) {
+                        (callback)(result);
+                    }
+                }
+            });
+        };
+    }
+
+    function bindGetterSetter(propertyInfo)
+    {
+        var propertyIndex = propertyInfo[0];
+        var propertyName = propertyInfo[1];
+        var notifySignalData = propertyInfo[2];
+        // initialize property cache with current value
+        // NOTE: if this is an object, it is not directly unwrapped as it might
+        // reference other QObject that we do not know yet
+        object.__propertyCache__[propertyIndex] = propertyInfo[3];
+
+        if (notifySignalData) {
+            if (notifySignalData[0] === 1) {
+                // signal name is optimized away, reconstruct the actual name
+                notifySignalData[0] = propertyName + "Changed";
+            }
+            addSignal(notifySignalData, true);
+        }
+
+        Object.defineProperty(object, propertyName, {
+            configurable: true,
+            get: function () {
+                var propertyValue = object.__propertyCache__[propertyIndex];
+                if (propertyValue === undefined) {
+                    // This shouldn't happen
+                    console.warn("Undefined value in property cache for property \"" + propertyName + "\" in object " + object.__id__);
+                }
+
+                return propertyValue;
+            },
+            set: function(value) {
+                if (value === undefined) {
+                    console.warn("Property setter for " + propertyName + " called with undefined value!");
+                    return;
+                }
+                object.__propertyCache__[propertyIndex] = value;
+                var valueToSend = value;
+                if (valueToSend instanceof QObject &amp;&amp; webChannel.objects[valueToSend.__id__] !== undefined)
+                    valueToSend = { "id": valueToSend.__id__ };
+                webChannel.exec({
+                    "type": QWebChannelMessageTypes.setProperty,
+                    "object": object.__id__,
+                    "property": propertyIndex,
+                    "value": valueToSend
+                });
+            }
+        });
+
+    }
+
+    // ----------------------------------------------------------------------
+
+    data.methods.forEach(addMethod);
+
+    data.properties.forEach(bindGetterSetter);
+
+    data.signals.forEach(function(signal) { addSignal(signal, false); });
+
+    for (var name in data.enums) {
+        object[name] = data.enums[name];
+    }
+}
+
+//required for use with nodejs
+if (typeof module === 'object') {
+    module.exports = {
+        QWebChannel: QWebChannel
+    };
+}
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<footer>
+    <img class="logo" src="img/toast-ui.png" style="">
+    <div class="footer-text">班联数城 cim sdk for javascript</div>
+</footer>
+<script>prettyPrint();</script>
+<script src="scripts/jquery.min.js"></script>
+<script src="scripts/tui-doc.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+    <script>
+        var id = '_sub'.replace(/"/g, '_');
+        var selectedApi = document.getElementById(id); // do not use jquery selector
+        var $selectedApi = $(selectedApi);
+
+        $selectedApi.removeClass('hidden');
+        $selectedApi.parent().find('.glyphicon').removeClass('glyphicon-plus').addClass('glyphicon-minus');
+        showLnbApi();
+    </script>
+
+</body>
+</html>

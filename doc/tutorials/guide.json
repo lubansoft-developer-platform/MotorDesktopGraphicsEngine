@@ -1,0 +1,46 @@
+{
+    "1_build": {
+        "title": "环境搭建"
+    },
+    "2_guide": {
+        "title": "操作指南",
+        "children": {
+            "bind3DView": {
+                "title": "如何绑定三维视图窗口?"
+            },
+            "enterScene": {
+                "title": "如何进入三维场景?"
+            },
+            "getInfo": {
+                "title": "如何进行信息获取?"
+            },
+            "position": {
+                "title": "如何进行三维定位?"
+            },
+            "editModel": {
+                "title": "如何进行模型微调?"
+            },
+            "aboutFBX": {
+                "title": "如何进行FBX模板的导入与部署?"
+            },
+            "saveProject": {
+                "title": "如何保存当前的编辑状态?"
+            },
+            "warroom": {
+                "title": "如何进入作战指挥室?"
+            },
+            "communicate": {
+                "title": "如何和三维图形进行交互?"
+            },
+            "more-real":{
+                "title": "如何让场景看起来更真实？"
+            },
+            "viewport":{
+                "title": "如何进行漫游？"
+            }
+        }
+    },
+    "3_debug": {
+        "title": "调试"
+    }
+}

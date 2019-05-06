@@ -1,0 +1,331 @@
+﻿.projectName {
+    margin-top: 5px;
+    margin-left: 5px;
+    width: 350px;
+    height: 55px;
+    background: url('../res/bg_topleft.png') center no-repeat;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    float: left;
+    position: absolute;
+}
+
+.titleLable {
+    margin: 0px auto;
+    margin-left: 20px;
+    height: 30px;
+    width: auto;
+    color: white;
+    font-size: 16px;
+    font-family: 'Microsoft YaHei';
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.titleImage {
+    margin: 0px auto;
+    margin-right: 10px;
+    width: auto;
+    height: auto;
+}
+
+.text-decoration {
+    background: linear-gradient(to right, #1c1e43, #808080, #1c1e43) no-repeat 1px 60px;
+    background-size: 298px 1px;
+}
+
+.leftTab {
+    height: calc(100% - 70px);
+    width: 50px;
+    background-image: url("../res/bg_lefttab.png");
+    margin-bottom: 5px;
+    margin-top: 65px;
+    margin-left: 5px;
+    float: left;
+    position: absolute;
+}
+
+    .leftTab li {
+        height: 80px;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .leftTab #idProjectMenu {
+        width: 50px;
+        height: 80px;
+        background: url("../res/project.png") center no-repeat;
+    }
+
+        .leftTab #idProjectMenu:hover {
+            width: 50px;
+            height: 80px;
+            background: url("../res/project_hover.png") center no-repeat, url("../res/lefthover.png") no-repeat 100% 100%;
+        }
+
+.menuboard {
+    display: none;
+    height: calc(100% - 70px);
+    width: 300px;
+    margin-top: 65px;
+    margin-left: 55px;
+    background: url("../res/menuboard.png") no-repeat;
+    background-size: 100% 100%;
+    color: white;
+    position: absolute;
+}
+
+    .menuboard h1 h2 h3 h4 {
+        font-family: 'Microsoft YaHei';
+    }
+
+    .menuboard .title {
+        padding-top: 20px;
+        padding-left: 15px;
+        height: 61px;
+    }
+
+div .menuMainitem {
+    width: 287px;
+    height: calc(100% - 96px);
+    float: left;
+    overflow-y: auto;
+}
+
+div .cardBoard {
+    display: none;
+    float: right;
+    margin-top: 10px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    height: calc(100% - 60px);
+    max-height: 750px;
+    width: 430px;
+    background: url("../res/cardboard.png") no-repeat;
+    background-size: 100% 100%;
+    color: white;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+    div .cardBoard .cardPic {
+        margin-right: 15px;
+        margin-left: 15px;
+        margin-bottom: 15px;
+        width: 400px;
+        background: url("../res/projectCard.png") no-repeat center;
+        height: 640px;
+    }
+
+    div .cardBoard .title {
+        padding-top: 30px;
+        padding-left: 15px;
+        height: 61px;
+    }
+
+    div .cardBoard h1 h2 h3 {
+        font-family: 'Microsoft YaHei';
+    }
+
+    div .cardBoard .text-decoration {
+        background: linear-gradient(to right, #1c1e43, #808080, #1c1e43) no-repeat 1px 60px;
+        background-size: 420px 1px;
+    }
+
+    div .cardBoard .enterProj {
+        width: 25px;
+        height: 22px;
+        margin-left: 375px;
+        margin-top: -20px;
+        cursor:pointer;
+    }
+
+div .compBoard {
+    display: none;
+    float: right;
+    margin-top: 10px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    height: auto;
+    max-height: 400px;
+    width: 400px;
+    background: url("../res/cardboard.png") no-repeat;
+    background-size: 100% 100%;
+    color: white;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+    div .compBoard .cardItem {
+        height: auto;
+        max-height: 290px;
+        width: 370px;
+        margin-right: 15px;
+        margin-left: 15px;
+        margin-bottom: 15px;
+        margin-top: -15px;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    div.compBoard .title {
+        padding-top: 30px;
+        padding-left: 15px;
+        height: 61px;
+    }
+
+    div .compBoard h1 h2 h3 {
+        font-family: 'Microsoft YaHei';
+    }
+
+    div .compBoard .text-decoration {
+        background: linear-gradient(to right, #1c1e43, #808080, #1c1e43) no-repeat 1px 60px;
+        background-size: 390px 1px;
+    }
+
+.cardItem table {
+    border-collapse: collapse;
+    border: 0px solid #808080;
+    font-family: 'Microsoft YaHei';
+    color: white;
+    height: auto;
+    font-size: 14px;
+    table-layout: fixed;
+}
+
+    .cardItem table tr {
+        height: 40px;
+    }
+
+    .cardItem table td {
+        border-top: 0;
+        border-right: 1px solid #808080;
+        border-bottom: 1px solid #808080;
+        border-left: 0;
+        height: 40px;
+        white-space:nowrap;
+        overflow:hidden;
+        text-overflow:ellipsis;
+    }
+
+    .cardItem table tr.lastrow td {
+        border-bottom: 0;
+    }
+
+    .cardItem table tr td.lastCol {
+        border-right: 0;
+    }
+
+
+.MenuBar {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    float:right;
+}
+
+.MenuBarStyle {
+    color: white;
+    bottom: 5px;
+    width: 40px;
+    height: 40px;
+    background: url("../res/buttonBar.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+    .MenuBarStyle img {
+        cursor: pointer;
+    }
+
+
+
+#idOperMenu:hover{
+    content:url("../res/menu_hover.png");
+}
+
+#idBackToSelect:hover {
+    content: url("../res/back_hover.png");
+}
+
+#idSelFloor:hover {
+    content: url("../res/switchFloorMode_hover.png");
+}
+
+#idSelComp:hover {
+    content: url("../res/switchCompMode_hover.png");
+}
+
+.bottomMenu {
+    display:none;
+    position: absolute;
+    right: 5px;
+    bottom: 45px;
+    height: auto;
+    max-height: 400px;
+    width:324px;
+    background: url("../res/bottomMenu.png") no-repeat;
+    background-size: 100% 100%;
+    overflow-y:auto;
+}
+
+    .bottomMenu table {
+        font-family: 'Microsoft YaHei';
+        color: white;
+        height: auto;
+        width: auto;
+        font-size: 14px;
+        border: none;
+        margin-left: 30px;
+        margin-top:5px;
+        margin-bottom: 5px;
+    }
+        .bottomMenu table tr {
+            height: 40px;
+        }
+
+        .bottomMenu table td {
+            height: 40px;
+            cursor:pointer;
+        }
+
+            .bottomMenu table td:hover {
+                text-decoration: none;
+                background: url("../res/tree_hover.png") no-repeat;
+                background-size: 100% 100%;
+            }
+
+.sceneMenu {
+    display:none;
+    height: auto;
+    max-height: 400px;
+    width: 324px;
+    top: 5px;
+    left: 5px;
+    background: url("../res/bottomMenu.png") no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    overflow-y: auto;
+}
+
+    .sceneMenu li {
+        height: 40px;
+        width: 294px;
+        margin: 15px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: white;
+        font-family: 'Microsoft YaHei';
+        font-size: 14px;
+        cursor: pointer;
+        line-height:40px;
+    }
+
+    .sceneMenu li:hover {
+        text-decoration: none;
+        background: url("../res/tree_hover.png") no-repeat;
+        background-size: 100% 100%;
+    }

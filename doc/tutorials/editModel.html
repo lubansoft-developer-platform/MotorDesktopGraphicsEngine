@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>模型编辑</title>
+    <script src="./jquery.js"></script>
+    <script type='text/javascript' src='blsdk.js'></script>
+</head>
+
+<body>
+    <h4>操作步骤</h4>
+    <p>1. 调用<code>setValidManipulatorType</code>接口,设置操作模式</p>
+    <p>2. 调用<code>saveProject</code>接口，将调整保存到工程</p>
+    <script class="code-js">
+        //设置操作模式
+        setValidManipulatorType(EManipulatorType.EManipulatorMove); //平移
+        //setValidManipulatorType(EManipulatorType.EManipulatorRotate); //旋转
+        //setValidManipulatorType(EManipulatorType.EManipulatorScale); //缩放
+        //setValidManipulatorType(EManipulatorType.EManipulatorNone); //退出模式
+    </script>
+</body>
+
+</html>

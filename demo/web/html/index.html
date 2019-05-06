@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <script type="text/javascript" src="../3rd/jquery-3.3.1/jquery-3.3.1.min.js"></script>
+    <script type='text/javascript' src='../sdk/qwebchannel.js'></script>
+    <script type='text/javascript' src='../sdk/blcore.js'></script>
+    <script type='text/javascript' src='../sdk/blcallback.js'></script>
+    <script type='text/javascript' src='../sdk/blthreeViewApi.js'></script>
+    <script type='text/javascript' src='../sdk/blsceneApi.js'></script>
+    <script type='text/javascript' src='../sdk/blsystemApi.js'></script>
+    <script type='text/javascript' src='../sdk/blcomponentApi.js'></script>
+    <script type='text/javascript' src='../sdk/blProjectApi.js'></script>
+</head>
+
+<body onselectstart="return false;" style="-moz-user-select:none;">
+    <!-- 标题栏 -->
+    <header class="titlebar" id="idTitle" ondblclick="onMaxBtnClick()">
+        <table>
+            <tr>
+                <td><img src="../res/winmin.png" class="winpic" id="minbtn" onclick="showMiniSize()" /></td>
+                <td><img src="../res/winmax.png" class="winpic" id="maxbtn" onclick="onMaxBtnClick()" /></td>
+                <td><img src="../res/winclose.png" class="winpic" id="closebtn" onclick="closeMainWindow()" /></td>
+            </tr>
+        </table>
+    </header>
+    <!--<iframe id="idFrame" name="mainframe" src="MainScene.html" scrolling="no" frameborder="0"> </iframe>-->
+    <!-- 界面主体 -->
+    <iframe id="idFrame" name="mainframe" src="Login.html " scrolling="no" frameborder="0" allowTransparency='true'> </iframe>
+    <!-- 通用框架脚本 -->
+    <script type='text/javascript' src="../js/threeEventTrans.js"></script>
+    <script language="javascript">
+        $(function () {
+            isMaxSized(function (val) {
+                if (val) setMaxState();
+                else setNormalState();
+            });
+            initHeader(document.getElementById("idTitle"));
+            var frame = document.getElementById("idFrame");
+            frame.onload = function () {
+                init3DView(document.getElementById("idFrame"), true);
+            }
+        });
+        var timmerHandle = null;
+        var isDrag = false;
+        function initHeader(eventObj) {
+            eventObj.onmousedown = function (e) {
+                if (e.button != 0 || e.target.tagName !== "HEADER") return;
+                isDrag = false;
+                timmerHandle = setTimeout(setDragTrue, 50);
+            }
+
+            function setDragTrue() {
+                isDrag = true;
+            }
+
+            eventObj.onmousemove = function (e) {
+                if (!isDrag) return;
+                dragMainWindow(function (val) {
+                    if (val) setMaxState();
+                    else setNormalState();
+                });
+                e.preventDefault();
+            }
+
+            eventObj.onmouseup = function (e) {
+                if (!isDrag) {
+                    clearTimeout(timmerHandle);
+                }
+                else {
+                    isDrag = false;
+                    e.preventDefault();
+                }
+            }
+        };
+
+        function setMaxState() {
+            $("#maxbtn").attr("src", "../res/winmax.png");
+            $("#maxbtn").hover(
+                function () {
+                    $("#maxbtn").attr("src", "../res/winmax_hover.png");
+                },
+                function () {
+                    $("#maxbtn").attr("src", "../res/winmax.png");
+                }
+            );
+        }
+
+        function setNormalState() {
+            $("#maxbtn").attr("src", "../res/winnmax.png");
+            $("#maxbtn").hover(
+                function () {
+                    $("#maxbtn").attr("src", "../res/winnmax_hover.png");
+                },
+                function () {
+                    $("#maxbtn").attr("src", "../res/winnmax.png");
+                }
+            );
+        }
+
+        function onMaxBtnClick() {
+            isMaxSized(function (val) {
+                if (val) {
+                    showNomalSize();
+                    setNormalState();
+                }
+                else {
+                    showMaxSize();
+                    setMaxState();
+                }
+            });
+        }
+    </script>
+</body>
+</html>

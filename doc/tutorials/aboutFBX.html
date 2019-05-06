@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FBX相关操作</title>
+    <script src="./jquery.js"></script>
+    <script type='text/javascript' src='blsdk.js'></script>
+</head>
+
+<body>
+    <h4>操作步骤</h4>
+    <p>1. 调用<code>getOpenFilePath</code>接口选择FBX模板文件路径</p>
+    <p>2. 调用<code>importFBXTml</code>接口，将FBX模板文件导入到系统中</p>
+    <p>3. (可选步骤)调用<code>getAllFBXTml</code>接口，获取所有的FBX模板列表</p>
+    <p>4. 调用<code>deplayFBX</code>接口，选择一个FBX模板，在系统中部署导入的FBX模型</p>
+    <p>5. 调用<code>saveProject</code>接口，将当前状态保存到工程</p>
+    <p>6. (可选步骤)调用<code>removeComponent</code>接口，将已部署的FBX模型从工程中删除，然后重复执行步骤5，保存工程</p>
+    <script class="code-js">
+        //重写构件创建回调函数
+        onCreateComponentCompleteCallBack = function(projGuid, componentId){
+            //保存构件
+            saveProject(projGuid);
+        }
+
+        //导入FBX模板
+        getOpenFilePath(function(fbxpath){
+            importFBXTml(fbxpath, "myfbx", function(fbxId){
+                //部署FBX
+                deplayFBX(fbxId);
+            });
+        });
+
+        //获取所有FBX模板列表
+        getAllFBXTml(function(fbxlist){
+            //部署FBX
+            deplayFBX(fbxlist[0].id);
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+﻿<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../css/detail.css" />
+    <link rel="stylesheet" type="text/css" href="../3rd/zTree_v3/css/zTreeStyle/zTreeStyle.css" />
+    <link rel="stylesheet" type="text/css" href="../css/leftTree.css" />
+    <script type="text/javascript" src="../3rd/jquery-3.3.1/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="../3rd/zTree_v3/js/jquery.ztree.core.js"></script>
+    <script type="text/javascript" src="../js/leftTree.js"></script>
+</head>
+
+<div onselectstart="return false;" style="-moz-user-select:none;">
+    <ul id="idSceneMenu" class="sceneMenu" onselectstart="return false;" style="-moz-user-select:none;">
+    </ul>
+</div>
+
+<!-- 脚本 -->
+<script language="javascript">
+    var sdk = parent;
+    var treeData = [];
+    var curComp = undefined;
+    var bSuccess = false;
+
+    $(function () {
+        $("#idSceneMenu").css({ "display": "block" });
+        sdk.initSceneProjData(function (projList) {
+            if (projList.length == 0) {
+                alert("没有任何工程数据!");
+                window.location.href = "Login.html"
+                return;
+            }
+            for (let i = 0; i < projList.length; i++) {
+                let info = projList[i];
+                let li = "<li title='" + info.projName + "' onclick='openSceneProj(\"" + info.projId.trim() + "\")'>" + info.projName + "</li>";
+                $("#idSceneMenu").append(li);
+            }
+        });
+    });
+
+    function openSceneProj(guid){
+        $("#idSceneMenu").css({ "display": "none" });
+        sdk.loadSceneProjData(guid, function (res) {
+            if (res) {
+                sdk.openProject(guid, "", function (val) {
+                    if (val === true) {
+                        sdk.enablePointCheckMode(true);
+                        sdk.positionToProject(guid);
+                        window.location.href = "MainScene.html";
+                    }
+                    else {
+                        alert("资源获取失败!");
+                        $("#idSceneMenu").css({ "display": "block" });
+                        sdk.enablePointCheckMode(false);
+                    }
+                });
+            }
+            else {
+                alert("资源获取失败!");
+                $("#idSceneMenu").css({ "display": "block" });
+                sdk.enablePointCheckMode(false);
+            }
+        });
+    }
+</script>

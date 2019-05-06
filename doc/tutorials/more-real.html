@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>真实</title>
+    <script src="./jquery.js"></script>
+    <script type='text/javascript' src='blsdk.js'></script>
+</head>
+
+<body>
+    <p>调用<code>setSceneArg(type:ESceneType, val:Number)</code>接口, 可以对天气进行模拟</p>
+    <script class="code-js">
+        //伪代码
+        setSceneArg(ESceneType.ESC_CLOUD, 0.2);//云层密度
+        setSceneArg(ESceneType.ESC_RAIN, 0.2);//雨量
+        setSceneArg(ESceneType.ESC_TIME, 12);//时刻(0-24)
+        setSceneArg(ESceneType.ESC_WIND, 0.2);//风速
+        setPlayerMode(ERoamMode.ESC_VELOCITY, 0.2);//移动速度
+        setPlayerMode(ERoamMode.ESC_GRAVITY, 0.2);//调节重力
+    </script>
+</body>
+
+</html>

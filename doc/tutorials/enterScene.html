@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>进入三维场景</title>
+    <script src="./jquery.js"></script>
+    <script type='text/javascript' src='blsdk.js'></script>
+</head>
+
+<body>
+    <h4>操作步骤</h4>
+    <p>1. 调用<code>getMainProjectInfo</code>接口获取主工程信息，取出主工程projId</p>
+    <p>2. 调用<code>openProject</code>接口，将projId传入，打开主工程</p>
+    <p>3. 调用<code>positionToProject</code>接口，飞往主工程所在的位置</p>
+    <div onselectstart="return false;" style="-moz-user-select:none;">
+        <ul id="idSceneMenu" class="code-html" onselectstart="return false;" style="-moz-user-select:none;">
+        </ul>
+    </div>
+    <script class="code-js">
+        //获取主工程信息
+
+        $(function () {
+            $("#idSceneMenu").css({ "display": "block" });
+            sdk.initSceneProjData(function (projList) {
+                if (projList.length == 0) {
+                    alert("没有任何工程数据!");
+                    return;
+                }
+                for (let i = 0; i < projList.length; i++) {
+                    let info = projList[i];
+                    let li = "<li title='" + info.projName + "' onclick='openSceneProj(\"" + info.projId.trim() + "\")'>" + info.projName + "</li>";
+                    $("#idSceneMenu").append(li);
+                }
+            });
+        });
+
+        function openSceneProj(guid) {
+            $("#idSceneMenu").css({ "display": "none" });
+            sdk.loadSceneProjData(guid, function (res) {
+                if (res) {
+                    sdk.openProject(guid, function (val) {
+                        if (val === true) {
+                            sdk.enablePointCheckMode(true);
+                            sdk.positionToProject(guid);
+                            window.location.href = "MainScene.html";
+                        }
+                        else {
+                            alert("资源获取失败!");
+                            $("#idSceneMenu").css({ "display": "block" });
+                            sdk.enablePointCheckMode(false);
+                        }
+                    });
+                }
+                else {
+                    alert("资源获取失败!");
+                    $("#idSceneMenu").css({ "display": "block" });
+                    sdk.enablePointCheckMode(false);
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
