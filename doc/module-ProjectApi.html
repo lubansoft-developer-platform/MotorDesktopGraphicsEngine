@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Module: ProjectApi | CIM Client SDK for JAVAScript</title>
+    <title>Module: ProjectApi | Motor Desktop Graphics Engine</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -24,7 +24,7 @@
         
     </div>
     <div class="title">
-        <h1><a href="index.html" class="link">CIM Client SDK for JAVAScript</a></h1>
+        <h1><a href="index.html" class="link">Motor Desktop Graphics Engine</a></h1>
         
             <span class="version">v1.0 beta 公测版</span>
         
@@ -5418,7 +5418,32 @@
 
             
 
-            <td class="description last"><p>所有bim构件信息<br>格式如下<br>[<br> {<br>     guid:string, //构件Guid<br>     cimProjGuid:string//cim工程id<br>     bimGuid:string, //构件的bim句柄<br>     mainCompGuid:string, //主构件bim句柄<br>     projGuid: string, //构件所属工程Guid<br>     bimPPid:string, //构件所属工程的bim工程代理id<br>     zhuanye:string, //构件专业<br>     floor:string, //构件所在的bim楼层<br>     cimFloor:string, //cim对应楼层<br>     dalei:string, //构件大类<br>     xiaolei:string, //构件小类<br>     name:string //构件名称<br>     props:[<br>         {<br>             name:string, //属性名称<br>             value:string, //属性值<br>             unit:string, //属性单位<br>             group:string, //属性分组<br>         }<br>     ]<br> }<br>]</p></td>
+            <td class="description last"><p>所有bim构件信息<br>
+格式如下<br>
+[<br>
+{<br>
+guid:string, //构件Guid<br>
+cimProjGuid:string//cim工程id<br>
+bimGuid:string, //构件的bim句柄<br>
+mainCompGuid:string, //主构件bim句柄<br>
+projGuid: string, //构件所属工程Guid<br>
+bimPPid:string, //构件所属工程的bim工程代理id<br>
+zhuanye:string, //构件专业<br>
+floor:string, //构件所在的bim楼层<br>
+cimFloor:string, //cim对应楼层<br>
+dalei:string, //构件大类<br>
+xiaolei:string, //构件小类<br>
+name:string //构件名称<br>
+props:[<br>
+{<br>
+name:string, //属性名称<br>
+value:string, //属性值<br>
+unit:string, //属性单位<br>
+group:string, //属性分组<br>
+}<br>
+]<br>
+}<br>
+]</p></td>
         </tr>
 
     
@@ -5557,7 +5582,15 @@
 
             
 
-            <td class="description last"><p>FBX模板列表<br>格式如下:<br>[<br>{<br>&quot;id&quot;: string,<br>&quot;name&quot;: string,<br>&quot;picPath&quot;: string<br>}<br>]</p></td>
+            <td class="description last"><p>FBX模板列表<br>
+格式如下:<br>
+[<br>
+{<br>
+&quot;id&quot;: string,<br>
+&quot;name&quot;: string,<br>
+&quot;picPath&quot;: string<br>
+}<br>
+]</p></td>
         </tr>
 
     
@@ -5696,7 +5729,16 @@
 
             
 
-            <td class="description last"><p>工程信息JSON数组<br>JSON格式<br>[{<br> projId:string,<br> projType:string,<br> projName:string,<br> epId:string, //企业id（若有）<br> deptId:string, //项目部id （若有）<br> pos:{x:double, y: double, z:double}<br>}];</p></td>
+            <td class="description last"><p>工程信息JSON数组<br>
+JSON格式<br>
+[{<br>
+projId:string,<br>
+projType:string,<br>
+projName:string,<br>
+epId:string, //企业id（若有）<br>
+deptId:string, //项目部id （若有）<br>
+pos:{x:double, y: double, z:double}<br>
+}];</p></td>
         </tr>
 
     
@@ -5981,7 +6023,15 @@
 
             
 
-            <td class="description last"><p>格式如下:<br>[<br>{<br> nPPid:int, //工程ppid<br> nProjModel:int //工程类型 1:预算， 2：施工<br> sProjName: string //工程名称<br> nProjType：string //工程专业 1:土建，2:钢筋, 3:安装, 4:Revit, 5:造价, 6:Tekla, 7:c3d, 8:Bently, 9:Rhino, 10:IFC, 11:场布<br>}<br>]</p></td>
+            <td class="description last"><p>格式如下:<br>
+[<br>
+{<br>
+nPPid:int, //工程ppid<br>
+nProjModel:int //工程类型 1:预算， 2：施工<br>
+sProjName: string //工程名称<br>
+nProjType：string //工程专业 1:土建，2:钢筋, 3:安装, 4:Revit, 5:造价, 6:Tekla, 7:c3d, 8:Bently, 9:Rhino, 10:IFC, 11:场布<br>
+}<br>
+]</p></td>
         </tr>
 
     
@@ -6537,7 +6587,16 @@
 
             
 
-            <td class="description last"><p>工程信息JSON对象<br>JSON格式<br>{<br> projId:string,<br> projType:string,<br> projName:string,<br> epId:string, //企业id（若有）<br> deptId:string, //项目部id （若有）<br> pos:{x:double, y: double, z:double}<br>};</p></td>
+            <td class="description last"><p>工程信息JSON对象<br>
+JSON格式<br>
+{<br>
+projId:string,<br>
+projType:string,<br>
+projName:string,<br>
+epId:string, //企业id（若有）<br>
+deptId:string, //项目部id （若有）<br>
+pos:{x:double, y: double, z:double}<br>
+};</p></td>
         </tr>
 
     
@@ -6676,7 +6735,17 @@
 
             
 
-            <td class="description last"><p>工程描述信息<br>格式如下<br>[<br> {<br>     name:string, //名称<br>     type:string, //该名称下包含的类型<br>     CTVisible:Boolean, //属性面板是否可见<br>     CardVisible:Boolean, //卡片面板是否可见<br>     child:[this] //自包含子节点<br> }<br>]</p></td>
+            <td class="description last"><p>工程描述信息<br>
+格式如下<br>
+[<br>
+{<br>
+name:string, //名称<br>
+type:string, //该名称下包含的类型<br>
+CTVisible:Boolean, //属性面板是否可见<br>
+CardVisible:Boolean, //卡片面板是否可见<br>
+child:[this] //自包含子节点<br>
+}<br>
+]</p></td>
         </tr>
 
     
@@ -7727,7 +7796,7 @@
 
 <footer>
     <img class="logo" src="img/toast-ui.png" style="">
-    <div class="footer-text">班联数城 cim sdk for javascript</div>
+    <div class="footer-text">Motor Desktop Graphics Engine</div>
 </footer>
 <script>prettyPrint();</script>
 <script src="scripts/jquery.min.js"></script>

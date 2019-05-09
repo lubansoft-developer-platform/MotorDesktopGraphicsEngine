@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Tutorial: 环境搭建 | CIM Client SDK for JAVAScript</title>
+    <title>Tutorial: 环境搭建 | Motor Desktop Graphics Engine</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -24,7 +24,7 @@
         
     </div>
     <div class="title">
-        <h1><a href="index.html" class="link">CIM Client SDK for JAVAScript</a></h1>
+        <h1><a href="index.html" class="link">Motor Desktop Graphics Engine</a></h1>
         
             <span class="version">v1.0 beta 公测版</span>
         
@@ -59,7 +59,8 @@
 
     
         <article class="readme">
-            <h3>目录结构</h3><pre class="prettyprint source"><code>/CIM Client SDK
+            <h3>目录结构</h3>
+<pre class="prettyprint source"><code>/MotorDesktopGraphicsEngine
 |
 |----/sdk
 |    |
@@ -115,31 +116,58 @@
 |    |
 |    \
 |
-\</code></pre><h4>sdk</h4><pre class="prettyprint source"><code>sdk文件夹下存放了CIM Client SDK 提供的所有js扩展库</code></pre><ul>
+\
+</code></pre>
+<h4>sdk</h4>
+<pre><code>sdk文件夹下存放了MotorDesktopGraphicsEngine提供的所有js扩展库
+</code></pre>
+<ul>
 <li>blsdk.js</li>
 </ul>
-<pre class="prettyprint source lang-ini"><code>CIM Client SDK主入口文件</code></pre><ul>
+<pre class="prettyprint source lang-ini"><code>MotorDesktopGraphicsEngine主入口文件
+</code></pre>
+<ul>
 <li>blcallback.js</li>
 </ul>
-<pre class="prettyprint source lang-ini"><code>CIM Client SDK全局回调通知API</code></pre><ul>
+<pre class="prettyprint source lang-ini"><code>MotorDesktopGraphicsEngine全局回调通知API
+</code></pre>
+<ul>
 <li>blcomponentApi.js</li>
 </ul>
-<pre class="prettyprint source lang-ini"><code>CIM Client SDK构件模块API</code></pre><ul>
+<pre class="prettyprint source lang-ini"><code>MotorDesktopGraphicsEngine构件模块API
+</code></pre>
+<ul>
 <li>blprojectApi.js</li>
 </ul>
-<pre class="prettyprint source lang-ini"><code>CIM Client SDK工程模块API</code></pre><ul>
+<pre class="prettyprint source lang-ini"><code>MotorDesktopGraphicsEngine工程模块API
+</code></pre>
+<ul>
 <li>blsceneApi.js</li>
 </ul>
-<pre class="prettyprint source lang-ini"><code>CIM Client SDK场景模块API</code></pre><ul>
+<pre class="prettyprint source lang-ini"><code>MotorDesktopGraphicsEngine场景模块API
+</code></pre>
+<ul>
 <li>blsystemApi.js</li>
 </ul>
-<pre class="prettyprint source lang-ini"><code>CIM Client SDK系统模块API</code></pre><ul>
+<pre class="prettyprint source lang-ini"><code>MotorDesktopGraphicsEngine系统模块API
+</code></pre>
+<ul>
 <li>blthreeViewApi.js</li>
 </ul>
-<pre class="prettyprint source lang-ini"><code>CIM Client SDK三维模块API</code></pre><h4>doc</h4><pre class="prettyprint source"><code>doc文件夹下存放了CIM Client SDK的离线版接口文档</code></pre><ul>
+<pre class="prettyprint source lang-ini"><code>MotorDesktopGraphicsEngine三维模块API
+</code></pre>
+<h4>doc</h4>
+<pre><code>doc文件夹下存放了MotorDesktopGraphicsEngine的离线版接口文档
+</code></pre>
+<ul>
 <li>index.html</li>
 </ul>
-<pre class="prettyprint source lang-ini"><code>CIM Client SDK离线版接口文档入口文件</code></pre><h4>release</h4><pre class="prettyprint source"><code>relsase文件夹中提供了CIM客户端平台</code></pre><ul>
+<pre class="prettyprint source lang-ini"><code>MotorDesktopGraphicsEngine离线版接口文档入口文件
+</code></pre>
+<h4>release</h4>
+<pre><code>relsase文件夹中提供了Motor客户端
+</code></pre>
+<ul>
 <li>config.ini</li>
 </ul>
 <pre class="prettyprint source lang-ini"><code>[Url]
@@ -151,18 +179,30 @@ url=你的项目入口文件地址(如:./myproject/index.html)
 
 [Debug]
 #是否可调试，当此项为true或1时，可以在平台中弹出右键菜单，选择devtool进行项目调试
-debug=false</code></pre><ul>
+debug=false
+</code></pre>
+<ul>
 <li>BLLogin.exe</li>
 </ul>
-<pre class="prettyprint source lang-ini"><code>CIM Client主进程</code></pre><h4>demo</h4><pre class="prettyprint source"><code>demo文件夹中提供了由班联数城提供的基于CIM Client SDK开发的示例demo</code></pre><hr>
-<h3>环境搭建</h3><pre class="prettyprint source lang-javascript"><code>1. 建立你自己的web project
+<pre class="prettyprint source lang-ini"><code>CIM Client主进程
+</code></pre>
+<h4>demo</h4>
+<pre><code>demo文件夹中提供了由鲁班开发者平台(LDP)提供的基于MotorDesktopGraphicsEngine开发的示例demo
+</code></pre>
+<hr>
+<h3>环境搭建</h3>
+<pre class="prettyprint source lang-javascript"><code>1. 建立你自己的web project
 2. 将sdk中的所有文件移动到你的project中，并确保他们位于相同的路径下
 3. 在你的project中使用如下语句&lt;script type='text/javascript' src='blsdk.js'>&lt;/script>将sdk库引入到你的project中
 4. 将你的project文件夹移动到release文件夹下
 5. 根据你的实际情况配置config.ini
-6. 运行BLLogin.exe，并开启你的开发之旅</code></pre><hr>
-<h3>官方Demo使用</h3><pre class="prettyprint source lang-javascript"><code>1. 将demo文件夹下的所有内容移动到release文件夹下
-2. 运行BLLogin.exe，享受Demo给你带来的开发乐趣</code></pre>
+6. 运行BLLogin.exe，并开启你的开发之旅
+</code></pre>
+<hr>
+<h3>官方Demo使用</h3>
+<pre class="prettyprint source lang-javascript"><code>1. 将demo文件夹下的所有内容移动到release文件夹下
+2. 运行BLLogin.exe，享受Demo给你带来的开发乐趣
+</code></pre>
         </article>
     
 </section>
@@ -173,7 +213,7 @@ debug=false</code></pre><ul>
 
 <footer>
     <img class="logo" src="img/toast-ui.png" style="">
-    <div class="footer-text">班联数城 cim sdk for javascript</div>
+    <div class="footer-text">Motor Desktop Graphics Engine</div>
 </footer>
 <script>prettyPrint();</script>
 <script src="scripts/jquery.min.js"></script>

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Tutorial: 操作指南 | CIM Client SDK for JAVAScript</title>
+    <title>Tutorial: 操作指南 | Motor Desktop Graphics Engine</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -24,7 +24,7 @@
         
     </div>
     <div class="title">
-        <h1><a href="index.html" class="link">CIM Client SDK for JAVAScript</a></h1>
+        <h1><a href="index.html" class="link">Motor Desktop Graphics Engine</a></h1>
         
             <span class="version">v1.0 beta 公测版</span>
         
@@ -83,26 +83,34 @@
 
     
         <article class="readme">
-            <h2>操作步骤</h2><h3>1. 设置Token(必须)</h3><ul>
+            <h2>操作步骤</h2>
+<h3>1. 设置Token(必须)</h3>
+<ul>
 <li>调用<code>setToken</code>接口，将界面登录CIM服务器所返回的token传入平台，作为拉取网络数据的token</li>
 </ul>
-<h3>2. 绑定三维视图</h3><ul>
-<li>调用<code>bind3DView</code>接口，将界面元素与三维视图绑定<ul>
+<h3>2. 绑定三维视图</h3>
+<ul>
+<li>调用<code>bind3DView</code>接口，将界面元素与三维视图绑定
+<ul>
 <li>绑定后，可以将对应标签内的事件通过<code>blthreeViewApi.js</code>的接口传递给三维引擎。</li>
 </ul>
 </li>
 </ul>
-<h3>3. 初始化工程</h3><ul>
+<h3>3. 初始化工程</h3>
+<ul>
 <li>调用<code>initSceneData()</code>接口，初始化cim平台工程数据，返回所有的场景列表。</li>
 <li><code>initSceneData()</code>接口必须在<code>setToken</code>之后执行</li>
 </ul>
-<h3>4. 打开主工程，进入三维场景</h3><ul>
+<h3>4. 打开主工程，进入三维场景</h3>
+<ul>
 <li>在初始化之后，获取主工程信息，并飞往主工程，此时，你就可以在你的三维工程中，进行你想要的一系列操作了</li>
 </ul>
-<h3>5. 重写全局回调函数</h3><ul>
+<h3>5. 重写全局回调函数</h3>
+<ul>
 <li>如果你想获取到三维场景的实时反馈数据，那么你需要重写callback模块中的全局回调函数，以实现你要的逻辑</li>
 </ul>
-<h2>附录</h2><ul>
+<h2>附录</h2>
+<ul>
 <li>查看界面上方对应操作，以获取最详细的调用示例</li>
 </ul>
         </article>
@@ -115,7 +123,7 @@
 
 <footer>
     <img class="logo" src="img/toast-ui.png" style="">
-    <div class="footer-text">班联数城 cim sdk for javascript</div>
+    <div class="footer-text">Motor Desktop Graphics Engine</div>
 </footer>
 <script>prettyPrint();</script>
 <script src="scripts/jquery.min.js"></script>

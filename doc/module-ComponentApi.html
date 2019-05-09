@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Module: ComponentApi | CIM Client SDK for JAVAScript</title>
+    <title>Module: ComponentApi | Motor Desktop Graphics Engine</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -24,7 +24,7 @@
         
     </div>
     <div class="title">
-        <h1><a href="index.html" class="link">CIM Client SDK for JAVAScript</a></h1>
+        <h1><a href="index.html" class="link">Motor Desktop Graphics Engine</a></h1>
         
             <span class="version">v1.0 beta 公测版</span>
         
@@ -6578,7 +6578,19 @@
 
             
 
-            <td class="description last"><p>变换矩阵<br>转换CAD矩阵 4*4，含平移，旋转，镜像，缩放<br>x1    x2    x3    t1<br>y1    y2    y3    t2<br>z1    z2    z3    t3<br>0    0    0    1<br>格式如下：<br>{<br> line1:{col1:double, col2:double, col3:double, col4:double},<br> line2:{col1:double, col2:double, col3:double, col4:double},<br> line3:{col1:double, col2:double, col3:double, col4:double},<br> line4:{col1:double, col2:double, col3:double, col4:double},<br>}</p></td>
+            <td class="description last"><p>变换矩阵<br>
+转换CAD矩阵 4*4，含平移，旋转，镜像，缩放<br>
+x1	x2	x3	t1<br>
+y1	y2	y3	t2<br>
+z1	z2	z3	t3<br>
+0	0	0	1<br>
+格式如下：<br>
+{<br>
+line1:{col1:double, col2:double, col3:double, col4:double},<br>
+line2:{col1:double, col2:double, col3:double, col4:double},<br>
+line3:{col1:double, col2:double, col3:double, col4:double},<br>
+line4:{col1:double, col2:double, col3:double, col4:double},<br>
+}</p></td>
         </tr>
 
     
@@ -7298,7 +7310,30 @@
 
             
 
-            <td class="description last"><p>构件的bim信息<br>格式如下:<br>[{<br>     guid:string, //构件Guid<br>     cimProjGuid:string//cim工程id<br>     bimGuid:string, //构件的bim句柄<br>     mainCompGuid:string, //主构件bim句柄<br>     projGuid: string, //构件所属工程Guid<br>     bimPPid:string, //构件所属工程的bim工程代理id<br>     zhuanye:string, //构件专业<br>     floor:string, //构件所在的bim楼层<br>     cimFloor:string, //cim对应楼层<br>     dalei:string, //构件大类<br>     xiaolei:string, //构件小类<br>     name:string //构件名称<br>     props:[<br>         {<br>             name:string, //属性名称<br>             value:string, //属性值<br>             unit:string, //属性单位<br>             group:string, //属性分组<br>         }<br>     ]<br> }]</p></td>
+            <td class="description last"><p>构件的bim信息<br>
+格式如下:<br>
+[{<br>
+guid:string, //构件Guid<br>
+cimProjGuid:string//cim工程id<br>
+bimGuid:string, //构件的bim句柄<br>
+mainCompGuid:string, //主构件bim句柄<br>
+projGuid: string, //构件所属工程Guid<br>
+bimPPid:string, //构件所属工程的bim工程代理id<br>
+zhuanye:string, //构件专业<br>
+floor:string, //构件所在的bim楼层<br>
+cimFloor:string, //cim对应楼层<br>
+dalei:string, //构件大类<br>
+xiaolei:string, //构件小类<br>
+name:string //构件名称<br>
+props:[<br>
+{<br>
+name:string, //属性名称<br>
+value:string, //属性值<br>
+unit:string, //属性单位<br>
+group:string, //属性分组<br>
+}<br>
+]<br>
+}]</p></td>
         </tr>
 
     
@@ -7437,7 +7472,30 @@
 
             
 
-            <td class="description last"><p>构件的bim信息<br>格式如下:<br>{<br>     guid:string, //构件Guid<br>     cimProjGuid:string//cim工程id<br>     bimGuid:string, //构件的bim句柄<br>     mainCompGuid:string, //主构件bim句柄<br>     projGuid: string, //构件所属工程Guid<br>     bimPPid:string, //构件所属工程的bim工程代理id<br>     zhuanye:string, //构件专业<br>     floor:string, //构件所在的bim楼层<br>     cimFloor:string, //cim对应楼层<br>     dalei:string, //构件大类<br>     xiaolei:string, //构件小类<br>     name:string //构件名称<br>     props:[<br>         {<br>             name:string, //属性名称<br>             value:string, //属性值<br>             unit:string, //属性单位<br>             group:string, //属性分组<br>         }<br>     ]<br> }</p></td>
+            <td class="description last"><p>构件的bim信息<br>
+格式如下:<br>
+{<br>
+guid:string, //构件Guid<br>
+cimProjGuid:string//cim工程id<br>
+bimGuid:string, //构件的bim句柄<br>
+mainCompGuid:string, //主构件bim句柄<br>
+projGuid: string, //构件所属工程Guid<br>
+bimPPid:string, //构件所属工程的bim工程代理id<br>
+zhuanye:string, //构件专业<br>
+floor:string, //构件所在的bim楼层<br>
+cimFloor:string, //cim对应楼层<br>
+dalei:string, //构件大类<br>
+xiaolei:string, //构件小类<br>
+name:string //构件名称<br>
+props:[<br>
+{<br>
+name:string, //属性名称<br>
+value:string, //属性值<br>
+unit:string, //属性单位<br>
+group:string, //属性分组<br>
+}<br>
+]<br>
+}</p></td>
         </tr>
 
     
@@ -7715,7 +7773,13 @@
 
             
 
-            <td class="description last"><p>包围盒的点描述<br>格式如下:<br>{<br> lowPt:{x:double, y:double, z:double} //左下角<br> highPt:{x:double, y:double, z:double} //右上角<br> midPt:{x:double, y:double, z:double} //中心点<br>}</p></td>
+            <td class="description last"><p>包围盒的点描述<br>
+格式如下:<br>
+{<br>
+lowPt:{x:double, y:double, z:double} //左下角<br>
+highPt:{x:double, y:double, z:double} //右上角<br>
+midPt:{x:double, y:double, z:double} //中心点<br>
+}</p></td>
         </tr>
 
     
@@ -7854,7 +7918,14 @@
 
             
 
-            <td class="description last"><p>构件信息的json对象<br>格式如下:<br>{<br>   componentId:string,<br>   componentType:string,<br>   componentName:string,<br>   pos:{x:double, y: double, z:double}<br> }</p></td>
+            <td class="description last"><p>构件信息的json对象<br>
+格式如下:<br>
+{<br>
+componentId:string,<br>
+componentType:string,<br>
+componentName:string,<br>
+pos:{x:double, y: double, z:double}<br>
+}</p></td>
         </tr>
 
     
@@ -7993,7 +8064,14 @@
 
             
 
-            <td class="description last"><p>构件信息的json数组<br>格式如下:<br>[{<br>   componentId:string,<br>   componentType:string,<br>   componentName:string,<br>   pos:{x:double, y: double, z:double}<br> }]</p></td>
+            <td class="description last"><p>构件信息的json数组<br>
+格式如下:<br>
+[{<br>
+componentId:string,<br>
+componentType:string,<br>
+componentName:string,<br>
+pos:{x:double, y: double, z:double}<br>
+}]</p></td>
         </tr>
 
     
@@ -8132,7 +8210,14 @@
 
             
 
-            <td class="description last"><p>构件信息的json数组<br>格式如下:<br>[{<br>   componentId:string,<br>   componentType:string,<br>   componentName:string,<br>   pos:{x:double, y: double, z:double}<br> }]</p></td>
+            <td class="description last"><p>构件信息的json数组<br>
+格式如下:<br>
+[{<br>
+componentId:string,<br>
+componentType:string,<br>
+componentName:string,<br>
+pos:{x:double, y: double, z:double}<br>
+}]</p></td>
         </tr>
 
     
@@ -8271,7 +8356,9 @@
 
             
 
-            <td class="description last"><p>构件坐标的json对象<br>格式如下:<br>{x:double, y: double, z:double}</p></td>
+            <td class="description last"><p>构件坐标的json对象<br>
+格式如下:<br>
+{x:double, y: double, z:double}</p></td>
         </tr>
 
     
@@ -8410,7 +8497,19 @@
 
             
 
-            <td class="description last"><p>构件的bim信息<br>格式如下:<br>{<br> CTVisible:Boolean, //属性面板是否可见<br> CardVisible:Boolean, //卡片面板是否可见<br> props:[<br>     {<br>         CTVisible:Boolean, //属性面板是否可见<br>         CardVisible:Boolean, //卡片面板是否可见<br>         prop:{key:string, value:string} //属性键值对<br>     }<br> ]<br>}</p></td>
+            <td class="description last"><p>构件的bim信息<br>
+格式如下:<br>
+{<br>
+CTVisible:Boolean, //属性面板是否可见<br>
+CardVisible:Boolean, //卡片面板是否可见<br>
+props:[<br>
+{<br>
+CTVisible:Boolean, //属性面板是否可见<br>
+CardVisible:Boolean, //卡片面板是否可见<br>
+prop:{key:string, value:string} //属性键值对<br>
+}<br>
+]<br>
+}</p></td>
         </tr>
 
     
@@ -9190,7 +9289,7 @@
 
 <footer>
     <img class="logo" src="img/toast-ui.png" style="">
-    <div class="footer-text">班联数城 cim sdk for javascript</div>
+    <div class="footer-text">Motor Desktop Graphics Engine</div>
 </footer>
 <script>prettyPrint();</script>
 <script src="scripts/jquery.min.js"></script>
