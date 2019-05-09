@@ -25,7 +25,7 @@ Motor Desktop Graphics Engine(以下简称为sdk)主要针对于网页前端开�
 ### 目录结构
 
 ```
-/CIM Client SDK
+/MotorDesktopGraphicsEngine
 |
 |----/sdk
 |    |
@@ -74,57 +74,57 @@ Motor Desktop Graphics Engine(以下简称为sdk)主要针对于网页前端开�
 \
 ```
 #### sdk
-    sdk文件夹下存放了CIM Client SDK 提供的所有js扩展库
+    sdk文件夹下存放了MotorDesktopGraphicsEngine提供的所有js扩展库
 
 - blsdk.js
 
 ```ini
-CIM Client SDK主入口文件
+MotorDesktopGraphicsEngine主入口文件
 ```
 - blcallback.js
 
 ```ini
-CIM Client SDK全局回调通知API
+MotorDesktopGraphicsEngine全局回调通知API
 ```
 
 - blcomponentApi.js
 
 ```ini
-CIM Client SDK构件模块API
+MotorDesktopGraphicsEngine构件模块API
 ```
 
 - blprojectApi.js
 
 ```ini
-CIM Client SDK工程模块API
+MotorDesktopGraphicsEngine工程模块API
 ```
 
 - blsceneApi.js
 
 ```ini
-CIM Client SDK场景模块API
+MotorDesktopGraphicsEngine场景模块API
 ```
 
 - blsystemApi.js
 
 ```ini
-CIM Client SDK系统模块API
+MotorDesktopGraphicsEngine系统模块API
 ```
 
 - blthreeViewApi.js
 
 ```ini
-CIM Client SDK三维模块API
+MotorDesktopGraphicsEngine三维模块API
 ```
 
 #### doc
-    doc文件夹下存放了CIM Client SDK的离线版接口文档
+    doc文件夹下存放了MotorDesktopGraphicsEngine的离线版接口文档
 
 - index.html
 
 ```ini
-CIM Client SDK离线版接口文档入口文件
+MotorDesktopGraphicsEngine离线版接口文档入口文件
 ```
 
 #### demo
-    demo文件夹中提供了由班联数城提供的基于CIM Client SDK开发的示例demo
+    demo文件夹中提供了由鲁班开发者平台(LDP)提供的基于MotorDesktopGraphicsEngine开发的示例demo
