@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodes version="2.5.0.2">
+	<node type="PlayerSpectator" id="1685590507" name="weather_camera">
+		<collision>1</collision>
+		<collision_mask>0x1</collision_mask>
+		<collision_radius>0.5</collision_radius>
+		<min_velocity>2</min_velocity>
+		<max_velocity>4</max_velocity>
+		<min_theta_angle>-89.9000015</min_theta_angle>
+		<max_theta_angle>89.9000015</max_theta_angle>
+		<acceleration>4</acceleration>
+		<damping>8</damping>
+		<turning>90</turning>
+		<znear>0.300000012</znear>
+		<zfar>20000</zfar>
+		<oblique_frustum_plane>0 0 -1 0</oblique_frustum_plane>
+		<is_oblique_frustum>0</is_oblique_frustum>
+		<transform>0.80493006765 -0.593369912311 0 0.0 -0.226074439415 -0.30667904695 0.92457478789 0.0 -0.548614805772 -0.744217961337 -0.381000869334 0.0 -1155.9930689 -1869.0421114 -819.689 1.0</transform>
+	</node>
+	<node type="NodeDummy" id="1316788312" folded="1" name="weather_player_depend">
+		<transform>1.0000000596 0 0 0.0 0 1.0000000596 0 0.0 0 0 1 0.0 0 0 0 1.0</transform>
+		<node type="WorldExpression" id="481413336" latest="1" folded="1" name="weather_src1">
+			<size>1e+009 1e+009 1e+009</size>
+			<expression>{
+
+// get player
+Player player = engine.game.getPlayer();
+if(player == 0) return;
+
+// player position
+vec3 offset = vec3(0.0f,0.0f,-15.0f);
+mat4 transform = translate(player.getWorldTransform() * offset);
+
+// transform childs
+Node node = getNode();
+forloop(int i = 0; node.getNumChildren()) {
+	Node child = node.getChild(i);
+	child.setWorldTransform(transform);
+}
+
+}</expression>
+			<transform>0.999999940391 0 0 0.0 0 0.999999940391 0 0.0 0 0 0.999999999995 0.0 0 0 0 1.0</transform>
+			<node type="NodeDummy" id="1653064249" folded="1" name="weather_src1_nodes">
+				<transform>1.00000011922 0 0 0.0 0 1.00000011922 0 0.0 0 0 1.00000005961 0.0 0 10.5261524948 -4.07086074777 1.0</transform>
+				<node type="ObjectParticles" id="525016071" collider="0" name="weather_rain_drops">
+					<particles_type>3</particles_type>
+					<spawn_rate>0</spawn_rate>
+					<physical_mask>0xffffffff</physical_mask>
+					<length_stretch>0.100000001</length_stretch>
+					<emitter_type>3</emitter_type>
+					<emitter_size>110 110 0</emitter_size>
+					<emitter_direction>0 0 -20</emitter_direction>
+					<emitter_spread>1 1 0</emitter_spread>
+					<life_mean>1</life_mean>
+					<life_spread>0</life_spread>
+					<velocity_mean>40</velocity_mean>
+					<velocity_spread>27</velocity_spread>
+					<radius_mean>0.0599999987</radius_mean>
+					<radius_spread>0.0299999993</radius_spread>
+					<gravity>0 0 -10</gravity>
+					<force>
+						<enabled>1</enabled>
+						<attached>1</attached>
+						<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0 0 0 1.0</transform>
+						<radius>80</radius>
+						<attenuation>1</attenuation>
+						<attractor>0</attractor>
+						<rotator>0</rotator>
+					</force>
+					<surface name="particles" material="90f7fe5215bbb5cd04f6fd6a4785cfc1cda916c3" property="surface_base"/>
+					<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0 0 30 1.0</transform>
+				</node>
+				<node type="ObjectParticles" id="1834268261" collider="0" folded="1" name="weather_rain_drops_collision1">
+					<particles_type>3</particles_type>
+					<collision>1</collision>
+					<culling>1</culling>
+					<spawn_rate>0</spawn_rate>
+					<physical_mask>0xffffffff</physical_mask>
+					<length_stretch>0.300000012</length_stretch>
+					<emitter_type>3</emitter_type>
+					<emitter_size>30 30 0</emitter_size>
+					<emitter_direction>0 4.96845007 -20</emitter_direction>
+					<emitter_spread>1.33123004 2.32491994 0</emitter_spread>
+					<life_mean>1</life_mean>
+					<life_spread>0</life_spread>
+					<velocity_mean>60</velocity_mean>
+					<velocity_spread>40</velocity_spread>
+					<radius_mean>0.100000001</radius_mean>
+					<radius_spread>0.0399999991</radius_spread>
+					<gravity>0 0 -10</gravity>
+					<force>
+						<enabled>1</enabled>
+						<attached>1</attached>
+						<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0 0 0 1.0</transform>
+						<radius>80</radius>
+						<attenuation>1</attenuation>
+						<attractor>0</attractor>
+						<rotator>0</rotator>
+					</force>
+					<surface name="particles" enabled="0" material="90f7fe5215bbb5cd04f6fd6a4785cfc1cda916c3" property="surface_base"/>
+					<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0 0 30 1.0</transform>
+					<node type="ObjectParticles" id="92016681" collider="0" name="weather_rain_splashes">
+						<variation_x>1</variation_x>
+						<variation_y>1</variation_y>
+						<spawn_rate>1</spawn_rate>
+						<growth_damping>1</growth_damping>
+						<emitter_type>5</emitter_type>
+						<emitter_enabled>1</emitter_enabled>
+						<emitter_direction>0 0 10</emitter_direction>
+						<life_mean>0.25</life_mean>
+						<life_spread>0.0500000007</life_spread>
+						<velocity_mean>0</velocity_mean>
+						<velocity_spread>0.300000012</velocity_spread>
+						<radius_mean>0.100000001</radius_mean>
+						<radius_spread>0.0500000007</radius_spread>
+						<growth_mean>0.699999988</growth_mean>
+						<growth_spread>0.400000006</growth_spread>
+						<gravity>0 0 -5</gravity>
+						<surface name="particles" material="f9feb008cc3156583e52031d278c8e3e4a52e969" property="surface_base"/>
+						<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0 0 0 1.0</transform>
+					</node>
+					<node type="ObjectParticles" id="342532591" collider="0" name="weather_rain_splashes_fume">
+						<variation_x>1</variation_x>
+						<variation_y>1</variation_y>
+						<texture_atlas>1</texture_atlas>
+						<spawn_rate>1</spawn_rate>
+						<growth_damping>1</growth_damping>
+						<emitter_type>5</emitter_type>
+						<emitter_enabled>1</emitter_enabled>
+						<emitter_direction>0 0 10</emitter_direction>
+						<life_mean>0.800000012</life_mean>
+						<life_spread>0.100000001</life_spread>
+						<velocity_mean>0.699999988</velocity_mean>
+						<velocity_spread>0.300000012</velocity_spread>
+						<radius_mean>0.25</radius_mean>
+						<radius_spread>0.0700000003</radius_spread>
+						<growth_mean>0.800000012</growth_mean>
+						<growth_spread>0.400000006</growth_spread>
+						<gravity>0 0 -2</gravity>
+						<surface name="particles" material="96fa84b2a11afa3250838781408ef6521c3e8997" property="surface_base"/>
+						<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0 0 0 1.0</transform>
+					</node>
+				</node>
+				<node type="ObjectParticles" id="850290164" collider="0" folded="1" name="weather_rain_drops_collision2">
+					<particles_type>3</particles_type>
+					<collision>1</collision>
+					<culling>1</culling>
+					<spawn_rate>0</spawn_rate>
+					<physical_mask>0xffffffff</physical_mask>
+					<length_stretch>0.300000012</length_stretch>
+					<emitter_type>3</emitter_type>
+					<emitter_size>70 70 0</emitter_size>
+					<emitter_direction>0 4.96845007 -20</emitter_direction>
+					<emitter_spread>1.33123004 2.32491994 0</emitter_spread>
+					<life_mean>1</life_mean>
+					<life_spread>0</life_spread>
+					<velocity_mean>60</velocity_mean>
+					<velocity_spread>40</velocity_spread>
+					<radius_mean>0.100000001</radius_mean>
+					<radius_spread>0.0399999991</radius_spread>
+					<gravity>0 0 -10</gravity>
+					<force>
+						<enabled>1</enabled>
+						<attached>1</attached>
+						<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0 0 0 1.0</transform>
+						<radius>80</radius>
+						<attenuation>1</attenuation>
+						<attractor>0</attractor>
+						<rotator>0</rotator>
+					</force>
+					<surface name="particles" enabled="0" material="90f7fe5215bbb5cd04f6fd6a4785cfc1cda916c3" property="surface_base"/>
+					<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0 0 30 1.0</transform>
+					<node type="ObjectParticles" id="265184884" collider="0" folded="1" name="weather_rain_fume">
+						<texture_atlas>1</texture_atlas>
+						<spawn_rate>1</spawn_rate>
+						<growth_damping>1</growth_damping>
+						<emitter_type>5</emitter_type>
+						<emitter_enabled>1</emitter_enabled>
+						<life_mean>5</life_mean>
+						<life_spread>0</life_spread>
+						<velocity_mean>0</velocity_mean>
+						<velocity_spread>0</velocity_spread>
+						<rotation_mean>0</rotation_mean>
+						<rotation_spread>20</rotation_spread>
+						<radius_mean>4</radius_mean>
+						<radius_spread>0</radius_spread>
+						<growth_mean>1</growth_mean>
+						<growth_spread>0</growth_spread>
+						<surface name="particles" material="96fa84b2a11afa3250838781408ef6521c3e8997" property="surface_base"/>
+						<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0 0 0 1.0</transform>
+					</node>
+				</node>
+				<node type="ObjectParticles" id="1344423297" collider="0" name="weather_wind_leaves">
+					<particles_type>4</particles_type>
+					<texture_atlas>1</texture_atlas>
+					<spawn_rate>0</spawn_rate>
+					<emitter_type>3</emitter_type>
+					<emitter_size>30 50 20</emitter_size>
+					<emitter_direction>0 3 0</emitter_direction>
+					<life_mean>4</life_mean>
+					<life_spread>0</life_spread>
+					<velocity_mean>0</velocity_mean>
+					<velocity_spread>0</velocity_spread>
+					<rotation_mean>0</rotation_mean>
+					<rotation_spread>100</rotation_spread>
+					<radius_mean>0.0900000036</radius_mean>
+					<radius_spread>0.0299999993</radius_spread>
+					<surface name="particles" material="2f2429a525e9882a2049c2e28064445caa775ec1" property="surface_base"/>
+					<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0 0 5 1.0</transform>
+				</node>
+				<node type="ObjectParticles" id="1952015249" collider="0" name="weather_wind_fume">
+					<texture_atlas>1</texture_atlas>
+					<spawn_rate>0</spawn_rate>
+					<emitter_type>3</emitter_type>
+					<emitter_based>1</emitter_based>
+					<emitter_size>30 50 10</emitter_size>
+					<emitter_direction>0 3 0</emitter_direction>
+					<period_mean>1.5</period_mean>
+					<period_spread>0</period_spread>
+					<duration_mean>1.5</duration_mean>
+					<duration_spread>1</duration_spread>
+					<life_mean>4</life_mean>
+					<life_spread>0</life_spread>
+					<velocity_mean>0</velocity_mean>
+					<velocity_spread>0</velocity_spread>
+					<rotation_mean>0</rotation_mean>
+					<rotation_spread>50</rotation_spread>
+					<radius_mean>7</radius_mean>
+					<radius_spread>0</radius_spread>
+					<surface name="particles" material="96fa84b2a11afa3250838781408ef6521c3e8997" property="surface_base"/>
+					<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0 0 0 1.0</transform>
+				</node>
+				<node type="ObjectParticles" id="1803495018" collider="0" name="weather_light_dust">
+					<texture_atlas>1</texture_atlas>
+					<spawn_rate>60</spawn_rate>
+					<emitter_type>3</emitter_type>
+					<emitter_enabled>1</emitter_enabled>
+					<emitter_size>20 20 15</emitter_size>
+					<emitter_spread>1 1 0.100000001</emitter_spread>
+					<life_mean>1.5</life_mean>
+					<life_spread>1</life_spread>
+					<velocity_mean>1</velocity_mean>
+					<velocity_spread>0.800000012</velocity_spread>
+					<radius_mean>0.0399999991</radius_mean>
+					<radius_spread>0.0199999996</radius_spread>
+					<force>
+						<enabled>1</enabled>
+						<attached>1</attached>
+						<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0 0 0 1.0</transform>
+						<radius>5</radius>
+						<attenuation>1</attenuation>
+						<attractor>-1</attractor>
+						<rotator>1</rotator>
+					</force>
+					<surface name="particles" material="183e3cded51574d22eeb7817deca2239ccc2bc66" property="surface_base"/>
+					<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0 0 0 1.0</transform>
+				</node>
+			</node>
+			<node type="NodeReference" id="1860463079" name="weather_stars">
+				<reference>weather/valley/nodes/stars.node</reference>
+				<transform>1.00000011922 0 0 0.0 0 1.00000011922 0 0.0 0 0 1.00000005961 0.0 0 10.5261524948 -4.07086074777 1.0</transform>
+			</node>
+		</node>
+		<node type="WorldExpression" id="1848703454" latest="1" folded="1" name="weather_src2">
+			<size>1e+009 1e+009 1e+009</size>
+			<expression>{
+
+// get player
+Player player = engine.game.getPlayer();
+if(player == 0) return;
+
+// player position
+mat4 transform = player.getWorldTransform();
+
+// transform childs
+Node node = getNode();
+forloop(int i = 0; node.getNumChildren()) {
+	Node child = node.getChild(i);
+	child.setWorldTransform(transform);
+}
+
+}</expression>
+			<transform>0.999999940391 0 0 0.0 0 0.999999940391 0 0.0 0 0 0.999999999995 0.0 0 0 0 1.0</transform>
+			<node type="NodeDummy" id="1748801531" folded="1" name="weather_src2_nodes">
+				<transform>1.00000011922 0 0 0.0 0 0.371390744617 0.928476806197 0.0 0 -0.928476861542 0.371390722479 0.0 0 -3.40100042835 1.50000008942 1.0</transform>
+				<node type="ObjectMeshStatic" id="1600914854" folded="1" name="weather_camera_drops_emitter">
+					<mesh_name>weather/valley/meshes/camera_drops_emitter.mesh</mesh_name>
+					<surface name="camera_drops_emitter" intersection="0" collision="0" material="47376db2c461c4945744b3bfd33f42eadca33575" property="surface_base"/>
+					<transform>1 0 2.9802299e-008 0.0 2.9802299e-008 5.96045989787e-008 -1 0.0 7.4505802e-009 1 4.47035009565e-008 0.0 -1.14441e-005 -1.52588000013e-005 -3.05176000008e-005 1.0</transform>
+					<node type="ObjectParticles" id="756097549" collider="0" name="weather_camera_drops">
+						<variation_x>1</variation_x>
+						<texture_atlas>1</texture_atlas>
+						<spawn_rate>0</spawn_rate>
+						<emitter_type>4</emitter_type>
+						<emitter_based>1</emitter_based>
+						<emitter_continuous>0</emitter_continuous>
+						<emitter_size>2 0 2</emitter_size>
+						<emitter_direction>0 0 -1</emitter_direction>
+						<emitter_spread>0 0 0</emitter_spread>
+						<life_mean>1</life_mean>
+						<life_spread>0.300000012</life_spread>
+						<velocity_mean>0</velocity_mean>
+						<velocity_spread>0</velocity_spread>
+						<angle_mean>0</angle_mean>
+						<angle_spread>0</angle_spread>
+						<radius_mean>0.0700000003</radius_mean>
+						<radius_spread>0.0299999993</radius_spread>
+						<gravity>0 0 -0.100000001</gravity>
+						<surface name="particles" material="8a73ba7d18fa92e60911c8362e6ff374101e444a" property="surface_base"/>
+						<transform>1 0 0 0.0 7.4505802e-009 1 -1.49012e-008 0.0 2.9802299e-008 0 1 0.0 7.62939e-006 2.28882e-005 0 1.0</transform>
+					</node>
+				</node>
+			</node>
+		</node>
+		<node type="NodeDummy" id="1949270718" enabled="0" folded="1" name="weather_lightning">
+			<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 -1700.99000001 -2773.18990001 114.111 1.0</transform>
+			<node type="ObjectMeshStatic" id="1198908059" folded="1" name="weather_lightning_mesh">
+				<mesh_name>weather/valley/meshes/lightning.mesh</mesh_name>
+				<surface name="lightning" cast_shadow="0" cast_world_shadow="0" material="d0d745c7d32b3f0fb160f21c3648f7a1977840d1" property="surface_base"/>
+				<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0 0 0 1.0</transform>
+				<node type="LightOmni" id="467791537" folded="1" name="weather_lightning_omni_light">
+					<attenuation_distance>1000</attenuation_distance>
+					<shape>2 1 0.200000003</shape>
+					<shape_type>-1</shape_type>
+					<color>0.5 0.629808009 1 1</color>
+					<intensity>0</intensity>
+					<attenuation_power>0.400000006</attenuation_power>
+					<shadow>0</shadow>
+					<shadow_bias>1</shadow_bias>
+					<shadow_screen_space>0</shadow_screen_space>
+					<shadow_screen_space_num_rays>8</shadow_screen_space_num_rays>
+					<shadow_screen_space_num_steps>8</shadow_screen_space_num_steps>
+					<shadow_screen_space_noise_ray>1</shadow_screen_space_noise_ray>
+					<shadow_screen_space_noise_step>0.5</shadow_screen_space_noise_step>
+					<shadow_screen_space_step_size>0.5</shadow_screen_space_step_size>
+					<shadow_screen_space_threshold>1</shadow_screen_space_threshold>
+					<shadow_screen_space_softness>0.400000006</shadow_screen_space_softness>
+					<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 67.365097 0 302.72198 1.0</transform>
+				</node>
+				<node type="ObjectVolumeSphere" id="1163848633" collider="0" name="weather_lightning_volume_light1">
+					<radius>800 800 800</radius>
+					<surface name="volume" material="2208c69d8ff9a70b3092918b9c2695b14b024c17" property="surface_base"/>
+					<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 159.966 25.0688 357.26999 1.0</transform>
+				</node>
+				<node type="ObjectVolumeSphere" id="722213499" collider="0" name="weather_lightning_volume_light2">
+					<radius>500 500 500</radius>
+					<surface name="volume" material="2208c69d8ff9a70b3092918b9c2695b14b024c17" property="surface_base"/>
+					<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 147.05901 105.644 887.18402 1.0</transform>
+				</node>
+				<node type="NodeTrigger" id="519407379" name="weather_lightning_trigger">
+					<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0 0 0 1.0</transform>
+				</node>
+			</node>
+		</node>
+	</node>
+	<node type="LightWorld" id="892457728" folded="1" name="weather_sun">
+		<scattering>1</scattering>
+		<disable_angle>180</disable_angle>
+		<shadow_sharpness>0</shadow_sharpness>
+		<num_shadow_cascades>1</num_shadow_cascades>
+		<shadow_cascade_borders>0.00499999989 0.0500000007 0.200000003</shadow_cascade_borders>
+		<color>1 0.941177011 0.847059011 1</color>
+		<intensity>1.5</intensity>
+		<shadow_resolution>4</shadow_resolution>
+		<shadow_bias>1</shadow_bias>
+		<shadow_normal_bias>4</shadow_normal_bias>
+		<shadow_screen_space>0</shadow_screen_space>
+		<shadow_screen_space_num_rays>8</shadow_screen_space_num_rays>
+		<shadow_screen_space_num_steps>8</shadow_screen_space_num_steps>
+		<shadow_screen_space_noise_ray>1</shadow_screen_space_noise_ray>
+		<shadow_screen_space_noise_step>0.5</shadow_screen_space_noise_step>
+		<shadow_screen_space_step_size>0.5</shadow_screen_space_step_size>
+		<shadow_screen_space_threshold>1</shadow_screen_space_threshold>
+		<shadow_screen_space_softness>0.400000006</shadow_screen_space_softness>
+		<transform>-0.559231877327 -0.322872787714 -0.769569575787 0.0 0.489982426167 -0.848673641682 4.1653589733e-007 0.0 -0.662939727306 -0.382745593786 0.642323553562 0.0 0 0 0 1.0</transform>
+		<node type="ObjectSky" id="1963843531" enabled="0" collider="0" name="weather_starsky">
+			<spherical>1</spherical>
+			<size>24000 24000 800</size>
+			<min_slices>500</min_slices>
+			<max_slices>600</max_slices>
+			<distribute>2</distribute>
+			<humidity>0.959999979</humidity>
+			<transition>0.5</transition>
+			<extinction>0.699999988</extinction>
+			<density_velocity>30 30 0</density_velocity>
+			<density_offset>1111.82996 1111.82996 0</density_offset>
+			<density_layer>3</density_layer>
+			<surface name="sphere" material="2b284b38b8254ab79aaed134d781543b6660f9d5" property="surface_base"/>
+			<surface name="volume" enabled="0" property="surface_base"/>
+			<surface name="shadow" enabled="0" folded="1" material="c71b5d2e40e0c4a360250214054186c5e6858d65" property="surface_base"/>
+			<transform>1.0030001 -1.1829799e-009 -1.9085084e-007 0.0 -5.6149823e-008 1.0000001 -7.7438955e-008 0.0 0.0071905269 3.2885174e-007 0.99700004 0.0 0.57300001 -2.322 -8.5710001 1.0</transform>
+		</node>
+	</node>
+	<node type="ObjectSky" id="104273368" collider="0" folded="1" name="weather_sky">
+		<simulation>1</simulation>
+		<size>8000 8000 300</size>
+		<min_slices>256</min_slices>
+		<max_slices>512</max_slices>
+		<distribute>4</distribute>
+		<humidity>0.850000024</humidity>
+		<transition>0.5</transition>
+		<extinction>0.699999988</extinction>
+		<density_image>weather/valley/textures/clouds.png</density_image>
+		<density_velocity>30 30 0</density_velocity>
+		<density_offset>481.064514 481.064514 0</density_offset>
+		<density_layer>1</density_layer>
+		<surface name="sphere" material="914303cb18b4559549270493f47c3aec1a51a26d" property="surface_base"/>
+		<surface name="volume" enabled="0" material="7bdfa437e6722af07e3de02f69e4131442d6aba0" property="surface_base"/>
+		<surface name="shadow" enabled="0" material="80e73c0958d1ade7fda46dc5045dca932bd2019c" property="surface_base"/>
+		<transform>0.999999999995 0 0 0.0 0 0.999999999995 0 0.0 0 0 0.999999999995 0.0 0 0 1100 1.0</transform>
+		<node type="ObjectCloudLayer" id="1486558320" collider="0" name="weather_clouds">
+			<coverage_animation_offset>0.740724027 0 0 0</coverage_animation_offset>
+			<noise_animation_offset>0.132248193 0 -0.0661240965 0</noise_animation_offset>
+			<surface name="clouds_surface" intersection="0" material="1d916e3bf9ec95fe04a97edb7f817f299dda9c3f" property="surface_base"/>
+			<transform>0.999999880795 0 0 0.0 0 0.999999880795 0 0.0 0 0 0.999999940401 0.0 0 0 3500 1.0</transform>
+		</node>
+	</node>
+	<node type="LightWorld" id="641296845" collider="0" folded="1" name="weather_moon">
+		<scattering>2</scattering>
+		<disable_angle>90</disable_angle>
+		<shadow_sharpness>0</shadow_sharpness>
+		<num_shadow_cascades>4</num_shadow_cascades>
+		<shadow_cascade_borders>0.0149999997 0.0500000007 0.200000003</shadow_cascade_borders>
+		<color>0.549019992 0.549019992 0.549019992 1</color>
+		<shadow_resolution>5</shadow_resolution>
+		<shadow_bias>1</shadow_bias>
+		<shadow_screen_space>0</shadow_screen_space>
+		<shadow_screen_space_num_rays>8</shadow_screen_space_num_rays>
+		<shadow_screen_space_num_steps>8</shadow_screen_space_num_steps>
+		<shadow_screen_space_noise_ray>1</shadow_screen_space_noise_ray>
+		<shadow_screen_space_noise_step>0.5</shadow_screen_space_noise_step>
+		<shadow_screen_space_step_size>0.5</shadow_screen_space_step_size>
+		<shadow_screen_space_threshold>1</shadow_screen_space_threshold>
+		<shadow_screen_space_softness>0.400000006</shadow_screen_space_softness>
+		<transform>0.78395742178 0.452618092299 -0.422118604183 0.0 0.499898314476 -0.864389181137 -0.000340425292961 0.0 -0.365685552359 -0.210816219449 -0.900289475918 0.0 0 0 0 1.0</transform>
+		<node type="WorldExpression" id="1753698855" latest="1" name="weather_moon_billboard_expression">
+			<size>1e+009 1e+009 1e+009</size>
+			<expression>{
+
+// get parent
+Node parent = getParent();
+if(parent == 0) return;
+
+// get player
+Player player = engine.game.getPlayer();
+if(player == 0) return;
+
+// player position
+mat4 transform = translate(player.getWorldPosition()) * rotation(parent.getWorldTransform()) * translate(0.0f,0.0f,7500.0f);
+
+// transform childs
+Node node = getNode();
+forloop(int i = 0; node.getNumChildren()) {
+	Node child = node.getChild(i);
+	child.setWorldTransform(transform);
+}
+
+}</expression>
+			<transform>1 0 1.49012e-008 0.0 0 1 -4.8428799e-008 0.0 2.9802299e-008 2.2351699e-008 1 0.0 2.34916e-021 -7.1588998e-022 5.4288499e-023 1.0</transform>
+		</node>
+	</node>
+	<node type="NodeLayer" id="1412187155" enabled="0" folded="1" name="weather_earth">
+		<layer>weather/demos/orbits/earth/earth.node</layer>
+		<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0 0 0 1.0</transform>
+	</node>
+	<node type="NodeLayer" id="1514900086" folded="1" name="commode">
+		<layer>weather/commode/commode.node</layer>
+		<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0 0 0 1.0</transform>
+	</node>
+</nodes>

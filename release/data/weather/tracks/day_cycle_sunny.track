@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<track version="2.5.0.2" min_time="0" max_time="24" unit_time="5">
+	<parameter type="material.parameterColor" name="weather_moon" string="emission_color">
+		<key time="0">1 1 1 1</key>
+	</parameter>
+	<parameter type="material.parameterSlider" name="weather_sky" string="clouds_01_scale">
+		<key time="1.5" type="1">0.1</key>
+		<key time="2.5" type="1">0.07</key>
+		<key time="5.5" type="1">0.12</key>
+		<key time="6" type="1">0.16</key>
+		<key time="8" type="1">0.5</key>
+		<key time="12" type="1">0.6</key>
+		<key time="16" type="1">0.5</key>
+		<key time="18" type="1">0.16</key>
+		<key time="18.5" type="1">0.12</key>
+		<key time="21.5" type="1">0.07</key>
+		<key time="22.5" type="1">0.1</key>
+	</parameter>
+	<parameter type="material.parameterSlider" name="weather_sky" string="clouds_23_scale">
+		<key time="1.5" type="1">0.05</key>
+		<key time="2.5" type="1">0.03</key>
+		<key time="5.5" type="1">0.07</key>
+		<key time="6" type="1">0.1</key>
+		<key time="8" type="1">0.3</key>
+		<key time="12" type="1">0.4</key>
+		<key time="16" type="1">0.3</key>
+		<key time="18" type="1">0.1</key>
+		<key time="18.5" type="1">0.07</key>
+		<key time="21.5" type="1">0.03</key>
+		<key time="22.5" type="1">0.05</key>
+	</parameter>
+	<parameter type="material.parameterSlider" name="weather_sky" string="clouds_01_threshold">
+		<key time="0" type="1">1.4</key>
+	</parameter>
+	<parameter type="material.parameterSlider" name="weather_sky" string="clouds_23_threshold">
+		<key time="0" type="1">1.6</key>
+	</parameter>
+	<parameter type="material.parameterSlider" name="weather_sky" string="sphere_scattering">
+		<key time="0" type="1">0.5</key>
+	</parameter>
+	<parameter type="material.parameterSlider" name="weather_fog" string="volume_density">
+		<key time="0" type="1">0</key>
+		<key time="2.5" type="1">0.2</key>
+		<key time="6" type="1">2</key>
+		<key time="9.71536" type="1">0</key>
+	</parameter>
+	<parameter type="material.parameterColor" name="weather_fog" string="diffuse_color">
+		<key time="0">0.14 0.169996 0.2 1</key>
+		<key time="1.5">0.0499961 0.0749961 0.1 1</key>
+		<key time="2.5">0.0420784 0.0460392 0.05 1</key>
+		<key time="5.5">0.137498 0.193749 0.25 1</key>
+		<key time="6">0.188235 0.247059 0.329412 1</key>
+		<key time="6.5">0.403922 0.443137 0.498039 1</key>
+		<key time="12">1 1 1 1</key>
+		<key time="21.5">0.0420784 0.0460392 0.05 1</key>
+	</parameter>
+	<parameter type="material.parameterColor" name="weather_post_filter_wet_surface" string="reflection_color">
+		<key time="0">0.25 0.274992 0.3 1</key>
+		<key time="1.5">0.208333 0.229157 0.25 1</key>
+		<key time="2.5">0.0833333 0.0916627 0.1 1</key>
+		<key time="5.5">0.165788 0.232894 0.3 1</key>
+		<key time="6">0.467502 0.501875 0.55 1</key>
+		<key time="12">0.722506 0.775624 0.85 1</key>
+		<key time="18">0.467502 0.501875 0.55 1</key>
+		<key time="18.5">0.165788 0.232894 0.3 1</key>
+		<key time="21.5">0.0829961 0.0914941 0.1 1</key>
+		<key time="22.5">0.208333 0.229157 0.25 1</key>
+		<key time="24">0.25 0.274992 0.3 1</key>
+	</parameter>
+	<parameter type="render.shadowShafts.exposure">
+		<key time="0" type="1">0.35</key>
+		<key time="2" type="1">0.35</key>
+		<key time="2.5" type="1">0</key>
+		<key time="5.5" type="1">0</key>
+		<key time="6" type="1">0.4</key>
+		<key time="12" type="1">0.4</key>
+		<key time="18" type="1">0.35</key>
+		<key time="18.5" type="1">0</key>
+	</parameter>
+	<parameter type="material.parameterColor" name="weather_light_dust" string="diffuse_color">
+		<key time="0">0.25 0.25 0.25 0.498035</key>
+		<key time="2.5">0 0 0 0.498039</key>
+		<key time="6">0.4 0.36369 0.29109 0.498039</key>
+		<key time="6.5">1 0.8 0.6 1</key>
+		<key time="12">1 0.983333 0.9 1</key>
+		<key time="18">1 0.827498 0.55 1</key>
+		<key time="18.5">0.4 0.36369 0.29109 0.498039</key>
+		<key time="21.5">0 0 0 0.498039</key>
+		<key time="22">0.15 0.15 0.15 0.498035</key>
+		<key time="24">0.25 0.25 0.25 0.498035</key>
+	</parameter>
+	<parameter type="material.parameterColor" name="weather_rain_drops" string="diffuse_color">
+		<key time="0">0.127498 0.138741 0.15 0.0980392</key>
+		<key time="2">0.127498 0.138741 0.15 0.0980392</key>
+		<key time="2.5">0.059498 0.0647451 0.07 0.0980353</key>
+		<key time="5.5">0.212502 0.231243 0.25 0.0980392</key>
+		<key time="6">0.7 0.641659 0.560004 0.0980353</key>
+		<key time="8">0.847414 0.811597 0.751644 0.0980372</key>
+		<key time="12">1 0.987498 0.950008 0.0980392</key>
+		<key time="16">0.849483 0.813982 0.754333 0.0980372</key>
+		<key time="18">0.7 0.641659 0.560004 0.0980353</key>
+		<key time="18.5">0.212502 0.231243 0.25 0.0980392</key>
+		<key time="21.5">0.127498 0.138741 0.15 0.0980392</key>
+	</parameter>
+	<parameter type="material.parameterColor" name="weather_rain_splash" string="diffuse_color">
+		<key time="0">0.101996 0.110996 0.12 0.784314</key>
+		<key time="2">0.101996 0.110996 0.12 0.784314</key>
+		<key time="2.5">0.059498 0.064749 0.07 0.784314</key>
+		<key time="5.5">0.255 0.277498 0.3 0.784314</key>
+		<key time="6">0.5 0.458326 0.4 0.784314</key>
+		<key time="8">0.744245 0.722928 0.693094 0.784314</key>
+		<key time="12">1 1 1 0.784314</key>
+		<key time="16">0.744245 0.722928 0.693094 0.784314</key>
+		<key time="18">0.5 0.458326 0.4 0.784314</key>
+		<key time="18.5">0.255 0.277498 0.3 0.784314</key>
+		<key time="21.5">0.059498 0.064749 0.07 0.784314</key>
+		<key time="22">0.101996 0.110996 0.12 0.784314</key>
+		<key time="24">0.101996 0.110996 0.12 0.784314</key>
+	</parameter>
+	<parameter type="material.parameterColor" name="weather_fume" string="diffuse_color">
+		<key time="0">0.100984 0.10989 0.118808 0.158416</key>
+		<key time="2">0.100984 0.10989 0.118808 0.158416</key>
+		<key time="2.5">0.042498 0.0462471 0.05 0.158416</key>
+		<key time="5.5">0.17 0.184996 0.2 0.158416</key>
+		<key time="6">0.45 0.393737 0.315004 0.158416</key>
+		<key time="8">0.710882 0.681307 0.639919 0.158416</key>
+		<key time="12">1 1 1 0.158416</key>
+		<key time="16">0.710882 0.681307 0.639919 0.158416</key>
+		<key time="18">0.45 0.393737 0.315004 0.158416</key>
+		<key time="18.5">0.17 0.184996 0.2 0.158416</key>
+		<key time="21.5">0.042498 0.0462471 0.05 0.158416</key>
+		<key time="22">0.100984 0.10989 0.118808 0.158416</key>
+		<key time="24">0.100984 0.10989 0.118808 0.158416</key>
+	</parameter>
+	<parameter type="material.parameterColor" name="weather_camera_drop" string="diffuse_color">
+		<key time="0">0.212498 0.231247 0.25 1</key>
+		<key time="2">0.127498 0.138745 0.15 1</key>
+		<key time="2.5">0.0509961 0.0554941 0.06 1</key>
+		<key time="5.5">0.212502 0.231247 0.25 1</key>
+		<key time="6">0.6 0.512498 0.39 1</key>
+		<key time="8">0.79242 0.747011 0.683441 1</key>
+		<key time="12">1 1 1 1</key>
+		<key time="16">0.801083 0.757569 0.696652 1</key>
+		<key time="18">0.6 0.512498 0.39 1</key>
+		<key time="18.5">0.212502 0.231247 0.25 1</key>
+		<key time="21.5">0.0509961 0.0554941 0.06 1</key>
+		<key time="22">0.127498 0.138745 0.15 1</key>
+		<key time="24">0.212498 0.231247 0.25 1</key>
+	</parameter>
+	<parameter type="material.parameterColor" name="weather_sky" string="volume_0_color">
+		<key time="0">0.149996 0.199988 0.25 1</key>
+		<key time="2">0.0899961 0.119992 0.15 1</key>
+		<key time="2.5">0.0745098 0.0980392 0.117647 1</key>
+		<key time="5.5">0.160784 0.203922 0.247059 1</key>
+		<key time="6.5">1 0.839216 0.6 1</key>
+		<key time="8">0.957583 0.860226 0.708163 1</key>
+		<key time="12">0.9 0.888749 0.855 1</key>
+		<key time="16">0.957583 0.860226 0.708163 1</key>
+		<key time="17.5">1 0.839216 0.6 1</key>
+		<key time="18.5">0.160784 0.203922 0.247059 1</key>
+		<key time="21.5">0.0745098 0.0980392 0.117647 1</key>
+		<key time="22">0.0899961 0.119992 0.15 1</key>
+		<key time="24">0.149996 0.199988 0.25 1</key>
+	</parameter>
+	<parameter type="material.parameterColor" name="weather_sky" string="volume_1_color">
+		<key time="0">0.0499961 0.0749961 0.1 1</key>
+		<key time="2">0.0249961 0.037498 0.05 1</key>
+		<key time="2.5">0.027451 0.027451 0.027451 1</key>
+		<key time="5.5">0.0823529 0.113725 0.14902 1</key>
+		<key time="6.5">0.298039 0.298039 0.298039 1</key>
+		<key time="8">0.298039 0.298039 0.298039 1</key>
+		<key time="12">0.298039 0.298039 0.298039 1</key>
+		<key time="16">0.298039 0.298039 0.298039 1</key>
+		<key time="17.5">0.298039 0.298039 0.298039 1</key>
+		<key time="18.5">0.0823529 0.113725 0.14902 1</key>
+		<key time="21.5">0.027451 0.027451 0.027451 1</key>
+		<key time="22">0.0249961 0.037498 0.05 1</key>
+		<key time="24">0.0499961 0.0749961 0.1 1</key>
+	</parameter>
+	<parameter type="material.parameterColor" name="weather_stars" string="diffuse_color">
+		<key time="2.5">1 1 1 1</key>
+		<key time="5.5">1 1 1 0.588235</key>
+		<key time="6.5">1 1 1 0</key>
+		<key time="17.5">1 1 1 0</key>
+		<key time="18.5">1 1 1 0.588235</key>
+		<key time="21.5">1 1 1 1</key>
+	</parameter>
+	<parameter type="node.enabled" id="1860463079" name="stars">
+		<key time="0">1</key>
+		<key time="6.5">0</key>
+		<key time="17.5">1</key>
+	</parameter>
+	<parameter type="material.parameterColor" name="weather_wind_leaves" string="diffuse_color">
+		<key time="0">0.25 0.25 0.25 1</key>
+		<key time="2.5">0 0 0 1</key>
+		<key time="6">0.4 0.363686 0.291086 1</key>
+		<key time="6.5">1 0.8 0.6 1</key>
+		<key time="12">1 0.983329 0.9 1</key>
+		<key time="18">1 0.827498 0.55 1</key>
+		<key time="18.5">0.4 0.363686 0.291086 1</key>
+		<key time="21.5">0 0 0 1</key>
+		<key time="22">0.15 0.15 0.15 1</key>
+		<key time="24">0.25 0.25 0.25 1</key>
+	</parameter>
+	<parameter type="render.environment.preset0.hazeColor">
+		<key time="0">0.0941177 0.109804 0.129412 1</key>
+		<key time="2.5">0.0588235 0.0666667 0.0784314 1</key>
+		<key time="7.06309">0.164706 0.203922 0.247059 1</key>
+		<key time="12">0.603922 0.796079 1 1</key>
+		<key time="17.147">0.0980392 0.121569 0.14902 1</key>
+		<key time="21.5">0.0588235 0.0666667 0.0784314 1</key>
+		<key time="24">0.0941177 0.109804 0.129412 1</key>
+	</parameter>
+	<parameter type="render.environment.preset0.hazeDensity">
+		<key time="0" type="1">1</key>
+		<key time="6" type="1">1</key>
+		<key time="12" type="1">2.5</key>
+		<key time="18.5" type="1">1</key>
+		<key time="24" type="1">1</key>
+	</parameter>
+	<parameter type="render.environment.preset1.intensity">
+		<key time="0" type="1">0</key>
+	</parameter>
+	<parameter type="material.parameterSlider" name="weather_sky" string="volume_alpha">
+		<key time="0" type="1">0</key>
+	</parameter>
+	<parameter type="material.parameterColor" name="weather_moon" string="diffuse_color">
+		<key time="0">0 0 0 1</key>
+	</parameter>
+</track>

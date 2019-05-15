@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.5.0.2" name="weather_empty" guid="47376db2c461c4945744b3bfd33f42eadca33575" parent="6eb0e262541d061a8509e4940854ef9d18d53ee0" base_material="mesh_base">
+	<options depth_mask="0" cast_shadow="0" cast_world_shadow="0"/>
+	<state name="deferred">0</state>
+	<state name="ambient">0</state>
+</material>

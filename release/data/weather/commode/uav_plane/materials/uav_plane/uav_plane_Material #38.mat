@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.5.0.2" name="uav_plane_Material #38" guid="995f1bf7387aec674172c0461061ef88dbda9f5c" parent="7883324257e53419ce52dcc834ef0a4a37d3f5a4" base_material="mesh_base">
+	<parameter name="albedo_color">0.10980393 0.10980393 0.10980393 1</parameter>
+	<parameter name="emission_color">0 0 0 1</parameter>
+	<parameter name="emission_scale">0</parameter>
+</material>

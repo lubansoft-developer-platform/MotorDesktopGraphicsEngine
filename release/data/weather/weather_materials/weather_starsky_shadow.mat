@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.5.0.2" name="weather_starsky_shadow" guid="c71b5d2e40e0c4a360250214054186c5e6858d65" base_material="sky_base">
+	<blend src="zero" dest="src_alpha"/>
+</material>

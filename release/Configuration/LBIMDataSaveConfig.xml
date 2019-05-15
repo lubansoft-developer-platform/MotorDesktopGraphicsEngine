@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LBIMDataConfig>
+	<!--工程设置-->
+	<model name="LBIMProjectSetting">
+		<!--楼层信息-->
+		<struct name="FloorInfo" flg="Y"/>
+		<!--计算规则(钢筋特有数据)-->
+		<struct name="CalcRule" flg="Y"/>
+		<!--箍筋设置(钢筋特有数据)-->
+		<struct name="GuJinSheZhi" flg="Y"/>
+		<!--锚固设置(钢筋特有数据)-->
+		<struct name="MaoGuSheZhi" flg="Y"/>
+		<!--搭接设置(钢筋特有数据)-->
+		<struct name="DaJieSheZhi" flg="Y"/>
+		<!--砼等级-->
+		<struct name="ConcreteGrade" flg = "Y"/>
+		<!--材质属性(土建特有数据)-->
+		<struct name="MaterialPty" flg = "Y"/>
+		<!--自定义断面边属性-->
+		<struct name="CustomEdgePty" flg="Y"/>
+		<!--企业Logo(施工特有数据)-->
+		<struct name="CompanyLogo" flg = "Y"/>
+		<!--类别属性(专项特有数据)-->
+		<struct name="SpecilProperty" flg = "Y"/>
+		<!-- 工程自定义属性 -->
+		<struct name="PJCustomPty" flg = "Y"/> 
+		<!--特殊钢筋设置（钢筋特有数据） -->
+		<struct name="TeShuGJSetting" flg = "Y"/> 
+	</model>
+	<!--构件-->
+	<model name="LBIMComponent">
+		<!--构件保存模式"Normal"为默认的构件保存模式.如果在LBIM构件中不设置保存模型将会默认采用此模式保存-->
+		<Pattern name="N">
+			<!--模板构件保存-->
+			<model name="TComponent" flg="Y">
+				<!--模板构件基础数据-->
+				<struct name="BaseData" flg="Y"/>
+				<!--属性参数-->
+				<struct name="LBIMPropertyParam" flg="Y"/>
+				<!--清单定额(安装特有数据)-->
+				<struct name="BillQuota" flg="Y"/>
+				<!--清单定额引用(土建特有数据)-->
+				<struct name="BillQuotaRef" flg="Y"/>
+				<!--配筋属性(钢筋特有数据)-->
+				<struct name="PeiJinProperty" flg="Y"/>
+				<!--计算设置(钢筋特有数据)-->
+				<struct name="CalcSetting" flg="Y"/>
+				<!--锚固搭接(钢筋特有数据)-->
+				<struct name="MaoGuDaJie" flg="Y"/>
+				<!--产品私有数据-->
+				<struct name="PrivateData" flg="Y"/>
+			</model>
+			<!--实体构件保存-->
+			<model name="SComponent" flg="Y">
+				<!--实体构件基础数据-->
+				<struct name="BaseData" flg="Y"/>
+				<!--属性列表-->
+				<struct name="LBIMPropertyParam" flg="Y"/>
+				<!--清单定额引用(土建特有数据)-->
+				<struct name="BillQuotaRef" flg="Y"/>
+				<!--二维几何属性-->
+				<struct name="LBIM2DProperty" flg="Y"/>
+				<!--三维几何属性-->
+				<struct name="LBIM3DProperty" flg="Y"/>
+				<!--配筋属性(钢筋特有数据)-->
+				<struct name="PeiJinProperty" flg="Y"/>
+				<!--计算设置(钢筋特有数据)-->
+				<struct name="CalcSetting" flg="Y"/>
+				<!--锚固搭接(钢筋特有数据)-->
+				<struct name="MaoGuDaJie" flg="Y"/>
+				<!--产品私有数据-->
+				<struct name="PrivateData" flg="Y"/>
+				<!--关联几何描述元素(施工 文字信息等)-->
+				<struct name="GeoRepresentation" flg="Y"/>
+			</model>
+		</Pattern>
+		<!--构件保存模式"Omnipotent"为万能构件保存模式-->
+		<Pattern name="O">
+			<!--模板构件保存-->
+			<model name="TComponent" flg="N">
+				<!--模板构件基础数据-->
+				<struct name="BaseData" flg="Y"/>
+				<!--属性参数-->
+				<struct name="LBIMPropertyParam" flg="Y"/>
+				<!--清单定额(安装特有数据)-->
+				<struct name="BillQuota" flg="Y"/>
+				<!--清单定额引用(土建特有数据)-->
+				<struct name="BillQuotaRef" flg="Y"/>
+				<!--配筋属性(钢筋特有数据)-->
+				<struct name="PeiJinProperty" flg="Y"/>
+				<!--计算设置(钢筋特有数据)-->
+				<struct name="CalcSetting" flg="Y"/>
+				<!--锚固搭接(钢筋特有数据)-->
+				<struct name="MaoGuDaJie" flg="Y"/>
+				<!--产品私有数据-->
+				<struct name="PrivateData" flg="Y"/>
+			</model>
+			<!--实体构件保存-->
+			<model name="SComponent" flg="Y">
+				<!--实体构件基础数据-->
+				<struct name="BaseData" flg="Y"/>
+				<!--属性参数-->
+				<struct name="LBIMPropertyParam" flg="Y"/>
+				<!--清单定额引用(土建特有数据)-->
+				<struct name="BillQuotaRef" flg="Y"/>
+				<!--二维几何属性-->
+				<struct name="LBIM2DProperty" flg="Y"/>
+				<!--三维几何属性-->
+				<struct name="LBIM3DProperty" flg="Y"/>
+				<!--配筋属性(钢筋特有数据)-->
+				<struct name="PeiJinProperty" flg="Y"/>
+				<!--计算设置(钢筋特有数据)-->
+				<struct name="CalcSetting" flg="Y"/>
+				<!--锚固搭接(钢筋特有数据)-->
+				<struct name="MaoGuDaJie" flg="Y"/>
+				<!--产品私有数据-->
+				<struct name="PrivateData" flg="Y"/>
+				<!--关联几何描述元素(施工 文字信息等)-->
+				<struct name="GeoRepresentation" flg="Y"/>
+			</model>
+		</Pattern>
+	</model>
+	<!--计算结果-->
+	<model name="LBIMCalcResult">
+		<!--土建的计算结果-->
+		<struct name="BuildCalcResult" flg="Y"/>
+		<!--钢筋的计算结果-->
+		<struct name="SteelBarCalcResult" flg="Y"/>
+		<!--安装的计算结果-->
+		<struct name="MEPCalcResult" flg="Y"/>
+	</model>
+</LBIMDataConfig>

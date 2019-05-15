@@ -1,0 +1,71 @@
+ <base_material version="2.0" name="vir_base"  parameters_prefix="m">
+   <blend src="src_alpha" dest="one_minus_src_alpha"/>
+   <options transparent="2"/>
+   <!-- States -->
+   <state name="ambient">1</state>
+   <!-- custom states -->
+   <state name="primitive"	items="point,line,circle"		defines="name_items"	pass_defines="ambient">1</state>
+   <state name="coord" items="world,eye,pro" defines="name_items"	pass_defines="ambient">2</state>
+   <!-- custom primitive parameter-->
+   <parameter name="primitive_size" type="slider" min="-1.0" max="2.0">3.f</parameter>
+   <parameter name="albedo_color"		type="color">1.0 0.0 0.0 1.0</parameter>
+   <!--custom patch mode-->
+   <group name="PatchMode">
+     <parameter name="normal_mode" type="slider" min="-1.0" max="2.0">-1.f</parameter>
+     <parameter name="select_mode" type="slider" min="-1.0" max="2.0">-1.f</parameter>
+   </group>
+   <!--custom texture-->
+   <texture unit="0"	name="vir_image"		pass="ambient"	anisotropy="1" >core/textures/common/white.dds</texture>
+
+   <texture unit="16"	name="patch_transf_row0"		pass="deferred,forward,auxiliary"  anisotropy="1" shader="all">unigine_project/materials/common/patchR.dds</texture>
+   <texture unit="17"	name="patch_transf_row1"		pass="deferred,forward,auxiliary"  anisotropy="1" shader="all">unigine_project/materials/common/patchG.dds</texture>
+   <texture unit="18"	name="patch_transf_row2"		pass="deferred,forward,auxiliary"  anisotropy="1" shader="all">unigine_project/materials/common/patchB.dds</texture>
+   <texture unit="19"	name="patch_color"		pass="deferred,ambient"	anisotropy="1" >unigine_project/materials/common/patchTransparent.dds</texture>
+   <texture unit="20"	name="patch_visible"	pass="deferred,ambient,auxiliary"	anisotropy="1" >unigine_project/materials/common/patchTransparent.dds</texture>
+
+   <shader pass="ambient" node="object_dynamic"
+    ambient="1"
+    primitive ="0"
+    coord="0"
+		defines="BASE_AMBIENT"
+    vertex="unigine_project/materials/vir_base/vir_base.vert"
+    geometry="unigine_project/materials/vir_base/point_world.geom"
+    fragment="unigine_project/materials/vir_base/vir_base.frag"/>
+
+   <shader pass="ambient" node="object_dynamic"
+    ambient="1"
+    primitive ="0"
+    coord="1"
+    defines="BASE_AMBIENT"
+    vertex="unigine_project/materials/vir_base/vir_base.vert"
+    geometry="unigine_project/materials/vir_base/point_eye.geom"
+    fragment="unigine_project/materials/vir_base/vir_base.frag"/>
+
+   <shader pass="ambient" node="object_dynamic"
+    ambient="1"
+    primitive ="1"
+    coord="0"
+    defines="BASE_AMBIENT"
+    vertex="unigine_project/materials/vir_base/vir_base.vert"
+    geometry="unigine_project/materials/vir_base/line_world.geom"
+    fragment="unigine_project/materials/vir_base/vir_base.frag"/>
+
+   <shader pass="ambient" node="object_dynamic"
+    ambient="1"
+    primitive ="1"
+    coord="1"
+    defines="BASE_AMBIENT"
+    vertex="unigine_project/materials/vir_base/vir_base.vert"
+    geometry="unigine_project/materials/vir_base/line_eye.geom"
+    fragment="unigine_project/materials/vir_base/vir_base.frag"/>
+   
+   <shader pass="ambient" node="object_dynamic"
+    ambient="1"
+    primitive ="1"
+    coord="2"
+    defines="BASE_AMBIENT"
+    vertex="unigine_project/materials/vir_base/vir_base.vert"
+    geometry="unigine_project/materials/vir_base/line_pro.geom"
+    fragment="unigine_project/materials/vir_base/vir_base.frag"/>
+ 
+</base_material>

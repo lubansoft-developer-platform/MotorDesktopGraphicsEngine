@@ -1,0 +1,33 @@
+<base_material version="2.0" name="post_composite" hidden="1">
+	
+	<!-- states -->
+	<state name="lens"			defines="name">0</state>
+	<state name="shadow_shafts"	defines="name">0</state>
+	<state name="lut"			defines="name">0</state>
+	<state name="dirt"			defines="name">0</state>
+	<state name="bloom"			defines="name">0</state>
+	<state name="sun_shafts"	defines="name">0</state>
+	<state name="cross"			defines="name">0</state>
+	<state name="filmic"		defines="name">0</state>
+	
+	<!-- shaders -->
+	<shader pass="post"
+		vertex="unigine_project/materials/post_composite/composite.vert"
+		fragment="unigine_project/materials/post_composite/composite.frag"/>
+	
+	<!-- textures -->
+	<texture unit="0" type="screen_color"/>
+	<texture unit="1" name="dirt"				dirt="1"			type="procedural"/>
+	<texture unit="2" name="bloom"				bloom="1"			type="procedural"/>
+	<texture unit="3" name="sun_shafts"			sun_shafts="1"		type="procedural"/>
+	<texture unit="4" name="cross"				cross="1"			type="procedural"/>
+	<texture unit="5" name="lens"				lens="1"			type="procedural"/>
+	<texture unit="6" name="shadow_shafts"		shadow_shafts="1"	type="procedural"/>
+	<texture unit="7" name="lut"				lut="1"				type="procedural"/>
+	<texture unit="8" name="dithering"								filter="point">core/textures/render_composite_dithering.dds</texture>
+  <texture unit="9" type="gbuffer_material_mask"/>
+	<!-- parameters -->
+	<parameter name="filmic_curve"				filmic="1" type="constant">1.0 1.0 1.0 1.0</parameter>
+	<parameter name="filmic_white"				filmic="1" type="constant">1.0 1.0 1.0 1.0</parameter>
+	<parameter name="dirt_scale"							type="slider">1.0</parameter>
+</base_material>

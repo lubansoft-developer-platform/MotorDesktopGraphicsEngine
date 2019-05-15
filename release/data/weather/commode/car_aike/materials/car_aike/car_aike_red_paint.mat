@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.5.0.2" name="car_aike_red_paint" guid="7cffc9cba608c43c54de0048b9ec1199d7543407" parent="60c2a79a0af6ba12fdafe84cbc9296654e98ff67" base_material="mesh_base">
+	<parameter name="diffuse_color">0.400000006 0 0 1</parameter>
+</material>

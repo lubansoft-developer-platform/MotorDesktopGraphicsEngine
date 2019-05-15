@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<track version="2.5.0.2" min_time="0" max_time="1" unit_time="1">
+	<parameter type="render.environment.preset1.intensity">
+		<key time="0" type="1">0</key>
+		<key time="0.463999987" type="1">0.150000006</key>
+		<key time="1" type="1">1</key>
+	</parameter>
+	<parameter type="material.parameterSlider" name="weather_clouds_base" string="coverage_contrast">
+		<key time="0" type="1">2</key>
+		<key time="0.286000013" type="4" handles="-0.0771666691 0.266666681 0.0771666691 -0.266666681">0.600000024</key>
+		<key time="0.463" type="4" handles="-0.119000003 0.100000009 0.119000003 -0.100000009">0.400000006</key>
+		<key time="1" type="2" handles="-0.108256221 0.0046874322 0.108256221 -0.0046874322">0</key>
+	</parameter>
+	<parameter type="material.parameterSlider" name="weather_clouds_base" string="noise_threshold_extent">
+		<key time="0" type="1">0.300000012</key>
+		<key time="0.463" type="1">0.300000012</key>
+		<key time="0.741999984" type="1">0.300000012</key>
+		<key time="1" type="1">0.150000006</key>
+	</parameter>
+	<parameter type="material.parameterSlider" name="weather_clouds_base" string="density">
+		<key time="0" type="1">0</key>
+		<key time="0.233999997" type="1">0.5</key>
+		<key time="0.463999987" type="1">1</key>
+	</parameter>
+	<parameter type="material.parameterSlider" name="weather_clouds_base" string="sun_intensity">
+		<key time="0" type="1">0.25</key>
+		<key time="1" type="1">0</key>
+	</parameter>
+	<parameter type="material.parameterSlider" name="weather_clouds_base" string="ambient_intensity">
+		<key time="0.880999982" type="1">1.10000002</key>
+		<key time="1" type="1">0.699999988</key>
+	</parameter>
+</track>

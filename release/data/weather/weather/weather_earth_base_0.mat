@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.5.0.2" name="weather_earth_base_0" guid="39e23dc0e907fbcf1efc3be1fe90d1df815d6c0e" base_material="weather_earth_base">
+	<blend src="src_alpha" dest="one_minus_src_alpha"/>
+	<options order="-8" offset="1" depth_mask="0" cast_shadow="0" cast_world_shadow="0"/>
+	<texture name="atmosphere_ramp" wrap="clamp" anisotropy="1">weather/demos/orbits/earth/textures/shading/atmosphere_ramp_1.tga</texture>
+	<texture name="light_ramp" wrap="clamp" anisotropy="1">weather/demos/orbits/earth/textures/shading/ground_light_ramp.tga</texture>
+	<texture name="atmo_light_ramp" wrap="clamp" anisotropy="1">weather/demos/orbits/earth/textures/shading/light_ramp.tga</texture>
+	<parameter name="water_color">0.109803997 0.129411995 0.200000003 1</parameter>
+	<parameter name="diffuse_color">1 1 1 1</parameter>
+	<parameter name="specular_color">0.188235 0.188235 0.188235 0.517647028</parameter>
+	<parameter name="specular_1">1 0.349020004 0 1</parameter>
+	<parameter name="specular_pow">6.71400023</parameter>
+	<parameter name="emission_scale">2</parameter>
+	<parameter name="emission_pow">2</parameter>
+	<parameter name="emission_terminator_pow">0.5</parameter>
+	<parameter name="emission_terminator_bias">0</parameter>
+	<parameter name="shadow">0.00999999978</parameter>
+	<parameter name="shadow_int">0.5</parameter>
+	<parameter name="fog_mountain">1.10000002</parameter>
+	<parameter name="pow_fog_mountain">0.5</parameter>
+	<parameter name="normal_scale">1</parameter>
+	<parameter name="normal_cloud_scale">0.0599999987</parameter>
+</material>

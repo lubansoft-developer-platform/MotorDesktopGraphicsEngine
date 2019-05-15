@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.5.0.2" name="weather_sky_volume" guid="7bdfa437e6722af07e3de02f69e4131442d6aba0" parent="b61a0949c5c99c80c01368ec577d2f400e8e8b9b" base_material="sky_base">
+	<blend src="src_alpha" dest="one_minus_src_alpha"/>
+	<options two_sided="1"/>
+</material>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodes version="2.5.0.2">
+	<node type="ObjectMeshSkinned" id="1926889201" name="plane">
+		<mesh_name>weather/commode/uav_plane/meshes/plane.mesh</mesh_name>
+		<anim_name>weather/commode/uav_plane/textures/plane.anim</anim_name>
+		<loop>1</loop>
+		<time>92.7791443</time>
+		<speed>360</speed>
+		<playing>1</playing>
+		<surface name="Material #37" collision="0" material="1ab975754e700b65a01a2b06d534d6e29bbfb5c2" property="surface_base"/>
+		<surface name="Material #452" collision="0" material="08f1c82b052cced443b0c1e3dd8721c349a6f3e5" property="surface_base"/>
+		<surface name="Material #38" collision="0" material="995f1bf7387aec674172c0461061ef88dbda9f5c" property="surface_base"/>
+		<surface name="Material #61" collision="0" material="95b2be3d976416c1c788401cacaa60bc9d4f5a7a" property="surface_base"/>
+		<surface name="Material #673" collision="0" material="eda4dd1a3cd90ae448ac045cb6e2ecd0e45fed6f" property="surface_base"/>
+		<surface name="Material #107" collision="0" material="8d8c80087fd55cfbd673697f3113a700f02829c6" property="surface_base"/>
+		<transform>0.999999940391 0 0 0.0 0 0.999999940391 0 0.0 0 0 0.999999999995 0.0 3.5527136788e-015 -2.84217094304e-014 4.4408920985e-016 1.0</transform>
+	</node>
+</nodes>

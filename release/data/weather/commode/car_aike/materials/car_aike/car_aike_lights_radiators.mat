@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.5.0.2" name="car_aike_lights_radiators" guid="5463c6e787da9449610542466f6703b69f5b8cbf" parent="aee241fa80e655b2e03de2dae86a3d01bd2118b9" base_material="mesh_base">
+	<texture name="diffuse">weather/commode/car_aike/textures/cars_radiator_d.dds</texture>
+	<texture name="specular">weather/commode/car_aike/textures/cars_radiator_d.dds</texture>
+	<parameter name="diffuse_color">0.486274987 0.486274987 0.486274987 1</parameter>
+</material>

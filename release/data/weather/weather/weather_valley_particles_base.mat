@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.5.0.2" name="weather_valley_particles_base" guid="6b2af29efffc8949446248d3020d70c76bc23372" base_material="particles_base">
+	<blend src="one" dest="one"/>
+</material>

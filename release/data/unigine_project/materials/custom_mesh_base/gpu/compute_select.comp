@@ -1,0 +1,82 @@
+/* Copyright (C) 2005-2017, UNIGINE Corp. All rights reserved.
+ *
+ * This file is a part of the UNIGINE 2.6.1.1 SDK.
+ *
+ * Your use and / or redistribution of this software in source and / or
+ * binary form, with or without modification, is subject to: (i) your
+ * ongoing acceptance of and compliance with the terms and conditions of
+ * the UNIGINE License Agreement; and (ii) your inclusion of this notice
+ * in any version of this software that you use or redistribute.
+ * A copy of the UNIGINE License Agreement is available by contacting
+ * UNIGINE Corp. at http://unigine.com/
+ */
+
+
+#define UNDEF_FRAGMENT_OUT
+
+#include <core/shaders/common/fragment.h>
+#include <core/shaders/common/compute.h>
+
+struct DXT2Block
+{
+	float4 iId;
+};
+
+// Unordered access textures
+INIT_RW_TEXTURE(0,RW_DYNAMIC_TEXTURE)
+INIT_RW_STRUCTURED_BUFFER(1,DXT2Block,VERTEX_DATA)
+
+// Source image
+INIT_TEXTURE(0, TEX_PATCH_TRANSF_ROW0)
+INIT_TEXTURE(1, TEX_PATCH_TRANSF_ROW1)
+INIT_TEXTURE(2, TEX_PATCH_TRANSF_ROW2)
+INIT_TEXTURE(3, TEX_PATCH_VISIBLE)
+
+CBUFFER(solver_parameters)
+	UNIFORM float4 m_mode_view_transform[4];
+	UNIFORM float4 m_projection_transform[4];
+END
+
+// Set 32x32 threads in one group
+MAIN_COMPUTE_BEGIN(512,1,1)
+	
+	// Our texture resoultion is 1024x1024, for solve particles system we can dispatch 32x32 thread groups - 32x32 threads each
+	uint i = GROUP_ID.x * 512 + GROUP_THREAD_ID.x;
+	float4 cValue = VERTEX_DATA[i].iId;
+
+	// 纹理坐标
+	uint iPatchId = cValue.w;
+	uint iY = iPatchId / 1024;
+	uint iX = iPatchId % 1024;
+	
+	float4 patch_visible = TEXTURE_FETCH(TEX_PATCH_VISIBLE, float2(iX, iY));
+	if (patch_visible.x > EPSILON || patch_visible.y > EPSILON)
+	{
+		TEXTURE_RW_STORE(RW_DYNAMIC_TEXTURE,int2(iX,iY),float4(0.f,1.f,0.f,1.f));
+		return;
+	}
+	
+	float4 patch_transf_row0 = TEXTURE_FETCH(TEX_PATCH_TRANSF_ROW0, float2(iX, iY));
+	float4 patch_transf_row1 = TEXTURE_FETCH(TEX_PATCH_TRANSF_ROW1, float2(iX, iY));
+	float4 patch_transf_row2 = TEXTURE_FETCH(TEX_PATCH_TRANSF_ROW2, float2(iX, iY));
+	cValue.xyz = mul4(patch_transf_row0, patch_transf_row1, patch_transf_row2, float4(cValue.xyz, 1.0f)).xyz;
+
+	//顶点变换
+	float4x4 cModeView = float4x4(m_mode_view_transform[0][0],m_mode_view_transform[0][1],m_mode_view_transform[0][2],m_mode_view_transform[0][3],
+								  m_mode_view_transform[1][0],m_mode_view_transform[1][1],m_mode_view_transform[1][2],m_mode_view_transform[1][3],
+								  m_mode_view_transform[2][0],m_mode_view_transform[2][1],m_mode_view_transform[2][2],m_mode_view_transform[2][3],
+								  m_mode_view_transform[3][0],m_mode_view_transform[3][1],m_mode_view_transform[3][2],m_mode_view_transform[3][3]);
+	float4 cVertex = mul4(cModeView,float4(cValue.xyz,1.0f));
+
+	float4x4 cProjection = float4x4(m_projection_transform[0][0],m_projection_transform[0][1],m_projection_transform[0][2],m_projection_transform[0][3],
+									m_projection_transform[1][0],m_projection_transform[1][1],m_projection_transform[1][2],m_projection_transform[1][3],
+									m_projection_transform[2][0],m_projection_transform[2][1],m_projection_transform[2][2],m_projection_transform[2][3],
+									m_projection_transform[3][0],m_projection_transform[3][1],m_projection_transform[3][2],m_projection_transform[3][3]);
+	cVertex = mul4(cProjection,float4(cVertex.xyz,1.0f));
+	cVertex.xyz =  cVertex.xyz / cVertex.w;
+
+	if(cVertex.x > -1 && cVertex.x < 1 && cVertex.y > -1 && cVertex.y < 1&& cVertex.z > -1 && cVertex.z < 1)
+		TEXTURE_RW_STORE(RW_DYNAMIC_TEXTURE,int2(iX,iY),float4(1.f,0.f,0.f,1.f));
+	else
+		TEXTURE_RW_STORE(RW_DYNAMIC_TEXTURE,int2(iX,iY),float4(0.f,1.f,0.f,1.f));
+END_COMPUTE

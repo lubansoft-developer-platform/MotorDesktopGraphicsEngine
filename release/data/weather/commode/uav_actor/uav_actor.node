@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodes version="2.5.0.2">
+	<node type="ObjectMeshSkinned" id="824563082" collider="0" name="actor_0">
+		<mesh_name>weather/commode/uav_actor/meshes/uav_actor.mesh</mesh_name>
+		<speed>0</speed>
+		<playing>1</playing>
+		<surface name="7 - Default" collision="0" material="dc7fc06b7babae92975c7188e8828282fb0627b1" property="surface_base"/>
+		<surface name="ce9105cb.dds" collision="0" material="57f5dbb025828031a46ec4493cd1fd844819eac3" property="surface_base"/>
+		<surface name="15 - Default" collision="0" material="e0dc6880bb2811ef7de0dd43e04338a2cbe2fda5" property="surface_base"/>
+		<surface name="19 - Default" collision="0" material="f197a80b7bbad5e19f9f2f00d5c6d70f698a2c45" property="surface_base"/>
+		<surface name="74343440.dds" collision="0" material="50baac98ae54c39509167fe23a2d85b8c61d2dbc" property="surface_base"/>
+		<surface name="ce9105cb.dds" collision="0" material="57f5dbb025828031a46ec4493cd1fd844819eac3" property="surface_base"/>
+		<transform>2.93725705147 0 0 0.0 0 2.65234470367 0 0.0 0 0 2.89227795601 0.0 -6.43714897823 9.47592090487 -6.78768907505 1.0</transform>
+	</node>
+</nodes>

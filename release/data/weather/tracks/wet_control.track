@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<track version="2.5.0.2" min_time="0" max_time="1" unit_time="1">
+	<parameter type="render.renderMaterials">
+		<key time="0"/>
+		<key time="0.0317096">weather_post_filter_wet_surface</key>
+		<key time="1"/>
+	</parameter>
+	<parameter type="material.parameterSlider" name="weather_post_filter_wet_surface" string="reflection_scale">
+		<key time="0" type="1" handles="-0.191907 0.00826045 0.191907 -0.00826045">0</key>
+		<key time="1" type="1" handles="-0.165465 -0.465501 0.165465 0.465501">1</key>
+	</parameter>
+</track>

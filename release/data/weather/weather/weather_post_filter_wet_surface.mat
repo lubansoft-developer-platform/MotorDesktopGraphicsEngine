@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.5.0.2" name="weather_post_filter_wet_surface" guid="0d3162235c41d8b1a7713927cbf7c30fbd070867" base_material="post_filter_wet">
+	<texture name="normal">weather/valley/textures/wet_surface_n.dds</texture>
+	<texture name="reflection">weather/valley/textures/environment_day_cloudy.dds</texture>
+	<parameter name="normal_transform">vec4(0.6f,0.10f,0.12*time,0.08*time)</parameter>
+	<parameter name="normal_threshold">3</parameter>
+	<parameter name="reflection_distance">170</parameter>
+	<parameter name="reflection_normal">1.5</parameter>
+	<parameter name="reflection_color">0.679628909 0.714155614 0.762500048 1</parameter>
+	<parameter name="reflection_scale">0</parameter>
+	<parameter name="fresnel_bias">0.100000001</parameter>
+	<parameter name="fresnel_power">3</parameter>
+</material>

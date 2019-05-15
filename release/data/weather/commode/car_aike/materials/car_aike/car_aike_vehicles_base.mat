@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.5.0.2" name="car_aike_vehicles_base" guid="8e4758d328638dbb31befe53ef749baa93eda2df" base_material="mesh_base">
+	<options order="1"/>
+	<state name="workflow">1</state>
+	<parameter name="material_mask">0x2</parameter>
+	<parameter name="specular_color">0.200000003 0.200000003 0.200000003 1</parameter>
+	<parameter name="gloss">0.120412</parameter>
+</material>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<track version="2.5.0.2" min_time="0" max_time="1" unit_time="1">
+	<parameter type="render.animation.stem">
+		<key time="0" type="1">1</key>
+		<key time="1" type="1">2.5</key>
+	</parameter>
+	<parameter type="render.animation.leaf">
+		<key time="0" type="1">1</key>
+		<key time="1" type="1">2.5</key>
+	</parameter>
+	<parameter type="render.animation.scale">
+		<key time="0" type="1">1</key>
+		<key time="1" type="1">2.5</key>
+	</parameter>
+	<parameter type="node.object.particles.emitterEnabled" id="1344423297" name="weather_wind_leaves">
+		<key time="0">0</key>
+		<key time="0.01">1</key>
+	</parameter>
+	<parameter type="node.object.particles.spawnRate" id="1344423297" name="weather_wind_leaves">
+		<key time="0" type="1">0</key>
+		<key time="0.3" type="1">0</key>
+		<key time="1" type="1">10</key>
+	</parameter>
+	<parameter type="node.object.particles.velocityMean" id="1344423297" name="weather_wind_leaves">
+		<key time="0" type="1">0</key>
+		<key time="0.2" type="1">3</key>
+		<key time="1" type="1">10</key>
+	</parameter>
+	<parameter type="node.object.particles.velocitySpread" id="1344423297" name="weather_wind_leaves">
+		<key time="0" type="1">0</key>
+		<key time="0.2" type="1">1</key>
+		<key time="1" type="1">5</key>
+	</parameter>
+	<parameter type="node.object.particles.emitterEnabled" id="1952015249" name="weather_wind_fume">
+		<key time="0">0</key>
+		<key time="0.01">1</key>
+	</parameter>
+	<parameter type="node.object.particles.spawnRate" id="1952015249" name="weather_wind_fume">
+		<key time="0" type="1">0</key>
+		<key time="0.2" type="1">5</key>
+		<key time="1" type="1">50</key>
+	</parameter>
+	<parameter type="node.object.particles.velocityMean" id="1952015249" name="weather_wind_fume">
+		<key time="0" type="1">0</key>
+		<key time="0.2" type="1">3</key>
+		<key time="1" type="1">10</key>
+	</parameter>
+	<parameter type="node.object.particles.velocitySpread" id="1952015249" name="weather_wind_fume">
+		<key time="0" type="1">0</key>
+		<key time="0.2" type="1">1</key>
+		<key time="1" type="1">5</key>
+	</parameter>
+	<parameter type="render.animation.wind">
+		<keys_x>
+			<key time="0" type="1">0</key>
+		</keys_x>
+		<keys_y>
+			<key time="0" type="1">0</key>
+			<key time="1" type="1">1</key>
+		</keys_y>
+		<keys_z>
+			<key time="0" type="1">0</key>
+			<key time="1" type="1">-0.1</key>
+		</keys_z>
+	</parameter>
+	<parameter type="node.object.particles.emitterDirection" id="525016071" name="weather_rain_drops">
+		<keys_x>
+			<key time="0" type="1">0</key>
+		</keys_x>
+		<keys_y>
+			<key time="0" type="1">0</key>
+			<key time="1" type="1">15</key>
+		</keys_y>
+		<keys_z>
+			<key time="0" type="1">-20</key>
+		</keys_z>
+	</parameter>
+	<parameter type="node.object.particles.emitterSpread" id="525016071" name="weather_rain_drops">
+		<keys_x>
+			<key time="0" type="1">1</key>
+			<key time="1" type="1">2</key>
+		</keys_x>
+		<keys_y>
+			<key time="0" type="1">1</key>
+			<key time="1" type="1">5</key>
+		</keys_y>
+		<keys_z/>
+	</parameter>
+	<parameter type="sound.volume5">
+		<key time="0" type="1">0</key>
+		<key time="0.333" type="1">1</key>
+		<key time="0.666" type="1">0</key>
+	</parameter>
+	<parameter type="sound.volume6">
+		<key time="0.333" type="1">0</key>
+		<key time="0.666" type="1">1</key>
+		<key time="1" type="1">0</key>
+	</parameter>
+	<parameter type="sound.volume7">
+		<key time="0.666" type="1">0</key>
+		<key time="1" type="1">1</key>
+	</parameter>
+</track>

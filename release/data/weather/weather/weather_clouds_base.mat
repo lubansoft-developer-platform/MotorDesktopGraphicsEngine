@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.5.0.2" name="weather_clouds_base" guid="1d916e3bf9ec95fe04a97edb7f817f299dda9c3f" base_material="clouds_base">
+	<texture name="clouds_coverage">weather/valley/textures/clouds_0.jpg</texture>
+	<parameter name="layer_max_height">607.099976</parameter>
+	<parameter name="coverage_size">0.0560000017</parameter>
+	<parameter name="coverage_contrast">0.441201746</parameter>
+	<parameter name="density">0.752173901</parameter>
+	<parameter name="base_size">0.449999988</parameter>
+	<parameter name="noise_threshold_extent">0.300000012</parameter>
+	<parameter name="detail_size">10</parameter>
+	<parameter name="curl_distortion_scale">500</parameter>
+	<parameter name="cloud_distortion">0.200000003</parameter>
+	<parameter name="detail_affect">2</parameter>
+	<parameter name="ambient_intensity">1.10000002</parameter>
+	<parameter name="sun_intensity">0.162499994</parameter>
+	<parameter name="hgp_pow">1</parameter>
+	<parameter name="wind_x">5</parameter>
+	<parameter name="wind_z">1.25</parameter>
+</material>

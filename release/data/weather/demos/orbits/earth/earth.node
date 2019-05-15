@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodes version="2.5.0.2">
+	<node type="ObjectMeshStatic" id="94465717" folded="1" name="weather_earth">
+		<mesh_name>weather/demos/orbits/earth/planet_lite.mesh</mesh_name>
+		<surface name="nz_lod1_x0_y0" material="b7ab4195e13ea0b423892fe86a37058363d07d86" property="surface_base"/>
+		<surface name="nz_lod1_x1_y0" material="fbae4ffc6060b86e02abb2b3fb7fadc2e96c76d6" property="surface_base"/>
+		<surface name="nz_lod1_x0_y1" material="a1b730b435b0fea4af7102d3e52b0aacf7f47a96" property="surface_base"/>
+		<surface name="nz_lod1_x1_y1" material="4da51156ae788767ee05591ce7b3a17225a8205d" property="surface_base"/>
+		<surface name="px_lod1_x0_y0" material="12f031b83f76b5927623c539835797e33ad68136" property="surface_base"/>
+		<surface name="px_lod1_x1_y0" material="fdc29edcc0ec0fd3704b53efd0d2aa253a57ea86" property="surface_base"/>
+		<surface name="px_lod1_x0_y1" material="fae49af0bf55e7db9ac0a1eb717497113314126d" property="surface_base"/>
+		<surface name="px_lod1_x1_y1" material="337c9d2afc01fffc57fd749cac66a0cc529a8720" property="surface_base"/>
+		<surface name="pz_lod1_x0_y0" material="834b96a3bf7a033586f4b4c1a194464bfb3dcbe7" property="surface_base"/>
+		<surface name="pz_lod1_x1_y0" material="11bad5accd2b3038ef26e0b14a4a50e1fa74043d" property="surface_base"/>
+		<surface name="pz_lod1_x0_y1" material="cfde98bf4d2e52014e7939d713b40bccac174ac3" property="surface_base"/>
+		<surface name="pz_lod1_x1_y1" material="6c557409fa867a53b935115bc8fba443694603ca" property="surface_base"/>
+		<surface name="nx_lod1_x0_y0" material="4547053600c21b3b3d36003fa919efdfc715679a" property="surface_base"/>
+		<surface name="nx_lod1_x1_y0" material="7a4445520353f14e58ba9ccc25de4a9ae3ee30a4" property="surface_base"/>
+		<surface name="nx_lod1_x0_y1" material="6aa7456e54cb2e7857eaa5b0763d65bb57b577ae" property="surface_base"/>
+		<surface name="nx_lod1_x1_y1" material="88212c697ae10d8cf2842de58d862f123b0b2003" property="surface_base"/>
+		<surface name="ny_lod1_x0_y0" material="79ccafc97afdb9e3aad6e2bcea01d717ceacc157" property="surface_base"/>
+		<surface name="ny_lod1_x1_y0" material="ee97108304040cd500939984ee75fde62eaf0749" property="surface_base"/>
+		<surface name="ny_lod1_x0_y1" material="c66a47a3fd8149a5c8042aa7fa612d1101f88cbe" property="surface_base"/>
+		<surface name="ny_lod1_x1_y1" material="b9d19e7cd927c22c85cd52c1d76a98ec4c7ce2c1" property="surface_base"/>
+		<surface name="py_lod1_x0_y0" material="317cdd41b22121d03f4e847e928d993930b251f7" property="surface_base"/>
+		<surface name="py_lod1_x1_y0" material="74dd51ed5e741cfe5d535e63faf70de56e65ea6f" property="surface_base"/>
+		<surface name="py_lod1_x0_y1" material="cdef257071c15a46b72f1ccfef87d06494116775" property="surface_base"/>
+		<surface name="py_lod1_x1_y1" material="8bb727056a1df2f3a4cbe8b0ed33ba68d318fd76" property="surface_base"/>
+		<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0 0 0 1.0</transform>
+	</node>
+</nodes>

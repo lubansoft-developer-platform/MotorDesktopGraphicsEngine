@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.5.0.2" name="uav_plane_Material #107" guid="8d8c80087fd55cfbd673697f3113a700f02829c6" parent="7883324257e53419ce52dcc834ef0a4a37d3f5a4" base_material="mesh_base">
+	<texture name="albedo">weather/commode/uav_plane/textures/jinshu01.dds</texture>
+	<parameter name="albedo_color">0.588 0.588 0.588 1</parameter>
+	<parameter name="emission_color">0 0 0 1</parameter>
+	<parameter name="emission_scale">0</parameter>
+</material>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.5.0.2" name="weather_fume" guid="96fa84b2a11afa3250838781408ef6521c3e8997" parent="6b2af29efffc8949446248d3020d70c76bc23372" base_material="particles_base">
+	<blend src="src_alpha" dest="one_minus_src_alpha"/>
+	<options order="-1"/>
+	<state name="volume">1</state>
+	<texture name="diffuse">weather/valley/textures/fume_d.dds</texture>
+	<texture name="attenuation">weather/valley/textures/particles_attenuation_d.dds</texture>
+	<parameter name="diffuse_color">0.86559999 0.880295813 0.894999981 0.158416003</parameter>
+	<parameter name="diffuse_scale">0.600000024</parameter>
+	<parameter name="animation_transform">vec4(1.0f,1.0f,1.0f,0.1f)</parameter>
+	<parameter name="volume_scale">0.400000006</parameter>
+</material>

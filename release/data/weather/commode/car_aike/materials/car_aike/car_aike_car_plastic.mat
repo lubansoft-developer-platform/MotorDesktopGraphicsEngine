@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.5.0.2" name="car_aike_car_plastic" guid="184cc59632faa6a65a2a7cb6fcbd36948965afc7" parent="aee241fa80e655b2e03de2dae86a3d01bd2118b9" base_material="mesh_base">
+	<options order="6"/>
+	<parameter name="material_mask">0x40</parameter>
+	<parameter name="diffuse_color">0 0 0 1</parameter>
+	<parameter name="specular_color">0.0862744972 0.0862744972 0.0862744972 1</parameter>
+	<parameter name="gloss">0.837000012</parameter>
+</material>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.5.0.2" name="material_ball" guid="3f41faccf417a2f9bf3c304e3eed36a01ab56afc" base_material="mesh_base">
+	<state name="ao_map">1</state>
+	<state name="ao_mapping">1</state>
+	<texture name="albedo">core/textures/material_ball/material_ball_alb.dds</texture>
+	<texture name="shading">core/textures/material_ball/material_ball_met.dds</texture>
+	<texture name="normal">core/textures/material_ball/material_ball_n.dds</texture>
+	<texture name="ambient_occlusion">core/textures/material_ball/material_ball_a.dds</texture>
+	<parameter name="albedo_color">1 1 1 1</parameter>
+	<parameter name="metalness">1</parameter>
+	<parameter name="diffuse_color">1 1 1 1</parameter>
+	<parameter name="specular_color">1 1 1 1</parameter>
+	<parameter name="gloss">1</parameter>
+</material>

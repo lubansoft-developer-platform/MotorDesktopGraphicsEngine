@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.5.0.2" name="car_aike_lights_yellow" guid="cd21700faa2ede2c4bcb3de216f7eddc6fdb61da" parent="e2bf31b06c36856a7657fb4bfb7816b3bfe9d305" base_material="mesh_base">
+	<blend src="one" dest="one"/>
+	<parameter name="emission_color">1 0.650979996 0 1</parameter>
+</material>

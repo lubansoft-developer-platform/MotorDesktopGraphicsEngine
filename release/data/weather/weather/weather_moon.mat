@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.5.0.2" name="weather_moon" guid="02e6aa45153a492aef25280e089032394eef244c" base_material="billboards_base">
+	<options transparent="1" depth_mask="0"/>
+	<state name="emission">1</state>
+	<state name="material_sun_shafts">0</state>
+	<texture name="diffuse">weather/valley/textures/moon_dr.dds</texture>
+	<texture name="emission">weather/valley/textures/moon_dr.dds</texture>
+	<parameter name="diffuse_color">0 0 0 1</parameter>
+	<parameter name="gloss_scale">0.120412</parameter>
+	<parameter name="emission_scale">0.0500000007</parameter>
+</material>

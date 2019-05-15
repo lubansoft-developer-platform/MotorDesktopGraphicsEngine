@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.5.0.2" name="weather_earth_nx_lod1_x0_y0" guid="4547053600c21b3b3d36003fa919efdfc715679a" parent="39e23dc0e907fbcf1efc3be1fe90d1df815d6c0e" base_material="weather_earth_base">
+	<texture name="diffuse">weather/demos/orbits/earth/textures/terrain/nx/diffuse/nx_x0_y0.dds</texture>
+	<texture name="normal">weather/demos/orbits/earth/textures/terrain/nx/normal/nx_x0_y0.dds</texture>
+	<texture name="specular">weather/demos/orbits/earth/textures/terrain/nx/specular/nx_x0_y0.dds</texture>
+	<texture name="emission">weather/demos/orbits/earth/textures/terrain/nx/emission/nx_x0_y0.dds</texture>
+	<texture name="height">weather/demos/orbits/earth/textures/terrain/nx/height/nx_x0_y0.dds</texture>
+	<texture name="diffuse_cloud">weather/demos/orbits/earth/textures/clouds/nx/diffuse/nx_x0_y0.dds</texture>
+	<texture name="normal_cloud">weather/demos/orbits/earth/textures/clouds/nx/normal/nx_x0_y0.dds</texture>
+</material>

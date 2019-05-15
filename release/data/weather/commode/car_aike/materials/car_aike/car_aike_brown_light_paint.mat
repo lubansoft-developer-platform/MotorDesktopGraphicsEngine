@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.5.0.2" name="car_aike_brown_light_paint" guid="a807447b514a02f6567055ae696d2561a5822df7" parent="60c2a79a0af6ba12fdafe84cbc9296654e98ff67" base_material="mesh_base">
+	<parameter name="diffuse_color">0.647059023 0.564706028 0.513725996 1</parameter>
+</material>

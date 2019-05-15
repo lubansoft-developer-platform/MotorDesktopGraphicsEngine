@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.5.0.2" name="weather_rain_splash" guid="f9feb008cc3156583e52031d278c8e3e4a52e969" parent="6b2af29efffc8949446248d3020d70c76bc23372" base_material="particles_base">
+	<blend src="src_alpha" dest="one_minus_src_alpha"/>
+	<state name="volume">1</state>
+	<texture name="diffuse">weather/valley/textures/rain_splash_d.dds</texture>
+	<texture name="attenuation">weather/valley/textures/particles_attenuation_d.dds</texture>
+	<texture name="normal">weather/valley/textures/rain_drop_n.dds</texture>
+	<parameter name="diffuse_color">0.865490079 0.879215717 0.894313633 0.784313977</parameter>
+	<parameter name="diffuse_scale">0.899999976</parameter>
+	<parameter name="animation_transform">vec4(1.0f,1.0f,1.0f,0.1f)</parameter>
+	<parameter name="volume_scale">0.300000012</parameter>
+	<parameter name="refraction_scale">0.300000012</parameter>
+</material>

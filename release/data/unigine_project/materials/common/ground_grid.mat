@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.5.0.2" name="ground_grid" guid="f7e3f5be6ec415cec3df466c150211af6f494500" base_material="mesh_base">
+	<state name="material_sun_shafts">0</state>
+	<texture name="diffuse">core/textures/common/checker_d.dds</texture>
+	<texture name="albedo">core/textures/common/checker_d.dds</texture>
+	<parameter name="albedo_color">1 1 1 1</parameter>
+	<parameter name="diffuse_color">0.807843029 0.807843029 0.807843029 1</parameter>
+	<parameter name="uv_transform">vec4(500.0f,500.0f,0.0f,0.0f)</parameter>
+</material>

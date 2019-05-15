@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.5.0.2" name="weather_sky" guid="b61a0949c5c99c80c01368ec577d2f400e8e8b9b" base_material="sky_base">
+	<options order="-8"/>
+	<texture name="mask_0">weather/valley/textures/clouds_mask1_a.dds</texture>
+	<texture name="mask_1">weather/valley/textures/clouds_mask2_a.dds</texture>
+	<texture name="clouds_01">weather/valley/textures/clouds1_a.dds</texture>
+	<texture name="clouds_23">weather/valley/textures/clouds2_a.dds</texture>
+	<parameter name="volume_0_color">0.811470628 0.804157495 0.782220662 1</parameter>
+	<parameter name="volume_1_color">0.267843097 0.276078254 0.298038989 1</parameter>
+	<parameter name="volume_01_scale">0.5</parameter>
+	<parameter name="volume_alpha">0.245000005</parameter>
+	<parameter name="clouds_01_scale">0.471678436</parameter>
+	<parameter name="clouds_23_scale">0.306678176</parameter>
+	<parameter name="clouds_01_threshold">1.08500004</parameter>
+	<parameter name="clouds_23_threshold">1.21499991</parameter>
+	<parameter name="sphere_scattering">0.395000011</parameter>
+</material>

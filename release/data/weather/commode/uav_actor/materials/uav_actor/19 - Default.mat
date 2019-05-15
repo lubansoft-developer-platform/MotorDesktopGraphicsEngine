@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.5.0.2" name="19 - Default" guid="f197a80b7bbad5e19f9f2f00d5c6d70f698a2c45" parent="22d66519150205ab57f86eea13155291f2d44a76" base_material="mesh_base">
+	<parameter name="albedo_color">1 0.541176498 0 1</parameter>
+	<parameter name="emission_color">0 0 0 1</parameter>
+	<parameter name="emission_scale">0</parameter>
+</material>

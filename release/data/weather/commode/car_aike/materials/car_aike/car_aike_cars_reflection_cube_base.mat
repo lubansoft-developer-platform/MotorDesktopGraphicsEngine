@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.5.0.2" name="car_aike_cars_reflection_cube_base" guid="8dd9703ba73bc873c8119b0f379373a9f180f299" base_material="mesh_base">
+	<options order="7"/>
+	<state name="workflow">1</state>
+	<parameter name="material_mask">0x80</parameter>
+	<parameter name="diffuse_color">0 0 0 1</parameter>
+	<parameter name="specular_color">0.200000003 0.200000003 0.200000003 1</parameter>
+	<parameter name="gloss">0.120412</parameter>
+</material>

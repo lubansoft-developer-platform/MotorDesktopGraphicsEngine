@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.5.0.2" name="car_aike_cars_mirrors" guid="3b40f7c4317e29bf2c776b4217bbe4c69f13baf5" parent="8dd9703ba73bc873c8119b0f379373a9f180f299" base_material="mesh_base">
+	<parameter name="specular_color">1 1 1 1</parameter>
+	<parameter name="gloss">1</parameter>
+</material>

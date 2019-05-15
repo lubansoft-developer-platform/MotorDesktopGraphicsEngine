@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.5.0.2" name="ce9105cb.dds" guid="57f5dbb025828031a46ec4493cd1fd844819eac3" parent="22d66519150205ab57f86eea13155291f2d44a76" base_material="mesh_base">
+	<texture name="albedo">weather/commode/uav_actor/textures/XIe.jpg</texture>
+	<parameter name="albedo_color">0.699999988 0.699999988 0.699999988 1</parameter>
+	<parameter name="emission_color">0 0 0 1</parameter>
+	<parameter name="emission_scale">0</parameter>
+</material>

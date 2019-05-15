@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<base_material name="post_filter_selection_sample" hidden="1" version="2.5.0.2">
+	<shader pass="post" vertex="core/shaders/screen_space/vertex/default.vert" fragment="unigine_project/materials/post_filter_selection/filter_selection_sample.frag"/>
+	<texture type="auxiliary"/>
+</base_material>

@@ -1,0 +1,68 @@
+<base_material version="2.0" name="gui_billboard_base">
+	
+	<!-- blending -->
+	<blend src="src_alpha" dest="one_minus_src_alpha"/>
+	
+	<!-- options -->
+	<options cast_shadow="0" cast_world_shadow="0"/>
+	<options depth_mask="0"/>
+	<options transparent="2"/>
+	<options overlap="1"/>
+	
+	<!-- states -->
+	<state name="deferred" type="toggle" title="Deferred Buffers" group="Default"					tooltip="&lt;p&gt;Enable rendering of the material during the deferred pass.&lt;/p&gt;">1</state>
+	<state name="auxiliary" type="toggle" group="Options"											tooltip="&lt;p&gt;Enable auxiliary rendering pass for the GUI material.&lt;/p&gt;&lt;p&gt;Can be used for custom post-effects.&lt;/p&gt;">0</state>
+	
+	<state name="mode" type="switch" items="default,yuv" group="Options"	title="Rendering Mode"	tooltip="&lt;p&gt;GUI video rendering mode.&lt;/p&gt;&lt;p&gt;&lt;ul&gt;&lt;li&gt;&lt;b&gt;Default&lt;/b&gt; - video is rendered as is.&lt;/li&gt;&lt;li&gt;&lt;b&gt;YUV&lt;/b&gt; - video is rendered in the YUV color space.&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;">0</state>
+	
+	<state name="material_dof"			deferred="1"	title="DOF"			group="Post Processing"	tooltip="&lt;p&gt;Enable the Depth Of Field effect for the GUI material.&lt;/p&gt;">1</state>
+	<state name="material_motion_blur"	deferred="1"	title="Motion Blur"	group="Post Processing"	tooltip="&lt;p&gt;Enable the Motion Blur effect for the GUI material.&lt;/p&gt;">1</state>
+	<state name="material_sun_shafts"	deferred="1"	title="Sun Shafts"	group="Post Processing"	tooltip="&lt;p&gt;Enable the Sun Shafts effect for the GUI material.&lt;/p&gt;">1</state>
+	
+	<!-- wireframe shaders -->
+	<shader pass="wireframe" node="object_gui"
+		defines="BASE_WIREFRAME"
+		vertex="core/shaders/gui/vertex/default.vert"
+		geometry="core/shaders/common/wireframe/wireframe.geom"
+		fragment="core/shaders/common/wireframe/wireframe.frag"/>
+	
+	<shader pass="visualizer_solid" node="object_gui"
+		defines="BASE_VISUALIZER_SOLID"
+		vertex="core/shaders/gui/vertex/default.vert"
+		fragment="core/shaders/common/wireframe/wireframe.frag"/>
+	
+	<!-- deferred shaders -->
+	<shader pass="deferred" node="object_gui"
+		deferred="1"
+		defines="BASE_DEFERRED"
+		transparent_defines=",ALPHA_TEST,TRANSPARENT_BLEND"
+		mode_defines=",YUV"
+		vertex="core/shaders/gui/vertex/deferred.vert"
+		fragment="core/shaders/gui/fragment/deferred.frag"/>
+	
+	<!-- auxiliary shaders -->
+	<shader pass="auxiliary" node="object_gui"
+		auxiliary="1"
+		defines="BASE_AUXILIARY"
+		vertex="core/shaders/gui/vertex/default.vert"
+		fragment="core/shaders/gui/fragment/auxiliary.frag"/>
+	
+	<!-- ambient shaders -->
+	<shader pass="ambient" node="object_gui"
+		defines="BASE_AMBIENT,AMBIENT"
+		mode_defines=",YUV"
+		overlap_defines=",OVERLAP_RENDER"
+		vertex="core/shaders/gui/vertex/default.vert"
+		fragment="unigine_project/materials/common/gui_billboard_ambient.frag"/>
+	
+	<!-- bindings -->
+	<bind node="object_gui_mesh" to="object_gui" defines="GUI_MESH"/>
+	
+	<!-- textures -->
+	<texture name="color" type="procedural"/>
+	
+	<!-- parameters -->
+	<parameter name="auxiliary_color" auxiliary="1" type="color"	tooltip="&lt;p&gt;Auxiliary rendering pass constant color.&lt;/p&gt;">1.0 1.0 1.0 1.0</parameter>
+	<parameter name="color" type="color"							tooltip="&lt;p&gt;GUI color.&lt;/p&gt;">1.0 1.0 1.0 1.0</parameter>
+	
+</base_material>

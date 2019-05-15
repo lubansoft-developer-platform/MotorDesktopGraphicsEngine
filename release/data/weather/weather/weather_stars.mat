@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.5.0.2" name="weather_stars" guid="8a723437d268c7ef4f1254da5e42abb2df2b7647" base_material="billboards_base">
+	<blend src="src_alpha" dest="one_minus_src_alpha"/>
+	<options order="-8" transparent="2" depth_mask="0"/>
+	<state name="deferred">0</state>
+	<state name="angular">1</state>
+	<state name="emission">1</state>
+	<state name="light_omni">0</state>
+	<state name="light_proj">0</state>
+	<state name="light_world">0</state>
+	<texture name="diffuse">weather/valley/textures/stars_d.dds</texture>
+	<texture name="emission">weather/valley/textures/stars_d.dds</texture>
+	<parameter name="diffuse_color">1 1 1 0</parameter>
+	<parameter name="specular_color">0.200000003 0.200000003 0.200000003 1</parameter>
+	<parameter name="gloss_scale">0.120412</parameter>
+	<parameter name="emission_scale">6</parameter>
+</material>

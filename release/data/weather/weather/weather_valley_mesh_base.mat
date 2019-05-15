@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.5.0.2" name="weather_valley_mesh_base" guid="6eb0e262541d061a8509e4940854ef9d18d53ee0" base_material="mesh_base">
+	<state name="workflow">1</state>
+	<parameter name="specular_color">0.200000003 0.200000003 0.200000003 1</parameter>
+	<parameter name="gloss">0.120412</parameter>
+</material>

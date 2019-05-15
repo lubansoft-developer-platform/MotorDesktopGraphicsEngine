@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<base_material editable="0" name="weather_stars_base" version="2.5.0.2">
+	<blend src="none" dest="none"/>
+	<shader pass="ambient" node="object_sky" vertex="weather/demos/orbits/earth/shaders/vertex/stars.shader" fragment="weather/demos/orbits/earth/shaders/fragment/stars.shader"/>
+	<texture name="background_0" shader="all" wrap="clamp" filter="bilinear">core/textures/sky_base_background.dds</texture>
+	<texture name="sun" shader="all" filter="bilinear" anisotropy="1">core/textures/common/white.dds</texture>
+	<parameter name="sphere_transform" type="expression">vec4(2.0f,2.0f,0.5f,0.25f)</parameter>
+	<parameter name="stars_intensity" type="slider" min="1" max="10" flags="max_expand">1</parameter>
+	<parameter name="stars_pow" type="slider" min="1" max="10" flags="max_expand">1</parameter>
+	<parameter name="sun_color" type="color">1 1 1 1</parameter>
+	<parameter name="sun_intensity" type="slider" min="1" max="10" flags="max_expand">1</parameter>
+	<parameter name="sun_pow" type="slider" min="1" max="10" flags="max_expand">1</parameter>
+</base_material>

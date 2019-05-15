@@ -1,0 +1,9 @@
+{
+	"version": "1.0.0",
+	"plugDll": [
+		"LBUniginePlug.dll",
+		"BizFramework.dll",	
+		"BLCimSDK.dll"
+	],
+	"quickRes": []
+}

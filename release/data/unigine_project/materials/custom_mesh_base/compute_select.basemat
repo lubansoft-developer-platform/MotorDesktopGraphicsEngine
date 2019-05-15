@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/* Copyright (C) 2005-2017, UNIGINE Corp. All rights reserved.
+ *
+ * This file is a part of the UNIGINE 2.6.1.1 SDK.
+ *
+ * Your use and / or redistribution of this software in source and / or
+ * binary form, with or without modification, is subject to: (i) your
+ * ongoing acceptance of and compliance with the terms and conditions of
+ * the UNIGINE License Agreement; and (ii) your inclusion of this notice
+ * in any version of this software that you use or redistribute.
+ * A copy of the UNIGINE License Agreement is available by contacting
+ * UNIGINE Corp. at http://unigine.com/
+ */
+
+-->
+
+<!--
+/* Compute shader read-write
+ */
+-->
+<base_material version="2.6" name="compute_select" hidden="1" parameters_prefix="m">
+	
+	<!-- shaders -->
+	<shader pass="post"
+		defines="BASE_POST"
+		compute="unigine_project/materials/custom_mesh_base/gpu/compute_select.comp"/>
+	
+  <parameter name="mode_view_transform" type="array" >vec4(1.0f,0.0f,0.0f,0.0f),vec4(0.0f,1.0f,0.0f,0.0f),vec4(0.0f,0.0f,1.0f,0.f),vec4(0.0f,0.0f,0.0f,1.f)</parameter>
+  <parameter name="projection_transform" type="array" >vec4(1.0f,0.0f,0.0f,0.0f),vec4(0.0f,1.0f,0.0f,0.0f),vec4(0.0f,0.0f,1.0f,0.f),vec4(0.0f,0.0f,0.0f,1.f)</parameter>
+  
+  <texture unit="0"	name="patch_transf_row0"		pass="post"  anisotropy="1" shader="all">unigine_project/materials/custom_mesh_base/patchBlack.dds</texture>
+  <texture unit="1"	name="patch_transf_row1"		pass="post"  anisotropy="1" shader="all">unigine_project/materials/custom_mesh_base/patchBlack.dds</texture>
+  <texture unit="2"	name="patch_transf_row2"		pass="post"  anisotropy="1" shader="all">unigine_project/materials/custom_mesh_base/patchWhite.dds</texture>
+  <texture unit="3"	name="patch_visible"	pass="post"	 anisotropy="1" shader="all">unigine_project/materials/custom_mesh_base/patchTransparent.dds</texture>
+</base_material>

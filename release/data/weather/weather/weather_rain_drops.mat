@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.5.0.2" name="weather_rain_drops" guid="90f7fe5215bbb5cd04f6fd6a4785cfc1cda916c3" parent="6b2af29efffc8949446248d3020d70c76bc23372" base_material="particles_base">
+	<blend src="src_alpha" dest="one_minus_src_alpha"/>
+	<options order="1"/>
+	<state name="refraction">1</state>
+	<texture name="diffuse">weather/valley/textures/rain_drop_d.dds</texture>
+	<texture name="normal">weather/valley/textures/rain_drop_n.dds</texture>
+	<parameter name="diffuse_color">0.807500005 0.799373686 0.775005162 0.0980392024</parameter>
+	<parameter name="diffuse_scale">2.20000005</parameter>
+	<parameter name="refraction_scale">0.200000003</parameter>
+</material>

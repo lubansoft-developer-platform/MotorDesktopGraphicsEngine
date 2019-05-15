@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.5.0.2" name="weather_light_dust" guid="183e3cded51574d22eeb7817deca2239ccc2bc66" parent="6b2af29efffc8949446248d3020d70c76bc23372" base_material="particles_base">
+	<blend src="src_alpha" dest="one_minus_src_alpha"/>
+	<state name="deferred">1</state>
+	<texture name="diffuse">weather/valley/textures/light_dust_particles_d.dds</texture>
+	<texture name="attenuation">weather/valley/textures/particles_attenuation_d.dds</texture>
+	<parameter name="diffuse_color">0.649999976 0.639166415 0.584999979 0.649999976</parameter>
+	<parameter name="animation_transform">vec4(1.0f,1.0f,1.0f,0.4f)</parameter>
+	<parameter name="deferred_threshold">0.600000024</parameter>
+</material>

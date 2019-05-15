@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.5.0.2" name="technology" guid="9ec2e6245e598520213085bbcfd88599c5fc2c22" base_material="mesh_base">
+	<blend src="src_alpha" dest="one_minus_src_alpha"/>
+	<options transparent="2" two_sided="0" cast_shadow="0" cast_world_shadow="0" overlap="0"/>
+	<state name="emission">1</state>
+	<parameter name="albedo_color">0.388235331 0.65882355 0.94901967 0.0392156877</parameter>
+	<parameter name="emission_color">0.388235331 0.65882355 0.94901967 0.0392156877</parameter>
+	<parameter name="emission_scale">1.5</parameter>
+	<parameter name="lightmap_scale">2</parameter>
+	<parameter name="vertex_balloon">0.100000001</parameter>
+</material>

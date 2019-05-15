@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ui version="1.0">
+        <vbox name="vbox::lbddata" align="expand" space="8">
+                <hbox align="expand">
+                        <label>当前Node :</label>
+                        <label name="label::NodeName" width="20"> </label>
+                        <button name="button::ExportNode">
+                            <text>导出节点</text>
+                        </button>
+                </hbox>
+				<hbox align="expand">
+                        <label>转换ID :</label>
+                        <editline name="editline::ConvertID" width="307" editable="0"></editline>
+                        <button name="button::GenerateID">
+                            <text>生成</text>
+                        </button>
+                        <button name="button::CleanID">
+                            <text>清理</text>
+                        </button>
+                </hbox>
+				<hbox align="expand">
+						<button name="button::OpenLocalProj">
+                            <text>打开本地工程</text>
+                        </button>
+						<label width="20"></label>
+                        <button name="button::CloseCurProj">
+                            <text>关闭当前工程</text>
+                        </button>
+						<checkbox name="checkbox::EnableAddEditerObj">
+                            <text>对象加入编辑树</text>
+                        </checkbox>
+                </hbox>
+        </vbox>
+</ui>

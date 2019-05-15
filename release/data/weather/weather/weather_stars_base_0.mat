@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.5.0.2" name="weather_stars_base_0" guid="2b284b38b8254ab79aaed134d781543b6660f9d5" base_material="weather_stars_base">
+	<blend src="src_alpha" dest="one_minus_src_alpha"/>
+	<options transparent="2" depth_mask="0"/>
+	<texture name="background_0">weather/demos/orbits/earth/textures/shading/stars_c.dds</texture>
+	<parameter name="stars_intensity">0.899999976</parameter>
+	<parameter name="stars_pow">1.60000002</parameter>
+	<parameter name="sun_color">0.0941177011 0.0627451017 0.0313725993 1</parameter>
+	<parameter name="sun_intensity">12808.2998</parameter>
+	<parameter name="sun_pow">141270</parameter>
+</material>

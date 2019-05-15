@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.5.0.2" name="car_aike_glass" guid="7ea13ca5f267300dee60aadcb0de38eb2595ea44" parent="8dd9703ba73bc873c8119b0f379373a9f180f299" base_material="mesh_base">
+	<parameter name="gloss">1</parameter>
+</material>

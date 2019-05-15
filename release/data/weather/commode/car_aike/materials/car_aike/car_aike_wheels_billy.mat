@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.5.0.2" name="car_aike_wheels_billy" guid="66283ddca033394894844d1f5c94be4c6be019e8" parent="b815af02da6c5423ecc7646bd3311ab660be4e71" base_material="mesh_base">
+	<texture name="diffuse">weather/commode/car_aike/textures/wheel_d.dds</texture>
+	<texture name="specular">weather/commode/car_aike/textures/wheel_s.dds</texture>
+	<texture name="normal">weather/commode/car_aike/textures/wheel_n.dds</texture>
+	<parameter name="diffuse_color">0.298038989 0.298038989 0.298038989 1</parameter>
+	<parameter name="specular_color">0.647059023 0.647059023 0.647059023 1</parameter>
+	<parameter name="gloss">0.600000024</parameter>
+</material>

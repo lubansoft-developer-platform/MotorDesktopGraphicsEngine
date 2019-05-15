@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.5.0.2" name="weather_wind_leaves" guid="2f2429a525e9882a2049c2e28064445caa775ec1" parent="6b2af29efffc8949446248d3020d70c76bc23372" base_material="particles_base">
+	<blend src="src_alpha" dest="one_minus_src_alpha"/>
+	<options depth_mask="1"/>
+	<state name="deferred">1</state>
+	<texture name="diffuse">weather/valley/textures/wind_leaves_d.dds</texture>
+	<texture name="attenuation">weather/valley/textures/particles_attenuation_d.dds</texture>
+	<parameter name="diffuse_color">0.94749999 0.936663866 0.882499993 1</parameter>
+	<parameter name="animation_transform">vec4(1.0f,1.0f,1.0f,0.8f)</parameter>
+	<parameter name="deferred_threshold">0.600000024</parameter>
+</material>

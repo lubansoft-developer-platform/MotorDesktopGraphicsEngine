@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.5.0.2" name="car_aike_blue_light_fiji_lod" guid="57b94122099d7b6f50e0758a7a5101098fe453da" parent="a878938def1dd5ce97d2cc4328fb707c1c44b86e" base_material="mesh_base">
+	<texture name="diffuse">weather/commode/car_aike/textures/automobile_fiji_lod_2_d.dds</texture>
+</material>

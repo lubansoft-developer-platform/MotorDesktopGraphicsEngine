@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodes version="2.5.0.2">
+	<node type="ObjectMeshStatic" id="181012237" name="car">
+		<mesh_name>weather/commode/car_aike/meshes/automobile_pegasus.mesh</mesh_name>
+		<surface name="automobile_pegasus" collision="0" min_visible_distance="20" max_visible_distance="500" material="bf0a1e22851a5a0beb31345313e07add2a2cdff4" property="surface_base"/>
+		<surface name="automobile_pegasus_automobile_body_color_mat" folded="1" collision="0" max_visible_distance="20" material="7cffc9cba608c43c54de0048b9ec1199d7543407" property="surface_base"/>
+		<surface name="automobile_pegasus_automobile_dark_mat" folded="1" collision="0" max_visible_distance="20" material="184cc59632faa6a65a2a7cb6fcbd36948965afc7" property="surface_base"/>
+		<surface name="automobile_pegasus_automobile_glass_mat" collision="0" max_visible_distance="20" material="7ea13ca5f267300dee60aadcb0de38eb2595ea44" property="surface_base"/>
+		<surface name="automobile_pegasus_automobile_glass_mat" collision="0" max_visible_distance="20" material="7ea13ca5f267300dee60aadcb0de38eb2595ea44" property="surface_base"/>
+		<surface name="automobile_pegasus_automobile_interior_mat" collision="0" max_visible_distance="20" material="56dc9cd14b0d095d418b958fda54f7f756f4968a" property="surface_base"/>
+		<surface name="automobile_pegasus_automobile_mirror_mat" collision="0" max_visible_distance="20" material="3b40f7c4317e29bf2c776b4217bbe4c69f13baf5" property="surface_base"/>
+		<surface name="automobile_pegasus_automobile_mirror_mat" collision="0" max_visible_distance="20" material="3b40f7c4317e29bf2c776b4217bbe4c69f13baf5" property="surface_base"/>
+		<surface name="automobile_pegasus_automobile_radiators_mat" collision="0" max_visible_distance="20" material="5463c6e787da9449610542466f6703b69f5b8cbf" property="surface_base"/>
+		<surface name="automobile_pegasus_dipped" collision="0" max_visible_distance="20" material="e2bf31b06c36856a7657fb4bfb7816b3bfe9d305" property="surface_base"/>
+		<surface name="automobile_pegasus_marker" collision="0" max_visible_distance="20" material="e2bf31b06c36856a7657fb4bfb7816b3bfe9d305" property="surface_base"/>
+		<surface name="automobile_pegasus_reversing" collision="0" max_visible_distance="20" material="e2bf31b06c36856a7657fb4bfb7816b3bfe9d305" property="surface_base"/>
+		<surface name="automobile_pegasus_stop" collision="0" max_visible_distance="20" material="fa9c9eddd613ad81c6ca19965c2ce70a14933a3e" property="surface_base"/>
+		<surface name="automobile_pegasus_turn_left" collision="0" max_visible_distance="20" material="cd21700faa2ede2c4bcb3de216f7eddc6fdb61da" property="surface_base"/>
+		<surface name="automobile_pegasus_turn_right" collision="0" max_visible_distance="20" material="cd21700faa2ede2c4bcb3de216f7eddc6fdb61da" property="surface_base"/>
+		<surface name="automobile_pegasus_wheel_fiji:wheel_mat" collision="0" max_visible_distance="40" material="66283ddca033394894844d1f5c94be4c6be019e8" property="surface_base"/>
+		<surface name="automobile_pegasus_wheels_lod" collision="0" min_visible_distance="40" max_visible_distance="500" material="66283ddca033394894844d1f5c94be4c6be019e8" property="surface_base"/>
+		<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0 0 0 1.0</transform>
+	</node>
+</nodes>

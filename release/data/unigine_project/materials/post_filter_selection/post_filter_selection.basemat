@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<base_material name="post_filter_selection" version="2.5.0.2">
+	<state name="filter_width" type="switch" items="quart_width">0</state>
+	<state name="filter_height" type="switch" items="quart_height">0</state>
+	<state name="filter_format" type="switch" items="rgba8">0</state>
+	<shader pass="post" vertex="core/shaders/screen_space/vertex/default.vert" fragment="unigine_project/materials/post_filter_selection/filter_selection.frag"/>
+	<texture name="color" pass="post" type="procedural"/>
+	<texture type="auxiliary"/>
+	<texture name="selection" pass="post" type="filter" materials="post_filter_selection_sample,post_hblur_2d,post_vblur_2d"/>
+</base_material>

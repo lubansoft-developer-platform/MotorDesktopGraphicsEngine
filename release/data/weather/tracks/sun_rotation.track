@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<track version="2.5.0.2" min_time="0" max_time="24" unit_time="5">
+	<parameter type="node.rotationZYX" id="157714147" name="weather_sun">
+		<keys_x/>
+		<keys_y>
+			<key time="0" type="2" handles="-1.69488 0.328644 1.69488 -0.328644">130</key>
+			<key time="6" type="2" handles="-1.94655 16.8545 1.94655 -16.8545">90</key>
+			<key time="12" type="2" handles="-2 0 2 -0">50</key>
+			<key time="18" type="2" handles="-1.97327 -18.2629 1.97327 18.2629">90</key>
+			<key time="24" type="2" handles="-1.66814 1.0798 1.66814 -1.0798">130</key>
+		</keys_y>
+		<keys_z>
+			<key time="0" type="1">30</key>
+			<key time="24" type="1">-330</key>
+		</keys_z>
+	</parameter>
+	<parameter type="sound.volume0">
+		<key time="0" type="4" handles="-0.833333 -0.0166667 0.833333 0.0166667">0</key>
+		<key time="5" type="4" handles="-1.33333 -0.125 1.33333 0.125">0.1</key>
+		<key time="8" type="4" handles="-1.16667 -0.15 1.16667 0.15">0.75</key>
+		<key time="12" type="4" handles="-1.33333 0 1.33333 -0">1</key>
+		<key time="16" type="4" handles="-1.16667 0.15 1.16667 -0.15">0.75</key>
+		<key time="19" type="4" handles="-1.33333 0.125 1.33333 -0.125">0.1</key>
+		<key time="24" type="4" handles="-0.833333 0.0166667 0.833333 -0.0166667">0</key>
+	</parameter>
+</track>

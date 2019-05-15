@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.5.0.2" name="weather_lightning_volume_light" guid="2208c69d8ff9a70b3092918b9c2695b14b024c17" base_material="volume_light_base">
+	<blend src="one" dest="one"/>
+	<parameter name="diffuse_color">0.0802000016 0.114600003 0.200000003 1</parameter>
+	<parameter name="volume_density">0</parameter>
+</material>

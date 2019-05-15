@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.5.0.2" name="car_aike_blue_billy_lod" guid="0cce56c00c89a526f30ed371492b3cdddcd6cc12" parent="9b1c3954e6f96bb842259d8e16db08e28e70c717" base_material="mesh_base">
+	<texture name="diffuse">weather/commode/car_aike/textures/automobile_billy_lod_2_d.dds</texture>
+</material>

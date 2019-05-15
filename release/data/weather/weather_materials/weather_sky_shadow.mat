@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.5.0.2" name="weather_sky_shadow" guid="80e73c0958d1ade7fda46dc5045dca932bd2019c" parent="b61a0949c5c99c80c01368ec577d2f400e8e8b9b" base_material="sky_base">
+	<blend src="zero" dest="src_alpha"/>
+</material>

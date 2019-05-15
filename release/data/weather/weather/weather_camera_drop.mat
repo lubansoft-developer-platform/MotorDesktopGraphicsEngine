@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.5.0.2" name="weather_camera_drop" guid="8a73ba7d18fa92e60911c8362e6ff374101e444a" parent="6b2af29efffc8949446248d3020d70c76bc23372" base_material="particles_base">
+	<blend src="src_alpha" dest="one_minus_src_alpha"/>
+	<options order="8"/>
+	<state name="refraction">1</state>
+	<texture name="diffuse">weather/valley/textures/camera_drop_d.dds</texture>
+	<texture name="attenuation">weather/valley/textures/particles_attenuation_d.dds</texture>
+	<texture name="normal">weather/valley/textures/camera_drop_n.dds</texture>
+	<parameter name="diffuse_color">0.94749999 0.94749999 0.94749999 1</parameter>
+	<parameter name="diffuse_scale">0.800000012</parameter>
+	<parameter name="animation_transform">vec4(1.0f,1.0f,1.0f,0.6f)</parameter>
+	<parameter name="refraction_scale">-0.300000012</parameter>
+</material>

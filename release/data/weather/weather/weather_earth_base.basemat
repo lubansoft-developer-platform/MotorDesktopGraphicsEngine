@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<base_material editable="0" name="weather_earth_base" version="2.5.0.2">
+	<blend src="none" dest="none"/>
+	<options transparent="2"/>
+	<state name="alpha_fade" hidden="1">0</state>
+	<shader pass="wireframe" node="object_mesh_static" defines="BASE_WIREFRAME" vertex="weather/demos/orbits/earth/shaders/vertex/earth.shader" geometry="core/shaders/common/wireframe/wireframe.geom" fragment="core/shaders/common/wireframe/wireframe.frag"/>
+	<shader pass="light_world" node="object_mesh_static" defines="BASE_LIGHT_WORLD,WORLD" vertex="weather/demos/orbits/earth/shaders/vertex/earth.shader" fragment="weather/demos/orbits/earth/shaders/fragment/earth.shader"/>
+	<bind node="object_mesh_cluster" to="object_mesh_static"/>
+	<bind node="object_mesh_clutter" to="object_mesh_static"/>
+	<bind node="object_mesh_dynamic" to="object_mesh_static"/>
+	<bind node="object_mesh_skinned" to="object_mesh_static"/>
+	<texture name="diffuse" shader="all" unit="0" filter="bilinear" anisotropy="1">core/textures/common/white.dds</texture>
+	<texture name="normal" shader="all" unit="1" format="signed" filter="bilinear" anisotropy="1">core/textures/common/normal.dds</texture>
+	<texture name="specular" shader="all" unit="2" filter="bilinear" anisotropy="1">core/textures/common/white.dds</texture>
+	<texture name="emission" shader="all" unit="3" filter="bilinear" anisotropy="1">core/textures/common/white.dds</texture>
+	<texture name="height" shader="all" unit="4" filter="bilinear" anisotropy="1">core/textures/common/white.dds</texture>
+	<texture name="diffuse_cloud" shader="all" unit="5" filter="bilinear" anisotropy="1">core/textures/common/white.dds</texture>
+	<texture name="normal_cloud" shader="all" unit="6" format="signed" filter="bilinear" anisotropy="1">core/textures/common/white.dds</texture>
+	<texture name="atmosphere_ramp" shader="all" unit="7" filter="bilinear" anisotropy="1">core/textures/common/white.dds</texture>
+	<texture name="light_ramp" shader="all" unit="8" filter="bilinear" anisotropy="1">core/textures/common/white.dds</texture>
+	<texture name="atmo_light_ramp" shader="all" unit="9" filter="bilinear" anisotropy="1">core/textures/common/white.dds</texture>
+	<parameter name="diffuse_scale" type="slider" hidden="1" max="4" flags="max_expand">1</parameter>
+	<parameter name="base_transform" type="expression">vec4(1.0f,1.0f,0.0f,0.0f)</parameter>
+	<parameter name="water_color" type="color">0 0 0 1</parameter>
+	<parameter name="diffuse_color" type="color">0.5 0.5 0.5 1</parameter>
+	<parameter name="specular_color" type="color">0 0 0 1</parameter>
+	<parameter name="specular_0" type="color">1 1 1 1</parameter>
+	<parameter name="specular_1" type="color">1 1 1 1</parameter>
+	<parameter name="specular_pow" type="slider" flags="max_expand">1</parameter>
+	<parameter name="specular_bias" type="slider" flags="max_expand">1</parameter>
+	<parameter name="emission_color" type="color">1 1 1 1</parameter>
+	<parameter name="emission_scale" type="slider" flags="max_expand">1</parameter>
+	<parameter name="emission_pow" type="slider" flags="max_expand">1</parameter>
+	<parameter name="emission_terminator_pow" type="slider" flags="max_expand">1</parameter>
+	<parameter name="emission_terminator_bias" type="slider" flags="max_expand">1</parameter>
+	<parameter name="cloud_color" type="color">1 1 1 1</parameter>
+	<parameter name="shadow" type="slider" flags="max_expand">1</parameter>
+	<parameter name="shadow_bias" type="slider" flags="max_expand">1</parameter>
+	<parameter name="shadow_int" type="slider" flags="max_expand">1</parameter>
+	<parameter name="fog_mountain" type="slider" flags="max_expand">1</parameter>
+	<parameter name="pow_fog_mountain" type="slider" flags="max_expand">1</parameter>
+	<parameter name="atmo_int" type="slider" flags="max_expand">1</parameter>
+	<parameter name="normal_scale" type="slider" flags="max_expand">0.300000012</parameter>
+	<parameter name="normal_cloud_scale" type="slider" flags="max_expand">0.100000001</parameter>
+	<parameter name="lod" type="slider" min="1" max="10" flags="max_expand">1</parameter>
+</base_material>

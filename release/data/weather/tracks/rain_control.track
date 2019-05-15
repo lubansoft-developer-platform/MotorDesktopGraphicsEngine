@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<track version="2.5.0.2" min_time="0" max_time="1" unit_time="1">
+	<parameter type="node.object.particles.emitterEnabled" id="525016071" name="weather_rain_drops">
+		<key time="0.025">0</key>
+		<key time="0.05">1</key>
+	</parameter>
+	<parameter type="node.object.particles.spawnRate" id="525016071" name="weather_rain_drops">
+		<key time="0.025" type="1">0</key>
+		<key time="1" type="1">3000</key>
+	</parameter>
+	<parameter type="node.object.particles.lengthStretch" id="525016071" name="weather_rain_drops">
+		<key time="0.025" type="1">0.1</key>
+		<key time="1" type="1">0.3</key>
+	</parameter>
+	<parameter type="node.object.particles.velocityMean" id="525016071" name="weather_rain_drops">
+		<key time="0.025" type="1">40</key>
+		<key time="1" type="1">80</key>
+	</parameter>
+	<parameter type="node.object.particles.velocitySpread" id="525016071" name="weather_rain_drops">
+		<key time="0.025" type="1">27</key>
+		<key time="1" type="1">40</key>
+	</parameter>
+	<parameter type="node.object.particles.radiusMean" id="525016071" name="weather_rain_drops">
+		<key time="0.025" type="1">0.06</key>
+		<key time="1" type="1">0.1</key>
+	</parameter>
+	<parameter type="node.object.particles.radiusSpread" id="525016071" name="weather_rain_drops">
+		<key time="0.025" type="1">0.03</key>
+		<key time="1" type="1">0.04</key>
+	</parameter>
+	<parameter type="node.object.particles.emitterEnabled" id="1834268261" name="weather_rain_drops_collision1">
+		<key time="0.025">0</key>
+		<key time="0.05">1</key>
+	</parameter>
+	<parameter type="node.object.particles.spawnRate" id="1834268261" name="weather_rain_drops_collision1">
+		<key time="0.025" type="1">0</key>
+		<key time="1" type="1">900</key>
+	</parameter>
+	<parameter type="node.object.particles.emitterEnabled" id="850290164" name="weather_rain_drops_collision2">
+		<key time="0.025">0</key>
+		<key time="0.05">1</key>
+	</parameter>
+	<parameter type="node.object.particles.spawnRate" id="850290164" name="weather_rain_drops_collision2">
+		<key time="0.025" type="1">0</key>
+		<key time="1" type="1">120</key>
+	</parameter>
+	<parameter type="node.object.particles.velocityMean" id="92016681" name="weather_rain_splashes">
+		<key time="0.025" type="1">0</key>
+		<key time="1" type="1">1</key>
+	</parameter>
+	<parameter type="node.object.particles.spawnRate" id="1344423297" name="weather_wind_leaves">
+		<key time="0.025" type="1">0</key>
+	</parameter>
+	<parameter type="node.object.particles.emitterEnabled" id="756097549" name="weather_camera_drops">
+		<key time="0.025">0</key>
+		<key time="0.05">1</key>
+	</parameter>
+	<parameter type="node.object.particles.spawnRate" id="756097549" name="weather_camera_drops">
+		<key time="0.025" type="1">0</key>
+		<key time="1" type="1">20</key>
+	</parameter>
+	<parameter type="sound.volume2">
+		<key time="0.025" type="1">0.005</key>
+		<key time="0.333" type="1">1</key>
+		<key time="0.666" type="1">0</key>
+	</parameter>
+	<parameter type="sound.volume3">
+		<key time="0.3333" type="1">0.005</key>
+		<key time="0.666" type="1">1</key>
+		<key time="1" type="1">0.005</key>
+	</parameter>
+	<parameter type="sound.volume4">
+		<key time="0.666" type="1">0.005</key>
+		<key time="0.666" type="1">0</key>
+		<key time="1" type="1">1</key>
+	</parameter>
+	<parameter type="node.enabled" id="1949270718" name="weather_lightning">
+		<key time="0.025">0</key>
+		<key time="0.2">1</key>
+	</parameter>
+	<parameter type="render.environment.preset1.intensity">
+		<key time="0" type="1">0</key>
+		<key time="1" type="1">1</key>
+	</parameter>
+	<parameter type="render.environment.preset1.hazeDensity">
+		<key time="0" type="1">0.5</key>
+		<key time="1" type="1">1</key>
+	</parameter>
+</track>

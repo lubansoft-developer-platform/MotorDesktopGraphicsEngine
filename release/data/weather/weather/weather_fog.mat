@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.5.0.2" name="weather_fog" guid="63192c3a996ffb38af0cf130753a5f73916426fe" base_material="volume_fog_base">
+	<blend src="src_alpha" dest="one_minus_src_alpha"/>
+	<state name="height">1</state>
+	<parameter name="volume_power">1.70000005</parameter>
+	<parameter name="volume_density">1.02221975e-006</parameter>
+	<parameter name="height_falloff">0.0399999991</parameter>
+</material>

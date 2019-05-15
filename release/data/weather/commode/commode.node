@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodes version="2.5.0.2">
+	<node type="NodeLayer" id="235933620" enabled="0" folded="1" name="lb_car">
+		<layer>weather/commode/car_aike/car_aike.node</layer>
+		<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0 0 0 1.0</transform>
+	</node>
+	<node type="NodeLayer" id="1900511905" enabled="0" folded="1" name="lb_plane">
+		<layer>weather/commode/uav_plane/uav_plane.node</layer>
+		<transform>1.00000000079 0 0 0.0 0 1.00000000079 0 0.0 0 0 1.0000000004 0.0 0 0 0 1.0</transform>
+	</node>
+	<node type="NodeLayer" id="1547525362" enabled="0" folded="1" name="lb_actor">
+		<layer>weather/commode/uav_actor/uav_actor.node</layer>
+		<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0 0 0 1.0</transform>
+	</node>
+</nodes>

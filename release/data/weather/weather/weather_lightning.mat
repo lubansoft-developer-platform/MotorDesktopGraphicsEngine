@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.5.0.2" name="weather_lightning" guid="d0d745c7d32b3f0fb160f21c3648f7a1977840d1" parent="6eb0e262541d061a8509e4940854ef9d18d53ee0" base_material="mesh_base">
+	<blend src="src_alpha" dest="one_minus_src_alpha"/>
+	<options transparent="2" depth_mask="0"/>
+	<state name="deferred">0</state>
+	<state name="emission">1</state>
+	<parameter name="diffuse_color">1 1 1 0</parameter>
+	<parameter name="emission_color">0.300000012 0.480199993 1 1</parameter>
+	<parameter name="emission_scale">3</parameter>
+</material>

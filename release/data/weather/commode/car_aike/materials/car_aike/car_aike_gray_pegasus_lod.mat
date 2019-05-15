@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.5.0.2" name="car_aike_gray_pegasus_lod" guid="c305fd1d7025d71a55742dc071bfc4eef3c3522c" parent="763e4fdb6bb0a4f8c0e03eafe34d626f803ca0e2" base_material="mesh_base">
+	<texture name="diffuse">weather/commode/car_aike/textures/automobile_pegasus_lod_2_d.dds</texture>
+</material>

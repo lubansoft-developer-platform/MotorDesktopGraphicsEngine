@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.5.0.2" name="uav_plane_Material #37" guid="1ab975754e700b65a01a2b06d534d6e29bbfb5c2" parent="7883324257e53419ce52dcc834ef0a4a37d3f5a4" base_material="mesh_base">
+	<state name="workflow">1</state>
+	<parameter name="albedo_color">0.568627477 0.568627477 0.568627477 1</parameter>
+	<parameter name="specular">0.726000011</parameter>
+	<parameter name="diffuse_color">0.619607866 0.619607866 0.619607866 1</parameter>
+	<parameter name="gloss">1</parameter>
+	<parameter name="microfiber">1</parameter>
+	<parameter name="translucent">0.561999977</parameter>
+	<parameter name="emission_color">0 0 0 1</parameter>
+	<parameter name="emission_scale">0</parameter>
+</material>

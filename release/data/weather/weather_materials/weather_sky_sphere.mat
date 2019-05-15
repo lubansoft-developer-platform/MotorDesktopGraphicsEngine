@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.5.0.2" name="weather_sky_sphere" guid="914303cb18b4559549270493f47c3aec1a51a26d" parent="b61a0949c5c99c80c01368ec577d2f400e8e8b9b" base_material="sky_base">
+	<blend src="src_alpha" dest="one_minus_src_alpha"/>
+</material>

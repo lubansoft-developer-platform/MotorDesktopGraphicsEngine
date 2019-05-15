@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<plugin name="lbdata_plugin" version="1.0">
+	<text>LBData Plugin</text>
+	<description>LBData plugin</description>
+	<source>lbdataplugin.cpp</source>
+</plugin>
