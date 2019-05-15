@@ -53,6 +53,16 @@ Motor Desktop Graphics Engine(以下简称为sdk)主要针对于网页前端开�
 |    |
 |    \
 |
+|----/release
+|    |
+|    |----config.ini
+|    |
+|    |----BLLogin.exe
+|    |
+|    |----*.*
+|    |
+|    \
+|
 |----/demo
 |    |
 |    |----/web
@@ -124,6 +134,30 @@ MotorDesktopGraphicsEngine三维模块API
 
 ```ini
 MotorDesktopGraphicsEngine离线版接口文档入口文件
+```
+
+#### release
+    relsase文件夹中提供了Motor客户端
+
+- config.ini
+
+```ini
+[Url]
+#web项目的入口地址是否为本地文件
+local=true
+
+#web项目的入口文件路径，本地文件为相对于release文件夹的相对路径(大小写不敏感); 网络地址需要加上协议前缀，如: http://www.baidu.com
+url=你的项目入口文件地址(如:./myproject/index.html)
+
+[Debug]
+#是否可调试，当此项为true或1时，可以在平台中弹出右键菜单，选择devtool进行项目调试
+debug=false
+```
+
+- BLLogin.exe
+
+```ini
+CIM Client主进程
 ```
 
 #### demo
