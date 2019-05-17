@@ -1,4 +1,7 @@
-﻿<head>
+﻿<!DOCTYPE html>
+<html>
+
+<head>
     <meta charset="utf-8" />
     <link rel="stylesheet" type="text/css" href="../css/common.css" />
     <link rel="stylesheet" type="text/css" href="../css/detail.css" />
@@ -9,284 +12,313 @@
     <script type="text/javascript" src="../js/leftTree.js"></script>
 </head>
 
-<div id="id3DView" onselectstart="return false;" style="-moz-user-select:none;">
-    <div class="projectName"><span id="idProjName" class="titleLable"><img class="titleImage" src="../res/target.png" />暂无工程</span></div>
-    <div class="leftTab">
-        <ul>
-            <li id="idProjectMenu" onclick="onShowProjectMenu()"></li>
-        </ul>
-    </div>
-    <div id="idProjectMenuBoard" class="menuboard">
-        <h3 class="title text-decoration">工程</h3>
-        <div class="menuMainitem">
-            <ul id="idProjectTree" class="ztree showIcon"></ul>
+<body>
+    <div id="id3DView" onselectstart="return false;" style="-moz-user-select:none;">
+        <div class="projectName"><span id="idProjName" class="titleLable"><img class="titleImage"
+                    src="../res/target.png" />暂无工程</span></div>
+        <div class="leftTab">
+            <ul>
+                <li id="idProjectMenu" onclick="onShowProjectMenu()"></li>
+            </ul>
+        </div>
+        <div id="idProjectMenuBoard" class="menuboard">
+            <h3 class="title text-decoration">工程</h3>
+            <div class="menuMainitem">
+                <ul id="idProjectTree" class="ztree showIcon"></ul>
+            </div>
+        </div>
+        <div class="cardBoard" id="idBoardCard">
+            <h4 class="title text-decoration" id="idCardTitle">工程<img class="enterProj" src="../res/btn_enterProj.png"
+                    onclick="openSubProj()" /></h4>
+            <div class="cardPic"></div>
+        </div>
+        <div class="compBoard" id="idCompCard">
+            <h4 class="title text-decoration" id="idCompTitle">构件</h4>
+            <div class="cardItem">
+                <table id="idCompInfo"></table>
+            </div>
+        </div>
+        <div class="MenuBar MenuBarStyle" style="width:80px;">
+            <table>
+                <tr>
+                    <td>
+                        <img id="idOperMenu" class="winpic" src="../res/menu.png" title="菜单" onclick="showOperMenu()" />
+                    </td>
+                    <td>
+                        <img id="idBackToSelect" class="winpic" src="../res/back.png" style="height:16px; width:16px;"
+                            title="返回场景选择" onclick="backToSceneSelect()" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="bottomMenu" id="idbottomMenu">
+            <table align="center">
+                <tr>
+                    <td onclick="onClickAddBillBoard()">插入billboard</td>
+                </tr>
+                <tr>
+                    <td onclick="onClickShowBillBoard()">显示billboard</td>
+                </tr>
+                <tr>
+                    <td onclick="onClickHideBillBoard()">隐藏billboard</td>
+                </tr>
+                <tr>
+                    <td onclick="onClickShowAllBillBoard()">显示所有billboard</td>
+                </tr>
+                <tr>
+                    <td onclick="onClickHideAllBillBoard()">隐藏所有billboard</td>
+                </tr>
+                <tr>
+                    <td onclick="onClickMoveComp()">构件平移</td>
+                </tr>
+                <tr>
+                    <td onclick="onClickRotateComp()">构件旋转</td>
+                </tr>
+                <tr>
+                    <td onclick="onClickScaleComp()">构件缩放</td>
+                </tr>
+                <tr>
+                    <td onclick="onClickCancelOper()">取消操作</td>
+                </tr>
+                <tr>
+                    <td onclick="onClickImportFBX()">导入FBX</td>
+                </tr>
+                <tr>
+                    <td onclick="onClickDelFBX()">删除FBX构件</td>
+                </tr>
+            </table>
         </div>
     </div>
-    <div class="cardBoard" id="idBoardCard">
-        <h4 class="title text-decoration" id="idCardTitle">工程<img class="enterProj" src="../res/btn_enterProj.png" onclick="openSubProj()" /></h4>
-        <div class="cardPic"></div>
-    </div>
-    <div class="compBoard" id="idCompCard">
-        <h4 class="title text-decoration" id="idCompTitle">构件</h4>
-        <div class="cardItem">
-            <table id="idCompInfo"></table>
-        </div>
-    </div>
-    <div class="MenuBar MenuBarStyle" style="width:80px;">
-        <table>
-            <tr>
-                <td>
-                    <img id="idOperMenu" class="winpic" src="../res/menu.png" title="菜单" onclick="showOperMenu()" />
-                </td>
-                <td>
-                    <img id="idBackToSelect" class="winpic" src="../res/back.png" style="height:16px; width:16px;" title="返回场景选择" onclick="backToSceneSelect()" />
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div class="bottomMenu" id="idbottomMenu">
-        <table align="center">
-            <tr><td onclick="onClickAddBillBoard()">插入billboard</td></tr>
-            <tr><td onclick="onClickShowBillBoard()">显示billboard</td></tr>
-            <tr><td onclick="onClickHideBillBoard()">隐藏billboard</td></tr>
-            <tr><td onclick="onClickShowAllBillBoard()">显示所有billboard</td></tr>
-            <tr><td onclick="onClickHideAllBillBoard()">隐藏所有billboard</td></tr>
-            <tr><td onclick="onClickMoveComp()">构件平移</td></tr>
-            <tr><td onclick="onClickRotateComp()">构件旋转</td></tr>
-            <tr><td onclick="onClickScaleComp()">构件缩放</td></tr>
-            <tr><td onclick="onClickCancelOper()">取消操作</td></tr>
-            <tr><td onclick="onClickImportFBX()">导入FBX</td></tr>
-            <tr><td onclick="onClickDelFBX()">删除FBX构件</td></tr>
-        </table>
-    </div>
-</div>
 
-<!-- 脚本 -->
-<script language="javascript">
-    var sdk = parent;
-    var treeData = [];
-    var curComp = undefined;
+    <!-- 脚本 -->
+    <script language="javascript">
+        var sdk = parent;
+        var treeData = [];
+        var curComp = undefined;
 
-    $(function () {
-        sdk.getCurProjectInfo(function (curProjInfo) {
-            if (curProjInfo.projId != null && curProjInfo.projId != undefined && curProjInfo.projId != "") {
-                $("#idProjName").html('<img class="titleImage" src="../res/target.png" />' + curProjInfo.projName);
-                onClickShowAllBillBoard();
-                return;
-            }
-        });
-    });
-
-    function mainSceneCompSelected(compId) {
-        $("#idBoardCard").css({ "display": "none" });
-        $("#idCompCard").css({ "display": "none" });
-        curComp = compId;
-        if (compId === null || compId === undefined || compId === "") return;
-        sdk.getComponentAttr(curComp, sdk.ECompAttrKey.pa_compProjID, function (projId) {
-            if (projId != "" && projId != null) {
-                $("#idBoardCard").css({ "display": "block" });
-                sdk.getComponentInfo(compId, function (compInfo) {
-                    $("#idCardTitle").html(compInfo.componentName + '<img class="enterProj" src="../res/btn_enterProj.png" onclick="openSubProj()"/>');
-                });
-            }
-            else {
-                sdk.getCompTempDesInfo(compId, function (propInfo) {
-                    if (propInfo.CardVisible) {
-                        $("#idCompCard").css({ "display": "block" });
-                        $("#idCompInfo").empty();
-                        for (var i = 0; i < propInfo.props.length; i++) {
-                            let info = propInfo.props[i];
-                            if (!info.CardVisible) continue;
-                            let tr = "<tr>"
-                                + "<td style='width:80px;'title='" + info.prop.key + "'>" + info.prop.key + "</td>"
-                                + "<td class = 'lastCol' style='width:calc(100% - 80px);' align='right' title='" + info.prop.value + "'>" + info.prop.value + "</td>"
-                                + "</tr>";
-                            $("#idCompInfo").append(tr);
-                        }
-                        $("#idCompInfo tr:last").addClass("lastrow");
-                        sdk.getComponentInfo(compId, function (compInfo) {
-                            $("#idCompTitle").text(compInfo.componentName);
-                        });
-                    }
-                });
-            }
-        });
-    }
-    sdk.setSelectComponentCallBack(mainSceneCompSelected);
-
-    function createTreeData(projid, infos, pid) {
-        let ret = [];
-        for (var i = 0; i < infos.length; i++) {
-            let info = infos[i];
-            if (!info.CTVisible) continue;
-            let data = {};
-            data.id = i + 1 + pid * 10;
-            data.pId = pid;
-            data.name = info.name;
-            data.type = info.type;
-            ret.push(data);
-            let recur = createTreeData(projid, info.child, data.id);
-            for (var j = 0; j < recur.length; j++) ret.push(recur[j]);
-        }
-        return ret;
-    }
-
-    function onShowProjectMenu() {
-        if ($("#idProjectMenuBoard").css("display") === "none") {
-            $("#idProjectMenuBoard").css({ "display": "block" });
-            var treeObj = $("#idProjectTree");
-            sdk.getCurProjectInfo(function (projInfo) {
-                sdk.getProjectPropTempDes(projInfo.projId, function (infosDes) {
-                    treeData = createTreeData(projInfo.projId, infosDes, 0);
-                    for (var i = 0; i < treeData.length; i++) {
-                        let curData = treeData[i];
-                        sdk.getSortedProjComponentInfosByType(projInfo.projId, curData.type, true, function (returnVal) {
-                            for (var j = 0; j < returnVal.length; j++) {
-                                let node = {};
-                                node.id = j + 1 + curData.id * 10;
-                                node.pId = curData.id;
-                                node.name = returnVal[j].componentName;
-                                node.compId = returnVal[j].componentId;
-                                node.type = returnVal[j].componentType;
-                                treeData.push(node);
-                            }
-                            $.fn.zTree.init(treeObj, setting, treeData);
-                        });
-                    }
-                });
-            });
-        }
-        else {
-            $("#idProjectMenuBoard").css({ "display": "none" });
-            treeData = [];
-        }
-    }
-
-    function openSubProj() {
-        if (curComp === null || curComp === undefined || curComp === "") return;
-        sdk.getComponentAttr(curComp, sdk.ECompAttrKey.pa_compProjID, function (projId) {
-            if (projId != "" && projId != null) {
-                sdk.openProject(projId, curComp, function (val) {
-                    if (val === true) {
-                        onClickHideAllBillBoard();
-                        sdk.setComponentVisible([curComp], false, function () { });
-                        sdk.removeSelectComponentCallBack(mainSceneCompSelected);
-                        window.location.href = "SubProject.html";
-                    }
-                    else {
-                        alert("打开工程失败!");
-                    }
-                });
-            }
-        });
-    }
-
-    function showOperMenu() {
-        if ($("#idbottomMenu").css("display") === "none") {
-            $("#idbottomMenu").css({ "display": "block" });
-        }
-        else {
-            $("#idbottomMenu").css({ "display": "none" });
-        }
-    }
-
-    function onClickAddBillBoard() {
-        if (curComp === null || curComp === undefined || curComp === "") {
-            alert("请先选择一个构件!");
-            return;
-        }
-        sdk.getBillboardByCompId(curComp, function (lstBillBoard) {
-            if (lstBillBoard.length > 0) {
-                onClickShowBillBoard();
-            }
-            else {
-                sdk.createBillboard(curComp, "mainscene", function (billboardId) {
-                    sdk.setBillboardImgByLocal(billboardId, "./pic/test.png", 15, 1, 0.25);
-                })
-            }
-        });
-    }
-
-    function onClickShowBillBoard() {
-        if (curComp === null || curComp === undefined || curComp === "") {
-            alert("请先选择一个构件!");
-            return;
-        }
-        sdk.getBillboardByCompId(curComp, function (lstBillBoard) {
-            sdk.setBillboardVisible(lstBillBoard, true);
-        });
-    }
-
-    function onClickHideBillBoard() {
-        if (curComp === null || curComp === undefined || curComp === "") {
-            alert("请先选择一个构件!");
-            return;
-        }
-        sdk.getBillboardByCompId(curComp, function (lstBillBoard) {
-            sdk.setBillboardVisible(lstBillBoard, false);
-        });
-    }
-
-    function onClickShowAllBillBoard() {
-        sdk.setBillboardVisibleByType("mainscene", true);
-    }
-
-    function onClickHideAllBillBoard() {
-
-        sdk.setBillboardVisibleByType("mainscene", false);
-    }
-
-    function onClickMoveComp() {
-        sdk.setValidManipulatorType(sdk.EManipulatorType.EManipulatorMove);
-    }
-
-    function onClickRotateComp() {
-        sdk.setValidManipulatorType(sdk.EManipulatorType.EManipulatorRotate);
-    }
-
-    function onClickScaleComp() {
-        sdk.setValidManipulatorType(sdk.EManipulatorType.EManipulatorScale);
-    }
-
-    function onClickCancelOper() {
-        sdk.setValidManipulatorType(sdk.EManipulatorType.EManipulatorNone);
-    }
-
-    function onClickImportFBX() {
-        sdk.getOpenFilePath(function (fbxPath) {
-            sdk.importFBXTml(fbxPath, "fbxTest", function (fbxId) {
-                if (fbxId == null || fbxId == undefined || fbxId == "") {
-                    alert("导入fbx文件失败");
+        $(function () {
+            sdk.getCurProjectInfo(function (curProjInfo) {
+                if (curProjInfo.projId != null && curProjInfo.projId != undefined && curProjInfo.projId != "") {
+                    $("#idProjName").html('<img class="titleImage" src="../res/target.png" />' + curProjInfo.projName);
+                    onClickShowAllBillBoard();
                     return;
                 }
+            });
+        });
+
+        function mainSceneCompSelected(compId) {
+            $("#idBoardCard").css({ "display": "none" });
+            $("#idCompCard").css({ "display": "none" });
+            curComp = compId;
+            if (compId === null || compId === undefined || compId === "") return;
+            sdk.getComponentAttr(curComp, sdk.ECompAttrKey.pa_compProjID, function (projId) {
+                if (projId != "" && projId != null) {
+                    $("#idBoardCard").css({ "display": "block" });
+                    sdk.getComponentInfo(compId, function (compInfo) {
+                        $("#idCardTitle").html(compInfo.componentName + '<img class="enterProj" src="../res/btn_enterProj.png" onclick="openSubProj()"/>');
+                    });
+                }
                 else {
-                    sdk.createFBXComponent(fbxId, 120.99253573430438, 30.99369371870904, 4, function (fbxCompId) {
-                        sdk.positionToComponent(fbxCompId);
+                    sdk.getCompTempDesInfo(compId, function (propInfo) {
+                        if (propInfo.CardVisible) {
+                            $("#idCompCard").css({ "display": "block" });
+                            $("#idCompInfo").empty();
+                            for (var i = 0; i < propInfo.props.length; i++) {
+                                let info = propInfo.props[i];
+                                if (!info.CardVisible) continue;
+                                let tr = "<tr>"
+                                    + "<td style='width:80px;'title='" + info.prop.key + "'>" + info.prop.key + "</td>"
+                                    + "<td class = 'lastCol' style='width:calc(100% - 80px);' align='right' title='" + info.prop.value + "'>" + info.prop.value + "</td>"
+                                    + "</tr>";
+                                $("#idCompInfo").append(tr);
+                            }
+                            $("#idCompInfo tr:last").addClass("lastrow");
+                            sdk.getComponentInfo(compId, function (compInfo) {
+                                $("#idCompTitle").text(compInfo.componentName);
+                            });
+                        }
                     });
                 }
             });
-        });
-    }
+        }
+        sdk.setSelectComponentCallBack(mainSceneCompSelected);
 
-    function onClickDelFBX() {
-        sdk.getComponentInfo(curComp, function (compInfo) {
-            if (compInfo.componentType == sdk.ECompType.type_fbx) {
-                sdk.deleteComp(curComp, true);
+        function createTreeData(projid, infos, pid) {
+            let ret = [];
+            for (var i = 0; i < infos.length; i++) {
+                let info = infos[i];
+                if (!info.CTVisible) continue;
+                let data = {};
+                data.id = i + 1 + pid * 10;
+                data.pId = pid;
+                data.name = info.name;
+                data.type = info.type;
+                ret.push(data);
+                let recur = createTreeData(projid, info.child, data.id);
+                for (var j = 0; j < recur.length; j++) ret.push(recur[j]);
             }
-        });
-    }
+            return ret;
+        }
 
-    function backToSceneSelect() {
-        sdk.getCurProjectInfo(function (curProjInfo) {
-            if (curProjInfo.projId != null && curProjInfo.projId != undefined && curProjInfo.projId != "") {
-                onClickHideAllBillBoard();
-                sdk.removeSelectComponentCallBack(mainSceneCompSelected);
-                sdk.positionTo(121.48, 31.22, 6371393 * 1.5, 0, 89.9);
-                sdk.unLoadSceneProjData(curProjInfo.projId, function () {
-                    window.location.href = "SelectScene.html";
+        function onShowProjectMenu() {
+            if ($("#idProjectMenuBoard").css("display") === "none") {
+                $("#idProjectMenuBoard").css({ "display": "block" });
+                var treeObj = $("#idProjectTree");
+                sdk.getCurProjectInfo(function (projInfo) {
+                    sdk.getProjectPropTempDes(projInfo.projId, function (infosDes) {
+                        treeData = createTreeData(projInfo.projId, infosDes, 0);
+                        for (var i = 0; i < treeData.length; i++) {
+                            let curData = treeData[i];
+                            sdk.getSortedProjComponentInfosByType(projInfo.projId, curData.type, true, function (returnVal) {
+                                for (var j = 0; j < returnVal.length; j++) {
+                                    let node = {};
+                                    node.id = j + 1 + curData.id * 10;
+                                    node.pId = curData.id;
+                                    node.name = returnVal[j].componentName;
+                                    node.compId = returnVal[j].componentId;
+                                    node.type = returnVal[j].componentType;
+                                    treeData.push(node);
+                                }
+                                $.fn.zTree.init(treeObj, setting, treeData);
+                            });
+                        }
+                    });
                 });
+            }
+            else {
+                $("#idProjectMenuBoard").css({ "display": "none" });
+                treeData = [];
+            }
+        }
+
+        function openSubProj() {
+            if (curComp === null || curComp === undefined || curComp === "") return;
+            sdk.getComponentAttr(curComp, sdk.ECompAttrKey.pa_compProjID, function (projId) {
+                if (projId != "" && projId != null) {
+                    sdk.openProject(projId, curComp, function (val) {
+                        if (val === true) {
+                            onClickHideAllBillBoard();
+                            sdk.setComponentVisible([curComp], false, function () { });
+                            sdk.removeSelectComponentCallBack(mainSceneCompSelected);
+                            window.location.href = "SubProject.html";
+                        }
+                        else {
+                            alert("打开工程失败!");
+                        }
+                    });
+                }
+            });
+        }
+
+        function showOperMenu() {
+            if ($("#idbottomMenu").css("display") === "none") {
+                $("#idbottomMenu").css({ "display": "block" });
+            }
+            else {
+                $("#idbottomMenu").css({ "display": "none" });
+            }
+        }
+
+        function onClickAddBillBoard() {
+            if (curComp === null || curComp === undefined || curComp === "") {
+                alert("请先选择一个构件!");
                 return;
             }
-        });
-    }
-</script>
+            sdk.getBillboardByCompId(curComp, function (lstBillBoard) {
+                if (lstBillBoard.length > 0) {
+                    onClickShowBillBoard();
+                }
+                else {
+                    sdk.createBillboard(curComp, "mainscene", function (billboardId) {
+                        sdk.setBillboardImgByLocal(billboardId, "./pic/test.png", 15, 1, 0.25);
+                    })
+                }
+            });
+        }
+
+        function onClickShowBillBoard() {
+            if (curComp === null || curComp === undefined || curComp === "") {
+                alert("请先选择一个构件!");
+                return;
+            }
+            sdk.getBillboardByCompId(curComp, function (lstBillBoard) {
+                sdk.setBillboardVisible(lstBillBoard, true);
+            });
+        }
+
+        function onClickHideBillBoard() {
+            if (curComp === null || curComp === undefined || curComp === "") {
+                alert("请先选择一个构件!");
+                return;
+            }
+            sdk.getBillboardByCompId(curComp, function (lstBillBoard) {
+                sdk.setBillboardVisible(lstBillBoard, false);
+            });
+        }
+
+        function onClickShowAllBillBoard() {
+            sdk.setBillboardVisibleByType("mainscene", true);
+        }
+
+        function onClickHideAllBillBoard() {
+
+            sdk.setBillboardVisibleByType("mainscene", false);
+        }
+
+        function onClickMoveComp() {
+            sdk.setValidManipulatorType(sdk.EManipulatorType.EManipulatorMove);
+        }
+
+        function onClickRotateComp() {
+            sdk.setValidManipulatorType(sdk.EManipulatorType.EManipulatorRotate);
+        }
+
+        function onClickScaleComp() {
+            sdk.setValidManipulatorType(sdk.EManipulatorType.EManipulatorScale);
+        }
+
+        function onClickCancelOper() {
+            sdk.setValidManipulatorType(sdk.EManipulatorType.EManipulatorNone);
+        }
+
+        function onClickImportFBX() {
+            sdk.getOpenFilePath(function (fbxPath) {
+                sdk.importFBXTml(fbxPath, "fbxTest", function (fbxId) {
+                    if (fbxId == null || fbxId == undefined || fbxId == "") {
+                        alert("导入fbx文件失败");
+                        return;
+                    }
+                    else {
+                        sdk.createFBXComponent(fbxId, 120.99253573430438, 30.99369371870904, 4, function (fbxCompId) {
+                            sdk.positionToComponent(fbxCompId);
+                        });
+                    }
+                });
+            });
+        }
+
+        function onClickDelFBX() {
+            sdk.getComponentInfo(curComp, function (compInfo) {
+                if (compInfo.componentType == sdk.ECompType.type_fbx) {
+                    sdk.deleteComp(curComp, true);
+                }
+            });
+        }
+
+        function backToSceneSelect() {
+            sdk.getCurProjectInfo(function (curProjInfo) {
+                if (curProjInfo.projId != null && curProjInfo.projId != undefined && curProjInfo.projId != "") {
+                    onClickHideAllBillBoard();
+                    sdk.removeSelectComponentCallBack(mainSceneCompSelected);
+                    sdk.positionTo(121.48, 31.22, 6371393 * 1.5, 0, 89.9);
+                    sdk.unLoadSceneProjData(curProjInfo.projId, function () {
+                        window.location.href = "SelectScene.html";
+                    });
+                    return;
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
