@@ -1,8 +1,0 @@
-[pack]  
-threads = 4
-deltaCacheSize = 256m  
-packSizeLimit = 256m  
-windowMemory = 256m  
-[core]  
-packedGitLimit = 256m  
-packedGitWindowSize = 256m  
