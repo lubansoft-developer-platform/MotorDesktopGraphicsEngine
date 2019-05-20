@@ -20,7 +20,7 @@ Motor Desktop Graphics Engine(以下简称为sdk)主要针对于网页前端开�
 - 本SDK将提供一个包含js文件的sdk压缩包。
 
 ### Motor客户端
-- 另行下载
+- 本SDK下的release包
 
 ### 目录结构
 
