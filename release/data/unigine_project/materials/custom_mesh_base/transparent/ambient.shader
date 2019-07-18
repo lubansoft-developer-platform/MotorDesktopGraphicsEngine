@@ -57,6 +57,7 @@ STRUCT(FRAGMENT_IN)
 		INIT_DATA(float3x3,15,DATA_TRANSFORM)
 	#endif
 	INIT_DATA(uint, 16, int_patch_id)///////��դ��ʱ����ֵ MODIFER_NOINTERPOLATION 
+	INIT_DATA(uint, 17, int_area_id)///////pretrans_area Index.
 	#ifdef TWO_SIDED
 		INIT_FRONTFACE
 	#endif
@@ -67,6 +68,7 @@ END
 MAIN_BEGIN_VERTEX(FRAGMENT_IN)
 	#include <unigine_project/materials/custom_mesh_base/common/vertex.h>
 	int_patch_id = DATA_UV.a;
+	int_area_id = DATA_UV.b;
 MAIN_END
 
 #elif FRAGMENT

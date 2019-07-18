@@ -1,7 +1,7 @@
 ### 目录结构
 
 ```
-/MotorDesktopGraphicsEngine
+/CIM Client SDK
 |
 |----/sdk
 |    |
@@ -33,7 +33,7 @@
 |    |
 |    |----config.ini
 |    |
-|    |----BLLogin.exe
+|    |----LBCityEye.exe
 |    |
 |    |----*.*
 |    |
@@ -60,60 +60,60 @@
 \
 ```
 #### sdk
-    sdk文件夹下存放了MotorDesktopGraphicsEngine提供的所有js扩展库
+    sdk文件夹下存放了CIM Client SDK 提供的所有js扩展库
 
 - blsdk.js
 
 ```ini
-MotorDesktopGraphicsEngine主入口文件
+CIM Client SDK主入口文件
 ```
 - blcallback.js
 
 ```ini
-MotorDesktopGraphicsEngine全局回调通知API
+CIM Client SDK全局回调通知API
 ```
 
 - blcomponentApi.js
 
 ```ini
-MotorDesktopGraphicsEngine构件模块API
+CIM Client SDK构件模块API
 ```
 
 - blprojectApi.js
 
 ```ini
-MotorDesktopGraphicsEngine工程模块API
+CIM Client SDK工程模块API
 ```
 
 - blsceneApi.js
 
 ```ini
-MotorDesktopGraphicsEngine场景模块API
+CIM Client SDK场景模块API
 ```
 
 - blsystemApi.js
 
 ```ini
-MotorDesktopGraphicsEngine系统模块API
+CIM Client SDK系统模块API
 ```
 
 - blthreeViewApi.js
 
 ```ini
-MotorDesktopGraphicsEngine三维模块API
+CIM Client SDK三维模块API
 ```
 
 #### doc
-    doc文件夹下存放了MotorDesktopGraphicsEngine的离线版接口文档
+    doc文件夹下存放了CIM Client SDK的离线版接口文档
 
 - index.html
 
 ```ini
-MotorDesktopGraphicsEngine离线版接口文档入口文件
+CIM Client SDK离线版接口文档入口文件
 ```
 
 #### release
-    relsase文件夹中提供了Motor客户端
+    relsase文件夹中提供了CIM客户端平台
 
 - config.ini
 
@@ -130,14 +130,14 @@ url=你的项目入口文件地址(如:./myproject/index.html)
 debug=false
 ```
 
-- BLLogin.exe
+- LBCityEye.exe
 
 ```ini
 CIM Client主进程
 ```
 
 #### demo
-    demo文件夹中提供了由鲁班开发者平台(LDP)提供的基于MotorDesktopGraphicsEngine开发的示例demo
+    demo文件夹中提供了由班联数城提供的基于CIM Client SDK开发的示例demo
 
 ---
 ### 环境搭建
@@ -148,7 +148,7 @@ CIM Client主进程
 3. 在你的project中使用如下语句<script type='text/javascript' src='blsdk.js'></script>将sdk库引入到你的project中
 4. 将你的project文件夹移动到release文件夹下
 5. 根据你的实际情况配置config.ini
-6. 运行BLLogin.exe，并开启你的开发之旅
+6. 运行LBCityEye.exe，并开启你的开发之旅
 ```
 
 ---
@@ -156,7 +156,7 @@ CIM Client主进程
 
 ```javascript
 1. 将demo文件夹下的所有内容移动到release文件夹下
-2. 运行BLLogin.exe，享受Demo给你带来的开发乐趣
+2. 运行LBCityEye.exe，享受Demo给你带来的开发乐趣
 ```
 
 

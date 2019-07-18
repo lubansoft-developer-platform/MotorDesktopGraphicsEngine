@@ -317,22 +317,23 @@ var convertWGS84toWorldCoord = function(dbB, dbL, dbH, funcRet) {
  *  }
  */
 
-/** 
- * 当前屏幕坐标转换到图形引擎中的三维空间坐标点
+/**
+ * 三维空间坐标点转换到图形引擎中的WGS84坐标点
  * @static
- * @param {Number} x - 窗口坐标x
- * @param {Number} y - 窗口坐标y
- * @param {convertScreenPttoWorldCoordCallBack} funcRet
+ * @param {Number} dbX - 空间点X
+ * @param {Number} dbY - 空间点Y
+ * @param {Number} dbZ - 空间点Z
+ * @param {convertWorldCoordtoWGS84CallBack} funcRet 
  * @returns {void}
-*/
-var convertScreenPttoWorldCoord = function (x, y, funcRet){
-    systemObj.ConvertScreenPttoWorldCoord(x, y, function (returnValue) {
+ */
+var convertWorldCoordtoWGS84 = function(dbX, dbY, dbZ, funcRet) {
+    systemObj.ConvertWorldCoordtoWGS84(dbX, dbY, dbZ, function (returnValue) {
         if (typeof funcRet === "function") funcRet(JSON.parse(returnValue));
     });
 }
 /**
- * convertScreenPttoWorldCoord回调函数
- * @callback convertScreenPttoWorldCoordCallBack
+ * convertWorldCoordtoWGS84
+ * @callback convertWorldCoordtoWGS84CallBack
  * @param {JSON} returnValue
  * 格式如下:
  * {

@@ -19,10 +19,7 @@
             },
             "editModel": {
                 "title": "如何进行模型微调?"
-            },
-            "aboutFBX": {
-                "title": "如何进行FBX模板的导入与部署?"
-            },
+            },            
             "saveProject": {
                 "title": "如何保存当前的编辑状态?"
             },

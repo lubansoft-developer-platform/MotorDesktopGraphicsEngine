@@ -168,3 +168,38 @@ var unLoadSceneProjData = function(sceneProjId, funcRet){
  * @callback loadSceneProjDataCallback
  * @param {Boolean} returnValue - 操作结果
  */
+
+ 
+/**
+ * 打开工程
+ * @static
+ * @param {string} projId - 工程id
+ * @param {} funcRet
+ */
+var openSceneProject = function (projId, funcRet) {
+    return sceneObj.OpenSceneProject(projId, function (returnValue) {
+        if (typeof funcRet === "function") funcRet(returnValue);
+    });
+ }
+ /**
+ * openSceneProject回调函数
+ * @callback openSceneProjectCallback
+ * @param {Boolean} returnValue - 操作结果
+ */
+
+ /**
+ * 关闭工程
+ * @static
+ * @param {string} projId - 工程id
+ * @param {} funcRet
+ */
+var closeSceneProject = function (projId, funcRet) {
+    return sceneObj.CloseSceneProject(projId, function (returnValue) {
+        if (typeof funcRet === "function") funcRet(returnValue);
+    });
+ }
+ /**
+ * closeSceneProject回调函数
+ * @callback closeSceneProjectCallback
+ * @param {Boolean} returnValue - 操作结果
+ */

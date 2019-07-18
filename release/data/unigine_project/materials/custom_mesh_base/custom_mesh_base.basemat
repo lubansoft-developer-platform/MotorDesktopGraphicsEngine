@@ -28,7 +28,7 @@
 		<state name="detail"	defines="name"	pass_defines="deferred,transparent"	tooltip="&lt;p&gt;Enable detail rendering.&lt;/p&gt;&lt;p&gt;This effect can be used to add details for objects, that are close to camera, or variations for distant ones, to make them look more realistic.&lt;/p&gt;"/>
 		<state name="emission"	defines="name"	pass_defines="ambient"				tooltip="&lt;p&gt;Enable emission rendering.&lt;/p&gt;&lt;p&gt;This effect simulates glow from extremely bright surfaces and can be used to create self-luminous objects (lamps, fire, etc.)&lt;/p&gt;"/>
 		<state name="lightmap"	defines="name"	pass_defines="deferred,ambient"		tooltip="&lt;p&gt;Enable use of a lightmap.&lt;/p&gt;&lt;p&gt;Activates an additional light map texture specifying that the material will be lit by it.&lt;/p&gt;"/>
-		<state name="auxiliary"	defines="name"	pass_defines="auxiliary"			tooltip="&lt;p&gt;Enable auxiliary rendering pass for the material.&lt;/p&gt;&lt;p&gt;Can be used for custom post-effects, such as thermal vision, etc.&lt;/p&gt;"/>
+		<state name="auxiliary"	defines="name"	pass_defines="auxiliary"			tooltip="&lt;p&gt;Enable auxiliary rendering pass for the material.&lt;/p&gt;&lt;p&gt;Can be used for custom post-effects, such as thermal vision, etc.&lt;/p&gt;">1</state>
 		
 		<state name="parallax"	transparent="0,1"	defines="name"	pass_defines="deferred,emission,shadow,depth_pre_pass"	tooltip="&lt;p&gt;Enable parallax occlusion mapping.&lt;/p&gt;&lt;p&gt;Can be used to fake surface relief adding more realism with less influence on the performance.&lt;/p&gt;"/>
 		
@@ -365,13 +365,13 @@
 	<texture unit="14"	type="light_image"						pass="forward"/>
 	<texture unit="15"	type="light_depth"						pass="forward"/>
 
-  <texture unit="16"	name="patch_transf_row0"		pass="deferred,forward,shadow,auxiliary"  anisotropy="1" shader="all">unigine_project/materials/common/patchR.dds</texture>
-  <texture unit="17"	name="patch_transf_row1"		pass="deferred,forward,shadow,auxiliary"  anisotropy="1" shader="all">unigine_project/materials/common/patchG.dds</texture>
-  <texture unit="18"	name="patch_transf_row2"		pass="deferred,forward,shadow,auxiliary"  anisotropy="1" shader="all">unigine_project/materials/common/patchB.dds</texture>
+  <texture unit="16"	name="patch_transf_row0"		pass="deferred,forward,shadow,auxiliary,wireframe"  anisotropy="1" shader="all">unigine_project/materials/common/patchR.dds</texture>
+  <texture unit="17"	name="patch_transf_row1"		pass="deferred,forward,shadow,auxiliary,wireframe"  anisotropy="1" shader="all">unigine_project/materials/common/patchG.dds</texture>
+  <texture unit="18"	name="patch_transf_row2"		pass="deferred,forward,shadow,auxiliary,wireframe"  anisotropy="1" shader="all">unigine_project/materials/common/patchB.dds</texture>
   <texture unit="19"	name="patch_color"		pass="deferred,ambient"	anisotropy="1" >unigine_project/materials/common/patchTransparent.dds</texture>
   <texture unit="20"	name="patch_visible"	pass="deferred,ambient,shadow,auxiliary"	anisotropy="1" >unigine_project/materials/common/patchTransparent.dds</texture>
   <texture unit="21"	name="pretrans_image"					pass="deferred,ambient">core/textures/common/white.dds</texture>
-  <texture unit="22"	name="height_mask_image"	pass="deferred,ambient">core/textures/common/white.dds</texture>
+  <texture unit="22"	name="pretrans_area"	pass="deferred,ambient">core/textures/common/white.dds</texture>
   
 	<!--
 	Passes

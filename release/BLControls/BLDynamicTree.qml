@@ -1,6 +1,7 @@
 import QtQuick 2.12
 import QtQuick.Controls 1.4
 import QtQuick.Controls.Styles 1.4
+import QtQuick.Window 2.0
 import BLControls 1.0
 
 Item {
@@ -16,14 +17,12 @@ Item {
     signal clickNode(var rowID)
 
     function expandTreeByIndex(index) {
-        var realIndex = treeView.model.mapFromSource(myIndex);
+        var realIndex = treeView.model.mapFromSource(index);
         treeView.expand(realIndex);
     }
-
     MouseArea{
         anchors.fill: parent
     }
-
     TreeView {
         id: treeView
         anchors.fill: parent
@@ -98,20 +97,23 @@ Item {
                 }
             }
             Text {
-                id: name
+                id: nameText
                 anchors.left: headerImg.right
                 anchors.leftMargin: 7
+                anchors.right: valueText.left
+                anchors.rightMargin: 5
                 height: parent.height
                 verticalAlignment: Text.AlignVCenter
                 opacity: styleData.selected?0.9 : 0.8
                 color: BLGlobal.textColor
-                elide: styleData.elideMode
+                //elide: styleData.selected ? Text.ElideNone : styleData.elideMode
+                wrapMode: Text.Wrap
                 text: styleData.value.name
                 font.family: root.fontFamily
                 font.pixelSize: root.fontSize
             }
             Text {
-                id: value
+                id: valueText
                 anchors.right: branchImage.left
                 anchors.rightMargin: 2
                 height: parent.height

@@ -11,8 +11,8 @@
 
 <body>
     <h4>操作步骤</h4>
-    <p>1. 调用<code>getMainProjectInfo</code>接口获取主工程信息，取出主工程projId</p>
-    <p>2. 调用<code>openProject</code>接口，将projId传入，打开主工程</p>
+    <p>1. 调用<code>initSceneProjData</code>接口获取主工程信息，选取出主工程projId</p>
+    <p>2. 调用<code>openSceneProject</code>接口，将projId传入，打开主工程</p>
     <p>3. 调用<code>positionToProject</code>接口，飞往主工程所在的位置</p>
     <div onselectstart="return false;" style="-moz-user-select:none;">
         <ul id="idSceneMenu" class="code-html" onselectstart="return false;" style="-moz-user-select:none;">
@@ -40,7 +40,7 @@
             $("#idSceneMenu").css({ "display": "none" });
             sdk.loadSceneProjData(guid, function (res) {
                 if (res) {
-                    sdk.openProject(guid, function (val) {
+                    sdk.openSceneProject(guid, function (val) {
                         if (val === true) {
                             sdk.enablePointCheckMode(true);
                             sdk.positionToProject(guid);

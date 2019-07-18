@@ -7,6 +7,8 @@ Item {
     property real ratio: 0.3
     property real gap:Math.PI/36
     property string centerText
+    property bool flag: true
+    property bool circleFlag: true
 
     onChartDataChanged: {
         canvas.requestPaint();
@@ -26,8 +28,10 @@ Item {
             if (context && root.chartData)
             {
                 context.clearRect(0,0,width,height)
-                drawRing(context);               //最外面的圆
-                drawSmallRect(context);          //内部的小矩形
+                if(circleFlag)
+                    drawRing(context);               //最外面的圆
+                if(flag)
+                    drawSmallRect(context);          //内部的小矩形
                 drawDonut(context);
             }
         }

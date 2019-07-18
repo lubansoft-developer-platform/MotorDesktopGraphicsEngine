@@ -78,7 +78,7 @@ STRUCT(FRAGMENT_IN)
 	#endif
 
 	INIT_DATA(uint, 17, int_patch_id)///////��դ��ʱ����ֵ MODIFER_NOINTERPOLATION 
-	
+	INIT_DATA(uint, 18, int_area_id)///////pretrans_area Index.
 	#ifdef TWO_SIDED
 		INIT_FRONTFACE
 	#endif
@@ -160,6 +160,7 @@ MAIN_BEGIN_VERTEX(FRAGMENT_IN)
 		DATA_GEODETIC_FLAT_POSITION = geodeticEllipsoidToFlatCameraView(out_d.position);
 	#endif
 		int_patch_id = DATA_UV.a;
+		int_area_id = DATA_UV.b;
 MAIN_END
 
 #elif FRAGMENT

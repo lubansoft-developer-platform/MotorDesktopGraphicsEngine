@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.5.0.2" name="custom_mesh_base_nobatch" guid="e882333bf8e149a727a08a44e57eb326f7f73763" base_material="custom_mesh_base">
+  <state name="auxiliary">0</state>
+</material>

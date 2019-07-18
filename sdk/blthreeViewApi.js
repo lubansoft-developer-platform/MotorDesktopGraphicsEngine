@@ -113,19 +113,19 @@ var bind3DView = function (element) {
     };
     BL3D_mouseMoveEvent = function (te, e) {
         if(bindElement !== te || bindElement === undefined) return;
-        return threeviewObj.mouseMoveEvent(e.pageX, e.pageY, e.ctrlKey, e.altKey, e.shiftKey);
+        return threeviewObj.mouseMoveEvent(e.layerX, e.layerY, e.ctrlKey, e.altKey, e.shiftKey);
     };
     BL3D_mouseDoubleClickEvent = function (te, e) {
         if(bindElement !== te || bindElement === undefined) return;
-        return threeviewObj.mouseDoubleClickEvent(e.pageX, e.pageY, e.button, e.buttons, e.ctrlKey, e.altKey, e.shiftKey);
+        return threeviewObj.mouseDoubleClickEvent(e.layerX, e.layerY, e.button, e.buttons, e.ctrlKey, e.altKey, e.shiftKey);
     };
     BL3D_mousePressEvent = function (te, e) {
         if(bindElement !== te || bindElement === undefined) return;
-        return threeviewObj.mousePressEvent(e.pageX, e.pageY, e.button, e.buttons, e.ctrlKey, e.altKey, e.shiftKey);
+        return threeviewObj.mousePressEvent(e.layerX, e.layerY, e.button, e.buttons, e.ctrlKey, e.altKey, e.shiftKey);
     };
     BL3D_mouseReleaseEvent = function (te, e) {
         if(bindElement !== te || bindElement === undefined) return;
-        return threeviewObj.mouseReleaseEvent(e.pageX, e.pageY, e.button, e.buttons, e.ctrlKey, e.altKey, e.shiftKey);
+        return threeviewObj.mouseReleaseEvent(e.layerX, e.layerY, e.button, e.buttons, e.ctrlKey, e.altKey, e.shiftKey);
     };
     BL3D_keyPressEvent = function (te, e) {
         if(bindElement !== te || bindElement === undefined) return;
@@ -137,7 +137,7 @@ var bind3DView = function (element) {
     };
     BL3D_wheelEvent = function (te, e) {
         if(bindElement !== te || bindElement === undefined) return;
-        return threeviewObj.wheelEvent(e.pageX, e.pageY, e.wheelDelta, e.buttons, e.ctrlKey, e.altKey, e.shiftKey);
+        return threeviewObj.wheelEvent(e.layerX, e.layerY, e.wheelDelta, e.buttons, e.ctrlKey, e.altKey, e.shiftKey);
     };
     BL3D_resizeEvent = function (te, x, y, width, height) {
         if(bindElement !== te || bindElement === undefined) return;

@@ -68,7 +68,7 @@
 		INIT_TEXTURE(20, TEX_PATCH_VISIBLE)
 		INIT_TEXTURE(21, TEX_PRETRANS_IMAGE)
 		
-		INIT_TEXTURE(22, TEX_HEIGHT_MASK_IMAGE)
+		INIT_TEXTURE(22, TEX_PRETRANS_AREA)
 	
 	CBUFFER(parameters)
 		
@@ -357,26 +357,25 @@
 		color = patch_color;
 	else
 	#ifdef PRETRANS
-		color *= TEXTURE_BASE(TEX_PRETRANS_IMAGE);
+	{
+		//float4 fTexSize = GET_TEXSIZE(TEX_PRETRANS_AREA);
+		float4 fAreaVec = TEXTURE_FETCH(TEX_PRETRANS_AREA, float2(int_area_id, 0));
+		if (fAreaVec.z - fAreaVec.x > EPSILON && fAreaVec.w - fAreaVec.y > EPSILON)
+		{
+			float fUVX = DATA_UV.x >= 0 ? frac(DATA_UV.x) : (1.0f - frac(abs(DATA_UV.x)));
+			float fUVY = DATA_UV.y >= 0 ? frac(DATA_UV.y) : (1.0f - frac(abs(DATA_UV.y)));
+			
+			fUVX = fAreaVec.x + fUVX*(fAreaVec.z - fAreaVec.x);
+			fUVY = (1.0f - fAreaVec.w) + fUVY*(fAreaVec.w - fAreaVec.y);
+			color *= TEXTURE(TEX_PRETRANS_IMAGE, float2(fUVX, fUVY));
+		}
+		else
+		{
+			color *= TEXTURE_BASE(TEX_PRETRANS_IMAGE);
+		}
+	}
 	#else
 		color *= TEXTURE_BASE(TEX_COLOR);
-	#endif
-	
-	#ifdef HEIGHT_MASK
-		float4 fTexSize = GET_TEXSIZE(TEX_HEIGHT_MASK_IMAGE);
-		uint iU = DATA_UV.x * fTexSize.x;
-		uint iV = DATA_UV.y * fTexSize.y;
-		uint iW = 6;
-		float4 heightmask0 = TEXTURE_FETCH(TEX_HEIGHT_MASK_IMAGE, uint2(iU, iV));
-		float4 heightmask1 = TEXTURE_FETCH(TEX_HEIGHT_MASK_IMAGE, uint2(iU-iW, iV));
-		float4 heightmask2 = TEXTURE_FETCH(TEX_HEIGHT_MASK_IMAGE, uint2(iU+iW, iV));
-		float4 heightmask3 = TEXTURE_FETCH(TEX_HEIGHT_MASK_IMAGE, uint2(iU, iV-iW));
-		float4 heightmask4 = TEXTURE_FETCH(TEX_HEIGHT_MASK_IMAGE, uint2(iU, iV+iW));
-		
-		if(heightmask0.a == 0 && heightmask1.a == 0 && heightmask2.a == 0 && heightmask3.a == 0 && heightmask4.a == 0)
-		 {
-			discard;
-		 }
 	#endif
 
 	float4 patch_visible = TEXTURE_FETCH(TEX_PATCH_VISIBLE, float2(iX, iY));

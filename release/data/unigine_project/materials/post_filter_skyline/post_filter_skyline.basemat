@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<base_material name="post_filter_skyline" version="2.5.0.2">
+	<shader pass="post" vertex="core/shaders/screen_space/vertex/default.vert" fragment="unigine_project/materials/post_filter_skyline/filter_skyline.frag"/>
+	<texture name="color" pass="post" type="procedural"/>
+	<texture type="gbuffer_material_mask"/>
+</base_material>

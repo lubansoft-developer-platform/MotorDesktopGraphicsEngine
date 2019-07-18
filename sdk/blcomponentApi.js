@@ -27,41 +27,30 @@ var ECompType = {
     type_fbx:"pa_fbxType"
 }
 
- /**
- * 构件属性key
+/**
+ * 根据工程Id获取其工程下所有构件列表
  * @static
- * @enum {string}
+ * @param {string} projId - 工程Id
+ * @param {getCimProjectComponentsCallback} funcRet
+ * @returns {void}
  */
-var ECompAttrKey = {
-    /** 
-     * bim构件属性guid
-    */
-    pa_attrGuid:"Param_AttrGuid",
-    /** 
-     * bim构件专业
-    */
-    pa_compDomain:"Param_ZhuanYeName",
-    /** 
-     * bim构件大类
-    */
-    pa_dalei:"Param_DaLeiName",
-    /** 
-     * bim构件小类
-    */
-    pa_xiaolei:"Param_XiaoLeiName",
-    /** 
-     * bim构件楼层名
-    */
-    pa_floorName:"Param_FloorName",
-    /** 
-     * bim构件系统名
-    */
-    pa_sysName:"Param_SysName",
-    /** 
-     * 构件对应的工程id
-    */
-    pa_compProjID:"pa_subprojID"
-};
+var getCimProjectComponents = function(projId, funcRet){
+    return componentObj.GetCimProjectComponents(projId, function (returnValue) {
+        if (typeof funcRet === "function") funcRet(JSON.parse(returnValue));
+    });
+}
+/**
+ * GetComponentsByProjId
+ * @function
+ * @callback getCimProjectComponentsCallback
+ * @param {JSON} returnValue - 构件信息的json数组
+ * 格式如下:
+ * [{
+ *    componentId:string, 
+ *    componentType:string, 
+ *    componentName:string,   
+ *  }]
+ */
 
 /**
  * 获取构件信息
@@ -85,86 +74,7 @@ var getComponentInfo = function (componentId, funcRet) {
  *    componentId:string, 
  *    componentType:string, 
  *    componentName:string, 
- *    pos:{x:double, y: double, z:double}
  *  }
- */
-
-/**
- * 根据工程Id获取构件信息
- * @static
- * @param {string} projId - 工程Id
- * @param {getComponentInfosByProjIdCallback} funcRet
- * @returns {void}
- */
-var getComponentInfosByProjId = function(projId, funcRet){
-    return componentObj.GetComponentInfosByProjId(projId, function (returnValue) {
-        if (typeof funcRet === "function") funcRet(JSON.parse(returnValue));
-    });
-}
-/**
- * getComponentInfosByProjId回调函数
- * @function
- * @callback getComponentInfosByProjIdCallback
- * @param {JSON} returnValue - 构件信息的json数组
- * 格式如下:
- * [{
- *    componentId:string, 
- *    componentType:string, 
- *    componentName:string, 
- *    pos:{x:double, y: double, z:double}
- *  }]
- */
-
-/**
- * 设置构件属性
- * @static
- * @param {string} componentId - 构件ID
- * @param {string} attrKey - 属性键
- * @param {string} attrVal - 属性值
- * @returns {void}
- */
-var setComponentAttr= function(componentId, attrKey, attrVal){
-    return componentObj.SetComponentAttr(componentId, attrKey, attrVal);
-}
-
-/**
- * 获取构件属性
- * @static
- * @param {string} componentId - 构件ID
- * @param {string} attrKey - 属性键
- * @param {getComponentAttrCallback} funcRet
- * @returns {void}
- */
-var getComponentAttr = function(componentId, attrKey, funcRet){
-    return componentObj.GetComponentAttr(componentId, attrKey, function (returnValue) {
-        if (typeof funcRet === "function") funcRet(returnValue);
-    });
-}
-/**
- * getComponentAttr回调函数
- * @function
- * @callback getComponentAttrCallback
- * @param {string} returnValue - 构件属性
- */
-
-/**
- * 删除构件
- * @static
- * @param {string} projId - 工程Id
- * @param {string} componentId - 构件Id
- * @param {removeComponentCallback} funcRet
- * @returns {void}
- */
-var removeComponent = function(projId, componentId, funcRet){
-    return componentObj.RemoveComponent(projId, componentId, function (returnValue) {
-        if (typeof funcRet === "function") funcRet(returnValue);
-    });
-}
-/**
- * removeComponent回调函数
- * @function
- * @callback removeComponentCallback
- * @param {Boolean} returnValue - 操作结果
  */
 
 /**
@@ -172,18 +82,18 @@ var removeComponent = function(projId, componentId, funcRet){
  * @static
  * @param {string[]} componentIds - 构件Id列表
  * @param {string} color - 颜色十六进制字符串，如"#ff0000"
- * @param {setComponentColorCallback} funcRet
+ * @param {setComponentForceColorCallback} funcRet
  * @returns {void}
  */
-var setComponentColor = function (componentIds, color, funcRet) {
+var setComponentForceColor  = function (componentIds, color, funcRet) {
     return componentObj.ForceComponentColor(componentIds, color, function (returnValue) {
         if (typeof funcRet === "function") funcRet(returnValue);
     })
 }
 /**
- * setComponentColor回调函数
+ * setComponentForceColor回调函数
  * @function
- * @callback setComponentColorCallback
+ * @callback setComponentForceColorCallback
  * @param {Boolean} returnValue - 操作结果
  */
 
@@ -207,15 +117,54 @@ var clearComponentForceColor = function (componentIds, funcRet) {
  */
 
 /**
- * 批量设置构件是否可见
+ * 设置工程下构件颜色
  * @static
- * @param {string[]} componentIds - 构件Id列表
+ * @param {string} projId - 工程Id
+ * @param {string} color - 颜色十六进制字符串，如"#ff0000"
+ * @param {setForceColorForProjCallback} funcRet
+ * @returns {void}
+ */
+var setForceColorForProj  = function (projId, color, funcRet) {
+    return componentObj.SetForceColorForProj(projId, color, function (returnValue) {
+        if (typeof funcRet === "function") funcRet(returnValue);
+    })
+}
+/**
+ * setForceColorForProj
+ * @function
+ * @callback setForceColorForProjCallback
+ * @param {Boolean} returnValue - 操作结果
+ */
+
+/**
+ * 清除工程下构件颜色
+ * @static
+ * @param {string} projId - 工程Id
+ * @param {clearForceColorForProjCallback} funcRet
+ * @returns {void}
+ */
+var clearForceColorForProj = function (projId, funcRet) {
+    return componentObj.ClearForceColorForProj(projId, function (returnValue) {
+        if (typeof funcRet === "function") funcRet(returnValue);
+    });
+}
+/**
+ * clearForceColorForProj
+ * @function
+ * @callback clearForceColorForProjCallback
+ * @param {Boolean} returnValue - 操作结果
+ */ 
+ 
+/**
+ * 设置工程下构件是否可见
+ * @static
+ * @param {string} componentId - 构件Id
  * @param {Boolean} bShow - 是否显示
  * @param {setComponentVisibleCallback} funcRet
  * @returns {void}
  */
-var setComponentVisible = function (componentIds, bShow, funcRet) {
-    return componentObj.SetComponentVisible(componentIds, bShow, function (returnValue) {
+var setComponentVisible = function (componentId, bShow, funcRet) {
+    return componentObj.SetComponentVisible(componentId, bShow, function (returnValue) {
         if (typeof funcRet === "function") funcRet(returnValue);
     });
 }
@@ -223,6 +172,26 @@ var setComponentVisible = function (componentIds, bShow, funcRet) {
  * setComponentVisible回调函数
  * @function
  * @callback setComponentVisibleCallback
+ * @param {Boolean} returnValue - 操作结果
+ */
+
+ /**
+ * 设置工程下构件是否可见
+ * @static
+ * @param {string} projId - 工程Id
+ * @param {Boolean} bShow - 是否显示
+ * @param {setVisibleForProjCallback} funcRet
+ * @returns {void}
+ */
+var setVisibleForProj = function (projId, bShow, funcRet) {
+    return componentObj.SetVisibleForProj(projId, bShow, function (returnValue) {
+        if (typeof funcRet === "function") funcRet(returnValue);
+    });
+}
+/**
+ * setComponentVisible回调函数
+ * @function
+ * @callback setVisibleForProjCallback
  * @param {Boolean} returnValue - 操作结果
  */
 
@@ -388,12 +357,12 @@ var getBillboardByType = function (sType, funcRet) {
 /**
  * 获取构件描述
  * @static
- * @param {string} compId - 构件ID 
+ * @param {string} componentId - 构件ID 
  * @param {getCompTempDesInfoCallback} funcRet 
  * @returns {void}
  */
-var getCompTempDesInfo = function (compId, funcRet){
-    return componentObj.GetCompTempDesInfo(compId, function (returnValue) {
+var getCompTempDesInfo = function (componentId, funcRet){
+    return componentObj.GetCompTempDesInfo(componentId, function (returnValue) {
         if (typeof funcRet === "function") funcRet(JSON.parse(returnValue));
     });
 }
@@ -404,12 +373,8 @@ var getCompTempDesInfo = function (compId, funcRet){
  * @param {JSON} returnValue - 构件的bim信息
  * 格式如下:
  * {
- *  CTVisible:Boolean, //属性面板是否可见
- *  CardVisible:Boolean, //卡片面板是否可见
  *  props:[
  *      {
- *          CTVisible:Boolean, //属性面板是否可见
- *          CardVisible:Boolean, //卡片面板是否可见
  *          prop:{key:string, value:string} //属性键值对
  *      }      
  *  ]
@@ -419,12 +384,12 @@ var getCompTempDesInfo = function (compId, funcRet){
 /**
  * 获取构件bim信息
  * @static
- * @param {string} compId - 构件ID 
+ * @param {string} componentId - 构件ID 
  * @param {getCompBimInfoCallback} funcRet 
  * @returns {void}
  */
-var getCompBimInfo = function (compId, funcRet){
-    return componentObj.GetCompBimInfo(compId, function (returnValue) {
+var getCompBimInfo = function (componentId, funcRet){
+    return componentObj.GetCompBimInfo(componentId, function (returnValue) {
         if (typeof funcRet === "function") funcRet(JSON.parse(returnValue));
     });
 }
@@ -440,7 +405,6 @@ var getCompBimInfo = function (compId, funcRet){
  *      bimGuid:string, //构件的bim句柄
  *      mainCompGuid:string, //主构件bim句柄
  *      projGuid: string, //构件所属工程Guid
- *      bimPPid:string, //构件所属工程的bim工程代理id
  *      zhuanye:string, //构件专业
  *      floor:string, //构件所在的bim楼层
  *      cimFloor:string, //cim对应楼层
@@ -461,12 +425,12 @@ var getCompBimInfo = function (compId, funcRet){
 /**
  * 批量获取构件bim信息
  * @static
- * @param {string[]} compIds - 构件ID 
+ * @param {string[]} componentIds - 构件ID 
  * @param {getCompBimInfoBatchCallback} funcRet 
  * @returns {void}
  */
-var getCompBimInfoBatch = function (compIds, funcRet){
-    return componentObj.GetCompBimInfoBatch(compIds, function (returnValue) {
+var getCompBimInfoBatch = function (componentIds, funcRet){
+    return componentObj.GetCompBimInfoBatch(componentIds, function (returnValue) {
         if (typeof funcRet === "function") funcRet(JSON.parse(returnValue));
     });
 }
@@ -482,7 +446,6 @@ var getCompBimInfoBatch = function (compIds, funcRet){
  *      bimGuid:string, //构件的bim句柄
  *      mainCompGuid:string, //主构件bim句柄
  *      projGuid: string, //构件所属工程Guid
- *      bimPPid:string, //构件所属工程的bim工程代理id
  *      zhuanye:string, //构件专业
  *      floor:string, //构件所在的bim楼层
  *      cimFloor:string, //cim对应楼层
@@ -503,43 +466,43 @@ var getCompBimInfoBatch = function (compIds, funcRet){
 /**
  * 反查构件
  * @static
- * @param {string[]} compIds - 构件ID
+ * @param {string[]} componentIds - 构件ID
  * @param {Number} dbScale - 镜头缩放系数, 默认取值2.0
  * @returns {void}
  */
-var researchComp = function (compIds, dbScale){
-    componentObj.ResearchComp(compIds, dbScale);
+var researchComp = function (componentIds, dbScale){
+    componentObj.ResearchComp(componentIds, dbScale);
 }
 
 /**
  * 构件高亮
  * @static
- * @param {string[]} compIds - 构件ID
+ * @param {string[]} componentIds - 构件ID
  * @returns {void}
  */
-var highlightComp = function (compIds){
-    componentObj.HighlightComp(compIds);
+var highlightComp = function (componentIds){
+    componentObj.HighlightComp(componentIds);
 }
 
 /**
  * 取消构件高亮
  * @static
- * @param {string[]} compIds - 构件ID
+ * @param {string[]} componentIds - 构件ID
  * @returns {void}
  */
-var cancelHighlightComp = function (compIds){
-    componentObj.CancelHighlightComp(compIds);
+var cancelHighlightComp = function (componentIds){
+    componentObj.CancelHighlightComp(componentIds);
 }
 
 /**
  * 获取构件的变换矩阵
  * @static
- * @param {string} compId - 构件ID
+ * @param {string} componentId - 构件ID
  * @param {getCompTransfCallback} funcRet 
  * @returns {void}
  */
-var getCompTransf = function (compId, funcRet){
-    return componentObj.GetCompTransf(compId, function (returnValue) {
+var getCompTransf = function (componentId, funcRet){
+    return componentObj.GetCompTransf(componentId, function (returnValue) {
         if (typeof funcRet === "function") funcRet(JSON.parse(returnValue));
     });
 }
@@ -554,7 +517,7 @@ var getCompTransf = function (compId, funcRet){
 /**
  * 设置构件的变换矩阵
  * @static
- * @param {string} compId - 构件ID 
+ * @param {string} componentId - 构件ID 
  * @param {JSON} transf - 变换矩阵
  * 转换CAD矩阵 4*4，含平移，旋转，镜像，缩放
  * x1	x2	x3	t1
@@ -570,19 +533,19 @@ var getCompTransf = function (compId, funcRet){
  * }
  * @returns {void}
  */
-var setCompTransf = function (compId, transf){
-    componentObj.setCompTransf(compId, JSON.stringfy(transf));
+var setCompTransf = function (componentId, transf){
+    componentObj.setCompTransf(componentId, JSON.stringfy(transf));
 }
 
 /** 
  * 获取构件包围盒(AABB)
  * @static
- * @param {string} compId - 构件ID 
+ * @param {string} componentId - 构件ID 
  * @param {getComponentBoundingBoxCallback} funcRet
  * @returns {void}
 */
-var getComponentBoundingBox = function (compId, funcRet){
-    return componentObj.GetComponentBoundingBox(compId, function (returnValue) {
+var getComponentBoundingBox = function (componentId, funcRet){
+    return componentObj.GetComponentBoundingBox(componentId, function (returnValue) {
         if (typeof funcRet === "function") funcRet(JSON.parse(returnValue));
     });
 }
@@ -619,7 +582,7 @@ function getProjComponentInfosByType(projId, type, funcRet) {
  * @param {string} projId - 工程id
  * @param {string} type - 构件类型
  * @param {Boolean} bAsc = 是否升序排列
- * @param {getProjComponentInfosByTypeCallback} funcRet
+ * @param {getSortedProjComponentInfosByTypeCallback} funcRet
  * @return {void}
 */
 function getSortedProjComponentInfosByType(projId, type, bAsc, funcRet){
@@ -628,28 +591,27 @@ function getSortedProjComponentInfosByType(projId, type, bAsc, funcRet){
     });
 }
 /**
- * getProjComponentInfosByType回调函数
+ * GetSortedProjComponentInfosByType
  * @function
- * @callback getComponentInfosByProjIdCallback
+ * @callback getSortedProjComponentInfosByTypeCallback
  * @param {JSON} returnValue - 构件信息的json数组
  * 格式如下:
  * [{
  *    componentId:string, 
  *    componentType:string, 
- *    componentName:string, 
- *    pos:{x:double, y: double, z:double}
+ *    componentName:string    
  *  }]
  */
 
  /**
  * 根据关联构件获取billboard列表
  * @static
- * @param {string} compId - 关联了billboard的构件id
+ * @param {string} componentId - 关联了billboard的构件id
  * @param {getBillBoardByCompIdCallback} funcRet
  * @returns {void}
  */
-var getBillboardByCompId = function (compId, funcRet) {
-    return componentObj.GetBillBoardByCompId(compId, function (returnValue) {
+var getBillboardByCompId = function (componentId, funcRet) {
+    return componentObj.GetBillBoardByCompId(componentId, function (returnValue) {
         if (typeof funcRet === "function") funcRet(returnValue);
     });
 }
@@ -660,13 +622,23 @@ var getBillboardByCompId = function (compId, funcRet) {
  * @param {string[]} returnValue - billboardId列表
  */
 
-/** 
- * 删除构件
+
+
+ /**
+ * 获取构件关联的工程列表
  * @static
- * @param {string} compId - 构件id
- * @param {Boolean} bTempComp - 是否是临时构件
+ * @param {string} componentId - 构件id
+ * @param {getLinkedProjIDCallback} funcRet
  * @returns {void}
-*/
-var deleteComp = function (compId, bTempComp){
-    componentObj.DeleteComp(compId, bTempComp);
+ */
+var getLinkedProjID = function (componentId, funcRet) {
+    return componentObj.GetLinkedProjID(componentId, function (returnValue) {
+        if (typeof funcRet === "function") funcRet(returnValue);
+    });
 }
+/**
+ * getLinkedProjID回调函数
+ * @function
+ * @callback getLinkedProjIDCallback
+ * @param {string[]} returnValue - 工程ID列表
+ */

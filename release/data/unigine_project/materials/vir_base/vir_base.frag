@@ -20,6 +20,7 @@ END
 
 MAIN_BEGIN(FRAGMENT_OUT,FRAGMENT_IN)
 
+	//OUT_COLOR = float4(1,0,0,1);
 	float2 uv = IN_DATA(1);
 	
 	#ifdef PRIMITIVE_POINT
@@ -31,7 +32,7 @@ MAIN_BEGIN(FRAGMENT_OUT,FRAGMENT_IN)
 		if(fDistance > 0.5 || fDistance < 0.45)
 			discard;
 	#endif
-
+	
 	uint int_patch_id = IN_DATA(0);
 	uint iY = int_patch_id / 1024;
 	uint iX = int_patch_id % 1024;
@@ -45,7 +46,7 @@ MAIN_BEGIN(FRAGMENT_OUT,FRAGMENT_IN)
 	float4 patch_color = TEXTURE_FETCH(TEX_PATCH_COLOR,float2(iX,iY));
 	if (length(patch_color)< EPSILON)
 		patch_color =m_albedo_color;
-
+	
 	float4 image_color = TEXTURE_BIAS_ZERO(TEX_PATCH_IMAGE,uv); //
 	OUT_COLOR = patch_color * image_color;
 	

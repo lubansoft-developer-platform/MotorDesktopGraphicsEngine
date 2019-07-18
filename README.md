@@ -57,7 +57,7 @@ Motor Desktop Graphics Engine(以下简称为sdk)主要针对于网页前端开�
 |    |
 |    |----config.ini
 |    |
-|    |----BLLogin.exe
+|    |----LBCityEye.exe
 |    |
 |    |----*.*
 |    |
@@ -154,7 +154,7 @@ url=你的项目入口文件地址(如:./myproject/index.html)
 debug=false
 ```
 
-- BLLogin.exe
+- LBCityEye.exe
 
 ```ini
 CIM Client主进程
