@@ -195,6 +195,17 @@ var setVisibleForProj = function (projId, bShow, funcRet) {
  * @param {Boolean} returnValue - 操作结果
  */
 
+ 
+/**
+ * 设置选中构件
+ * @static
+ * @param {string[]} componentIds - 构件Id列表
+ * @returns {void}
+ */
+var setSelectID = function (componentIds) {
+    return componentObj.SetSelectID(componentIds);
+}
+
 /**
  * 获取构件坐标
  * @static

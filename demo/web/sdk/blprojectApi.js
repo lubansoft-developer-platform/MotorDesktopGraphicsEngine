@@ -210,6 +210,15 @@ var setValidManipulatorType = function (type) {
     return projectObj.SetValidManipulatorType(type);
 }
 
+/**
+ * 恢复当前工程默认状态
+ * @static
+ * @returns {void}
+ */
+var resetProjectStatus = function () {
+    projectObj.ResetProjectStatus();
+}
+
 /** 
  * 获取工程的bim信息
  * @static
@@ -376,7 +385,7 @@ var getProjectCimFloors = function (projId, funcRet){
  * [
  *  {
  *      name:string, //名称
- *      type:string, //该名称下包含的类型
+ *      sysName:string, //该名称下包含的类型
  *      child:[this] //自包含子节点
  *  }
  * ]
