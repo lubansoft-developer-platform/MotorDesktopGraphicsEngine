@@ -14,7 +14,7 @@ ScrollView {
 
     clip: true
     contentWidth: width; contentHeight: listView.height
-    GradientLine {
+    BLLinearGradient {
         anchors.top: parent.top
         width: parent.width; height: 1
     }
@@ -63,7 +63,7 @@ ScrollView {
                     text: modelData.note
                 }
             }
-            GradientLine {
+            BLLinearGradient {
                 anchors.bottom: parent.bottom
                 width: parent.width; height: 1
             }

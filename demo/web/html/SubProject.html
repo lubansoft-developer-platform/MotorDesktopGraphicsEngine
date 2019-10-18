@@ -53,7 +53,7 @@
     $(function () {
         sdk.getLinkedProjectForOpening(function (projInfo) {
             for(let i = 0; i<projInfo.length; i++){
-                if(projInfo[i].projType === "BIM")
+                if(projInfo[i].projType === "SUBCIM")
                     curProjInfo = projInfo[i];
             }
             
@@ -161,22 +161,42 @@
             $("#idProjectMenuBoard").css({ "display": "block" });
             if (treeData.length > 0) return;
             var treeObj = $("#idProjectTree");
-            sdk.getProjectCimFloors(curProjInfo.projId, function (floors) {
-                for (let i = 0; i < floors.length; i++) {
-                    let node = {};
-                    node.id = (i + 1) * 10;
-                    node.pId = 0;
-                    node.name = floors[i];
-                    treeData.push(node);
-                }
-                for (let i = 0; i < floors.length; i++) {
-                    let ndx = i;
-                    sdk.getBimProjectComponetsByCimFloor(curProjInfo.projId, floors[ndx], function (bimInfos) {
-                        createZhuanyeNode((ndx + 1) * 10, bimInfos);
+
+            sdk.getBimProjectList(curProjInfo.projId, function (bimProjList) {
+                if (bimProjList.length == 0) return;
+                sdk.getProjectCimFloors(bimProjList[0], function (floors) {
+                    for (let i = 0; i < floors.length; i++) {
+                        let node = {};
+                        node.id = (i + 1) * 10;
+                        node.pId = 0;
+                        node.name = floors[i];
+                        treeData.push(node);
+                    }
+                    async function asyncOrgTree() {          
+                        for (let i = 0; i < floors.length; i++) {
+                            let allBimComp = [];
+                            await new Promise(resolve => {                                
+                                for (let j = 0; j < bimProjList.length; j++) {
+                                    let bimProj = bimProjList[j];
+                                    sdk.getBimProjectComponetsByCimFloor(bimProj, floors[i], function (compList) {                                
+                                        for (let k = 0; k < compList.length; k++){
+                                            allBimComp.push(compList[k]);                                   
+                                        }
+                                        if(j === bimProjList.length - 1) {
+                                            resolve(true);
+                                        }                                      
+                                    });
+                                }                                                               
+                            }).then(() => {
+                                createZhuanyeNode((i + 1) * 10, allBimComp);
+                            });                            
+                        }
                         $.fn.zTree.init(treeObj, settingSubProj, treeData);
-                    });
-                }
-            });
+                        console.log("end",treeData);
+                    }
+                    asyncOrgTree();
+                });  
+            });           
         }
         else {
             $("#idProjectMenuBoard").css({ "display": "none" });
@@ -187,8 +207,10 @@
         $("#idCompCard").css({ "display": "none" });
         curComp = compId;
         if (compId === null || compId === undefined || compId === "") return;      
-        sdk.isBimModelProject(curProjInfo.projId, function (bHas) {
-            if (bHas) {
+        sdk.getBimProjectList(curProjInfo.projId, function(bimProjList)
+        {
+            if(bimProjList.length > 0)
+            {
                 sdk.getCompBimInfo(compId, function (bimInfo) {
                     $("#idCompCard").css({ "display": "block" });
                     $("#idCompInfo").empty();

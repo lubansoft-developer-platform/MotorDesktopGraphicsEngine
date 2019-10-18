@@ -39,11 +39,12 @@ var getCimProjectComponents = function(projId, funcRet){
         if (typeof funcRet === "function") funcRet(JSON.parse(returnValue));
     });
 }
+
 /**
  * GetComponentsByProjId
  * @function
  * @callback getCimProjectComponentsCallback
- * @param {JSON} returnValue - 构件信息的json数组
+ * @param {JSON[]} returnValue - 构件信息的json数组
  * 格式如下:
  * [{
  *    componentId:string, 
@@ -449,7 +450,7 @@ var getCompBimInfoBatch = function (componentIds, funcRet){
  * getCompBimInfoBatch回调函数
  * @function
  * @callback getCompBimInfoBatchCallback
- * @param {JSON} returnValue - 构件的bim信息
+ * @param {JSON[]} returnValue - 构件的bim信息
  * 格式如下:
  * [{
  *      guid:string, //构件Guid
@@ -605,7 +606,7 @@ function getSortedProjComponentInfosByType(projId, type, bAsc, funcRet){
  * GetSortedProjComponentInfosByType
  * @function
  * @callback getSortedProjComponentInfosByTypeCallback
- * @param {JSON} returnValue - 构件信息的json数组
+ * @param {JSON[]} returnValue - 构件信息的json数组
  * 格式如下:
  * [{
  *    componentId:string, 
@@ -633,10 +634,8 @@ var getBillboardByCompId = function (componentId, funcRet) {
  * @param {string[]} returnValue - billboardId列表
  */
 
-
-
  /**
- * 获取构件关联的工程列表
+ * 获取构件关联的子CIM工程
  * @static
  * @param {string} componentId - 构件id
  * @param {getLinkedProjIDCallback} funcRet
@@ -651,5 +650,24 @@ var getLinkedProjID = function (componentId, funcRet) {
  * getLinkedProjID回调函数
  * @function
  * @callback getLinkedProjIDCallback
+ * @param {string} returnValue - 工程ID
+ */
+
+ /**
+* 获取构件关联的BIM工程列表 
+* @static
+* @param {string} componentId - 构件id
+* @param {getLinkedBimProjListCallback} funcRet
+* @returns {void}
+*/
+var getLinkedBimProjList = function (componentId, funcRet) {
+    return componentObj.GetLinkedBimProjList(componentId, function (returnValue) {
+        if (typeof funcRet === "function") funcRet(returnValue);
+    });
+}
+/**
+ * getLinkedBimProjList 回调函数
+ * @function
+ * @callback getLinkedBimProjListCallback
  * @param {string[]} returnValue - 工程ID列表
  */

@@ -1,0 +1,1062 @@
+[
+    {
+        "name": "建筑",
+        "sysName": "Type_JianZhu",
+        "subType": [
+            {
+                "name": "周边建筑",
+                "sysName": "Type_JianZhu_ZhouBianJianZhu",
+                "image": "Type_JianZhu_ZhouBianJianZhu_big.png",
+                "paramter": [
+                    {
+                        "name": "用地面积",
+                        "sysName": "Param_YongDiMianJi",
+                        "unit": "m2",
+                        "alignType": "RIGHT",
+                        "value": "1000"
+                    },
+                    {
+                        "name": "建筑面积",
+                        "sysName": "Param_JianZhuMianJi",
+                        "unit": "m2",
+                        "alignType": "RIGHT",
+                        "value": "6000"
+                    }
+                ]
+            },
+            {
+                "name": "办公楼",
+                "sysName": "Type_JianZhu_BanGong",
+                "image": "Type_JianZhu_BanGong_big.png",
+                "paramter": [
+                    {
+                        "name": "建筑高度",
+                        "sysName": "Param_JianZhuGaoDu",
+                        "unit": "m",
+                        "alignType": "RIGHT",
+                        "value": "50"
+                    },
+                    {
+                        "name": "建筑层数",
+                        "sysName": "Param_JianZhuCengShu",
+                        "alignType": "RIGHT",
+                        "value": "14"
+                    },
+                    {
+                        "name": "占地面积",
+                        "sysName": "Param_ZhanDiMianJi",
+                        "unit": "m2",
+                        "alignType": "RIGHT",
+                        "value": "3925"
+                    },
+                    {
+                        "name": "建设单位",
+                        "sysName": "Param_JianSheDanWei",
+                        "alignType": "LEFT",
+                        "value": "南通创源科技园发展有限公司"
+                    },
+                    {
+                        "name": "设计单位",
+                        "sysName": "Param_SheJiDanWei",
+                        "alignType": "LEFT",
+                        "value": "浙江省工业设计研究院"
+                    },
+                    {
+                        "name": "施工单位",
+                        "sysName": "Param_ShiGongDanWei",
+                        "alignType": "LEFT",
+                        "value": "南通二建"
+                    },
+                    {
+                        "name": "监理单位",
+                        "sysName": "Param_JianLiDanWei",
+                        "alignType": "LEFT",
+                        "value": "华政监理"
+                    },
+                    {
+                        "name": "工程造价",
+                        "sysName": "Param_GongChengZaoJia",
+                        "unit": "元",
+                        "alignType": "LEFT",
+                        "value": "2122"
+                    },
+                    {
+                        "name": "物业公司",
+                        "sysName": "Param_WuYeGongSi",
+                        "alignType": "LEFT",
+                        "value": "锦江物业"
+                    },
+                    {
+                        "name": "建筑面积",
+                        "sysName": "Param_JianZhuMianJi",
+                        "unit": "m2",
+                        "alignType": "RIGHT",
+                        "cardImage": "mianji.png",
+                        "value": "119141.7"
+                    },
+                    {
+                        "name": "企业数量",
+                        "sysName": "Param_QiYeShuLiang",
+                        "alignType": "RIGHT",
+                        "cardImage": "qiye.png",
+                        "value": "25"
+                    },
+                    {
+                        "name": "人员数量",
+                        "sysName": "Param_RenYuanShuLiang",
+                        "alignType": "RIGHT",
+                        "cardImage": "renyuan.png",
+                        "value": "600"
+                    },
+                    {
+                        "name": "物资",
+                        "sysName": "Param_WuZi",
+                        "unit": "个",
+                        "alignType": "RIGHT",
+                        "cardImage": "wuzi.png",
+                        "value": "24"
+                    },
+                    {
+                        "name": "能耗",
+                        "sysName": "Param_NengHao",
+                        "unit": "kgce/t",
+                        "alignType": "RIGHT",
+                        "cardImage": "nenghao.png",
+                        "value": "2035"
+                    },
+                    {
+                        "name": "温度",
+                        "sysName": "Param_WenDu",
+                        "unit": "℃",
+                        "alignType": "RIGHT",
+                        "cardImage": "wendu.png",
+                        "value": "16"
+                    },
+                    {
+                        "name": "设备",
+                        "sysName": "Param_SheBei",
+                        "unit": "台",
+                        "alignType": "RIGHT",
+                        "cardImage": "shebei.png",
+                        "value": "92"
+                    },
+                    {
+                        "name": "安全",
+                        "sysName": "Param_AnQuan",
+                        "alignType": "RIGHT",
+                        "cardImage": "anquan.png",
+                        "value": "安全"
+                    },
+                    {
+                        "name": "警报",
+                        "sysName": "Param_JingBao",
+                        "alignType": "RIGHT",
+                        "cardImage": "jingbao.png",
+                        "value": "无"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "设施设备",
+        "sysName": "Type_SheShiSheBei",
+        "subType": [
+            {
+                "name": "监控设备",
+                "sysName": "Type_SheShiSheBei_JKSB",
+                "image": "Type_SheShiSheBei_JKSB_big.png",
+                "paramter": [
+                    {
+                        "name": "设备图片",
+                        "sysName": "Param_DaTu",
+                        "alignType": "LEFT"
+                    },
+                    {
+                        "name": "设备编号",
+                        "sysName": "Param_SBBH",
+                        "alignType": "LEFT",
+                        "value": "001"
+                    },
+                    {
+                        "name": "设备型号",
+                        "sysName": "Param_SBXH",
+                        "alignType": "LEFT",
+                        "value": "DS-2CC12C8T-IW3Z"
+                    },
+                    {
+                        "name": "生产厂商",
+                        "sysName": "Param_SCCS",
+                        "alignType": "LEFT",
+                        "value": "海康威视"
+                    },
+                    {
+                        "name": "定位设备",
+                        "sysName": "Param_DingWei",
+                        "alignType": "LEFT"
+                    },
+                    {
+                        "name": "遥控设备",
+                        "sysName": "Param_YaoKong",
+                        "alignType": "LEFT"
+                    },
+                    {
+                        "name": "运行状态",
+                        "sysName": "Param_YXZT",
+                        "alignType": "LEFT"
+                    }
+                ]
+            },
+            {
+                "name": "闸机",
+                "sysName": "Type_SheShiSheBei_ZJ",
+                "image": "Type_SheShiSheBei_ZJ_big.png",
+                "paramter": [
+                    {
+                        "name": "设备图片",
+                        "sysName": "Param_DaTu",
+                        "alignType": "LEFT"
+                    },
+                    {
+                        "name": "设备编号",
+                        "sysName": "Param_SBBH",
+                        "alignType": "LEFT",
+                        "value": "001"
+                    },
+                    {
+                        "name": "设备型号",
+                        "sysName": "Param_SBXH",
+                        "alignType": "LEFT",
+                        "value": "IW3Z"
+                    },
+                    {
+                        "name": "生产厂商",
+                        "sysName": "Param_SCCS",
+                        "alignType": "LEFT",
+                        "value": "海康威视"
+                    },
+                    {
+                        "name": "运行状态",
+                        "sysName": "Param_YXZT",
+                        "alignType": "LEFT"
+                    }
+                ]
+            },
+            {
+                "name": "出风口",
+                "sysName": "Type_SheShiSheBei_ChuFengKou",
+                "image": "Type_SheShiSheBei_ChuFengKou_big.png",
+                "paramter": [
+                    {
+                        "name": "构件长度",
+                        "sysName": "Param_GouJianChangDu",
+                        "unit": "mm",
+                        "alignType": "RIGHT",
+                        "value": "800"
+                    },
+                    {
+                        "name": "构件宽度",
+                        "sysName": "Param_GouJianKuanDu",
+                        "unit": "mm",
+                        "alignType": "RIGHT",
+                        "value": "400"
+                    },
+                    {
+                        "name": "构件厚度",
+                        "sysName": "Param_GouJianHouDu",
+                        "unit": "mm",
+                        "alignType": "RIGHT",
+                        "value": "50"
+                    },
+                    {
+                        "name": "风口类型",
+                        "sysName": "Param_FengKouLeiXing",
+                        "alignType": "LEFT",
+                        "value": "百叶窗"
+                    },
+                    {
+                        "name": "风口材质",
+                        "sysName": "Param_FengKouCaiZhi",
+                        "alignType": "LEFT",
+                        "value": "铝合金"
+                    },
+                    {
+                        "name": "单体质量",
+                        "sysName": "Param_DanTiZhiLiang",
+                        "unit": "kg",
+                        "alignType": "RIGHT",
+                        "value": "1"
+                    },
+                    {
+                        "name": "品牌",
+                        "sysName": "Param_PinPai",
+                        "alignType": "LEFT",
+                        "value": "天道"
+                    },
+                    {
+                        "name": "供应商",
+                        "sysName": "Param_GongYingShang",
+                        "alignType": "LEFT",
+                        "value": "上海容华"
+                    },
+                    {
+                        "name": "联系人",
+                        "sysName": "Param_LianXiRen",
+                        "alignType": "LEFT",
+                        "value": "张亚"
+                    },
+                    {
+                        "name": "联系方式",
+                        "sysName": "Param_LianXiFangShi",
+                        "alignType": "LEFT",
+                        "value": "15902120288"
+                    }
+                ]
+            },
+            {
+                "name": "水管",
+                "sysName": "Type_SheShiSheBei_ShuiGuan",
+                "image": "Type_SheShiSheBei_ShuiGuan_big.png",
+                "paramter": [
+                    {
+                        "name": "管道材质",
+                        "sysName": "Param_GuanDaoCaiZhi",
+                        "alignType": "LEFT",
+                        "value": "镀锌钢管"
+                    },
+                    {
+                        "name": "管径规格",
+                        "sysName": "Param_GuanJingGuiGe",
+                        "alignType": "LEFT",
+                        "value": "DN15"
+                    },
+                    {
+                        "name": "管道壁厚",
+                        "sysName": "Param_GuanDaoBiHou",
+                        "unit": "mm",
+                        "alignType": "RIGHT",
+                        "value": "2.8"
+                    },
+                    {
+                        "name": "连接方式",
+                        "sysName": "Param_LianJieFangShi",
+                        "alignType": "LEFT",
+                        "value": "螺纹连接"
+                    },
+                    {
+                        "name": "保温材料",
+                        "sysName": "Param_BaoWenCaiLiao",
+                        "alignType": "LEFT",
+                        "value": "玻璃棉"
+                    },
+                    {
+                        "name": "保温厚度",
+                        "sysName": "Param_BaoWenHouDu",
+                        "unit": "mm",
+                        "alignType": "RIGHT",
+                        "value": "30"
+                    },
+                    {
+                        "name": "管道刷油",
+                        "sysName": "Param_GuanDaoShuaYou",
+                        "alignType": "LEFT"
+                    },
+                    {
+                        "name": "管道压力",
+                        "sysName": "Param_GuanDaoYaLi",
+                        "unit": "Mpa",
+                        "alignType": "RIGHT",
+                        "value": "1.0"
+                    },
+                    {
+                        "name": "安装位置",
+                        "sysName": "Param_AnZhuangWeiZhi",
+                        "alignType": "LEFT",
+                        "value": "室内"
+                    },
+                    {
+                        "name": "安装方式",
+                        "sysName": "Param_AnZhuangFangShi",
+                        "alignType": "LEFT",
+                        "value": "明装"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "附属设施",
+        "sysName": "Type_FuShuSheShi",
+        "subType": [
+            {
+                "name": "停车位",
+                "sysName": "Type_FuShuSheShi_TingCheWei",
+                "image": "Type_FuShuSheShi_TingCheWei_big.png",
+                "paramter": [
+                    {
+                        "name": "车位编号",
+                        "sysName": "Param_CheWeiBianHao",
+                        "alignType": "LEFT",
+                        "value": "001"
+                    },
+                    {
+                        "name": "所属停车区",
+                        "sysName": "Param_SuoShuTingCheQu",
+                        "alignType": "LEFT",
+                        "value": "A"
+                    },
+                    {
+                        "name": "是否固定车位",
+                        "sysName": "Param_ShiFouGuDingCheWei",
+                        "alignType": "LEFT",
+                        "value": "否"
+                    },
+                    {
+                        "name": "固定车牌",
+                        "sysName": "GuDingCheWei",
+                        "alignType": "LEFT"
+                    }
+                ]
+            },
+            {
+                "name": "井盖",
+                "sysName": "Type_FuShuSheShi_JingGai",
+                "image": "Type_FuShuSheShi_JingGai_big.png",
+                "paramter": [
+                    {
+                        "name": "井盖编号",
+                        "sysName": "Param_JingGaiBianHao",
+                        "alignType": "LEFT",
+                        "value": "001"
+                    },
+                    {
+                        "name": "主管部门",
+                        "sysName": "Param_ZhuGuanBuMen",
+                        "alignType": "LEFT",
+                        "value": "市政管理局"
+                    },
+                    {
+                        "name": "系统",
+                        "sysName": "Param_XiTong",
+                        "alignType": "LEFT",
+                        "value": "电信"
+                    },
+                    {
+                        "name": "巡检情况",
+                        "sysName": "Param_XunJianQingKuang",
+                        "alignType": "LEFT",
+                        "value": "电信局"
+                    },
+                    {
+                        "name": "维护情况",
+                        "sysName": "Param_WeiHuQingKuang",
+                        "alignType": "LEFT",
+                        "value": "良好"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "车辆",
+        "sysName": "Type_CheLiang",
+        "subType": [
+            {
+                "name": "小型车",
+                "sysName": "Type_CheLiang_XXC",
+                "image": "Type_CheLiang_XXC_big.png",
+                "paramter": [
+                    {
+                        "name": "类型",
+                        "sysName": "Param_LeiXing",
+                        "alignType": "LEFT",
+                        "value": "长租车"
+                    },
+                    {
+                        "name": "分类",
+                        "sysName": "Param_FenLei",
+                        "alignType": "LEFT",
+                        "value": "小型车"
+                    },
+                    {
+                        "name": "品牌",
+                        "sysName": "Param_PinPai",
+                        "alignType": "LEFT",
+                        "value": "BMW"
+                    },
+                    {
+                        "name": "车牌号",
+                        "sysName": "Param_ChePaiHao",
+                        "alignType": "LEFT",
+                        "value": "沪B PB112"
+                    },
+                    {
+                        "name": "固定车位",
+                        "sysName": "Param_GuDingCheWei",
+                        "alignType": "LEFT",
+                        "cardImage": "Param_GuDingCheWei.png",
+                        "value": "A001"
+                    },
+                    {
+                        "name": "定位",
+                        "sysName": "Param_DW",
+                        "alignType": "LEFT",
+                        "cardImage": "Param_DW.png",
+                        "value": "定位"
+                    },
+                    {
+                        "name": "出入记录",
+                        "sysName": "Param_ChuRuJiLu",
+                        "alignType": "LEFT",
+                        "cardImage": "Param_ChuRuJiLu.png",
+                        "value": "出入记录"
+                    }
+                ]
+            },
+            {
+                "name": "中型车",
+                "sysName": "Type_CheLiang_ZXC",
+                "image": "Type_CheLiang_ZXC_big.png",
+                "paramter": [
+                    {
+                        "name": "类型",
+                        "sysName": "Param_LeiXing",
+                        "alignType": "LEFT",
+                        "value": "中型车"
+                    },
+                    {
+                        "name": "分类",
+                        "sysName": "Param_FenLei",
+                        "alignType": "LEFT",
+                        "value": "中型车"
+                    },
+                    {
+                        "name": "品牌",
+                        "sysName": "Param_PinPai",
+                        "alignType": "LEFT",
+                        "value": "雪弗兰"
+                    },
+                    {
+                        "name": "车牌号",
+                        "sysName": "Param_ChePaiHao",
+                        "alignType": "LEFT",
+                        "value": "沪A PB112"
+                    },
+                    {
+                        "name": "固定车位",
+                        "sysName": "Param_GuDingCheWei",
+                        "alignType": "LEFT",
+                        "cardImage": "Param_GuDingCheWei.png",
+                        "value": "A002"
+                    },
+                    {
+                        "name": "定位",
+                        "sysName": "Param_DW",
+                        "alignType": "LEFT",
+                        "cardImage": "Param_DW.png",
+                        "value": "定位"
+                    },
+                    {
+                        "name": "出入记录",
+                        "sysName": "Param_ChuRuJiLu",
+                        "alignType": "LEFT",
+                        "cardImage": "Param_ChuRuJiLu.png",
+                        "value": "出入记录"
+                    }
+                ]
+            },
+            {
+                "name": "大型车",
+                "sysName": "Type_CheLiang_DXC",
+                "image": "Type_CheLiang_DXC_big.png",
+                "paramter": [
+                    {
+                        "name": "类型",
+                        "sysName": "Param_LeiXing",
+                        "alignType": "LEFT",
+                        "value": "大型车"
+                    },
+                    {
+                        "name": "分类",
+                        "sysName": "Param_FenLei",
+                        "alignType": "LEFT",
+                        "value": "大型车"
+                    },
+                    {
+                        "name": "品牌",
+                        "sysName": "Param_PinPai",
+                        "alignType": "LEFT",
+                        "value": "雪弗兰"
+                    },
+                    {
+                        "name": "车牌号",
+                        "sysName": "Param_ChePaiHao",
+                        "alignType": "LEFT",
+                        "value": "沪A PB112"
+                    },
+                    {
+                        "name": "固定车位",
+                        "sysName": "Param_GuDingCheWei",
+                        "alignType": "LEFT",
+                        "cardImage": "Param_GuDingCheWei.png",
+                        "value": "A002"
+                    },
+                    {
+                        "name": "定位",
+                        "sysName": "Param_DW",
+                        "alignType": "LEFT",
+                        "cardImage": "Param_DW.png",
+                        "value": "定位"
+                    },
+                    {
+                        "name": "出入记录",
+                        "sysName": "Param_ChuRuJiLu",
+                        "alignType": "LEFT",
+                        "cardImage": "Param_ChuRuJiLu.png",
+                        "value": "出入记录"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "物资",
+        "sysName": "Type_WuZi",
+        "subType": [
+            {
+                "name": "物资",
+                "sysName": "Type_WuZi_FangHong",
+                "image": "Type_WuZi_FangHong_big.png",
+                "paramter": [
+                    {
+                        "name": "名称",
+                        "sysName": "Param_MingCheng",
+                        "alignType": "LEFT",
+                        "value": "沙袋"
+                    },
+                    {
+                        "name": "类型",
+                        "sysName": "Param_LeiXing",
+                        "alignType": "LEFT",
+                        "value": "防洪物资"
+                    },
+                    {
+                        "name": "编号",
+                        "sysName": "Param_BianHao",
+                        "alignType": "LEFT",
+                        "value": "001"
+                    },
+                    {
+                        "name": "数量",
+                        "sysName": "Param_ShuLiang",
+                        "alignType": "RIGHT",
+                        "cardImage": "Param_ShuLiang.png",
+                        "value": "30"
+                    },
+                    {
+                        "name": "定位",
+                        "sysName": "Param_DW",
+                        "alignType": "LEFT",
+                        "cardImage": "Param_DW.png",
+                        "value": "定位"
+                    },
+                    {
+                        "name": "出入记录",
+                        "sysName": "Param_ChuRuJiLu",
+                        "alignType": "LEFT",
+                        "cardImage": "Param_ChuRuJiLu.png",
+                        "value": "出入记录"
+                    }
+                ]
+            },
+            {
+                "name": "货物",
+                "sysName": "Type_WuZi_HuoWu",
+                "image": "Type_WuZi_HuoWu_big.png",
+                "paramter": [
+                    {
+                        "name": "名称",
+                        "sysName": "Param_MingCheng",
+                        "alignType": "LEFT",
+                        "value": "服装"
+                    },
+                    {
+                        "name": "类型",
+                        "sysName": "Param_LeiXing",
+                        "alignType": "LEFT",
+                        "value": "货物"
+                    },
+                    {
+                        "name": "编号",
+                        "sysName": "Param_BianHao",
+                        "alignType": "LEFT",
+                        "value": "002"
+                    },
+                    {
+                        "name": "数量",
+                        "sysName": "Param_ShuLiang",
+                        "alignType": "RIGHT",
+                        "cardImage": "Param_ShuLiang.png",
+                        "value": "30"
+                    },
+                    {
+                        "name": "定位",
+                        "sysName": "Param_DW",
+                        "alignType": "LEFT",
+                        "cardImage": "Param_DW.png",
+                        "value": "定位"
+                    },
+                    {
+                        "name": "出入记录",
+                        "sysName": "Param_ChuRuJiLu",
+                        "alignType": "LEFT",
+                        "cardImage": "Param_ChuRuJiLu.png",
+                        "value": "出入记录"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "绿化",
+        "sysName": "Type_LvHua",
+        "subType": [
+            {
+                "name": "草地",
+                "sysName": "Type_LvHua_CaoDi",
+                "image": "Type_LvHua_CaoDi_big.png",
+                "paramter": [
+                    {
+                        "name": "绿地编号",
+                        "sysName": "Param_LvDiBianHao",
+                        "alignType": "LEFT",
+                        "value": "001"
+                    },
+                    {
+                        "name": "绿地名称",
+                        "sysName": "Param_LvDiMingCheng",
+                        "alignType": "LEFT",
+                        "value": "绿地"
+                    },
+                    {
+                        "name": "绿地面积",
+                        "sysName": "Param_LvDiMianJi",
+                        "unit": "m2",
+                        "alignType": "RIGHT",
+                        "value":  "100"
+                    },
+                    {
+                        "name": "植被类型",
+                        "sysName": "Param_ZhiBeiLeiXing",
+                        "alignType": "LEFT",
+                        "value": "草地"
+                    },
+                    {
+                        "name": "覆盖率",
+                        "sysName": "Param_FuGanLv",
+                        "unit": "%",
+                        "alignType": "RIGHT",
+                        "value": "30"
+                    }
+                ]
+            },
+            {
+                "name": "花坛",
+                "sysName": "Type_LvHua_HuaTan",
+                "image": "Type_LvHua_HuaTan_big.png",
+                "paramter": [
+                    {
+                        "name": "绿地编号",
+                        "sysName": "Param_LvDiBianHao",
+                        "alignType": "LEFT",
+                        "value": "002"
+                    },
+                    {
+                        "name": "绿地名称",
+                        "sysName": "Param_LvDiMingCheng",
+                        "alignType": "LEFT",
+                        "value": "花坛"
+                    },
+                    {
+                        "name": "绿地面积",
+                        "sysName": "Param_LvDiMianJi",
+                        "unit": "m2",
+                        "alignType": "RIGHT",
+                        "value": "100"
+                    },
+                    {
+                        "name": "植被类型",
+                        "sysName": "Param_ZhiBeiLeiXing",
+                        "alignType": "LEFT",
+                        "value": "花坛"
+                    },
+                    {
+                        "name": "覆盖率",
+                        "sysName": "Param_FuGanLv",
+                        "unit": "%",
+                        "alignType": "RIGHT",
+                        "value": "30"
+                    }
+                ]
+            },
+            {
+                "name": "古树名木",
+                "sysName": "Type_LvHua_GuShuMingMu",
+                "image": "Type_LvHua_GuShuMingMu_big.png",
+                "paramter": [
+                    {
+                        "name": "植被种类",
+                        "sysName": "Param_ZhiBeiZhongLei",
+                        "alignType": "LEFT",
+                        "value": "樟树"
+                    },
+                    {
+                        "name": "植被编号",
+                        "sysName": "Param_ZhiBeiBianHao",
+                        "alignType": "LEFT",
+                        "value": "ZS001"
+                    },
+                    {
+                        "name": "树龄",
+                        "sysName": "Param_ShuLing",
+                        "unit": "年",
+                        "alignType": "RIGHT",
+                        "value": "30"
+                    },
+                    {
+                        "name": "保护等级",
+                        "sysName": "Param_BaoHuDengJi",
+                        "alignType": "LEFT",
+                        "value": "县级"
+                    },
+                    {
+                        "name": "养护单位",
+                        "sysName": "Param_YangHuDanWei",
+                        "alignType": "LEFT",
+                        "value": "园区管委会"
+                    },
+                    {
+                        "name": "负责人",
+                        "sysName": "Param_FuZeRen",
+                        "alignType": "LEFT",
+                        "value": "张三"
+                    },
+                    {
+                        "name": "上次养护时间",
+                        "sysName": "Param_ShangCiYangHuShiJian",
+                        "alignType": "LEFT",
+                        "value": "20180111"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "水体",
+        "sysName": "Type_ShuiTi",
+        "subType": {
+            "name": "河流",
+            "sysName": "Type_ShuiTi_HeLiu",
+            "image": "Type_ShuiTi_HeLiu_big.png",
+            "paramter": [
+                {
+                    "name": "河流名称",
+                    "sysName": "Param_HeLiuMingCheng",
+                    "alignType": "LEFT"
+                },
+                {
+                    "name": "水流速",
+                    "sysName": "Param_ShuiLiuSu",
+                    "alignType": "RIGHT"
+                },
+                {
+                    "name": "丰水期水位高度",
+                    "sysName": "Param_FengShuiQiShuiWeiGaoDun",
+                    "unit": "m",
+                    "alignType": "RIGHT"
+                },
+                {
+                    "name": "枯水期水位高度",
+                    "sysName": "Param_KuShuiQiShuiWeiGaoDun",
+                    "unit": "m",
+                    "alignType": "RIGHT"
+                },
+                {
+                    "name": "水质",
+                    "sysName": "Param_ShuiZhi",
+                    "alignType": "LEFT"
+                },
+                {
+                    "name": "防汛标准",
+                    "sysName": "Param_FangXunBiaoZhun",
+                    "alignType": "LEFT"
+                }
+            ]
+        }
+    },
+    {
+        "name": "市政管线",
+        "sysName": "Type_ShiZhengGuanXian",
+        "subType": {
+            "name": "排水管线",
+            "sysName": "Type_ShiZhengGuanXian_PaiShui",
+            "image": "Type_ShiZhengGuanXian_PaiShui_big.png",
+            "paramter": [
+                {
+                    "name": "市政管线编号",
+                    "sysName": "Param_ShiZhengGuanXianBianHao",
+                    "alignType": "LEFT"
+                },
+                {
+                    "name": "管径",
+                    "sysName": "Param_GuanJing",
+                    "unit": "mm",
+                    "alignType": "RIGHT",
+                    "value": "2"
+                },
+                {
+                    "name": "容量",
+                    "sysName": "Param_RongLiang",
+                    "alignType": "RIGHT",
+                    "value": "2000"
+                },
+                {
+                    "name": "材质",
+                    "sysName": "Param_CaiZhi",
+                    "alignType": "LEFT",
+                    "value": "混合"
+                }
+            ]
+        }
+    },
+    {
+        "name": "地形",
+        "sysName": "Type_DiXing"
+    },
+    {
+        "name": "道路",
+        "sysName": "Type_DaoLu",
+        "subType": {
+            "name": "公路",
+            "sysName": "Type_DaoLu_ZhuGanLu",
+            "image": "Type_DaoLu_ZhuGanLu_big.png",
+            "paramter": [
+                {
+                    "name": "道路编号",
+                    "sysName": "Param_DaoLuBianHao",
+                    "alignType": "LEFT"
+                },
+                {
+                    "name": "道路名称",
+                    "sysName": "Param_DaoLuMingCheng",
+                    "alignType": "LEFT"
+                },
+                {
+                    "name": "红线宽度",
+                    "sysName": "Param_HongXianKuanDu",
+                    "unit": "m",
+                    "alignType": "RIGHT",
+                    "value": "50"
+                },
+                {
+                    "name": "人行道宽度",
+                    "sysName": "Param_RenXingDaoKunDu",
+                    "unit": "m",
+                    "alignType": "RIGHT",
+                    "value": "5"
+                },
+                {
+                    "name": "绿化带宽度",
+                    "sysName": "Param_LvHuaDaiKuanDu",
+                    "unit": "m",
+                    "alignType": "RIGHT",
+                    "value": "10"
+                },
+                {
+                    "name": "分隔带宽度",
+                    "sysName": "Param_FenGeDaiKuanDu",
+                    "unit": "m",
+                    "alignType": "RIGHT",
+                    "value": "2"
+                },
+                {
+                    "name": "设计车速",
+                    "sysName": "Param_SheJiCheSu",
+                    "unit": "km/h",
+                    "alignType": "RIGHT",
+                    "value": "60"
+                },
+                {
+                    "name": "车流量",
+                    "sysName": "Param_CheLiuLiang",
+                    "alignType": "RIGHT",
+                    "value": "100"
+                },
+                {
+                    "name": "荷载",
+                    "sysName": "Param_HeZai",
+                    "alignType": "RIGHT",
+                    "value": "20"
+                },
+                {
+                    "name": "道路材质",
+                    "sysName": "Param_DaoLuCaiZhi",
+                    "alignType": "LEFT",
+                    "value": "沥青混凝土"
+                }
+            ]
+        }
+    },
+    {
+        "name": "边框",
+        "sysName": "Type_BianKuang",
+        "subType": [
+            {
+                "name": "建筑外边框",
+                "sysName": "Type_BuildingBorder",
+                "paramter": {
+                    "name": "占位",
+                    "sysName": "Param_ZhanWei"
+                }
+            },
+            {
+                "name": "楼层外边框",
+                "sysName": "Type_FloorBorder",
+                "paramter": {
+                    "name": "占位",
+                    "sysName": "Param_ZhanWei"
+                }
+            }
+        ]
+    },
+    {
+        "name": "区域",
+        "sysName": "Type_QuYu",
+        "subType": [
+            {
+                "name": "区域",
+                "sysName": "Type_AreaBorder",
+                "image": "Type_AreaBorder_big.png",
+                "paramter": [
+                    {
+                        "name": "使用面积",
+                        "sysName": "Param_MianJi",
+                        "unit": "m2",
+                        "alignType": "RIGHT",
+                        "value": "1000"
+                    },
+                    {
+                        "name": "租用情况",
+                        "sysName": "Param_ZuYongQingKuang",
+                        "alignType": "LEFT",
+                        "value": "可招租"
+                    }
+                ]
+            },
+            {
+                "name": "导入构件",
+                "sysName": "Type_ImportComp"
+            }
+        ]
+    }
+]

@@ -52,7 +52,7 @@ Item{
         }
     }
 
-    GradientLine {
+    BLLinearGradient {
         id:line
         visible: headVisible
         anchors {

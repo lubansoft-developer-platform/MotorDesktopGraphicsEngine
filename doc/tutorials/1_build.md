@@ -1,7 +1,7 @@
 ### 目录结构
 
 ```
-/CIM Client SDK
+/Desktop Model JS SDK
 |
 |----/sdk
 |    |
@@ -60,60 +60,60 @@
 \
 ```
 #### sdk
-    sdk文件夹下存放了CIM Client SDK 提供的所有js扩展库
+    sdk文件夹下存放了Desktop Model JS SDK提供的所有js扩展库
 
 - blsdk.js
 
 ```ini
-CIM Client SDK主入口文件
+Desktop Model JS SDK主入口文件
 ```
 - blcallback.js
 
 ```ini
-CIM Client SDK全局回调通知API
+Desktop Model JS SDK全局回调通知API
 ```
 
 - blcomponentApi.js
 
 ```ini
-CIM Client SDK构件模块API
+Desktop Model JS SDK构件模块API
 ```
 
 - blprojectApi.js
 
 ```ini
-CIM Client SDK工程模块API
+Desktop Model JS SDK工程模块API
 ```
 
 - blsceneApi.js
 
 ```ini
-CIM Client SDK场景模块API
+Desktop Model JS SDK场景模块API
 ```
 
 - blsystemApi.js
 
 ```ini
-CIM Client SDK系统模块API
+Desktop Model JS SDK系统模块API
 ```
 
 - blthreeViewApi.js
 
 ```ini
-CIM Client SDK三维模块API
+Desktop Model JS SDK三维模块API
 ```
 
 #### doc
-    doc文件夹下存放了CIM Client SDK的离线版接口文档
+    doc文件夹下存放了Desktop Model JS SDK的离线版接口文档
 
 - index.html
 
 ```ini
-CIM Client SDK离线版接口文档入口文件
+Desktop Model JS SDK离线版接口文档入口文件
 ```
 
 #### release
-    relsase文件夹中提供了CIM客户端平台
+    relsase文件夹中提供了Motor开发组件客户端平台
 
 - config.ini
 
@@ -130,14 +130,14 @@ url=你的项目入口文件地址(如:./myproject/index.html)
 debug=false
 ```
 
-- LBCityEye.exe
+- MotorDemo.exe
 
 ```ini
-CIM Client主进程
+Motor开发组件客户端主进程
 ```
 
 #### demo
-    demo文件夹中提供了由班联数城提供的基于CIM Client SDK开发的示例demo
+    demo文件夹中提供了由鲁班软件提供的基于Desktop Model JS SDK开发的示例demo
 
 ---
 ### 环境搭建
@@ -148,7 +148,7 @@ CIM Client主进程
 3. 在你的project中使用如下语句<script type='text/javascript' src='blsdk.js'></script>将sdk库引入到你的project中
 4. 将你的project文件夹移动到release文件夹下
 5. 根据你的实际情况配置config.ini
-6. 运行LBCityEye.exe，并开启你的开发之旅
+6. 运行MotorDemo.exe，并开启你的开发之旅
 ```
 
 ---
@@ -156,7 +156,7 @@ CIM Client主进程
 
 ```javascript
 1. 将demo文件夹下的所有内容移动到release文件夹下
-2. 运行LBCityEye.exe，享受Demo给你带来的开发乐趣
+2. 运行MotorDemo.exe，享受Demo给你带来的开发乐趣
 ```
 
 

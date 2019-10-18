@@ -1,0 +1,8 @@
+<base_material version="2.0" name="depth_mask_mesh_static_shadow" editable="0" hidden="1">
+	<shader pass="shadow" node="object_mesh_static" vertex="unigine_project/materials/depth_mask_mesh_base/static_shadow.shader"/>
+	
+	<bind node="object_mesh_cluster" to="object_mesh_static" defines="USE_CLUTTER_CLUSTER_PARAMETERS"/>
+	<bind node="object_mesh_clutter" to="object_mesh_static" defines="USE_CLUTTER_CLUSTER_PARAMETERS"/>
+	<bind node="object_mesh_dynamic" to="object_mesh_static"/>
+	<bind node="object_mesh_skinned" to="object_mesh_static"/>
+</base_material>

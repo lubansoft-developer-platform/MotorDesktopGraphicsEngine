@@ -1,4 +1,5 @@
 ﻿import QtQuick 2.7
+import QtGraphicalEffects 1.12
 import BLControls 1.0
 
 Item {
@@ -10,6 +11,7 @@ Item {
     property real nsize: 16
     property real vsize: 14
     property bool nbold: true
+    property alias lineVisible: linearGradient.visible
     BLToolTipText {
         id: nameText
         width: parent.width/2
@@ -33,11 +35,10 @@ Item {
         font.pixelSize: root.vsize
         color: BLGlobal.textColor
     }
-    GradientLine {
-        anchors {
-            bottom: parent.bottom; bottomMargin: 1
-            left: parent.left; right: parent.right
-        }
+    BLLinearGradient {
+        id: linearGradient
+        anchors.bottom: parent.bottom
+        width: parent.width
         height: 1
     }
 }

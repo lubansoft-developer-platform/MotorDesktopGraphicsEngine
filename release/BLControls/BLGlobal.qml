@@ -14,7 +14,7 @@ QtObject {
     }
     // 千分位
     function analysisValue(value,decimal) {
-        return (value.toFixed(decimal) + '').replace(/\d{1,3}(?=(\d{3})+(\.\d*)?$)/g, '$&,');
+        return (value.toFixed(decimal?0 : decimal) + '').replace(/\d{1,3}(?=(\d{3})+(\.\d*)?$)/g, '$&,');
     }
 	// 获取exe所在目录
 	function getAppDir() {

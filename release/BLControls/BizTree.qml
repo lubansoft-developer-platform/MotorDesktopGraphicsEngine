@@ -10,7 +10,7 @@ Item {
     signal doubleClickNode(var styleData)
     signal clickNode(var styleData)
     signal sigWheel()
-    CTextInput {
+    BLTextInput {
         anchors.top: parent.top
         id: searchInput
         width: parent.width

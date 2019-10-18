@@ -11,7 +11,8 @@ Item {
 
     property QtObject leftTextObj: leftTextId
     property QtObject rightTextObj: rightTextId
-
+    // 是否显示底线
+    property alias bottomVisible: bottomLine.visible
     //分割块颜色
     property string partnerBlockColor: "#485a76"
     //分割线颜色
@@ -56,23 +57,29 @@ Item {
                 color: partnerLineColor
             }
         }
-        BLToolTipText {
-            id:rightTextId
-            font {
-                family: BLGlobal.fontFamily
-                pixelSize: BLGlobal.fontSize
-            }
-            color: BLGlobal.textColor
-            text: root.rightText
+
+        Item {
             Layout.fillWidth: true
             Layout.fillHeight: true
-            wrapMode: Text.WordWrap
-            horizontalAlignment: Text.AlignRight
-            verticalAlignment: Text.AlignVCenter
+            BLToolTipText {
+                id:rightTextId
+                font {
+                    family: BLGlobal.fontFamily
+                    pixelSize: BLGlobal.fontSize
+                }
+                color: BLGlobal.textColor
+                text: root.rightText
+                width: parent.width
+                height: parent.height
+                wrapMode: Text.WordWrap
+                horizontalAlignment: Text.AlignRight
+                verticalAlignment: Text.AlignVCenter
+            }
         }
     }
 
-    GradientLine {
+    BLLinearGradient {
+        id: bottomLine
         width: parent.width
         anchors.bottom: parent.bottom
     }

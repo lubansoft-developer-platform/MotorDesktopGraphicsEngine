@@ -3,7 +3,8 @@ import QtQuick.Controls 2.2
 import BLControls 1.0
 ComboBox {
     id: root
-    property var borderColor:"#a070c0"
+    property color borderColor: "#a070c0"
+    property color themeColor: "#303e44"
     background: Rectangle {
         color: "transparent"
         border.color: borderColor
@@ -31,8 +32,7 @@ ComboBox {
                 z: 100
                 Text {
                     id: textId
-                    font.family: BLGlobal.fontFamily
-                    font.pixelSize: BLGlobal.fontSize
+                    font: BLGlobal.getFontObject()
                     color: BLGlobal.textColor
                     elide: Text.ElideRight
                     anchors.verticalCenter: parent.verticalCenter
@@ -74,7 +74,7 @@ ComboBox {
                     width: detailText.width+10
                     height: detailText.height+10
                     anchors.horizontalCenter: textId.horizontalCenter
-                    color: Qt.rgba(107/255,107/255,107/255,1)
+                    color: root.themeColor
                     radius: 3
                     Text {
                         id: detailText
@@ -110,7 +110,7 @@ ComboBox {
             delegate: Rectangle {
                 width: root.width
                 height: root.height
-                color: area.containsMouse ? Qt.lighter("#0e112d") : "#0e112d"
+                color: area.containsMouse ? Qt.lighter(root.themeColor) : root.themeColor
                 Row {
                     anchors.fill: parent
                     anchors.leftMargin: 4

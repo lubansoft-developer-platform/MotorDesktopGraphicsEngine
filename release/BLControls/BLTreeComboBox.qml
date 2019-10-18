@@ -4,11 +4,11 @@ import QtQuick.Controls 1.4 as QC14
 import QtQuick.Controls.Styles 1.4 as QCS14
 ComboBox {
     id: root
-
+    property color themeColor: "#303e44"
     property string colorRole: "color"
     property string cCurrentText: qsTr("全部")
     property string imgSource
-    property var bordColor: "#a070c0"
+    property color bordColor: "#a070c0"
     signal clickNode(var styleData)
     
     background: Rectangle {
@@ -87,12 +87,12 @@ ComboBox {
             rowDelegate: Rectangle {
                 width: root.width
                 height: root.height
-                color: "#0e112d"
+                color: root.themeColor
             }
             itemDelegate: Rectangle {
                 width: root.width
                 height: root.height
-                color: area.containsMouse ? Qt.lighter("#0e112d") : "#0e112d"
+                color: area.containsMouse ? Qt.lighter(root.themeColor) : root.themeColor
                 Row {
                     anchors.fill: parent
                     anchors.leftMargin: 4
@@ -132,7 +132,7 @@ ComboBox {
                 width: root.width
             }
             style:QCS14.TreeViewStyle {
-                backgroundColor: "#0e112d"
+                backgroundColor: root.themeColor
                 //                indentation: 4
                 branchDelegate: Item {
                     //                                    width: indentation

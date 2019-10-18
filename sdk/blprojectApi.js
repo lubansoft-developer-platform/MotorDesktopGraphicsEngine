@@ -137,7 +137,7 @@ var getAllProjInfoList = function (funcRet) {
  /**
  * getAllProjInfoList回调函数
  * @callback getAllProjInfoListCallback
- * @param {JSON} returnValue - 工程信息JSON数组
+ * @param {JSON[]} returnValue - 工程信息JSON数组
  * JSON格式
  * [{
  *  projId:string,
@@ -145,6 +145,24 @@ var getAllProjInfoList = function (funcRet) {
  *  projName:string, 
  *  pos:{x:double, y: double, z:double}
  * }];
+ */
+
+/** 
+ * 根据已打开构件子cim工程Id获取关联bim工程Id列表
+ * @static
+ * @param {string} projId - 工程id
+ * @param {getBimProjectListCallback} funcRet
+ * @returns {void}
+*/
+var getBimProjectList = function (projId, funcRet){
+    projectObj.GetBimProjectList(projId, function (returnValue) {
+        if (typeof funcRet === "function") funcRet(returnValue);
+    });
+}
+/**
+ * getBimProjectList回调函数
+ * @callback getBimProjectListCallback
+ * @param {string[]} returnValue - 关联BIM工程Id
  */
 
  /**
@@ -161,7 +179,7 @@ var openLinkedProjectByComp = function (compId, funcRet) {
  /**
  * openLinkedProjectByComp回调函数
  * @callback openLinkedProjectByCompCallback
- * @param {Boolean} returnValue - 操作结果
+ * @param {Boolean}  - 操作结果
  */
 
  /**
@@ -220,33 +238,6 @@ var resetProjectStatus = function () {
 }
 
 /** 
- * 获取工程的bim信息
- * @static
- * @param {string} projId - 工程Id
- * @param {getBimProjectInfoCallback} funcRet
- * @returns {void}
- */ 
-var getBimProjectInfo = function (projId, funcRet){
-    return projectObj.GetBimProjectInfo(projId, function (returnValue) {
-        if (typeof funcRet === "function") funcRet(JSON.parse(returnValue));
-    });
-}
-/**
- * getBimProjectInfo回调函数
- * @callback getBimProjectInfoCallback
- * @param {JSON} returnValue
- * 格式如下:
- * [
- * {
- *  nPPid:int, //工程ppid
- *  nProjModel:int //工程类型 1:预算， 2：施工
- *  sProjName: string //工程名称
- *  nProjType：string //工程专业 1:土建，2:钢筋, 3:安装, 4:Revit, 5:造价, 6:Tekla, 7:c3d, 8:Bently, 9:Rhino, 10:IFC, 11:场布
- * }
- * ]
- */
-
-/** 
  * 获取工程属性
  * @static
  * @param {string} projId - 工程id
@@ -280,7 +271,7 @@ var setProjectAttr = function (projId, attrKey, attrVal){
 /** 
  * 获取工程所有bim构件信息
  * @static
- * @param {string} projId - 工程id
+ * @param {string} projId - bim工程id
  * @param {getBimProjectComponentsCallback} funcRet
  * @returns {void}
 */
@@ -292,7 +283,7 @@ var getBimProjectComponents = function (projId, funcRet){
 /**
  * getBimProjectComponents回调函数
  * @callback getBimProjectComponentsCallback
- * @param {JSON} returnValue - 所有bim构件信息
+ * @param {JSON[]} returnValue - 所有bim构件信息
  * 格式如下
  * [
  *  {
@@ -314,7 +305,7 @@ var getBimProjectComponents = function (projId, funcRet){
 /** 
  * 根据cim楼层id获取bim构件信息
  * @static
- * @param {string} projId - 工程id
+ * @param {string} projId - bim工程id
  * @param {string} floorId- cim楼层id
  * @param {getBimProjectComponetsByCimFloorCallback} funcRet
  * @returns {void}
@@ -327,7 +318,7 @@ var getBimProjectComponetsByCimFloor = function (projId, floorId, funcRet){
 /**
  * getBimProjectComponetsByCimFloor
  * @callback getBimProjectComponetsByCimFloorCallback
- * @param {JSON} returnValue - bim构件信息
+ * @param {JSON[]} returnValue - bim构件信息
  * 格式如下
  * [
  *  {
@@ -347,9 +338,9 @@ var getBimProjectComponetsByCimFloor = function (projId, floorId, funcRet){
  */
 
 /** 
- * 根据cim楼层id获取bim构件信息
+ * 获取已打开子工程关联bim工程的楼层信息
  * @static
- * @param {string} projId - 工程id
+ * @param {string} projId - bim工程id
  * @param {getProjectCimFloorsCallback} funcRet
  * @returns {void}
 */

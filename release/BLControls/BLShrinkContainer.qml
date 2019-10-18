@@ -21,6 +21,8 @@ Item {
     property alias infoContents: infoItem.children
     property alias mainContents: mainItem.children
 
+    property alias lineVisible: splitLine.visible
+
     //不需要收缩功能的item索引号。
     //mainContents是一个类似Column的容器，其中的Item有一部分可能不需要提供收缩功能（例如：搜索框），
     //要实现这样的功能，只要将这个Item在Column中占的索引号放入列表
@@ -69,11 +71,13 @@ Item {
             NumberAnimation { duration: 300 }
         }
     }
-    GradientLine {
+    Item {
         id: splitLine
-        y: leftTopItem.height-2 /*+ defaultMargin / 2*/
+        y: leftTopItem.height-2
         width: parent.width
         height: 1
+        BLLinearGradient {
+        }
     }
 
     Item {

@@ -51,6 +51,7 @@ function onTreeSubDbClick(e, treeId, treeNode) {
 
         $("#idCompCard").css({ "display": "none" });
         sdk.setSelType(sdk.ESelectType.selComp);
+        sdk.resetProjectStatus();
         sdk.researchComp(compLst, 2.0);
     }
     return true;

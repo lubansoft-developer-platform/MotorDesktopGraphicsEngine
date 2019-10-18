@@ -1,15 +1,16 @@
 import QtQuick 2.0
+import BLControls 1.0
 
 Rectangle{
     id:bgBar
-    property alias startColor:progBar.startColor
-    property alias endColor:progBar.endColor
-    property real maxValue:0
-    property real startValue:0
-    property alias orientation:progBar.orientation
+    property alias startColor: progBar.startColor
+    property alias endColor: progBar.endColor
+    property real maxValue: 0
+    property real startValue: 0
+    property alias orientation: progBar.orientation
     property real value:0
-    DynRectangle{
-        id:progBar
+    BLDynamicBar {
+        id: progBar
         startColor: progBarStartColor
         endColor: progBarEndColor
         endVal: value/maxValue*(orientation===Qt.Horizontal?bgBar.width:bgBar.height)

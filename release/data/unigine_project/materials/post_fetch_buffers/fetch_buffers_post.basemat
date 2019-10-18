@@ -1,0 +1,3 @@
+<base_material version="2.6" name="fetch_buffers_post" hidden="1">
+	<shader pass="post" fragment="unigine_project/materials/post_fetch_buffers/fetch_buffers_post.frag"/>
+</base_material>

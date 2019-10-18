@@ -357,7 +357,7 @@ var getScreenInfos = function (funcRet){
 /** 
  * getScreenInfos回调函数
  * @callback getScreenInfosCallBack
- * @param {JSON} returnValue - 屏幕信息
+ * @param {JSON[]} returnValue - 屏幕信息
  * 格式如下:
  * [
  *  {

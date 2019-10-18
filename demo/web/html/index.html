@@ -32,12 +32,12 @@
     <script type='text/javascript' src="../js/threeEventTrans.js"></script>
     <script language="javascript">
         $(function () {
-            // isMaxSized(function (val) {
-            //     if (val) setMaxState();
-            //     else{
-            //         onMaxBtnClick();
-            //     }
-            // });
+            isMaxSized(function (val) {
+                if (val) setMaxState();
+                else{
+                    onMaxBtnClick();
+                }
+            });
             initHeader(document.getElementById("idTitle"));
             var frame = document.getElementById("idFrame");
             frame.onload = function () {

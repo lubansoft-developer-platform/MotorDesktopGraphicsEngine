@@ -27,9 +27,9 @@ Item {
             delegate: Item {
                 width: parent.width
                 height: legend.itemHeight
-                DynRectangle {
+                BLDynamicBar{
                     id: dynRect
-                    spaceDraw: false
+                    runAnimate: false
                     anchors.verticalCenter: parent.verticalCenter
                     startColor: modelData.startColor
                     endColor: modelData.endColor
