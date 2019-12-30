@@ -1,6 +1,44 @@
 ## 更新日志
 
-### Motor Desktop SDK 20191017
+### Motor Desktop SDK v2.0
+
+**add**
+- Project
+- Component
+- Viewer
+- Config
+
+**framework change**
+
+- 修改ES5函数，为ES6风格
+- 使用class代替function
+
+**deprecated**
+
+- blprojectApi.js
+
+    1. 使用Project替代
+
+- blcomponentApi.js
+
+    1. 使用Component替代
+
+- blsceneApi.js
+
+    1. 使用Viewer替代
+
+- blthreeViewApi.js
+
+    1. 使用Viewer替代
+
+**feature**
+
+- 支持script方式引入
+- 支持ES6语法
+- 支持typescript
+- 支持amd, commonjs方式引入
+
+### Motor Desktop SDK v1.0
 
 **feature**
 
