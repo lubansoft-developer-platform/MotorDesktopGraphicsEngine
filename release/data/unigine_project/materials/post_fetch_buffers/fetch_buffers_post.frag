@@ -17,70 +17,37 @@
 #include <core/shaders/common/fragment.h>
 
 INIT_TEXTURE(0, TEX_DEPTH)
-//INIT_TEXTURE(1, TEX_ALBEDO)
-//INIT_TEXTURE(2, TEX_NORMAL)
-//INIT_TEXTURE(3, TEX_SHADING)
+INIT_TEXTURE(1, TEX_ALBEDO)
+INIT_TEXTURE(2, TEX_SHADING)
 
 STRUCT(FRAGMENT_OUT)
 	INIT_MRT(TYPE_RGBA, 0)
 	//INIT_MRT(TYPE_RGBA, 1)
-	//INIT_MRT(TYPE_RGBA, 2)
-	//INIT_MRT(TYPE_RGBA, 3)
-	//INIT_MRT(TYPE_RGBA, 4)
 END
 
 #define OUT_LDEPTH		OUT_MRT(0)
 //#define OUT_ALBEDO		OUT_MRT(1)
-//#define OUT_NORMAL		OUT_MRT(2)
-//#define OUT_METALNESS	OUT_MRT(3)
-//#define OUT_ROUGHNESS	OUT_MRT(4)
 
 MAIN_BEGIN(FRAGMENT_OUT, FRAGMENT_IN)
 
 	float2 uv = IN_POSITION.xy * s_viewport.zw;
 	
 	float native_depth = TEXTURE_BIAS_ZERO(TEX_DEPTH, uv).r;
-	float linear_depth = getLinearizedDepth(TEXTURE_OUT(TEX_DEPTH), uv);
-	
-	float clear = sign(abs(native_depth));
+	//float3 board_id = TEXTURE_BIAS_ZERO(TEX_ALBEDO, uv).rgb;
+	//float board_height = TEXTURE_BIAS_ZERO(TEX_SHADING, uv).r;
+
+	GBuffer gbuffer = GBufferDefault();
+	loadGBufferAlbedo(gbuffer, TEXTURE_OUT(TEX_ALBEDO), uv);
+	loadGBufferShading(gbuffer, TEXTURE_OUT(TEX_SHADING), uv);
+
 	float fAbsDepth = abs(native_depth);
-	
+	float3 board_id = gbuffer.albedo*255.f;
+	float fBoardHeiht = gbuffer.metalness;
+	uint iBoardId = board_id.r + board_id.g * 256 + board_id.b * 256 * 256;
 	if(fAbsDepth > 0)
 	{
-	OUT_LDEPTH = float4(fAbsDepth,0.0f,0.0f,1.f);
+	OUT_LDEPTH = float4(fAbsDepth,fBoardHeiht,iBoardId,1.f);
+	//OUT_LDEPTH = float4(0.8f,0.0002f,1000,1.f);
 	}
-
-	// GBuffer gbuffer = GBufferDefault();
-	// loadGBufferAlbedo(gbuffer, TEXTURE_OUT(TEX_ALBEDO), uv);
-	// loadGBufferNormal(gbuffer, TEXTURE_OUT(TEX_NORMAL), uv);
-	// loadGBufferShading(gbuffer, TEXTURE_OUT(TEX_SHADING), uv);
-	// 
-	// ////OUT_LDEPTH.rgb = FLOAT3(linear_depth);
-	// //OUT_LDEPTH.r = native_depth*10000;
-	// //OUT_LDEPTH.a = 1.0f;
-	// //OUT_LDEPTH *= clear;
-	// 
-	// 
-	// OUT_ALBEDO.rgb = gbuffer.albedo;
-	// OUT_ALBEDO.a = 1.0f;
-	// //OUT_ALBEDO *= clear;
-	// 
-	// if(fAbsDepth > 0)
-	// {
-	// OUT_LDEPTH = float4(fAbsDepth,0.0f,0.0f,1.f);
-	// }
-	// //OUT_DEPTH = 0.01f;//native_depth;
-	// 
-	// OUT_NORMAL.rgb = gbuffer.normal * 0.5f + 0.5f;
-	// OUT_NORMAL.a = 1.0f;
-	// OUT_NORMAL *= clear;
-	// 
-	// OUT_METALNESS.rgb = FLOAT3(gbuffer.metalness);
-	// OUT_METALNESS.a = 1.0f;
-	// OUT_METALNESS *= clear;
-	// 
-	// OUT_ROUGHNESS.rgb = FLOAT3(gbuffer.roughness);
-	// OUT_ROUGHNESS.a = 1.0f;
-	// OUT_ROUGHNESS *= clear;
 	
 MAIN_END

@@ -9,13 +9,15 @@
 </div>
 
 <!-- 脚本 -->
+
 <script language="javascript">
+    let sdk = parent.Motor;
     $(function () {
         LoginByAppId("d0b3c61c6639434e84900b1fd8d391cb", "459dc8b77a63a0c009aec27f818febf6");    
       });
 
     function LoginByAppId(appId, appSecret) {
- 		var webUrl = "https://open.lubansoft.com/api/motor";
+        var webUrl = "https://open.lubansoft.com/api/motor";
         $.ajax({
             url: webUrl + "/v1.0/service/uc/auth/token" + "?appid=" + appId + "&secret=" + appSecret,
             dataType: "json",
@@ -23,7 +25,7 @@
             type: "get",
             success: function (result) {
                 if (result["code"] === 200) {
-                    parent.setToken(webUrl, result["data"]);
+                    sdk.setToken(webUrl, result["data"]);
                     window.location.href = "SelectScene.html";
                 }
                 else {

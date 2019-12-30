@@ -1,0 +1,235 @@
+
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+
+<head>
+    <title>Lubansoft log file</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style type="text/css" id="logCss">
+        body {
+            background: #18242b;
+            color: #afc6d1;
+            margin-right: 20px;
+            margin-left: 20px;
+            font-size: 14px;
+            font-family: Arial, sans-serif, sans;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:link {
+            color: #a0b2bb;
+        }
+
+        a:active {
+            color: #f59504;
+        }
+
+        a:visited {
+            color: #adc7d4;
+        }
+
+        a:hover {
+            color: #e49115;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        h2 {
+            color: #ebe5e5;
+        }
+
+        .d,
+        .w,
+        .c,
+        .f,
+        .i {
+            padding: 3px;
+            overflow: auto;
+        }
+
+        .d {
+            background-color: #0f1011;
+            color: #a8c1ce;
+        }
+
+        .i {
+            background-color: #294453;
+            color: #a8c1ce;
+        }
+
+        .w {
+            background-color: #7993a0;
+            color: #1b2329;
+        }
+
+        .c {
+            background-color: #ff952b;
+            color: #1d2930;
+        }
+
+        .f {
+            background-color: #fc0808;
+            color: #19242b;
+        }
+    </style>
+</head>
+
+<body>
+    <h1><a href="http://www.lubansoft.com/">鲁班软件</a> 日志文件</h1>
+    <script type="text/JavaScript">
+        function objHide(obj) {
+            obj.style.display="none"
+        }
+        function objShow(obj) {
+            obj.style.display="block"
+        }
+        function selectType() {
+            var sel = document.getElementById("typeSelect");
+            const hideList = new Set(['d', 'i', 'w', 'c', 'f']);
+            if (sel.value === 'a') {
+                hideList.forEach(element => {
+                    var list = document.querySelectorAll('.' + element);
+                    list.forEach(objShow);
+                });
+            } else {
+                var ss = hideList;
+                ss.delete(sel.value);
+                ss.forEach(element => {
+                    var list = document.querySelectorAll('.' + element);
+                    list.forEach(objHide);
+                });
+                var showList = document.querySelectorAll('.' + sel.value);
+                showList.forEach(objShow);
+            }
+        }
+    </script>
+    <select id="typeSelect" onchange="selectType()">
+        <option value='a' selected="selected">All</option>
+        <option value='d'>Debug</option>
+        <option value='i'>Info</option>
+        <option value='w'>Warning</option>
+        <option value='c'>Critical</option>
+        <option value='f'>Fatal</option>
+    </select>
+
+<div class="w">2019-12-30 22:35:25 Attribute Qt::AA_EnableHighDpiScaling must be set before QCoreApplication is created.</div>
+<div class="c">2019-12-30 22:35:25 args count not equal 2 (操作成功完成。)</div>
+<div class="w">2019-12-30 22:35:25 LCIM::CLBCityEyeApp::Init  argument miss </div>
+<div class="d">2019-12-30 22:35:25 "LBUniginePlug.dll"</div>
+<div class="d">2019-12-30 22:35:25 "BizFramework.dll"</div>
+<div class="d">2019-12-30 22:35:27 "BLCimSDK.dll"</div>
+<div class="w">2019-12-30 22:35:27 Qt WebEngine seems to be initialized from a plugin. Please set Qt::AA_ShareOpenGLContexts using QCoreApplication::setAttribute before constructing QGuiApplication.</div>
+<div class="w">2019-12-30 22:35:27 QLayout: Cannot add a null widget to QGridLayout/</div>
+<div class="w">2019-12-30 22:35:27 Attribute Qt::AA_ShareOpenGLContexts must be set before QCoreApplication is created.</div>
+<div class="d">2019-12-30 22:35:27 "删除缓存目录失败！"</div>
+<div class="d">2019-12-30 22:35:27 load url failed</div>
+<div class="d">2019-12-30 22:35:30 "BLCimSDK.dll"</div>
+<div class="d">2019-12-30 22:35:30 "BizFramework.dll"</div>
+<div class="d">2019-12-30 22:35:30 "LBUniginePlug.dll"</div>
+<div class="w">2019-12-30 22:40:21 Attribute Qt::AA_EnableHighDpiScaling must be set before QCoreApplication is created.</div>
+<div class="c">2019-12-30 22:40:22 args count not equal 2 (操作成功完成。)</div>
+<div class="w">2019-12-30 22:40:22 LCIM::CLBCityEyeApp::Init  argument miss </div>
+<div class="d">2019-12-30 22:40:22 "LBUniginePlug.dll"</div>
+<div class="d">2019-12-30 22:40:22 "BizFramework.dll"</div>
+<div class="d">2019-12-30 22:40:23 "BLCimSDK.dll"</div>
+<div class="w">2019-12-30 22:40:23 Qt WebEngine seems to be initialized from a plugin. Please set Qt::AA_ShareOpenGLContexts using QCoreApplication::setAttribute before constructing QGuiApplication.</div>
+<div class="w">2019-12-30 22:40:23 QLayout: Cannot add a null widget to QGridLayout/</div>
+<div class="w">2019-12-30 22:40:23 Attribute Qt::AA_ShareOpenGLContexts must be set before QCoreApplication is created.</div>
+<div class="d">2019-12-30 22:40:23 "删除缓存目录失败！"</div>
+<div class="d">2019-12-30 22:40:24 load url failed</div>
+<div class="d">2019-12-30 22:40:42 "BLCimSDK.dll"</div>
+<div class="d">2019-12-30 22:40:42 "BizFramework.dll"</div>
+<div class="d">2019-12-30 22:40:42 "LBUniginePlug.dll"</div>
+<div class="w">2019-12-30 22:42:45 Attribute Qt::AA_EnableHighDpiScaling must be set before QCoreApplication is created.</div>
+<div class="c">2019-12-30 22:42:45 args count not equal 2 (操作成功完成。)</div>
+<div class="w">2019-12-30 22:42:45 LCIM::CLBCityEyeApp::Init  argument miss </div>
+<div class="d">2019-12-30 22:42:45 "LBUniginePlug.dll"</div>
+<div class="d">2019-12-30 22:42:45 "BizFramework.dll"</div>
+<div class="d">2019-12-30 22:42:46 "BLCimSDK.dll"</div>
+<div class="w">2019-12-30 22:42:46 Qt WebEngine seems to be initialized from a plugin. Please set Qt::AA_ShareOpenGLContexts using QCoreApplication::setAttribute before constructing QGuiApplication.</div>
+<div class="w">2019-12-30 22:42:46 QLayout: Cannot add a null widget to QGridLayout/</div>
+<div class="w">2019-12-30 22:42:46 Attribute Qt::AA_ShareOpenGLContexts must be set before QCoreApplication is created.</div>
+<div class="d">2019-12-30 22:42:46 "删除缓存目录失败！"</div>
+<div class="d">2019-12-30 22:42:47 load url failed</div>
+<div class="d">2019-12-30 22:42:49 "BLCimSDK.dll"</div>
+<div class="d">2019-12-30 22:42:49 "BizFramework.dll"</div>
+<div class="d">2019-12-30 22:42:49 "LBUniginePlug.dll"</div>
+<div class="w">2019-12-30 22:44:53 Attribute Qt::AA_EnableHighDpiScaling must be set before QCoreApplication is created.</div>
+<div class="c">2019-12-30 22:44:53 args count not equal 2 (操作成功完成。)</div>
+<div class="w">2019-12-30 22:44:53 LCIM::CLBCityEyeApp::Init  argument miss </div>
+<div class="d">2019-12-30 22:44:53 "LBUniginePlug.dll"</div>
+<div class="d">2019-12-30 22:44:53 "BizFramework.dll"</div>
+<div class="d">2019-12-30 22:44:54 "BLCimSDK.dll"</div>
+<div class="w">2019-12-30 22:44:54 Qt WebEngine seems to be initialized from a plugin. Please set Qt::AA_ShareOpenGLContexts using QCoreApplication::setAttribute before constructing QGuiApplication.</div>
+<div class="w">2019-12-30 22:44:54 QLayout: Cannot add a null widget to QGridLayout/</div>
+<div class="w">2019-12-30 22:44:54 Attribute Qt::AA_ShareOpenGLContexts must be set before QCoreApplication is created.</div>
+<div class="d">2019-12-30 22:44:55 "删除缓存目录失败！"</div>
+<div class="w">2019-12-30 22:44:55 jQuery.Deferred exception: isMaxSized is not defined</div>
+<div class="c">2019-12-30 22:44:55 Uncaught ReferenceError: isMaxSized is not defined</div>
+<div class="c">2019-12-30 22:45:01 Uncaught ReferenceError: closeMainWindow is not defined</div>
+<div class="d">2019-12-30 22:45:03 "BLCimSDK.dll"</div>
+<div class="d">2019-12-30 22:45:03 "BizFramework.dll"</div>
+<div class="d">2019-12-30 22:45:03 "LBUniginePlug.dll"</div>
+<div class="w">2019-12-30 22:46:35 Attribute Qt::AA_EnableHighDpiScaling must be set before QCoreApplication is created.</div>
+<div class="c">2019-12-30 22:46:35 args count not equal 2 (操作成功完成。)</div>
+<div class="w">2019-12-30 22:46:35 LCIM::CLBCityEyeApp::Init  argument miss </div>
+<div class="d">2019-12-30 22:46:35 "LBUniginePlug.dll"</div>
+<div class="d">2019-12-30 22:46:35 "BizFramework.dll"</div>
+<div class="d">2019-12-30 22:46:37 "BLCimSDK.dll"</div>
+<div class="w">2019-12-30 22:46:37 Qt WebEngine seems to be initialized from a plugin. Please set Qt::AA_ShareOpenGLContexts using QCoreApplication::setAttribute before constructing QGuiApplication.</div>
+<div class="w">2019-12-30 22:46:37 QLayout: Cannot add a null widget to QGridLayout/</div>
+<div class="w">2019-12-30 22:46:37 Attribute Qt::AA_ShareOpenGLContexts must be set before QCoreApplication is created.</div>
+<div class="d">2019-12-30 22:46:37 "删除缓存目录失败！"</div>
+<div class="w">2019-12-30 22:46:37 jQuery.Deferred exception: isMaxSized is not defined</div>
+<div class="c">2019-12-30 22:46:37 Uncaught ReferenceError: isMaxSized is not defined</div>
+<div class="c">2019-12-30 22:46:37 Failed to load https://open.lubansoft.com/apimotor/v1.0/service/uc/auth/token?appid=d0b3c61c6639434e84900b1fd8d391cb&secret=459dc8b77a63a0c009aec27f818febf6: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'file://' is therefore not allowed access.</div>
+<div class="d">2019-12-30 22:47:18 "BLCimSDK.dll"</div>
+<div class="d">2019-12-30 22:47:18 "BizFramework.dll"</div>
+<div class="d">2019-12-30 22:47:18 "LBUniginePlug.dll"</div>
+<div class="w">2019-12-30 22:48:23 Attribute Qt::AA_EnableHighDpiScaling must be set before QCoreApplication is created.</div>
+<div class="c">2019-12-30 22:48:23 args count not equal 2 (操作成功完成。)</div>
+<div class="w">2019-12-30 22:48:23 LCIM::CLBCityEyeApp::Init  argument miss </div>
+<div class="d">2019-12-30 22:48:23 "LBUniginePlug.dll"</div>
+<div class="d">2019-12-30 22:48:23 "BizFramework.dll"</div>
+<div class="d">2019-12-30 22:48:24 "BLCimSDK.dll"</div>
+<div class="w">2019-12-30 22:48:24 Qt WebEngine seems to be initialized from a plugin. Please set Qt::AA_ShareOpenGLContexts using QCoreApplication::setAttribute before constructing QGuiApplication.</div>
+<div class="w">2019-12-30 22:48:24 QLayout: Cannot add a null widget to QGridLayout/</div>
+<div class="w">2019-12-30 22:48:24 Attribute Qt::AA_ShareOpenGLContexts must be set before QCoreApplication is created.</div>
+<div class="d">2019-12-30 22:48:24 "删除缓存目录失败！"</div>
+<div class="w">2019-12-30 22:48:25 jQuery.Deferred exception: isMaxSized is not defined</div>
+<div class="c">2019-12-30 22:48:25 Uncaught ReferenceError: isMaxSized is not defined</div>
+<div class="c">2019-12-30 22:48:25 Failed to load https://open.lubansoft.com/apimotor/v1.0/service/uc/auth/token?appid=d0b3c61c6639434e84900b1fd8d391cb&secret=459dc8b77a63a0c009aec27f818febf6: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'file://' is therefore not allowed access.</div>
+<div class="c">2019-12-30 22:48:39 Uncaught ReferenceError: closeMainWindow is not defined</div>
+<div class="d">2019-12-30 22:48:42 "BLCimSDK.dll"</div>
+<div class="d">2019-12-30 22:48:42 "BizFramework.dll"</div>
+<div class="d">2019-12-30 22:48:42 "LBUniginePlug.dll"</div>
+<div class="w">2019-12-30 22:50:23 Attribute Qt::AA_EnableHighDpiScaling must be set before QCoreApplication is created.</div>
+<div class="c">2019-12-30 22:50:23 args count not equal 2 (操作成功完成。)</div>
+<div class="w">2019-12-30 22:50:23 LCIM::CLBCityEyeApp::Init  argument miss </div>
+<div class="d">2019-12-30 22:50:23 "LBUniginePlug.dll"</div>
+<div class="d">2019-12-30 22:50:23 "BizFramework.dll"</div>
+<div class="d">2019-12-30 22:50:24 "BLCimSDK.dll"</div>
+<div class="w">2019-12-30 22:50:24 Qt WebEngine seems to be initialized from a plugin. Please set Qt::AA_ShareOpenGLContexts using QCoreApplication::setAttribute before constructing QGuiApplication.</div>
+<div class="w">2019-12-30 22:50:24 QLayout: Cannot add a null widget to QGridLayout/</div>
+<div class="w">2019-12-30 22:50:24 Attribute Qt::AA_ShareOpenGLContexts must be set before QCoreApplication is created.</div>
+<div class="d">2019-12-30 22:50:24 "删除缓存目录失败！"</div>
+<div class="w">2019-12-30 22:51:15 Attribute Qt::AA_EnableHighDpiScaling must be set before QCoreApplication is created.</div>
+<div class="c">2019-12-30 22:51:15 args count not equal 2 (操作成功完成。)</div>
+<div class="w">2019-12-30 22:51:15 LCIM::CLBCityEyeApp::Init  argument miss </div>
+<div class="d">2019-12-30 22:51:15 "LBUniginePlug.dll"</div>
+<div class="d">2019-12-30 22:51:15 "BizFramework.dll"</div>
+<div class="d">2019-12-30 22:51:17 "BLCimSDK.dll"</div>
+<div class="w">2019-12-30 22:51:17 Qt WebEngine seems to be initialized from a plugin. Please set Qt::AA_ShareOpenGLContexts using QCoreApplication::setAttribute before constructing QGuiApplication.</div>
+<div class="w">2019-12-30 22:51:17 QLayout: Cannot add a null widget to QGridLayout/</div>
+<div class="w">2019-12-30 22:51:17 Attribute Qt::AA_ShareOpenGLContexts must be set before QCoreApplication is created.</div>
+<div class="d">2019-12-30 22:51:17 "删除缓存目录失败！"</div>
+<div class="c">2019-12-30 22:51:22 Uncaught ReferenceError: BL3D_resizeEvent is not defined</div>
+<div class="d">2019-12-30 22:51:39 "BLCimSDK.dll"</div>
+<div class="d">2019-12-30 22:51:39 "BizFramework.dll"</div>
+<div class="d">2019-12-30 22:51:39 "LBUniginePlug.dll"</div>

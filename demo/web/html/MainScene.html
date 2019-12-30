@@ -62,7 +62,7 @@
 
 <!-- 脚本 -->
 <script language="javascript">
-    var sdk = parent;
+    let sdk = parent.Motor;
     var treeData = [];
     var curComp = undefined;
     var sceneProjId = window.localStorage.name;
@@ -181,13 +181,15 @@
             }
         });
     }
-
+    let m = 0;
     function showOperMenu() {
-        if ($("#idbottomMenu").css("display") === "none") {
-            $("#idbottomMenu").css({ "display": "block" });
+        if (m === 0) {
+            sdk.setPlayerMode(1);
+            m = 1;
         }
         else {
-            $("#idbottomMenu").css({ "display": "none" });
+            sdk.setPlayerMode(0);
+            m = 0;
         }
     }
 

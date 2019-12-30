@@ -340,7 +340,7 @@
 		float4 fBoardId = float4(0.0f, 0.0f, 0.0f, 0.0f);
 		if (cVertex.x > -1 && cVertex.x < 1 && cVertex.y > -1 && cVertex.y < 1)
 		{
-			fDepthPosition = TEXTURE_FETCH(TEX_BOARD_DEPTH, float2((cVertex.x*0.5 + 0.5) * m_viewport.x, (cVertex.y*0.5 + 0.5) * m_viewport.y));//float2(600, 300));// 
+			fDepthPosition = TEXTURE_FETCH(TEX_BOARD_DEPTH, float2((cVertex.x*0.5 + 0.5) * m_viewport.x, (-cVertex.y*0.5 + 0.5) * m_viewport.y));//float2(600, 300));// 
 			uint iY = fDepthPosition.b / 1024;
 			uint iX = fDepthPosition.b % 1024;
 			fBoardId = TEXTURE_FETCH(TEX_BOARD_ID, float2(iX, iY));
@@ -348,10 +348,14 @@
 			{
 				float4 position = mul4(cIProjection, float4(cVertex.x, cVertex.y, fDepthPosition.r + fDepthPosition.g, 1.0f));
 				position.xyz = position.xyz / position.w;
-
+		
 				out_d.world_position.z = position.z - m_modeView_transform[2][3];
 				out_d.position = mul4(s_modelview, float4(out_d.world_position, 1.0f)).xyz;
 			}
+		}
+		else
+		{
+			cVertex.z = fDepthPosition.r;
 		}
 	#endif
 	OUT_POSITION = mul4(s_projection,float4(out_d.position, 1.0f));

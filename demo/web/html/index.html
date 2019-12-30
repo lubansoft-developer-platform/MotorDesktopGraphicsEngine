@@ -2,16 +2,12 @@
 <html>
 <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="../css/common.css" />
     <script type="text/javascript" src="../3rd/jquery-3.3.1/jquery-3.3.1.min.js"></script>
-    <script type='text/javascript' src='../sdk/qwebchannel.js'></script>
-    <script type='text/javascript' src='../sdk/blcore.js'></script>
-    <script type='text/javascript' src='../sdk/blcallback.js'></script>
-    <script type='text/javascript' src='../sdk/blthreeViewApi.js'></script>
-    <script type='text/javascript' src='../sdk/blsceneApi.js'></script>
-    <script type='text/javascript' src='../sdk/blsystemApi.js'></script>
-    <script type='text/javascript' src='../sdk/blcomponentApi.js'></script>
-    <script type='text/javascript' src='../sdk/blProjectApi.js'></script>
+    <script type='text/javascript' src='../js/threeEventTrans.js'></script>
+    <script type='text/javascript' src='../sdk/motor.js'></script>
 </head>
 
 <body onselectstart="return false;" style="-moz-user-select:none;">
@@ -31,13 +27,15 @@
     <!-- 通用框架脚本 -->
     <script type='text/javascript' src="../js/threeEventTrans.js"></script>
     <script language="javascript">
+        let sdk = Motor;
         $(function () {
-            isMaxSized(function (val) {
-                if (val) setMaxState();
-                else{
-                    onMaxBtnClick();
-                }
-            });
+            // isMaxSized(function (val) {
+            //     if (val) setMaxState();
+            //     else{
+            //         onMaxBtnClick();
+            //     }
+            // });
+            
             initHeader(document.getElementById("idTitle"));
             var frame = document.getElementById("idFrame");
             frame.onload = function () {
@@ -59,7 +57,7 @@
 
             eventObj.onmousemove = function (e) {
                 if (!isDrag) return;
-                dragMainWindow(function (val) {
+                sdk.dragMainWindow(function (val) {
                     if (val) setMaxState();
                     else setNormalState();
                 });
@@ -102,16 +100,19 @@
         }
 
         function onMaxBtnClick() {
-            isMaxSized(function (val) {
+            sdk.isMaxSized(function (val) {
                 if (val) {
-                    showNomalSize();
+                    sdk.showNomalSize();
                     setNormalState();
                 }
                 else {
-                    showMaxSize();
+                    sdk.showMaxSize();
                     setMaxState();
                 }
             });
+        }
+        function closeMainWindow() {
+            sdk.closeMainWindow();
         }
     </script>
 </body>

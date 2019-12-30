@@ -16,7 +16,7 @@
 
 <!-- 脚本 -->
 <script language="javascript">
-    var sdk = parent;
+    let sdk = parent.Motor;
     var treeData = [];
     var curComp = undefined;
     var bSuccess = false;
@@ -43,6 +43,7 @@
             if (res) {
                 sdk.openSceneProject(guid, function (val) {
                     if (val === true) {
+                        //sdk.setPlayerMode(1);
                         sdk.enablePointCheckMode(true);
                         sdk.positionToProject(guid);
                         window.localStorage.name = guid;

@@ -83,7 +83,7 @@ MAIN_BEGIN(FRAGMENT_OUT,FRAGMENT_IN)
 			discard;
 	}
 
-	OUT_COLOR = TEXTURE_BASE(TEX_AUXILIARY) * m_auxiliary_color;
+	OUT_COLOR = float4(0.f, 1.f, 0.f, 1.f);// TEXTURE_BASE(TEX_AUXILIARY) * m_auxiliary_color;
 	
 	#ifdef VERTEX_COLOR && VERTEX_AUXILIARY
 		OUT_COLOR *= DATA_VERTEX_COLOR;

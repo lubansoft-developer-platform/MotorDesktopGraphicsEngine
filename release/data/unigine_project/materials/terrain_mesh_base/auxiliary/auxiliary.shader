@@ -90,7 +90,7 @@ MAIN_BEGIN(FRAGMENT_OUT,FRAGMENT_IN)
 	
 	//user patchID  int_patch_id pass 的片元shader中的输入变量.编译.
 
-	OUT_COLOR = TEXTURE_BASE(TEX_AUXILIARY) * m_auxiliary_color;
+	OUT_COLOR = float4(1.f, 0.f, 0.f, 1.f);//TEXTURE_BASE(TEX_AUXILIARY) * m_auxiliary_color;
 	
 	#ifdef VERTEX_COLOR && VERTEX_AUXILIARY
 		OUT_COLOR *= DATA_VERTEX_COLOR;

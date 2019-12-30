@@ -94,9 +94,10 @@ function getOffsetTop(element) {
 
 var curEvent = undefined;
 function init3DView(eventObj, bTrans) {
+    let sdk = Motor;
     var bindEle = eventObj.contentDocument.getElementById("id3DView");
     if (bindEle == undefined || bindEle == null) return;
-    bind3DView(bindEle);
+    sdk.bind3DView(bindEle);
 
     const bFuncEnableTrans = function (e) {
         let bRet = false;
@@ -108,11 +109,11 @@ function init3DView(eventObj, bTrans) {
     let bEventTrans = bTrans;
 
     bindEle.onmousemove = (function (e) {
-        BL3D_mouseMoveEvent(bindEle, e);
+        sdk.BL3D_mouseMoveEvent(bindEle, e);
     });
     bindEle.ondblclick = (function (e) {
         if (bEventTrans && bFuncEnableTrans(e)) {
-            BL3D_mouseDoubleClickEvent(bindEle, e);
+            sdk.BL3D_mouseDoubleClickEvent(bindEle, e);
             e.preventDefault();
         }
     });
@@ -120,7 +121,7 @@ function init3DView(eventObj, bTrans) {
     var onEleMouseDown = (function (e) {
         curEvent = e;
         if (bEventTrans && bFuncEnableTrans(e)) {
-            BL3D_mousePressEvent(bindEle, e);
+            sdk.BL3D_mousePressEvent(bindEle, e);
             e.preventDefault();
             curEvent = undefined;
         }
@@ -130,31 +131,31 @@ function init3DView(eventObj, bTrans) {
 
     bindEle.onmouseup = (function (e) {
         if (bEventTrans) {
-            BL3D_mouseReleaseEvent(bindEle, e);
+            sdk.BL3D_mouseReleaseEvent(bindEle, e);
             e.preventDefault();
         }
     });
-    
+
     eventObj.contentWindow.document.onkeydown = (function (e) {
         if (bEventTrans) {
-            BL3D_keyPressEvent(bindEle, e);
+            sdk.BL3D_keyPressEvent(bindEle, e);
             e.preventDefault();
         }
     });
     eventObj.contentWindow.document.onkeyup = (function (e) {
         if (bEventTrans) {
-            BL3D_keyReleaseEvent(bindEle, e);
+            sdk.BL3D_keyReleaseEvent(bindEle, e);
             e.preventDefault();
         }
     });
 
     $(eventObj).resize(function () {
-        threeviewObj.resizeEvent(getOffsetLeft(eventObj), getOffsetTop(eventObj), eventObj.offsetWidth, eventObj.offsetHeight);
+        sdk.BL3D_resizeEvent(getOffsetLeft(eventObj), getOffsetTop(eventObj), eventObj.offsetWidth, eventObj.offsetHeight);
     });
 
     bindEle.onmousewheel = (function (e) {
         if (bEventTrans && bFuncEnableTrans(e)) {
-            BL3D_wheelEvent(bindEle, e);
+            sdk.BL3D_wheelEvent(bindEle, e);
             e.preventDefault();
         }
     });

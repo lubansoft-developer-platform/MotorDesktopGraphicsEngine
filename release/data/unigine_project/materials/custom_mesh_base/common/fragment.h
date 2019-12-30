@@ -195,11 +195,11 @@
 	#ifdef CALCULATE_TANGENT_SPACE
 		calculateTBN(T,B,N,DATA_POSITION,base_texcoord);
 	#else
-		normalizationTBN(T,B,N,DATA_SIGN_BINORMAL);
+		B = cross(N, T) * DATA_SIGN_BINORMAL;//normalizationTBN(T,B,N,DATA_SIGN_BINORMAL);
 	#endif
 	
 	#ifdef TWO_SIDED
-		float front_face = IN_FRONTFACE ? 1.0f : -1.0f;
+		float front_face = 1.f;// IN_FRONTFACE ? 1.0f : -1.0f;
 		T *= front_face;
 		B *= front_face;
 		N *= front_face;
