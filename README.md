@@ -29,21 +29,9 @@ Motor Desktop Graphics Engine(以下简称为sdk)主要针对于网页前端开�
 |
 |----/sdk
 |    |
-|    |----blsdk.js
+|    |----motor.d.js
 |    |
-|    |---- blcallback.js 
-|    |
-|    |---- blcomponentApi.js
-|    |
-|    |---- blprojectApi.js
-|    |
-|    |---- blsceneApi.js
-|    |
-|    |---- blsystemApi.js
-|    |
-|    |---- blthreeViewApi.js
-|    |
-|    |---- *.js
+|    |---- motor.js
 |    |
 |    \
 |
@@ -57,7 +45,7 @@ Motor Desktop Graphics Engine(以下简称为sdk)主要针对于网页前端开�
 |    |
 |    |----config.ini
 |    |
-|    |----LBCityEye.exe
+|    |----MotorDemo.exe
 |    |
 |    |----*.*
 |    |
@@ -86,45 +74,10 @@ Motor Desktop Graphics Engine(以下简称为sdk)主要针对于网页前端开�
 #### sdk
     sdk文件夹下存放了MotorDesktopGraphicsEngine提供的所有js扩展库
 
-- blsdk.js
+- motor.js
 
 ```ini
 MotorDesktopGraphicsEngine主入口文件
-```
-- blcallback.js
-
-```ini
-MotorDesktopGraphicsEngine全局回调通知API
-```
-
-- blcomponentApi.js
-
-```ini
-MotorDesktopGraphicsEngine构件模块API
-```
-
-- blprojectApi.js
-
-```ini
-MotorDesktopGraphicsEngine工程模块API
-```
-
-- blsceneApi.js
-
-```ini
-MotorDesktopGraphicsEngine场景模块API
-```
-
-- blsystemApi.js
-
-```ini
-MotorDesktopGraphicsEngine系统模块API
-```
-
-- blthreeViewApi.js
-
-```ini
-MotorDesktopGraphicsEngine三维模块API
 ```
 
 #### doc
@@ -154,7 +107,7 @@ url=你的项目入口文件地址(如:./myproject/index.html)
 debug=false
 ```
 
-- LBCityEye.exe
+- MotorDemo.exe
 
 ```ini
 CIM Client主进程
