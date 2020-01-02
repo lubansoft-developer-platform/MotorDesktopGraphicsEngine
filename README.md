@@ -29,7 +29,7 @@ Motor Desktop Graphics Engine(以下简称为sdk)主要针对于网页前端开�
 |
 |----/sdk
 |    |
-|    |----motor.d.js
+|    |----motor.d.ts
 |    |
 |    |---- motor.js
 |    |
