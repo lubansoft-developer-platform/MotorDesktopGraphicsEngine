@@ -115,3 +115,6 @@ CIM Client主进程
 
 #### demo
     demo文件夹中提供了由鲁班开发者平台(LDP)提供的基于MotorDesktopGraphicsEngine开发的示例demo
+
+### 注意
+本SDK只支持N卡，不支持A卡
