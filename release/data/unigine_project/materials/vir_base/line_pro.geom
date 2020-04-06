@@ -14,6 +14,7 @@ STRUCT(GEOMETRY_OUT)
 	INIT_POSITION
 	INIT_OUT(uint,0)
 	INIT_OUT(float2,1)
+	INIT_OUT(uint, 2)
 END
 
 STRUCT(GEOMETRY_IN)
@@ -21,6 +22,7 @@ STRUCT(GEOMETRY_IN)
 	INIT_GEOM_IN(uint,0)
 	INIT_GEOM_IN(float2,1)
 	INIT_GEOM_IN(float3,2)
+	INIT_GEOM_IN(uint,3)
 END
 
 //user line_width 
@@ -51,21 +53,25 @@ MAIN_GEOM_BEGIN(GEOMETRY_OUT,GEOMETRY_IN)
 
 	OUT_DATA(0) = IN_GEOM_DATA(0,1);
 	OUT_DATA(1) = float2(0.0f,1.0f);
+	OUT_DATA(2) = IN_GEOM_DATA(3,1);
 	OUT_POSITION = reproject(center_1,-sideY * m_line_width_1);
 	EMIT_VERTEX
 
 	OUT_DATA(0) = IN_GEOM_DATA(0,0);
 	OUT_DATA(1) = float2(0.0f,0.0f);
+	OUT_DATA(2) = IN_GEOM_DATA(3,0);
 	OUT_POSITION = reproject(center_0 ,-sideY * m_line_width_0);
 	EMIT_VERTEX
 	
 	OUT_DATA(0) = IN_GEOM_DATA(0,1);
 	OUT_DATA(1) = float2(1,1.0f);
+	OUT_DATA(2) = IN_GEOM_DATA(3,1);
 	OUT_POSITION = reproject(center_1 , sideY * m_line_width_1);
 	EMIT_VERTEX
 	
 	OUT_DATA(0) = IN_GEOM_DATA(0,0);
 	OUT_DATA(1) = float2(1,0.0f);
+	OUT_DATA(2) = IN_GEOM_DATA(3,0);
 	OUT_POSITION = reproject(center_0 , sideY * m_line_width_0);
 	EMIT_VERTEX
 	

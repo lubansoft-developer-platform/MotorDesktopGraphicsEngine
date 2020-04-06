@@ -6,6 +6,7 @@
    <!-- custom states -->
    <state name="primitive"	items="point,line,circle,polygone"		defines="name_items"	pass_defines="ambient">1</state>
    <state name="coord" items="world,eye,pro" defines="name_items"	pass_defines="ambient">2</state>
+   <state name="texturePbrMat"	 defines="name"	internal="0"/>
    <!-- custom primitive parameter-->
    <parameter name="primitive_size" type="slider" min="0.0">3.f</parameter>
    <parameter name="albedo_color"		type="color">1.0 0.0 0.0 1.0</parameter>
@@ -22,7 +23,8 @@
    <texture unit="18"	name="patch_transf_row2"		pass="deferred,forward,auxiliary"  anisotropy="1" shader="all">unigine_project/materials/common/patchB.dds</texture>
    <texture unit="19"	name="patch_color"		pass="deferred,ambient"	anisotropy="1" >unigine_project/materials/common/patchTransparent.dds</texture>
    <texture unit="20"	name="patch_visible"	pass="deferred,ambient,auxiliary"	anisotropy="1" >unigine_project/materials/common/patchTransparent.dds</texture>
-
+   <texture unit="21"	name="patch_pbrmat"		pass="deferred,ambient"	anisotropy="1" >unigine_project/materials/common/patchTransparent.dds</texture>
+   
    <shader pass="ambient" node="object_dynamic"
     ambient="1"
     primitive ="0"

@@ -5,11 +5,13 @@
 INIT_TEXTURE(0,TEX_PATCH_IMAGE)
 INIT_TEXTURE(19,TEX_PATCH_COLOR)
 INIT_TEXTURE(20,TEX_PATCH_VISIBLE)
+INIT_TEXTURE(21,TEX_PATCH_PBRMAT)
 
 STRUCT(FRAGMENT_IN)
 	INIT_POSITION
 	INIT_IN(uint,0)
 	INIT_IN(float2,1)
+	INIT_IN(uint,2)
 END
 
 //user line_color 
@@ -46,6 +48,13 @@ MAIN_BEGIN(FRAGMENT_OUT,FRAGMENT_IN)
 	float4 patch_color = TEXTURE_FETCH(TEX_PATCH_COLOR,float2(iX,iY));
 	if (length(patch_color)< EPSILON)
 		patch_color =m_albedo_color;
+		
+	#ifdef TEXTUREPBRMAT
+		uint int_mat_id = IN_DATA(2);
+		uint iY0 = int_mat_id / 512;
+		uint iX0 = int_mat_id % 512;
+		patch_color = TEXTURE_FETCH(TEX_PATCH_PBRMAT, float2(iX0 * 2, iY0));
+	#endif
 	
 	float4 image_color = TEXTURE_BIAS_ZERO(TEX_PATCH_IMAGE,uv); //
 	OUT_COLOR = patch_color * image_color;

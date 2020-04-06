@@ -69,6 +69,7 @@
 		INIT_TEXTURE(21, TEX_PRETRANS_IMAGE)
 		
 		INIT_TEXTURE(22, TEX_PRETRANS_AREA)
+		INIT_TEXTURE(23, TEX_PATCH_PBRMAT)
 	
 	CBUFFER(parameters)
 		
@@ -352,13 +353,17 @@
 	//user patchID  int_patch_id pass 的片元shader中的输入变量.编译.
 	uint iY = int_patch_id / 1024;
 	uint iX = int_patch_id % 1024;
+
+	uint iY0 = int_area_id / 512;
+	uint iX0 = int_area_id % 512;
+	
 	float4 patch_color = TEXTURE_FETCH(TEX_PATCH_COLOR, float2(iX, iY));
 	if (length(patch_color) > EPSILON)
 		color = patch_color;
 	else
 	#ifdef PRETRANS
 	{
-		//float4 fTexSize = GET_TEXSIZE(TEX_PRETRANS_AREA);
+		float4 fTexSize = GET_TEXSIZE(TEX_PRETRANS_AREA);
 		float4 fAreaVec = TEXTURE_FETCH(TEX_PRETRANS_AREA, float2(int_area_id, 0));
 		if (fAreaVec.z - fAreaVec.x > EPSILON && fAreaVec.w - fAreaVec.y > EPSILON)
 		{
@@ -374,8 +379,15 @@
 			color *= TEXTURE_BASE(TEX_PRETRANS_IMAGE);
 		}
 	}
+	#elif TEXTUREPBRMAT
+	{
+		float4 pbrBaseColor = TEXTURE_FETCH(TEX_PATCH_PBRMAT, float2(iX0 * 2, iY0));
+		color = pbrBaseColor;
+	}
 	#else
+	{
 		color *= TEXTURE_BASE(TEX_COLOR);
+	}
 	#endif
 
 	float4 patch_visible = TEXTURE_FETCH(TEX_PATCH_VISIBLE, float2(iX, iY));
@@ -481,8 +493,14 @@
 	
 	#ifdef METALNESS
 		GBUFFER.albedo		= color.rgb;
-		GBUFFER.metalness	= shading.r;
-		GBUFFER.roughness	= shading.g;
+		#ifdef TEXTUREPBRMAT
+			float4 pbrMetalRough = TEXTURE_FETCH(TEX_PATCH_PBRMAT, float2(iX0 * 2 + 1, iY0));
+			GBUFFER.metalness = pbrMetalRough.r;
+			GBUFFER.roughness = pbrMetalRough.g;
+		#else
+			GBUFFER.metalness	= shading.r;
+			GBUFFER.roughness	= shading.g;
+		#endif
 		
 		#ifdef OUT_GBUFFER_SPECULAR
 			#ifdef SPECULAR_MAP

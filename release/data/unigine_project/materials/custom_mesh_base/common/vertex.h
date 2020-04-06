@@ -32,6 +32,7 @@
 	INIT_TEXTURE(16, TEX_PATCH_TRANSF_ROW0)
 	INIT_TEXTURE(17, TEX_PATCH_TRANSF_ROW1)
 	INIT_TEXTURE(18, TEX_PATCH_TRANSF_ROW2)
+	INIT_TEXTURE(23, TEX_PATCH_PBRMAT)
 
 	CBUFFER(parameters)
 		UNIFORM float4 m_uv_transform;
@@ -267,6 +268,20 @@
 				out_d.position += normal * (m_vertex_balloon);
 			#endif
 		#endif
+		
+		#ifdef TEXTUREPBRMAT
+				
+			float radius = max(getPosition(out_d.position).w * s_viewport.w / s_projection[1].y,0.0f);
+			uint iMatId = in_d.texcoord.z;
+			uint iY0 = iMatId / 512;
+			uint iX0 = iMatId % 512;
+			
+			float4 pbrZbufferPri = TEXTURE_FETCH(TEX_PATCH_PBRMAT, uint2(iX0 * 2 + 1, iY0));
+			
+			out_d.position += normal * (radius * (pbrZbufferPri.b * 255.0f) * -0.01f);
+				
+		#endif
+
 		
 		return out_d;
 	}

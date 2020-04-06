@@ -12,6 +12,7 @@
   <state name="pretrans"		defines="name"	internal="0"/>
   <state name="textureColor"	 defines="name"	internal="0"/>
   <state name="height_mask"	defines="name"	internal="0"/>
+  <state name="texturePbrMat"	 defines="name"	internal="0"/>
 	
 	<group name="Default">
 		<state name="workflow" items="metalness,specular" defines="items"			tooltip="&lt;p&gt;Workflow selection determines which textures are to be used.&lt;/p&gt;&lt;p&gt;There are two workflows available:&lt;ul&gt;&lt;li&gt;&lt;b&gt;Metalness&lt;/b&gt; — new standard of textures (albedo, metalness, roughness).&lt;/li&gt;&lt;li&gt;&lt;b&gt;Specular&lt;/b&gt; — old standard of textures (diffuse, specular, gloss).&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;p&gt;It is strongly recommended to use the Metalness workflow as it uses a less number of texture channels, and uses material parameters more similar to real ones.&lt;/p&gt;"/>
@@ -372,6 +373,7 @@
   <texture unit="20"	name="patch_visible"	pass="deferred,ambient,shadow,auxiliary"	anisotropy="1" >unigine_project/materials/common/patchTransparent.dds</texture>
   <texture unit="21"	name="pretrans_image"					pass="deferred,ambient">core/textures/common/white.dds</texture>
   <texture unit="22"	name="pretrans_area"	pass="deferred,ambient">core/textures/common/white.dds</texture>
+  <texture unit="23"	name="patch_pbrmat"	 	pass="deferred,ambient" anisotropy="1"  shader="all" >core/textures/common/white.dds</texture>
   
 	<!--
 	Passes

@@ -10,6 +10,7 @@ STRUCT(VERTEX_IN)
 	INIT_ATTRIBUTE(float3,0,POSITION)
 	INIT_ATTRIBUTE(float,1,PATCHID)
 	INIT_ATTRIBUTE(float3,2,NORMAL)
+	INIT_ATTRIBUTE(float,3,PBRMATID)
 END
 
 STRUCT(VERTEX_OUT)
@@ -17,6 +18,7 @@ STRUCT(VERTEX_OUT)
 	INIT_OUT(uint,0) //patchId
 	INIT_OUT(float2,1)//coord
 	INIT_OUT(float3,2)//normal
+	INIT_OUT(uint,3) //pbrMatId
 END
 
 MAIN_BEGIN(VERTEX_OUT,VERTEX_IN)
@@ -24,6 +26,7 @@ MAIN_BEGIN(VERTEX_OUT,VERTEX_IN)
 	float3 cWorldPosition = IN_ATTRIBUTE(0);
 	float3 cNormal = IN_ATTRIBUTE(2);
 	uint iPatchId = IN_ATTRIBUTE(1);
+	uint iPbrMatId = IN_ATTRIBUTE(3);
 	OUT_DATA(0) = iPatchId;
 	OUT_DATA(1) = float2(0,0);
 	
@@ -45,6 +48,7 @@ MAIN_BEGIN(VERTEX_OUT,VERTEX_IN)
 		cNormal = float3(0,0,-1);
 	#endif
 	OUT_DATA(2) = cNormal;
+	OUT_DATA(3) = iPbrMatId;
 	OUT_POSITION = cPosition;
 MAIN_END
 //MAIN_END 后需要加ENTE回车键,否则会出现缺失}.

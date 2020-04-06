@@ -60,13 +60,25 @@
     
         <article class="readme">
             <h3>目录结构</h3>
-<pre class="prettyprint source"><code>/MotorDesktopGraphicsEngine
+<pre class="prettyprint source"><code>/Desktop Model JS SDK
 |
 |----/sdk
 |    |
-|    |----motor.d.ts
+|    |----blsdk.js
 |    |
-|    |---- motor.js
+|    |---- blcallback.js 
+|    |
+|    |---- blcomponentApi.js
+|    |
+|    |---- blprojectApi.js
+|    |
+|    |---- blsceneApi.js
+|    |
+|    |---- blsystemApi.js
+|    |
+|    |---- blthreeViewApi.js
+|    |
+|    |---- *.js
 |    |
 |    \
 |
@@ -80,7 +92,7 @@
 |    |
 |    |----config.ini
 |    |
-|    |----MotorDemo.exe
+|    |----LBCityEye.exe
 |    |
 |    |----*.*
 |    |
@@ -107,23 +119,53 @@
 \
 </code></pre>
 <h4>sdk</h4>
-<pre><code>sdk文件夹下存放了MotorDesktopGraphicsEngine提供的所有js扩展库
+<pre><code>sdk文件夹下存放了Desktop Model JS SDK提供的所有js扩展库
 </code></pre>
 <ul>
-<li>motor.js</li>
+<li>blsdk.js</li>
 </ul>
-<pre class="prettyprint source lang-ini"><code>MotorDesktopGraphicsEngine主入口文件
+<pre class="prettyprint source lang-ini"><code>Desktop Model JS SDK主入口文件
+</code></pre>
+<ul>
+<li>blcallback.js</li>
+</ul>
+<pre class="prettyprint source lang-ini"><code>Desktop Model JS SDK全局回调通知API
+</code></pre>
+<ul>
+<li>blcomponentApi.js</li>
+</ul>
+<pre class="prettyprint source lang-ini"><code>Desktop Model JS SDK构件模块API
+</code></pre>
+<ul>
+<li>blprojectApi.js</li>
+</ul>
+<pre class="prettyprint source lang-ini"><code>Desktop Model JS SDK工程模块API
+</code></pre>
+<ul>
+<li>blsceneApi.js</li>
+</ul>
+<pre class="prettyprint source lang-ini"><code>Desktop Model JS SDK场景模块API
+</code></pre>
+<ul>
+<li>blsystemApi.js</li>
+</ul>
+<pre class="prettyprint source lang-ini"><code>Desktop Model JS SDK系统模块API
+</code></pre>
+<ul>
+<li>blthreeViewApi.js</li>
+</ul>
+<pre class="prettyprint source lang-ini"><code>Desktop Model JS SDK三维模块API
 </code></pre>
 <h4>doc</h4>
-<pre><code>doc文件夹下存放了MotorDesktopGraphicsEngine的离线版接口文档
+<pre><code>doc文件夹下存放了Desktop Model JS SDK的离线版接口文档
 </code></pre>
 <ul>
 <li>index.html</li>
 </ul>
-<pre class="prettyprint source lang-ini"><code>MotorDesktopGraphicsEngine离线版接口文档入口文件
+<pre class="prettyprint source lang-ini"><code>Desktop Model JS SDK离线版接口文档入口文件
 </code></pre>
 <h4>release</h4>
-<pre><code>relsase文件夹中提供了Motor客户端
+<pre><code>relsase文件夹中提供了Motor开发组件客户端平台
 </code></pre>
 <ul>
 <li>config.ini</li>
@@ -151,7 +193,7 @@ debug=false
 <h3>环境搭建</h3>
 <pre class="prettyprint source lang-javascript"><code>1. 建立你自己的web project
 2. 将sdk中的所有文件移动到你的project中，并确保他们位于相同的路径下
-3. 在你的project中使用如下语句&lt;script type='text/javascript' src='motor.js'>&lt;/script>将sdk库引入到你的project中
+3. 在你的project中使用如下语句&lt;script type='text/javascript' src='blsdk.js'>&lt;/script>将sdk库引入到你的project中
 4. 将你的project文件夹移动到release文件夹下
 5. 根据你的实际情况配置config.ini
 6. 运行MotorDemo.exe，并开启你的开发之旅

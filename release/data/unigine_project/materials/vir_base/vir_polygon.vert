@@ -10,13 +10,15 @@ STRUCT(VERTEX_IN)
 	INIT_ATTRIBUTE(float3,0,POSITION)
 	INIT_ATTRIBUTE(float,1,PATCHID)
 	INIT_ATTRIBUTE(float3,2,NORMAL)
+	INIT_ATTRIBUTE(float,3,MATERIALID)
 END
 
 STRUCT(VERTEX_OUT)
 	INIT_POSITION
 	INIT_OUT(uint,0) //patchId
 	INIT_OUT(float2,1)//coord
-	INIT_OUT(float3,2)//normal
+	//INIT_OUT(float3,2)//normal
+	INIT_OUT(uint,2)
 END
 
 MAIN_BEGIN(VERTEX_OUT,VERTEX_IN)
@@ -45,7 +47,8 @@ MAIN_BEGIN(VERTEX_OUT,VERTEX_IN)
 		cPosition = getPosition(mul4(s_transform[0],s_transform[1],s_transform[2],cPosition + float4(cWorldPosition,0.f)));
 		cNormal = normalize(mul3(s_transform[0],s_transform[1],s_transform[2], cNormal));
 	#endif
-	OUT_DATA(2) = cNormal;
+	//OUT_DATA(2) = cNormal;
+	OUT_DATA(2) = IN_ATTRIBUTE(3);
 	OUT_POSITION = cPosition;
 MAIN_END
 //MAIN_END 后需要加ENTE回车键,否则会出现缺失}.
