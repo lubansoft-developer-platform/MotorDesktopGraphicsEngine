@@ -1,6 +1,11 @@
 ## 更新日志
 
+### Motor Desktop SDK v2.0.2
+**bug fix**
+- 修复修改构件颜色透明度失败的bug
+
 ### Motor Desktop SDK v2.0.1
+
 **bug fix**
 - 修复基于JS的事件穿透失败的bug
 
