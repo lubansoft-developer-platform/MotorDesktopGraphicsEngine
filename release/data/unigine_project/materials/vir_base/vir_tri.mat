@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.5.0.2" name="vir_tri" guid="7512caf349368d2ca638f6bb5e11d17abfad82e8" base_material="vir_base">
+<state name="primitive">3</state>
+</material>
